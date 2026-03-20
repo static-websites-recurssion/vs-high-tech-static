@@ -1,32 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
-  --foreground: #e5e7eb;
+  --background: #030611;
+  --foreground: #eaf0ff;
+
+  --muted: rgba(234, 240, 255, 0.72);
+  --panel: rgba(11, 24, 56, 0.52);
+  --panel-2: rgba(8, 18, 44, 0.28);
+  --border: rgba(120, 160, 255, 0.28);
+  --border-2: rgba(120, 160, 255, 0.18);
+
+  --accent: #5bd7ff;
+  --accent-2: #7c5cff;
+  --accent-3: #2ef2c9;
+  --metal: #9fb1d1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-sora);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617;
-    --foreground: #e5e7eb;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: radial-gradient(circle at top left, #1d283a 0, #020617 45%, #000000 100%);
+  background:
+    radial-gradient(1100px circle at 12% 10%, rgba(91, 215, 255, 0.18), transparent 40%),
+    radial-gradient(900px circle at 85% 18%, rgba(124, 92, 255, 0.16), transparent 35%),
+    radial-gradient(650px circle at 55% 95%, rgba(46, 242, 201, 0.08), transparent 45%),
+    linear-gradient(180deg, #030611, #04102a);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-::selection {
-  background: #22c55e33;
-  color: #f9fafb;
+/* Soft scanlines for an industrial / secure-infrastructure vibe */
+@keyframes scan {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(10%);
+    opacity: 0.25;
+  }
+}
+
+.secure-scanlines {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.06) 45%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: overlay;
+  animation: scan 6s linear infinite;
+}
+
+.metal-grid {
+  background-image:
+    linear-gradient(to right, rgba(120, 160, 255, 0.14) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(to bottom, rgba(120, 160, 255, 0.12) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 48px 48px;
+  opacity: 0.22;
+}
+
+/* Subtle grain to avoid a "perfectly clean" UI look */
+.grain-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+@keyframes glint-move {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(340%) skewX(-18deg);
+  }
+}
+
+/* Premium "glass glint" on hover */
+.glint-hover::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    90deg,
+    rgba(91, 215, 255, 0) 0%,
+    rgba(91, 215, 255, 0.18) 35%,
+    rgba(124, 92, 255, 0.22) 55%,
+    rgba(91, 215, 255, 0) 100%
+  );
+  opacity: 0;
+  transform: translateX(-140%) skewX(-18deg);
+  pointer-events: none;
+}
+
+.glint-hover:hover::after {
+  opacity: 1;
+  animation: glint-move 900ms ease-out;
 }
