@@ -1,94 +1,162 @@
+import type { Metadata } from "next";
+import { Clock, MapPin, Shield } from "lucide-react";
+
+import { QuoteRequestForm } from "@/components/contact/quote-request-form";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Contact Us | Hyderabad & Vijayawada Security Printing",
+  },
+  description:
+    "Request a quote for confidential printing — offices in Hyderabad & Vijayawada, triple ISO certified. Call 9849068920 or send an enquiry online.",
+};
+
+const whyPoints = [
+  {
+    title: "Fast turnaround response",
+    body: "We prioritise enquiries so you get timelines and next steps without delay.",
+    icon: Clock,
+  },
+  {
+    title: "Confidential handling of all specs",
+    body: "Your job details are treated as sensitive and shared only on a need-to-know basis.",
+    icon: Shield,
+  },
+  {
+    title: "Free site visit available for large orders",
+    body: "For substantial requirements, we can arrange a visit to align on security and logistics.",
+    icon: MapPin,
+  },
+] as const;
+
 export default function ContactPage() {
   return (
-    <div className="bg-slate-950">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
-        <header className="mb-8">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-emerald-300">
-            CONTACT
-          </p>
-          <h1 className="mt-2 text-2xl font-semibold text-slate-50 sm:text-3xl">
-            Share your security print or card brief.
-          </h1>
-          <p className="mt-3 max-w-2xl text-xs leading-relaxed text-slate-300 sm:text-[0.85rem]">
-            Tell us what you are trying to secure — cheques, tax stamps, certificates, cards or
-            tickets — and we will respond with a technical perspective and a plant walkthrough
-            slot.
-          </p>
-        </header>
-        <div className="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
-          <div className="space-y-3 text-xs text-slate-300 sm:text-[0.85rem]">
-            <p className="font-semibold text-slate-100">
-              VS Hi‑Tech Security Printing (placeholder)
-            </p>
-            <p className="text-slate-400">
-              Replace this panel with your actual registered address, legal entity name and GST
-              details once you deploy.
-            </p>
-            <p>
-              <span className="text-slate-500">Email:</span> info@vshitech.example
-            </p>
-            <p>
-              <span className="text-slate-500">Phone:</span> +91‑XXXXXXXXXX
-            </p>
-          </div>
-          <form className="space-y-4 rounded-3xl border border-white/10 bg-black/80 p-5 text-xs backdrop-blur">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="space-y-1 text-[11px] font-medium text-slate-300">
-                Name
-                <input
-                  type="text"
-                  placeholder="Your full name"
-                  className="w-full rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-xs text-slate-100 outline-none placeholder:text-slate-500 focus:border-emerald-400"
-                />
-              </label>
-              <label className="space-y-1 text-[11px] font-medium text-slate-300">
-                Organisation
-                <input
-                  type="text"
-                  placeholder="Bank, ministry, enterprise…"
-                  className="w-full rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-xs text-slate-100 outline-none placeholder:text-slate-500 focus:border-emerald-400"
-                />
-              </label>
+    <div className="bg-background">
+      {/* SECTION 1 — Office cards */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <h1 className="text-center text-3xl font-bold text-primary sm:text-4xl">
+          Contact Us
+        </h1>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+          Reach our Hyderabad or Vijayawada office for quotes, site visits, and
+          support.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-lg font-bold text-primary sm:text-xl">
+              Hyderabad Office &amp; Works
+            </h2>
+            <div className="mt-4 space-y-4 text-sm text-muted-foreground">
+              <div>
+                <p className="font-semibold text-primary">Address</p>
+                <p className="mt-1 leading-relaxed">
+                  Plot no: 74, Road No:7, ALEAP Industrial Estate, opp:JNTU
+                  Kukatpally, Pragati Nagar, Nizampet (P.O.), Hyderabad-500090
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-primary">Phone</p>
+                <a
+                  href="tel:+919849068920"
+                  className="mt-1 inline-block text-accent hover:underline"
+                >
+                  9849068920
+                </a>
+              </div>
+              <div>
+                <p className="font-semibold text-primary">Email</p>
+                <p className="mt-1 space-y-1">
+                  <a
+                    href="mailto:vsprints@gmail.com"
+                    className="block text-accent hover:underline"
+                  >
+                    vsprints@gmail.com
+                  </a>
+                  <a
+                    href="mailto:vshitechs@gmail.com"
+                    className="block text-accent hover:underline"
+                  >
+                    vshitechs@gmail.com
+                  </a>
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-border pt-4 text-xs sm:text-sm">
+                <span>
+                  <span className="font-semibold text-primary">GST:</span>{" "}
+                  36AADCV2323F1ZN
+                </span>
+                <span>
+                  <span className="font-semibold text-primary">PAN:</span>{" "}
+                  AADCV2323F
+                </span>
+              </div>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="space-y-1 text-[11px] font-medium text-slate-300">
-                Work email
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  className="w-full rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-xs text-slate-100 outline-none placeholder:text-slate-500 focus:border-emerald-400"
-                />
-              </label>
-              <label className="space-y-1 text-[11px] font-medium text-slate-300">
-                Phone (optional)
-                <input
-                  type="tel"
-                  placeholder="+91…"
-                  className="w-full rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-xs text-slate-100 outline-none placeholder:text-slate-500 focus:border-emerald-400"
-                />
-              </label>
+          </article>
+
+          <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-lg font-bold text-primary sm:text-xl">
+              Vijayawada Office &amp; Works
+            </h2>
+            <div className="mt-4 space-y-4 text-sm text-muted-foreground">
+              <div>
+                <p className="font-semibold text-primary">Address</p>
+                <p className="mt-1 leading-relaxed">
+                  Plot No. 11, Aleap Industrial Estate, Surampally Village,
+                  Nunna, Krishna District, Vijayawada - 521 212
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-primary">Phone</p>
+                <a
+                  href="tel:+919441404321"
+                  className="mt-1 inline-block text-accent hover:underline"
+                >
+                  9441404321
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-border pt-4 text-xs sm:text-sm">
+                <span>
+                  <span className="font-semibold text-primary">GST:</span>{" "}
+                  37AADCV2323F1ZL
+                </span>
+              </div>
             </div>
-            <label className="space-y-1 text-[11px] font-medium text-slate-300">
-              What do you want to secure?
-              <textarea
-                rows={4}
-                placeholder="Cheques, tax stamps, certificates, cards, tickets…"
-                className="w-full rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-xs text-slate-100 outline-none placeholder:text-slate-500 focus:border-emerald-400"
-              />
-            </label>
-            <div className="flex items-center justify-between gap-4 pt-1 text-[10px] text-slate-500">
-              <p>This static form can be wired to email, CRM or ticketing in your deployment.</p>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-4 py-1.5 text-[11px] font-semibold text-slate-900 shadow-[0_10px_25px_rgba(16,185,129,0.6)] hover:bg-emerald-300"
-              >
-                Send enquiry
-              </button>
-            </div>
-          </form>
+          </article>
         </div>
-      </div>
+      </section>
+
+      {/* SECTION 2 — Quote form */}
+      <section className="border-t border-border bg-white py-12 lg:py-16">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <QuoteRequestForm />
+        </div>
+      </section>
+
+      {/* SECTION 3 — Why enquire */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
+          Why enquire with us
+        </h2>
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {whyPoints.map(({ title, body, icon: Icon }) => (
+            <div
+              key={title}
+              className="rounded-xl border border-primary/10 bg-white p-6 text-center shadow-sm sm:p-7"
+            >
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-primary">
+                <Icon className="h-7 w-7" strokeWidth={1.75} aria-hidden />
+              </div>
+              <h3 className="mt-4 text-base font-semibold text-primary">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
-

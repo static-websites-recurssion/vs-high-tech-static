@@ -1,178 +1,267 @@
-export default function Home() {
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  Award,
+  Barcode,
+  BookMarked,
+  BookOpen,
+  Building2,
+  Clock,
+  FileQuestion,
+  Landmark,
+  ScanLine,
+  Shield,
+  Ticket,
+} from "lucide-react";
+
+import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
+import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
+  },
+  description:
+    "India's trusted security printing partner since 1997. Confidential question papers, OMR, cheque books & certificates for universities, banks & government in Andhra Pradesh & Telangana.",
+};
+
+const products = [
+  {
+    name: "Question Papers",
+    subtitle: "Confidential Printing",
+    icon: FileQuestion,
+    href: "/products",
+  },
+  { name: "OMR Sheets", subtitle: null, icon: ScanLine, href: "/products" },
+  {
+    name: "Answer Booklets",
+    subtitle: null,
+    icon: BookOpen,
+    href: "/products",
+  },
+  {
+    name: "University Certificates",
+    subtitle: null,
+    icon: Award,
+    href: "/products",
+  },
+  { name: "Cheque Books", subtitle: null, icon: Landmark, href: "/products" },
+  {
+    name: "Barcode & Variable Data Printing",
+    subtitle: null,
+    icon: Barcode,
+    href: "/products",
+  },
+  { name: "Lottery Tickets", subtitle: null, icon: Ticket, href: "/products" },
+  {
+    name: "Pass Books & Annual Reports",
+    subtitle: null,
+    icon: BookMarked,
+    href: "/products",
+  },
+] as const;
+
+const sectors = [
+  "Universities & Exam Boards",
+  "Banks & Financial Institutions",
+  "Government Departments",
+  "Corporate & Private Sector",
+] as const;
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col text-sm sm:text-base">
-      {/* Hero */}
-        <section
-          className="relative overflow-hidden border-b border-white/10 bg-black"
-        >
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,#22c55e33,transparent_55%),radial-gradient(circle_at_100%_100%,#0ea5e933,transparent_55%)]" />
-          <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:flex-row lg:items-center">
-            {/* Left: punchy copy */}
-            <div className="flex-1 space-y-7">
-              <p className="inline-flex rounded-full border border-emerald-500/40 bg-black/60 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-emerald-300 shadow-[0_0_18px_rgba(16,185,129,0.6)]">
-                HIGH SECURITY PRINT · INDIA
-              </p>
-              <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-[2.75rem]">
-                Premium{" "}
-                <span className="bg-[conic-gradient(from_180deg_at_50%_50%,#4ade80,#22d3ee,#a5b4fc,#4ade80)] bg-clip-text text-transparent">
-                  security printing
-                </span>{" "}
-                for cheques, cards & government documents.
-              </h1>
-              <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-[0.95rem]">
-                VS Hi‑Tech blends high‑speed web offset, variable data and smart card technology to
-                deliver documents that are beautiful, hard to copy and engineered for bank‑grade
-                and government workflows.
-              </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-2.5 text-[13px] font-semibold text-slate-900 shadow-[0_18px_40px_rgba(16,185,129,0.6)] transition hover:bg-emerald-300"
-                >
-                  Book a capabilities call
-                </a>
-                <a
-                  href="#capabilities"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-black/60 px-5 py-2 text-[13px] font-medium text-slate-100 hover:border-emerald-400/70 hover:text-emerald-200"
-                >
-                  View plant specs
-                </a>
-              </div>
-              <div className="mt-4 grid max-w-xl grid-cols-3 gap-4 text-[11px] text-slate-300 sm:text-xs">
-                <div className="rounded-2xl border border-white/15 bg-black/60 px-3 py-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-                    Web offset
-                  </p>
-                  <p className="mt-1 text-[13px] font-semibold text-slate-50">
-                    30,000 A4 pages/hr
-                  </p>
-                  <p className="mt-1 text-[11px] text-slate-400">
-                    8‑colour (4+4) with online numbering.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-white/15 bg-black/60 px-3 py-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-                    Variable data
-                  </p>
-                  <p className="mt-1 text-[13px] font-semibold text-slate-50">
-                    140 ppm · 1200 dpi
-                  </p>
-                  <p className="mt-1 text-[11px] text-slate-400">
-                    Konica Minolta 7120 / 6120 with auto‑inspection.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-white/15 bg-black/60 px-3 py-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-                    Finishing
-                  </p>
-                  <p className="mt-1 text-[13px] font-semibold text-slate-50">
-                    Multi‑line binding
-                  </p>
-                  <p className="mt-1 text-[11px] text-slate-400">
-                    Muller Martini/Appu perfect binding, 2‑knife trimming.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div className="bg-background">
+      {/* SECTION 1 — Hero */}
+      <section className="w-full bg-primary text-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.15]">
+            India&apos;s Trusted Security Printing Partner — Since 1997
+          </h1>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg">
+            Confidential question papers, OMR sheets, cheque books,
+            certificates, and 20+ more security print products. Serving
+            universities, banks, and government across Andhra Pradesh &
+            Telangana.
+          </p>
+          <TrustHeroCounters />
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button variant="accent" size="lg" asChild>
+              <Link href="/contact">Request a Quote</Link>
+            </Button>
+            <Button variant="outlineLight" size="lg" asChild>
+              <Link href="/products">View Our Products</Link>
+            </Button>
+          </div>
+          <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/20 pt-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-12 sm:gap-y-3 lg:gap-x-16">
+            <p className="text-center text-sm font-semibold text-gold">
+              ISO 9001:2015 Certified
+            </p>
+            <p className="text-center text-sm font-semibold text-gold">
+              ISO 27001:2013 Certified
+            </p>
+            <p className="text-center text-sm font-semibold text-gold">
+              ISO 14001:2015 Certified
+            </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Right: visual glass panel */}
-            <div className="flex-1">
-              <div className="relative mx-auto max-w-md rounded-[2rem] border border-emerald-400/40 bg-gradient-to-br from-emerald-500/20 via-slate-900/90 to-black/95 p-[1px] shadow-[0_0_80px_rgba(16,185,129,0.7)]">
-                <div className="rounded-[1.9rem] bg-black/80 p-5 backdrop-blur-xl">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-emerald-300">
-                        CORE PROGRAMMES
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-slate-50">
-                        Designed to be almost impossible to duplicate.
-                      </p>
-                    </div>
-                    <div className="h-11 w-11 rounded-3xl bg-emerald-400/20 ring-2 ring-emerald-400/70" />
-                  </div>
-                  <div className="mt-4 grid gap-3 text-[11px] text-slate-200">
-                    <div className="rounded-2xl border border-white/10 bg-white/5 px-3 py-3">
-                      <p className="text-[11px] font-semibold text-slate-50">
-                        Government & revenue
-                      </p>
-                      <p className="mt-1 text-[11px] text-slate-300">
-                        Tax stamps, licences, tickets, certificates and revenue labels with overt
-                        and covert security features.
-                      </p>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-white/5 px-3 py-3">
-                      <p className="text-[11px] font-semibold text-slate-50">
-                        Banking & financial
-                      </p>
-                      <p className="mt-1 text-[11px] text-slate-300">
-                        MICR cheques, credits, passbooks and statements integrated with clearing
-                        and fraud‑prevention systems.
-                      </p>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-white/5 px-3 py-3">
-                      <p className="text-[11px] font-semibold text-slate-50">
-                        Smart cards & RFID
-                      </p>
-                      <p className="mt-1 text-[11px] text-slate-300">
-                        Banking cards, biometric and RFID cards, toll and travel tags – inspired
-                        by players like KL Hi‑Tech.
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-[10px] text-slate-400">
-                    Visual style takes cues from security leaders such as DG press, Thomson Press,
-                    Parseq, Orion and Koenig &amp; Bauer, with VS Hi‑Tech positioned as the
-                    high‑tech Indian specialist.
-                  </p>
-                </div>
+      {/* SECTION 2 — Stats bar */}
+      <section className="w-full border-t border-white/10 bg-primary text-white">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:px-8 lg:py-12">
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-bold text-accent sm:text-3xl">
+              28+ Years
+            </p>
+            <p className="mt-1 text-sm text-white/85">
+              Of Security Printing Experience
+            </p>
+          </div>
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-bold text-accent sm:text-3xl">
+              #1 Rank
+            </p>
+            <p className="mt-1 text-sm text-white/85">
+              In Andhra Pradesh & Telangana
+            </p>
+          </div>
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-bold text-accent sm:text-3xl">
+              365 Days
+            </p>
+            <p className="mt-1 text-sm text-white/85">
+              Round-the-Clock Operations
+            </p>
+          </div>
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-bold text-accent sm:text-3xl">
+              162 Staff
+            </p>
+            <p className="mt-1 text-sm text-white/85">
+              Technical & Management Team
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3 — Products grid */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <h2 className="text-center text-3xl font-bold text-primary sm:text-4xl">
+          Our Range of Security Products
+        </h2>
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {products.map(({ name, subtitle, icon: Icon, href }) => (
+            <div
+              key={name}
+              className="flex flex-col rounded-xl border border-accent/20 bg-sky-100 p-6 shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-primary shadow-sm">
+                <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
               </div>
+              <h3 className="mt-4 text-lg font-semibold leading-snug text-primary">
+                {name}
+                {subtitle ? (
+                  <span className="mt-0.5 block text-sm font-normal text-primary/80">
+                    {subtitle}
+                  </span>
+                ) : null}
+              </h3>
+              <Link
+                href={href}
+                className="mt-auto pt-6 text-sm font-semibold text-accent hover:underline"
+              >
+                Learn More →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION 4 — Why Choose Us */}
+      <section className="border-y border-border bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-primary sm:text-4xl">
+            Why Choose Us
+          </h2>
+          <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+            <div className="text-center md:text-left">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary md:mx-0">
+                <Shield className="h-7 w-7" strokeWidth={1.75} aria-hidden />
+              </div>
+              <h3 className="mt-4 text-xl font-semibold text-primary">
+                High Confidentiality
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Single entry/exit, CCTV surveillance, biometric attendance,
+                special security guards
+              </p>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary md:mx-0">
+                <Building2
+                  className="h-7 w-7"
+                  strokeWidth={1.75}
+                  aria-hidden
+                />
+              </div>
+              <h3 className="mt-4 text-xl font-semibold text-primary">
+                State-of-the-Art Machinery
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                24 types of printing machines including Orient, NAPH,
+                Muller-Martini
+              </p>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary md:mx-0">
+                <Clock className="h-7 w-7" strokeWidth={1.75} aria-hidden />
+              </div>
+              <h3 className="mt-4 text-xl font-semibold text-primary">
+                On-Time Delivery
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                365 days, 24x7 operations, DCM closed vehicle transport
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-      {/* Simple teaser sections linking to pages */}
-      <section className="border-b border-slate-800 bg-[radial-gradient(circle_at_top,#22c55e22,transparent_60%),radial-gradient(circle_at_bottom,#0ea5e922,transparent_60%)] bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
-          <div className="grid gap-4 sm:grid-cols-3">
-            <a
-              href="/capabilities"
-              className="group rounded-2xl border border-white/10 bg-black/70 p-4 text-xs text-slate-300 backdrop-blur hover:border-emerald-400/70"
+      {/* SECTION 5 — Sectors strip */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <h2 className="text-center text-3xl font-bold text-primary sm:text-4xl">
+          Sectors We Serve
+        </h2>
+        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {sectors.map((label) => (
+            <div
+              key={label}
+              className="flex min-h-[5.5rem] items-center justify-center rounded-xl border border-primary/15 bg-white px-4 py-5 text-center text-sm font-semibold leading-snug text-primary shadow-sm transition-shadow hover:border-accent/40 hover:shadow-md sm:min-h-[6rem] sm:text-base"
             >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-emerald-300">
-                PLANT
-              </p>
-              <p className="mt-2 text-sm font-semibold text-slate-50">Capabilities</p>
-              <p className="mt-1 text-[11px] text-slate-400">
-                Web offset, VDP, binding, CTCP and power redundancy — all from your technical PDF.
-              </p>
-            </a>
-            <a
-              href="/sectors"
-              className="group rounded-2xl border border-white/10 bg-black/70 p-4 text-xs text-slate-300 backdrop-blur hover:border-emerald-400/70"
-            >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-emerald-300">
-                MARKETS
-              </p>
-              <p className="mt-2 text-sm font-semibold text-slate-50">Sectors</p>
-              <p className="mt-1 text-[11px] text-slate-400">
-                Government, banking, education, telecom &amp; transport — mapped like your
-                competitors.
-              </p>
-            </a>
-            <a
-              href="/technology"
-              className="group rounded-2xl border border-white/10 bg-black/70 p-4 text-xs text-slate-300 backdrop-blur hover:border-emerald-400/70"
-            >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-emerald-300">
-                SECURITY
-              </p>
-              <p className="mt-2 text-sm font-semibold text-slate-50">Technology</p>
-              <p className="mt-1 text-[11px] text-slate-400">
-                Overt/covert features and workflows inspired by global leaders like Koenig &amp;
-                Bauer.
-              </p>
-            </a>
-          </div>
+              {label}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION 6 — CTA Banner */}
+      <section className="w-full bg-primary text-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-16">
+          <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+            Ready to print with confidence?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 sm:text-lg">
+            Get a free quote from our team in Hyderabad or Vijayawada
+          </p>
+          <Button
+            variant="accent"
+            size="lg"
+            className="mt-8"
+            asChild
+          >
+            <Link href="/contact">Contact Us Today</Link>
+          </Button>
         </div>
       </section>
     </div>
