@@ -7,7 +7,7 @@ export function AnnouncementBar() {
         <span aria-hidden>🔒</span>{" "}
         <span className="font-medium">Triple ISO Certified</span>
         <span className="mx-1.5 text-white/50 sm:mx-2">|</span>
-        <span>Serving AP &amp; Telangana for 28+ Years</span>
+        <span>Serving from 28+ Years</span>
         <span className="mx-1.5 text-white/50 sm:mx-2">|</span>
         <span>Call: </span>
         <Link

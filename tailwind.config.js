@@ -8,6 +8,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "Rockwell",
+          "Rockwell Nova",
+          "Roboto Slab",
+          "Segoe UI",
+          "Arial",
+          "sans-serif",
+        ],
+      },
       colors: {
         border: "#e2e8f0",
         input: "#e2e8f0",

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
-import { FloatingQuoteButton } from "@/components/layout/floating-quote-button";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 
@@ -27,6 +26,15 @@ export const metadata: Metadata = {
   },
   description:
     "Triple ISO-certified security printing in Hyderabad & Vijayawada — question papers, OMR, cheque books, certificates, and confidential print for AP & Telangana.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=2", type: "image/x-icon" },
+      { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=2", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png?v=2", sizes: "180x180" }],
+    shortcut: ["/favicon.ico?v=2"],
+  },
 };
 
 export default function RootLayout({
@@ -38,13 +46,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
-        style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
       >
         <AnnouncementBar />
         <Navbar />
-        <main className="flex-1 pb-24">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingQuoteButton />
       </body>
     </html>
   );

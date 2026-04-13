@@ -1,20 +1,37 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Clock, MapPin, Shield } from "lucide-react";
 
-import { QuoteRequestForm } from "@/components/contact/quote-request-form";
+import { ContactDetailsForm } from "@/components/contact/ContactDetailsForm";
+import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
   title: {
     absolute: "Contact Us | Hyderabad & Vijayawada Security Printing",
   },
   description:
-    "Request a quote for confidential printing — offices in Hyderabad & Vijayawada, triple ISO certified. Call 9849068920 or send an enquiry online.",
+    "Hyderabad & Vijayawada offices, phone and email, Google Maps directions — triple ISO certified security printing for AP & Telangana.",
 };
+
+const mapEmbeds = [
+  {
+    title: "Hyderabad — ALEAP Industrial Estate (approx.)",
+    src: "https://maps.google.com/maps?q=17.4991,78.3910&z=16&output=embed&hl=en",
+    openUrl:
+      "https://www.google.com/maps/search/?api=1&query=17.4991,78.3910",
+  },
+  {
+    title: "Vijayawada — Aleap Industrial Estate, Nunna (approx.)",
+    src: "https://maps.google.com/maps?q=16.5155,80.6262&z=16&output=embed&hl=en",
+    openUrl:
+      "https://www.google.com/maps/search/?api=1&query=16.5155,80.6262",
+  },
+] as const;
 
 const whyPoints = [
   {
     title: "Fast turnaround response",
-    body: "We prioritise enquiries so you get timelines and next steps without delay.",
+    body: "We respond promptly so you get timelines and next steps without delay.",
     icon: Clock,
   },
   {
@@ -32,17 +49,37 @@ const whyPoints = [
 export default function ContactPage() {
   return (
     <div className="bg-background">
-      {/* SECTION 1 — Office cards */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <h1 className="text-center text-3xl font-bold text-primary sm:text-4xl">
-          Contact Us
-        </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Reach our Hyderabad or Vijayawada office for quotes, site visits, and
-          support.
-        </p>
+      <section className="relative w-full overflow-hidden border-b border-border">
+        <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-14 lg:px-8">
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-40 overflow-hidden rounded-b-2xl sm:h-48">
+            <Image
+              src={siteImages.heroFacility.src}
+              alt=""
+              fill
+              className="object-cover object-center opacity-40"
+              sizes="100vw"
+              aria-hidden
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/85 to-background"
+              aria-hidden
+            />
+          </div>
+          <div className="relative z-10">
+            <h1 className="text-center text-3xl font-bold text-primary sm:text-4xl">
+              Contact Us
+            </h1>
+            <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+              Reach our Hyderabad or Vijayawada office by phone or email for site
+              visits and support.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {/* SECTION 1 — Office cards */}
+      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+        <div className="mt-2 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-lg font-bold text-primary sm:text-xl">
               Hyderabad Office &amp; Works
@@ -86,10 +123,7 @@ export default function ContactPage() {
                   <span className="font-semibold text-primary">GST:</span>{" "}
                   36AADCV2323F1ZN
                 </span>
-                <span>
-                  <span className="font-semibold text-primary">PAN:</span>{" "}
-                  AADCV2323F
-                </span>
+                
               </div>
             </div>
           </article>
@@ -126,17 +160,64 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* SECTION 2 — Quote form */}
-      <section className="border-t border-border bg-white py-12 lg:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <QuoteRequestForm />
+      {/* SECTION 2 — Contact form */}
+      <section className="border-t border-border bg-muted/30 py-12 lg:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <ContactDetailsForm
+              toEmails={["vsprints@gmail.com", "vshitechs@gmail.com"]}
+            />
+          </div>
         </div>
       </section>
 
-      {/* SECTION 3 — Why enquire */}
+      {/* SECTION 3 — Maps */}
+      <section className="border-t border-border bg-muted/30 py-12 lg:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-xl font-bold text-primary sm:text-2xl">
+            Find us on the map
+          </h2>
+          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground">
+            Approximate map pins for each plant. For exact gate access and
+            visitor clearance, please coordinate with our office before your
+            visit.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {mapEmbeds.map((m) => (
+              <div key={m.title}>
+                <p className="mb-3 text-sm font-semibold text-primary">
+                  {m.title}
+                </p>
+                <div className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm ring-1 ring-black/5">
+                  <iframe
+                    title={m.title}
+                    src={m.src}
+                    className="aspect-[4/3] w-full border-0 sm:aspect-video"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  <a
+                    href={m.openUrl}
+                    className="font-medium text-accent hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open in Google Maps
+                  </a>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — Why work with us */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-          Why enquire with us
+          Why work with us
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {whyPoints.map(({ title, body, icon: Icon }) => (

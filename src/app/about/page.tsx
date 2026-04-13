@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Award,
@@ -12,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
   title: {
@@ -120,6 +122,15 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="flex flex-col gap-4">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-primary/10 shadow-md">
+              <Image
+                src={siteImages.aboutEstate.src}
+                alt={siteImages.aboutEstate.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
             <div className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm">
               <p className="text-2xl font-bold text-accent">2009</p>
               <p className="mt-2 text-sm font-medium text-primary">
@@ -152,6 +163,13 @@ export default function AboutPage() {
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
             Internationally recognised standards that guide how we work every
             day.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground">
+            For procurement packs and scope statements, see our dedicated{" "}
+            <Link href="/certifications" className="font-medium text-accent hover:underline">
+              Certifications
+            </Link>{" "}
+            page.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {isoCards.map(({ code, title, plain }) => (
