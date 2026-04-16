@@ -1,48 +1,37 @@
-# syntax = docker/dockerfile:1
+# Production image for static export (`output: "export"` → `out/`).
+# This project does not use Prisma or Next.js standalone output; serving is nginx, not `node server.js`.
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=22.21.1
-FROM node:${NODE_VERSION}-slim AS base
-
-LABEL fly_launch_runtime="Next.js"
-
-# Next.js app lives here
+# Stage 1: Dependencies
+FROM node:20-alpine AS deps
 WORKDIR /app
 
-# Set production environment
-ENV NODE_ENV="production"
+RUN apk add --no-cache libc6-compat
 
+COPY package.json package-lock.json* ./
 
-# Throw-away build stage to reduce size of final image
-FROM base AS build
+# Install all deps (including dev) so `next build` can compile TypeScript, Tailwind, etc.
+RUN npm ci
 
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
+# Stage 2: Builder
+FROM node:20-alpine AS builder
+WORKDIR /app
 
-# Install node modules
-COPY package-lock.json package.json ./
-RUN npm ci --include=dev
-
-# Copy application code
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build application
-RUN npx next build --experimental-build-mode compile
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
 
-# Remove development dependencies
-RUN npm prune --omit=dev
+RUN mkdir -p public
 
+RUN npm run build
 
-# Final stage for app image
-FROM base
+# Stage 3: Runner — static `out/` via nginx (matches Fly `internal_port = 8080`)
+FROM nginx:alpine AS runner
 
-# Copy built application
-COPY --from=build /app /app
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/out /usr/share/nginx/html
 
-# Entrypoint sets up the container.
-ENTRYPOINT [ "/app/docker-entrypoint.js" ]
+EXPOSE 8080
 
-# Start the server by default, this can be overwritten at runtime
-EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+CMD ["nginx", "-g", "daemon off;"]
