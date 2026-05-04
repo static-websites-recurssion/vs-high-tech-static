@@ -6,24 +6,7 @@ import { useMemo, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { type BlogCategory, type BlogPost } from "@/lib/blog-posts";
-import { siteImages } from "@/lib/site-images";
-
-function categoryThumb(category: BlogCategory) {
-  switch (category) {
-    case "Education":
-      return siteImages.industryEducation;
-    case "Banking":
-      return siteImages.industryBanking;
-    case "Technology":
-      return siteImages.infraOffsetPress;
-    case "Products":
-      return siteImages.servicesBanner;
-    case "Company":
-      return siteImages.aboutEstate;
-    default:
-      return siteImages.heroFacility;
-  }
-}
+import { knowledgeCardImage } from "@/lib/knowledge-preview-media";
 
 export function BlogListingClient({
   posts,
@@ -68,21 +51,23 @@ export function BlogListingClient({
 
       <section className="mx-auto max-w-6xl px-4 pb-14 sm:px-6 lg:px-8 lg:pb-20">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {visible.map((post) => (
+          {visible.map((post) => {
+            const thumb = knowledgeCardImage(post.category);
+            return (
             <article
               key={post.slug}
               className="overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
-                  src={categoryThumb(post.category).src}
-                  alt={categoryThumb(post.category).alt}
+                  src={thumb.src}
+                  alt={thumb.alt}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-primary/45 via-primary/5 to-transparent"
                   aria-hidden
                 />
               </div>
@@ -96,6 +81,9 @@ export function BlogListingClient({
                 <h2 className="mt-4 text-lg font-bold leading-snug text-primary">
                   {post.title}
                 </h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {post.excerpt}
+                </p>
                 <div className="mt-5">
                   <Link
                     href={`/knowledge/blog/${post.slug}`}
@@ -106,7 +94,8 @@ export function BlogListingClient({
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </section>
     </>

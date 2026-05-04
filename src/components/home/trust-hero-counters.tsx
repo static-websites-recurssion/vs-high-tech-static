@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { cn } from "@/lib/utils";
+
 function useCountUp(target: number, durationMs: number, active: boolean) {
   const [value, setValue] = useState(0);
 
@@ -31,7 +33,19 @@ const items = [
   { end: 365, suffix: "", label: "Days operations / year" },
 ] as const;
 
-export function TrustHeroCounters() {
+type TrustHeroCountersProps = {
+  className?: string;
+  /** Cleaner horizontal strip for the home hero (no heavy borders). */
+  variant?: "default" | "hero";
+  /** Align stats for a centered hero card (home page). */
+  centered?: boolean;
+};
+
+export function TrustHeroCounters({
+  className,
+  variant = "default",
+  centered = false,
+}: TrustHeroCountersProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
 
@@ -59,19 +73,46 @@ export function TrustHeroCounters() {
   return (
     <div
       ref={ref}
-      className="mt-10 grid grid-cols-1 gap-6 border-y border-white/15 py-8 sm:grid-cols-3 sm:gap-4 sm:py-10"
+      className={cn(
+        variant === "hero" && centered
+          ? "mt-8 flex flex-col items-center gap-8 sm:mt-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-10 sm:gap-y-6"
+          : variant === "hero"
+            ? "mt-8 flex flex-col gap-8 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-y-4"
+            : "mt-10 grid grid-cols-1 gap-6 border-y border-white/15 py-8 sm:grid-cols-3 sm:gap-4 sm:py-10",
+        className
+      )}
       aria-label="Key company figures"
     >
       {items.map((item, i) => (
         <div
           key={item.label}
-          className="text-center sm:border-r sm:border-white/10 sm:last:border-r-0 sm:px-2"
+          className={cn(
+            variant === "hero" && centered
+              ? "min-w-0 text-center sm:min-w-[7.5rem]"
+              : variant === "hero"
+                ? "min-w-0 text-left sm:border-l sm:border-white/[0.12] sm:pl-8 sm:first:border-l-0 sm:first:pl-0"
+                : "text-center sm:border-r sm:border-white/10 sm:last:border-r-0 sm:px-2"
+          )}
         >
-          <p className="font-mono text-4xl font-bold tabular-nums text-accent sm:text-5xl">
+          <p
+            className={cn(
+              "font-mono font-semibold tabular-nums tracking-tight",
+              variant === "hero"
+                ? "text-3xl text-sky-100 sm:text-4xl"
+                : "text-accent text-4xl font-bold sm:text-5xl"
+            )}
+          >
             {values[i]}
             {item.suffix}
           </p>
-          <p className="mt-2 text-xs font-medium uppercase tracking-wide text-white/75 sm:text-sm">
+          <p
+            className={cn(
+              "mt-1.5 font-medium uppercase tracking-wide",
+              variant === "hero"
+                ? "text-[11px] text-sky-300/90 sm:text-xs"
+                : "mt-2 text-xs text-white/80 sm:text-sm"
+            )}
+          >
             {item.label}
           </p>
         </div>

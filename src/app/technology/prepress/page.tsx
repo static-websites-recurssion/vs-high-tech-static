@@ -68,7 +68,7 @@ export default function PrepressPage() {
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src="/images/tech-prepress-lab.png"
+            src="/images/tech-prepress-lab.webp"
             alt=""
             fill
             className="object-cover"

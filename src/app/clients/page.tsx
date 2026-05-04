@@ -108,11 +108,13 @@ export default function ClientsPage() {
                 className={reverse ? "rounded-2xl bg-white p-6 shadow-sm sm:p-8" : "rounded-2xl bg-background p-6 sm:p-8"}
               >
                 <div
-                  className={`grid grid-cols-1 gap-8 lg:grid-cols-[420px_1fr] lg:items-start ${
-                    reverse ? "lg:grid-cols-[1fr_420px]" : ""
+                  className={`grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:items-start ${
+                    reverse
+                      ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)]"
+                      : ""
                   }`}
                 >
-                  <div className={reverse ? "lg:order-2" : ""}>
+                  <div className={`min-w-0 ${reverse ? "lg:order-2" : ""}`}>
                     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 shadow-sm">
                       <Image
                         src={s.image.src}
@@ -123,13 +125,13 @@ export default function ClientsPage() {
                       />
                     </div>
                   </div>
-                  <div className={reverse ? "lg:order-1" : ""}>
-                    <div className="flex items-center gap-3">
+                  <div className={`min-w-0 ${reverse ? "lg:order-1" : ""}`}>
+                    <div className="flex min-w-0 items-center gap-3">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                         <Icon className="h-6 w-6" aria-hidden />
                       </div>
-                      <div className="flex flex-1 flex-wrap items-center justify-between gap-3">
-                        <h2 className="text-2xl font-bold text-primary">
+                      <div className="flex min-w-0 flex-1 flex-wrap items-center justify-between gap-3">
+                        <h2 className="min-w-0 break-words text-2xl font-bold text-primary">
                           {s.label}
                         </h2>
                         <Button variant="outline" size="sm" asChild>

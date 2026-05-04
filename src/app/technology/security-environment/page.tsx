@@ -25,12 +25,12 @@ const placeholderSections = [
   {
     title: "Controlled access zones",
     body: "Visitors and staff are managed through defined access points with strict verification.",
-    src: "/images/tech-placeholder-storage.png",
+    src: "/images/tech-placeholder-storage.webp",
   },
   {
     title: "Guarded secure handling",
     body: "Sensitive production steps are monitored, with checks for inbound/outbound materials.",
-    src: "/images/tech-placeholder-lab.png",
+    src: "/images/tech-placeholder-lab.webp",
   },
   {
     title: "Secure waste destruction flow",

@@ -96,10 +96,6 @@ const dropdownMenus: DropdownMenu[] = [
     items: [
       { label: "Blog", href: "/knowledge/blog" },
       {
-        label: "News & Updates",
-        href: "/knowledge/news",
-      },
-      {
         label: "Downloads",
         href: "/knowledge/downloads",
       },
@@ -152,23 +148,25 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-white/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 isolate border-b border-border/80 bg-white shadow-sm">
+      <div className="mx-auto flex min-w-0 max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="max-w-[min(100%,18rem)] text-sm font-semibold leading-tight text-primary sm:max-w-xs sm:text-base"
+          className="min-w-0 max-w-[min(100%,18rem)] text-xs font-semibold leading-tight text-primary sm:max-w-xs sm:text-sm md:text-base"
           onClick={() => setOpen(false)}
         >
-          <span className="flex items-center gap-3">
+          <span className="flex min-w-0 items-center gap-2 sm:gap-3">
             <Image
               src="/brand-logo.png"
               alt="V.S. Hitech logo"
               width={34}
               height={34}
               priority
-              className="h-9 w-9"
+              className="h-8 w-8 shrink-0 sm:h-9 sm:w-9"
             />
-            <span>VS HITECH SECURITY FORMS PVT LTD</span>
+            <span className="break-words hyphens-auto">
+              VS HITECH SECURITY FORMS PVT LTD
+            </span>
           </span>
         </Link>
 
@@ -300,9 +298,21 @@ export function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-border bg-white px-4 py-3 md:hidden"
+          className="max-h-[min(75vh,560px)] overflow-y-auto overscroll-y-contain border-t border-border bg-white px-4 py-3 md:hidden"
         >
           <div className="flex flex-col gap-2">
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className={cn(
+                "rounded-xl border border-border px-3 py-2.5 text-sm font-semibold transition-colors",
+                pathname === "/"
+                  ? "border-accent/40 bg-muted text-primary"
+                  : "text-primary hover:bg-muted/70"
+              )}
+            >
+              Home
+            </Link>
             {dropdownMenus.map((menu) => (
               <details
                 key={menu.key}
@@ -322,7 +332,7 @@ export function Navbar() {
                       }
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "rounded-lg px-2 py-2 text-sm transition-colors",
+                        "break-words rounded-lg px-2 py-2 text-sm transition-colors",
                         isPathActive(pathname, item.href)
                           ? "border border-accent/40 bg-muted text-primary"
                           : "text-foreground/90 hover:bg-muted"

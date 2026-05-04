@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
@@ -37,19 +37,27 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1a2563",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="min-w-0 overflow-x-clip">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen min-w-0 flex-col font-sans antialiased`}
       >
         <AnnouncementBar />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-clip">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Award,
+  Building2,
   ChevronRight,
+  Cpu,
   FileCheck,
   FileDown,
   HeartHandshake,
   Lock,
+  MapPin,
   ShieldCheck,
   Users,
 } from "lucide-react";
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
     absolute: "About Us | 28 Years of Security Printing Excellence",
   },
   description:
-    "Company story, triple ISO certifications, Hyderabad & Vijayawada plants, and leadership at V.S. Hitech Security Forms Pvt. Ltd.",
+    "Company profile: security printing since 2009, triple ISO under NABCB accreditation, Hyderabad & Vijayawada works, leadership, pre-press scale, and confidentiality controls.",
 };
 
 const isoCards = [
@@ -71,6 +74,39 @@ const values = [
   },
 ] as const;
 
+const profileHighlights = [
+  {
+    title: "Who we serve",
+    icon: Building2,
+    body:
+      "Universities, exam boards, banks, government departments, and corporates — with emphasis on high-confidential examination programmes, secure stationery, and institutional documentation.",
+  },
+  {
+    title: "Two integrated works",
+    icon: MapPin,
+    body:
+      "Manufacturing in Telangana (Hyderabad, ALEAP Industrial Estate) and Andhra Pradesh (Vijayawada, Aleap Industrial Estate) — 365-day, round-the-clock operations with DCM closed-vehicle logistics from both plants.",
+  },
+  {
+    title: "Pre-press & DTP",
+    icon: Cpu,
+    body:
+      "30 high-configured DTP systems, 10 scanners, and 20 laser printers (A4 and A3) to support artwork, data, and plate-ready output at volume.",
+  },
+] as const;
+
+const securityPractices = [
+  "Single entry and exit, guarded at all times",
+  "Biometric attendance across the workforce",
+  "Entire press under CCTV surveillance",
+  "Visitors restricted from work areas without special permission",
+  "Adequate fire-fighting equipment for contingencies",
+  "Dual checking on all incoming and outgoing materials",
+  "Printing, finishing, and allied operations under one roof",
+  "Additional security guards deployed for highly sensitive jobs",
+  "Confidential waste shredded and disposed of securely",
+] as const;
+
 export default function AboutPage() {
   return (
     <div className="bg-background">
@@ -91,7 +127,8 @@ export default function AboutPage() {
             About V.S. Hitech Security Forms Pvt. Ltd.
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            A story of 28 years, two cities, and a commitment to confidentiality
+            Triple ISO-certified security printing — two plants, institutional
+            programmes, and controls aligned to our May 2025 company profile.
           </p>
           <div className="mt-8">
             <Button variant="outlineLight" size="lg" className="gap-2" asChild>
@@ -112,25 +149,75 @@ export default function AboutPage() {
               Company Story
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Incorporated in 2009 as a Private Limited Company, V.S. Hitech
-              Security Forms Pvt. Ltd. evolved from the proprietary firm V.S.
-              Hitech Security Forms, managed by Managing Director Shri R. Phani
-              Krishna for over 28 years. We are a triple ISO-certified leading
-              security printing company with printing units in both Andhra
-              Pradesh (Vijayawada) and Telangana (Hyderabad), operating 365 days
-              a year, round the clock.
+              <strong className="font-semibold text-foreground">
+                V.S. Hitech Security Forms Private Limited
+              </strong>{" "}
+              is a leading security printing company, certified to{" "}
+              <strong className="font-semibold text-foreground">
+                ISO 9001:2015, ISO 27001:2013, and ISO 14001:2015
+              </strong>{" "}
+              under NABCB accreditation. Incorporated in{" "}
+              <strong className="font-semibold text-foreground">2009</strong> as
+              a Private Limited Company, we grew from the proprietary firm{" "}
+              <em>V.S. Hitech Security Forms</em>, with{" "}
+              <strong className="font-semibold text-foreground">
+                Shri Ramisetti Phani Krishna
+              </strong>{" "}
+              as Managing Director bringing more than{" "}
+              <strong className="font-semibold text-foreground">
+                28 years
+              </strong>{" "}
+              of printing-industry experience.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              We provide confidential and commercial printing for{" "}
+              <strong className="font-semibold text-foreground">
+                universities, banks, government, and large institutions
+              </strong>
+              , with state-of-the-art machinery and a strong emphasis on{" "}
+              <strong className="font-semibold text-foreground">
+                confidentiality, quality, safety, and integrity
+              </strong>
+              . A woman director serves on the board, and we are committed to{" "}
+              <strong className="font-semibold text-foreground">
+                women&apos;s welfare and employment
+              </strong>{" "}
+              across technical and support roles. Our customers rely on us for
+              prompt statutory compliance and disciplined dispatch.
+            </p>
+            <p className="mt-4 rounded-xl border border-primary/10 bg-sky-50/80 px-4 py-3 text-sm leading-relaxed text-primary">
+              As stated in our company profile for buyers: among India&apos;s
+              leading security printers —{" "}
+              <strong className="font-semibold">first in Andhra Pradesh &amp; Telangana</strong>{" "}
+              and <strong className="font-semibold">third nationally</strong>.
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-primary/10 shadow-md">
-              <Image
-                src={siteImages.aboutEstate.src}
-                alt={siteImages.aboutEstate.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <figure className="relative aspect-[4/3] overflow-hidden rounded-xl border border-primary/10 shadow-md">
+                <Image
+                  src={siteImages.worksHyderabadMainGate.src}
+                  alt={siteImages.worksHyderabadMainGate.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+                <figcaption className="sr-only">Main gate — Hyderabad works</figcaption>
+              </figure>
+              <figure className="relative aspect-[4/3] overflow-hidden rounded-xl border border-primary/10 shadow-md">
+                <Image
+                  src={siteImages.worksHyderabadStreetView.src}
+                  alt={siteImages.worksHyderabadStreetView.alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+                <figcaption className="sr-only">Street view — Hyderabad works</figcaption>
+              </figure>
             </div>
+            <p className="text-center text-xs text-muted-foreground sm:text-left">
+              Hyderabad works — actual building exteriors at our Telangana plant.
+            </p>
             <div className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm">
               <p className="text-2xl font-bold text-accent">2009</p>
               <p className="mt-2 text-sm font-medium text-primary">
@@ -147,10 +234,65 @@ export default function AboutPage() {
             </div>
             <div className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm">
               <p className="text-sm font-semibold leading-relaxed text-primary">
-                75 Technical + 63 Non-Technical + 24 Managers
+                75 technical + 63 non-technical + 24 managers &amp; officers
+              </p>
+              <p className="mt-2 text-xs text-muted-foreground">
+                Technical staff are experienced in confidential programmes, per
+                company profile disclosures.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Profile highlights (company profile) */}
+      <section className="border-t border-border bg-muted/30 py-14 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
+            Profile highlights
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
+            Summary points from our published company profile — full statutory
+            tables and equipment schedules are in the downloadable PDF.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {profileHighlights.map(({ title, icon: Icon, body }) => (
+              <div
+                key={title}
+                className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-primary">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-center text-sm text-muted-foreground">
+            Hyderabad works: about{" "}
+            <strong className="font-medium text-primary">40,000 sq. ft.</strong>{" "}
+            plot and{" "}
+            <strong className="font-medium text-primary">35,000 sq. ft.</strong>{" "}
+            built-up. Vijayawada works: about{" "}
+            <strong className="font-medium text-primary">25,000 sq. ft.</strong>{" "}
+            — see{" "}
+            <Link href="/contact" className="font-medium text-accent hover:underline">
+              Contact
+            </Link>{" "}
+            for GST / MSME lines and{" "}
+            <Link
+              href="/infrastructure"
+              className="font-medium text-accent hover:underline"
+            >
+              Infrastructure
+            </Link>{" "}
+            for premises and plant security context.
+          </p>
         </div>
       </section>
 
@@ -195,6 +337,28 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Confidentiality & site security (company profile) */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
+          Confidentiality &amp; site security
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
+          Controls we disclose to institutional customers — aligned to our
+          company profile and ISO 27001 orientation.
+        </p>
+        <ul className="mx-auto mt-10 max-w-3xl space-y-3 text-sm leading-relaxed text-muted-foreground">
+          {securityPractices.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span
+                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                aria-hidden
+              />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* SECTION 4 — Management Team */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
@@ -206,7 +370,7 @@ export default function AboutPage() {
               <Users className="h-6 w-6" strokeWidth={1.75} aria-hidden />
             </div>
             <h3 className="mt-4 text-xl font-bold text-primary">
-              Shri R. Phani Krishna
+              Shri Ramisetti Phani Krishna
             </h3>
             <p className="text-sm font-medium text-accent">Managing Director</p>
             <dl className="mt-6 space-y-3 text-sm">
@@ -217,9 +381,16 @@ export default function AboutPage() {
                 </dd>
               </div>
               <div>
+                <dt className="font-semibold text-primary">Registered address</dt>
+                <dd className="mt-0.5 text-muted-foreground">
+                  Villa No. 190, APR Pranav Antilia, beside Keshava Reddy School,
+                  Indra Nagar, Bachupally, Hyderabad 500090
+                </dd>
+              </div>
+              <div>
                 <dt className="font-semibold text-primary">Education</dt>
                 <dd className="mt-0.5 text-muted-foreground">
-                  Diploma in Printing Technology, B.Tech, MBA
+                  Diploma in Printing Technology, B.Tech, MBA (postgraduate)
                 </dd>
               </div>
               <div>
@@ -247,9 +418,11 @@ export default function AboutPage() {
               </div>
             </dl>
             <p className="mt-6 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
-              With vast experience in the printing industry, Shri Phani Krishna
-              brought V.S. Hitech to national rank 3 and #1 in Andhra Pradesh &
-              Telangana through dedication and technical expertise.
+              With vast experience in the printing industry, he is credited in
+              our company profile with positioning V.S. Hitech among the top
+              security printers nationally and as the leading player in Andhra
+              Pradesh and Telangana — through sustained execution and technical
+              depth.
             </p>
           </article>
 
@@ -265,8 +438,19 @@ export default function AboutPage() {
               <div>
                 <dt className="font-semibold text-primary">Husband</dt>
                 <dd className="mt-0.5 text-muted-foreground">
-                  Shri R. Phani Krishna
+                  Shri Ramisetti Phani Krishna
                 </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-primary">Registered address</dt>
+                <dd className="mt-0.5 text-muted-foreground">
+                  Villa No. 190, APR Pranav Antilia, beside Keshava Reddy School,
+                  Indra Nagar, Bachupally, Hyderabad 500090
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-primary">Education</dt>
+                <dd className="mt-0.5 text-muted-foreground">Graduate</dd>
               </div>
               <div>
                 <dt className="font-semibold text-primary">Contact</dt>
@@ -281,10 +465,11 @@ export default function AboutPage() {
               </div>
             </dl>
             <p className="mt-6 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
-              Experienced in DTP, data entry in Indian and foreign languages, and
-              execution of commercial and confidential printing. Together they
-              have built V.S. Hitech into the region&apos;s most trusted
-              security printer.
+              Experienced in DTP, designing, and data entry in Indian and foreign
+              languages, and in the execution of commercial and confidential
+              printing. The company profile recognises her contribution alongside
+              the Managing Director in building V.S. Hitech into a trusted
+              security-print partner for the region.
             </p>
           </article>
         </div>

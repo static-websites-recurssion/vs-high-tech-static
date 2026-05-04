@@ -1,11 +1,26 @@
 /**
  * Central image paths and alt text for consistent SEO and accessibility.
- * Assets live under /public/images (AI-generated illustrative photography).
+ * Facility exteriors are site photography; other assets may be illustrative or from the company profile.
  */
 export const siteImages = {
+  /** Home hero — corporate logo on neutral field (softened in CSS for readability). */
+  heroReceptionBackdrop: {
+    src: "/images/home/hero-logo-backdrop.png",
+    alt: "V.S. Hitech corporate logo — blue mark on light background",
+  },
+  /** Street view of the Hyderabad works — used for page heroes and banners. */
   heroFacility: {
-    src: "/images/hero-print-facility.webp",
-    alt: "Modern security printing facility with commercial offset press and production floor",
+    src: "/images/facilities/hyderabad-works-street-view.webp",
+    alt: "Hyderabad manufacturing works — exterior street view of the V.S. Hitech facility",
+  },
+  /** Main gate and building front — used on About and plant-focused sections. */
+  worksHyderabadMainGate: {
+    src: "/images/facilities/hyderabad-works-main-gate.webp",
+    alt: "Hyderabad works main entrance — white building with gate and perimeter wall at V.S. Hitech",
+  },
+  worksHyderabadStreetView: {
+    src: "/images/facilities/hyderabad-works-street-view.webp",
+    alt: "Hyderabad works — street view of the multi-storey manufacturing building",
   },
   infraOffsetPress: {
     src: "/images/infra-offset-press.webp",
@@ -18,6 +33,11 @@ export const siteImages = {
   infraMaterials: {
     src: "/images/infra-materials.webp",
     alt: "Warehoused paper stock and cartons ready for controlled production use",
+  },
+  /** Home — Why Choose Us banner: on-site web press photography. */
+  whyChooseUsPress: {
+    src: "/images/home/why-choose-us-press.webp",
+    alt: "Multi-level blue web offset press with paper reels on the production floor at V.S. Hitech",
   },
   industryEducation: {
     src: "/images/industry-education.webp",
@@ -36,8 +56,8 @@ export const siteImages = {
     alt: "Corporate reports and business printing on a professional workspace",
   },
   aboutEstate: {
-    src: "/images/about-industrial-estate.webp",
-    alt: "Industrial estate with manufacturing buildings representing multi-location operations",
+    src: "/images/facilities/hyderabad-works-main-gate.webp",
+    alt: "Hyderabad works main entrance and building exterior at ALEAP Industrial Estate",
   },
   servicesBanner: {
     src: "/images/services-banner-texture.webp",

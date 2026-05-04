@@ -95,7 +95,7 @@ export function ContactDetailsForm({
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8"
+      className="min-w-0 max-w-full rounded-2xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8"
     >
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>

@@ -20,7 +20,12 @@ import {
 import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/lib/blog-posts";
+import { knowledgeCardImage } from "@/lib/knowledge-preview-media";
+import { machineryPlantPhotos } from "@/lib/machinery-plant-photos";
 import { siteImages } from "@/lib/site-images";
+
+/** Hero-side production shot — multi-level web offset (plant imagery). */
+const heroMachineryPhoto = machineryPlantPhotos[2];
 
 export const metadata: Metadata = {
   title: {
@@ -91,63 +96,124 @@ export default function HomePage() {
 
   return (
     <div className="bg-background">
-      {/* SECTION 1 — Hero */}
-      <section className="w-full bg-primary text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
-            <div>
-              <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.15]">
-                India&apos;s Trusted Security Printing Partner — Since 1997
-              </h1>
-              <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg">
-                Confidential question papers, OMR sheets, cheque books,
-                certificates, and 20+ more security print products. Serving
-                universities, banks, and government across Andhra Pradesh &
-                Telangana.
-              </p>
-              <TrustHeroCounters />
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button variant="accent" size="lg" asChild>
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
-                <Button variant="outlineLight" size="lg" asChild>
-                  <Link href="/services">View Services</Link>
-                </Button>
+      {/* SECTION 1 — Hero: logo field + copy; plant photography on larger screens */}
+      <section className="relative isolate w-full min-h-[min(100svh,880px)] overflow-hidden bg-[#dce8f4] text-sky-50">
+        <div className="absolute inset-0 overflow-hidden bg-[#dce8f4]">
+          <Image
+            src={siteImages.heroReceptionBackdrop.src}
+            alt=""
+            fill
+            className="object-contain object-center opacity-[0.38] blur-[6px] contrast-[0.92] sm:opacity-[0.42] sm:blur-[5px] md:blur-[4px]"
+            priority
+            sizes="100vw"
+            aria-hidden
+          />
+        </div>
+        {/* Blue-tinted scrims — ties hero to brand navy / sky */}
+        <div
+          className="absolute inset-0 bg-primary/22"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-[#0a1430]/78 via-[#1a2563]/48 to-[#0a1430]/78"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[#0a1430]/50 via-transparent to-sky-900/20"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-sky-400/12 via-transparent to-sky-600/10"
+          aria-hidden
+        />
+        <div className="relative z-10 mx-auto flex min-h-[min(100svh,880px)] w-full max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div className="grid w-full min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(260px,400px)] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(280px,420px)] xl:gap-12">
+            <div className="flex min-w-0 justify-center lg:justify-end">
+              <div className="w-full max-w-3xl sm:max-w-4xl lg:max-w-[42rem]">
+                <div className="rounded-3xl border border-sky-400/20 bg-gradient-to-br from-slate-950/55 via-[#121c3d]/35 to-primary/20 p-6 shadow-[0_8px_40px_-8px_rgba(8,20,60,0.45)] ring-1 ring-sky-400/10 sm:p-9 lg:p-10 xl:p-11">
+                  <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-sky-300 sm:text-sm">
+                    Triple ISO · Hyderabad &amp; Vijayawada
+                  </p>
+                  <h1 className="mt-4 text-balance bg-gradient-to-br from-white via-sky-100 to-sky-300 bg-clip-text text-center text-3xl font-medium leading-[1.18] tracking-[-0.02em] text-transparent sm:text-4xl md:text-5xl lg:text-[2.85rem] lg:leading-[1.1]">
+                    India&apos;s trusted security printing partner — since 1997
+                  </h1>
+                  <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[1.65] text-sky-200/90 sm:text-lg">
+                    Confidential question papers, OMR, cheque books, certificates,
+                    and institutional security print — for universities, banks, and
+                    government across Andhra Pradesh &amp; Telangana.
+                  </p>
+                  <TrustHeroCounters variant="hero" centered />
+                  <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
+                    <Button
+                      variant="accent"
+                      size="lg"
+                      className="shadow-lg shadow-black/20"
+                      asChild
+                    >
+                      <Link href="/contact">Contact us</Link>
+                    </Button>
+                    <Button
+                      variant="outlineLight"
+                      size="lg"
+                      className="border-sky-300/45 bg-sky-400/10 text-sky-50 hover:border-sky-200/60 hover:bg-sky-400/20"
+                      asChild
+                    >
+                      <Link href="/services">View services</Link>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-white/25 shadow-2xl lg:aspect-[4/3]">
-              <Image
-                src={siteImages.heroFacility.src}
-                alt={siteImages.heroFacility.alt}
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+
+            <figure className="mx-auto w-full max-w-md min-w-0 lg:mx-0 lg:max-w-none">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-primary/40 shadow-[0_20px_50px_-12px_rgba(8,30,80,0.55)] ring-1 ring-sky-400/25 sm:aspect-[5/6] lg:aspect-[3/4]">
+                <Image
+                  src={heroMachineryPhoto.src}
+                  alt={heroMachineryPhoto.alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                />
+              </div>
+              <figcaption className="mt-2.5 text-center text-[11px] font-medium leading-snug text-sky-200/80 lg:text-left">
+                {heroMachineryPhoto.caption}
+                <span className="mt-1 block">
+                  <Link
+                    href="/technology/machinery"
+                    className="font-semibold text-sky-300 underline-offset-2 hover:text-sky-200 hover:underline"
+                  >
+                    Our machinery →
+                  </Link>
+                </span>
+              </figcaption>
+            </figure>
           </div>
-          <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/20 pt-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-12 sm:gap-y-3 lg:gap-x-16">
-            <p className="text-center text-sm font-semibold text-gold">
-              ISO 9001:2015 Certified
-            </p>
-            <p className="text-center text-sm font-semibold text-gold">
-              ISO 27001:2013 Certified
-            </p>
-            <p className="text-center text-sm font-semibold text-gold">
-              ISO 14001:2015 Certified
-            </p>
+
+          <div className="mt-10 flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t border-sky-400/25 pt-8 text-center text-xs font-medium text-sky-200/85 sm:mt-12 sm:gap-x-4 sm:text-sm lg:mt-14">
+            <span className="font-semibold text-sky-200">ISO 9001:2015</span>
+            <span className="text-sky-500/45" aria-hidden>
+              ·
+            </span>
+            <span className="font-semibold text-sky-200">ISO 27001:2013</span>
+            <span className="text-sky-500/45" aria-hidden>
+              ·
+            </span>
+            <span className="font-semibold text-sky-200">ISO 14001:2015</span>
+            <span className="w-full text-sky-300/90 sm:ml-1 sm:w-auto">
+              NABCB-accredited management systems
+            </span>
           </div>
         </div>
       </section>
 
       {/* SECTION 2 — Stats bar */}
-      <section className="w-full border-t border-white/10 bg-primary text-white">
+      <section className="w-full border-t border-sky-900/30 bg-primary text-sky-50">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:px-8 lg:py-12">
           <div className="text-center sm:text-left">
             <p className="text-2xl font-bold text-accent sm:text-3xl">
               28+ Years
             </p>
-            <p className="mt-1 text-sm text-white/85">
+            <p className="mt-1 text-sm text-sky-200/85">
               Of Security Printing Experience
             </p>
           </div>
@@ -155,7 +221,7 @@ export default function HomePage() {
               <p className="text-2xl font-bold text-accent sm:text-3xl">
                 2 Units
               </p>
-              <p className="mt-1 text-sm text-white/85">
+              <p className="mt-1 text-sm text-sky-200/85">
                 Hyderabad &amp; Vijayawada plants
               </p>
             </div>
@@ -163,7 +229,7 @@ export default function HomePage() {
             <p className="text-2xl font-bold text-accent sm:text-3xl">
               365 Days
             </p>
-            <p className="mt-1 text-sm text-white/85">
+            <p className="mt-1 text-sm text-sky-200/85">
               Round-the-Clock Operations
             </p>
           </div>
@@ -171,10 +237,51 @@ export default function HomePage() {
             <p className="text-2xl font-bold text-accent sm:text-3xl">
               162 Staff
             </p>
-            <p className="mt-1 text-sm text-white/85">
+            <p className="mt-1 text-sm text-sky-200/85">
               Technical & Management Team
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Hyderabad works — real exteriors */}
+      <section className="border-t border-border bg-white py-14 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
+            Our Hyderabad works
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
+            Actual building exteriors at our Telangana plant — same audited
+            facility that runs confidential examination and banking programmes.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 shadow-md">
+              <Image
+                src={siteImages.worksHyderabadMainGate.src}
+                alt={siteImages.worksHyderabadMainGate.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 shadow-md">
+              <Image
+                src={siteImages.worksHyderabadStreetView.src}
+                alt={siteImages.worksHyderabadStreetView.alt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+          <p className="mt-8 text-center">
+            <Link
+              href="/infrastructure"
+              className="text-sm font-semibold text-accent hover:underline"
+            >
+              Infrastructure &amp; premises →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -228,10 +335,10 @@ export default function HomePage() {
           <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-primary/10 shadow-md">
             <div className="relative aspect-[21/9] w-full sm:aspect-[3/1]">
               <Image
-                src={siteImages.infraFinishing.src}
-                alt={siteImages.infraFinishing.alt}
+                src={siteImages.whyChooseUsPress.src}
+                alt={siteImages.whyChooseUsPress.alt}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 896px) 100vw, 896px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
@@ -313,7 +420,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/55 to-primary/25" />
-              <span className="relative z-10 m-auto px-4 text-center text-sm font-semibold leading-snug text-white sm:text-base">
+              <span className="relative z-10 m-auto px-4 text-center text-sm font-semibold leading-snug text-sky-50 drop-shadow-[0_1px_3px_rgba(0,20,60,0.5)] sm:text-base">
                 {label}
               </span>
             </Link>
@@ -322,52 +429,59 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 6 — Knowledge Centre teaser */}
-      <section className="border-t border-border bg-white py-16 lg:py-20">
+      <section className="border-t border-border bg-gradient-to-b from-sky-50/40 to-white py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="text-3xl font-bold text-primary sm:text-4xl">
-                Learn About Security Printing
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                Knowledge centre
+              </p>
+              <h2 className="mt-2 text-3xl font-bold text-primary sm:text-4xl">
+                Security printing — notes from our floors
               </h2>
-              <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-                Practical guidance for universities, banks, and government teams
-                — from OMR best practices to confidentiality controls.
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Short articles we use with{" "}
+                <strong className="font-medium text-foreground">
+                  exam cells, treasury teams, and audit visits
+                </strong>
+                : question-paper controls, OMR tolerances, MICR on cheque
+                books, and what{" "}
+                <strong className="font-medium text-foreground">
+                  ISO 27001
+                </strong>{" "}
+                actually changes in pre-press. Photography is from our{" "}
+                <strong className="font-medium text-foreground">
+                  Hyderabad and Vijayawada
+                </strong>{" "}
+                works — not stock art.
               </p>
             </div>
             <Link
               href="/knowledge/blog"
-              className="text-sm font-semibold text-accent hover:underline"
+              className="shrink-0 text-sm font-semibold text-accent hover:underline"
             >
-              View All Articles →
+              All articles →
             </Link>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {previewPosts.map((post) => (
+            {previewPosts.map((post) => {
+              const thumb = knowledgeCardImage(post.category);
+              return (
               <article
                 key={post.slug}
-                className="overflow-hidden rounded-2xl border border-primary/10 bg-background shadow-sm transition-shadow hover:shadow-md"
+                className="overflow-hidden rounded-2xl border border-primary/15 bg-white shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <Image
-                    src={
-                      post.category === "Education"
-                        ? siteImages.industryEducation.src
-                        : post.category === "Banking"
-                          ? siteImages.industryBanking.src
-                          : post.category === "Technology"
-                            ? siteImages.infraOffsetPress.src
-                            : post.category === "Products"
-                              ? siteImages.servicesBanner.src
-                              : siteImages.aboutEstate.src
-                    }
-                    alt=""
+                    src={thumb.src}
+                    alt={thumb.alt}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div
-                    className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"
+                    className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"
                     aria-hidden
                   />
                 </div>
@@ -376,24 +490,31 @@ export default function HomePage() {
                     <span className="rounded-full border border-primary/15 bg-sky-50 px-3 py-1 text-xs font-semibold text-primary">
                       {post.category}
                     </span>
-                    <time className="text-xs text-muted-foreground">
+                    <time
+                      className="text-xs tabular-nums text-muted-foreground"
+                      dateTime={post.date}
+                    >
                       {post.date}
                     </time>
                   </div>
                   <h3 className="mt-4 text-lg font-bold leading-snug text-primary">
                     {post.title}
                   </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {post.excerpt}
+                  </p>
                   <div className="mt-5">
                     <Link
                       href={`/knowledge/blog/${post.slug}`}
                       className="text-sm font-semibold text-accent hover:underline"
                     >
-                      Read More →
+                      Read article →
                     </Link>
                   </div>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -458,7 +579,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 8 — CTA Banner */}
-      <section className="relative w-full overflow-hidden bg-primary text-white">
+      <section className="relative w-full overflow-hidden bg-primary text-sky-50">
         <div className="absolute inset-0 opacity-20">
           <Image
             src={siteImages.infraOffsetPress.src}
@@ -469,11 +590,12 @@ export default function HomePage() {
             aria-hidden
           />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-sky-600/15 to-transparent mix-blend-overlay" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-16">
-          <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+          <h2 className="bg-gradient-to-r from-white via-sky-200 to-sky-100 bg-clip-text text-2xl font-bold text-transparent sm:text-3xl md:text-4xl">
             Ready to print with confidence?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-sky-200/95 sm:text-lg">
             Speak with our team in Hyderabad or Vijayawada
           </p>
           <Button
@@ -488,14 +610,14 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 9 — Certifications bar */}
-      <section className="border-t border-white/10 bg-primary py-12 text-white">
+      <section className="border-t border-sky-900/30 bg-primary py-12 text-sky-50">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:items-center">
             <div className="md:col-span-3">
-              <h2 className="text-2xl font-bold sm:text-3xl">
+              <h2 className="text-2xl font-bold text-sky-100 sm:text-3xl">
                 Certifications &amp; compliance
               </h2>
-              <p className="mt-2 max-w-2xl text-sm text-white/85 sm:text-base">
+              <p className="mt-2 max-w-2xl text-sm text-sky-200/90 sm:text-base">
                 International standards that support quality, confidentiality,
                 and responsible operations.
               </p>
@@ -516,10 +638,10 @@ export default function HomePage() {
                 ].map((b) => (
                   <div
                     key={b.code}
-                    className="rounded-xl border border-white/15 bg-white/5 px-5 py-5"
+                    className="rounded-xl border border-sky-400/25 bg-sky-950/25 px-5 py-5"
                   >
-                    <p className="text-sm font-bold text-gold">{b.code}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-white/80">
+                    <p className="text-sm font-bold text-sky-200">{b.code}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-sky-300/90">
                       {b.text}
                     </p>
                   </div>

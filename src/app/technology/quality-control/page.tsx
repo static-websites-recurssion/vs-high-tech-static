@@ -52,7 +52,7 @@ export default function QualityControlPage() {
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src="/images/tech-qc-background.png"
+            src="/images/tech-qc-background.webp"
             alt=""
             fill
             className="object-cover"

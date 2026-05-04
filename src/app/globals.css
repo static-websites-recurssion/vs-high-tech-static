@@ -8,11 +8,16 @@
   --foreground: #1a2563;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "Segoe UI", Arial,
     sans-serif;
+  overflow-x: clip;
 }
 
 @layer utilities {

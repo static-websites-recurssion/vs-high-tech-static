@@ -85,14 +85,14 @@ export function MachineCategoriesAccordion() {
                 type="button"
                 id={headerId}
                 className={cn(
-                  "flex w-full items-center justify-between gap-3 px-4 py-4 text-left text-base font-semibold text-primary transition-colors sm:px-5 sm:text-lg",
+                  "flex w-full min-w-0 items-center justify-between gap-3 px-4 py-4 text-left text-base font-semibold text-primary transition-colors sm:px-5 sm:text-lg",
                   isOpen ? "bg-primary/5" : "bg-white hover:bg-muted/80"
                 )}
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(isOpen ? -1 : index)}
               >
-                <span className="pr-2">{group.title}</span>
+                <span className="min-w-0 break-words pr-2">{group.title}</span>
                 <ChevronDown
                   className={cn(
                     "h-5 w-5 shrink-0 text-accent transition-transform duration-300 ease-out motion-reduce:transition-none",
@@ -119,10 +119,10 @@ export function MachineCategoriesAccordion() {
                   {group.items.map((item) => (
                     <li
                       key={item}
-                      className="flex gap-2 text-sm leading-relaxed text-muted-foreground sm:text-base"
+                      className="flex min-w-0 gap-2 text-sm leading-relaxed text-muted-foreground sm:text-base"
                     >
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                      <span>{item}</span>
+                      <span className="min-w-0 break-words">{item}</span>
                     </li>
                   ))}
                 </ul>

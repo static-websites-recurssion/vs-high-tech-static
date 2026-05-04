@@ -4,16 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import { blogPosts } from "@/lib/blog-posts";
-import { siteImages } from "@/lib/site-images";
-
-function categoryThumb(category: string) {
-  if (category === "Education") return siteImages.industryEducation;
-  if (category === "Banking") return siteImages.industryBanking;
-  if (category === "Technology") return siteImages.infraOffsetPress;
-  if (category === "Products") return siteImages.servicesBanner;
-  return siteImages.aboutEstate;
-}
+import { blogPosts, type BlogCategory } from "@/lib/blog-posts";
+import { knowledgeCardImage } from "@/lib/knowledge-preview-media";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -29,11 +21,11 @@ export function generateMetadata({
 
   return {
     title: { absolute: `${post.title} | VS Hitech Blog` },
-    description: `Blog post in ${post.category}: ${post.title}`,
+    description: post.excerpt,
   };
 }
 
-function pickRelated(slug: string, category: string) {
+function pickRelated(slug: string, category: BlogCategory) {
   const same = blogPosts.filter((p) => p.slug !== slug && p.category === category);
   const other = blogPosts.filter((p) => p.slug !== slug && p.category !== category);
   return [...same, ...other].slice(0, 3);
@@ -48,16 +40,17 @@ export default function BlogDetailPage({
   if (!post) notFound();
 
   const related = pickRelated(post.slug, post.category);
+  const heroThumb = knowledgeCardImage(post.category);
 
   return (
     <div className="bg-background">
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src={categoryThumb(post.category).src}
+            src={heroThumb.src}
             alt=""
             fill
-            className="object-cover"
+            className="object-cover object-center"
             sizes="100vw"
             priority
             aria-hidden
@@ -76,24 +69,31 @@ export default function BlogDetailPage({
           <h1 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             {post.title}
           </h1>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg">
+            {post.excerpt}
+          </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <article className="prose prose-slate max-w-none">
           <p>
-            Content placeholder. This article will be expanded with institutional
-            guidance, security controls, and implementation best practices.
+            Full article copy is prepared for your team to drop in from tenders,
+            internal SOPs, or customer FAQs. The summary above reflects how we
+            talk about this topic with buyers in Andhra Pradesh, Telangana, and
+            neighbouring states.
           </p>
           <p>
-            For now, use this template to publish updates about secure printing,
-            compliance, and large-scale program delivery.
+            For specifications on question papers, OMR, cheque books, certificates,
+            or variable-data programmes, contact our Hyderabad or Vijayawada
+            offices — we can share sample packs and audit-friendly process maps
+            under NDA.
           </p>
           <h2>Key takeaways</h2>
           <ul>
-            <li>Define security features as per your tender/RFP.</li>
-            <li>Confirm serial control, audit trails, and dispatch discipline.</li>
-            <li>Align timelines with testing and verification requirements.</li>
+            <li>Match security features and paper to your RFP — not a generic catalogue.</li>
+            <li>Serial control, gate logs, and destruction certificates beat marketing claims.</li>
+            <li>Build slack for proof, QC, and DCM dispatch into the exam or issuance calendar.</li>
           </ul>
         </article>
       </section>
@@ -104,7 +104,9 @@ export default function BlogDetailPage({
             Related posts
           </h2>
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {related.map((p) => (
+            {related.map((p) => {
+              const thumb = knowledgeCardImage(p.category);
+              return (
               <Link
                 key={p.slug}
                 href={`/knowledge/blog/${p.slug}`}
@@ -112,14 +114,14 @@ export default function BlogDetailPage({
               >
                 <div className="relative aspect-[16/10] w-full bg-muted">
                   <Image
-                    src={categoryThumb(p.category).src}
-                    alt={categoryThumb(p.category).alt}
+                    src={thumb.src}
+                    alt={thumb.alt}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div
-                    className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"
+                    className="absolute inset-0 bg-gradient-to-t from-primary/45 via-primary/5 to-transparent"
                     aria-hidden
                   />
                 </div>
@@ -133,12 +135,16 @@ export default function BlogDetailPage({
                 <p className="mt-4 text-sm font-bold leading-snug text-primary">
                   {p.title}
                 </p>
+                <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-muted-foreground">
+                  {p.excerpt}
+                </p>
                 <p className="mt-4 text-sm font-semibold text-accent">
-                  Read More →
+                  Read article →
                 </p>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 rounded-2xl border border-primary/10 bg-primary/5 p-8">

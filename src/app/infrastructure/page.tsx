@@ -9,7 +9,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { MachineCategoriesAccordion } from "@/components/infrastructure/machine-categories-accordion";
+import { MachineryOverviewSections } from "@/components/infrastructure/machinery-overview-sections";
 import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
@@ -41,150 +41,15 @@ const testingFacilities = [
   { label: "UV features testing", icon: Sparkles },
 ] as const;
 
-const opsSnapshot = [
-  {
-    stat: "2",
-    label: "Manufacturing units",
-    detail: "Hyderabad (Telangana) & Vijayawada (Andhra Pradesh)",
-  },
-  {
-    stat: "~60,000",
-    label: "Combined site footprint (sft)",
-    detail: "35,000 sft built-up Hyderabad + 25,000 sft Vijayawada",
-  },
-  {
-    stat: "24+",
-    label: "Machine & line categories",
-    detail: "Web offset, stationery, CTCP, binding, cutting, security finishing",
-  },
-  {
-    stat: "30,000+",
-    label: "Impressions / hour (web)",
-    detail: "High-speed colour web lines for volume examination & commercial work",
-  },
-] as const;
-
-const facilityPhotos = [
-  {
-    ...siteImages.infraOffsetPress,
-    caption: "High-volume web and sheet workflows",
-  },
-  {
-    ...siteImages.infraFinishing,
-    caption: "Finishing, collation, and dispatch discipline",
-  },
-  {
-    ...siteImages.infraMaterials,
-    caption: "Material control and batch traceability",
-  },
-] as const;
-
 export default function InfrastructurePage() {
   return (
     <div className="bg-background">
-      {/* SECTION 1 — Hero */}
-      <section className="relative w-full overflow-hidden bg-primary text-white">
-        <div className="absolute inset-0 opacity-25">
-          <Image
-            src={siteImages.infraMaterials.src}
-            alt=""
-            fill
-            className="object-cover object-center"
-            sizes="100vw"
-            priority
-            aria-hidden
-          />
-        </div>
-        <div className="absolute inset-0 bg-primary/88" aria-hidden />
-        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Infrastructure &amp; facilities
-          </h1>
-          <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Multi-location manufacturing for confidential and high-volume
-            institutional print — 365-day, 24×7 operations with segregated
-            security zones and audited disposal.
-          </p>
-        </div>
-      </section>
+      <MachineryOverviewSections
+        heroTitle="Infrastructure & facilities"
+        heroSubtitle="Multi-location manufacturing for confidential and high-volume institutional print — 365-day, 24×7 operations with segregated security zones and audited disposal."
+      />
 
-      {/* SECTION 2 — Operations snapshot */}
-      <section className="border-b border-border bg-white py-12 lg:py-14">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-xl font-bold text-primary sm:text-2xl">
-            Operations at a glance
-          </h2>
-          <p className="mx-auto mt-3 max-w-3xl text-center text-sm text-muted-foreground sm:text-base">
-            Scale and redundancy for government, university, and banking
-            programmes that cannot afford delays or capacity shortfalls.
-          </p>
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {opsSnapshot.map((row) => (
-              <div
-                key={row.label}
-                className="rounded-xl border border-primary/10 bg-sky-50/50 p-5 text-center shadow-sm sm:text-left"
-              >
-                <p className="text-2xl font-bold text-accent sm:text-3xl">
-                  {row.stat}
-                </p>
-                <p className="mt-2 text-sm font-semibold text-primary">
-                  {row.label}
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  {row.detail}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3 — Facility photography */}
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-          Production environment
-        </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-          Illustrative imagery aligned to our capabilities; on-site photography
-          available under NDA for qualified buyers. Scheduled plant visits can be
-          arranged through our offices.
-        </p>
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {facilityPhotos.map((photo) => (
-            <figure
-              key={photo.src}
-              className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                width={1200}
-                height={800}
-                className="aspect-[3/2] w-full object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <figcaption className="border-t border-border px-4 py-3 text-center text-xs font-medium text-primary">
-                {photo.caption}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      {/* SECTION 4 — Machine categories */}
-      <section className="mx-auto max-w-6xl px-4 pb-14 sm:px-6 lg:px-8 lg:pb-20">
-        <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-          Machine categories
-        </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Expand each group to view installed equipment and specifications.
-        </p>
-        <div className="mt-10">
-          <MachineCategoriesAccordion />
-        </div>
-      </section>
-
-      {/* SECTION 5 — Security Environment */}
+      {/* Security Environment */}
       <section className="border-y border-border bg-white py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
@@ -213,7 +78,7 @@ export default function InfrastructurePage() {
         </div>
       </section>
 
-      {/* SECTION 6 — Testing Facilities */}
+      {/* Testing Facilities */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
           Testing Facilities
@@ -235,7 +100,48 @@ export default function InfrastructurePage() {
         </div>
       </section>
 
-      {/* SECTION 7 — Premises */}
+      {/* Hyderabad works — actual exteriors */}
+      <section className="border-t border-border bg-muted/40 py-14 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
+            Hyderabad works — building exteriors
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
+            Site photography of our Telangana manufacturing facility (ALEAP
+            Industrial Estate, Nizampet).
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <figure className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm">
+              <Image
+                src={siteImages.worksHyderabadMainGate.src}
+                alt={siteImages.worksHyderabadMainGate.alt}
+                width={1024}
+                height={768}
+                className="aspect-[4/3] w-full object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <figcaption className="border-t border-border px-4 py-3 text-center text-xs font-medium text-primary">
+                Main entrance
+              </figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm">
+              <Image
+                src={siteImages.worksHyderabadStreetView.src}
+                alt={siteImages.worksHyderabadStreetView.alt}
+                width={768}
+                height={1024}
+                className="aspect-[3/4] w-full object-cover md:aspect-[4/3]"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <figcaption className="border-t border-border px-4 py-3 text-center text-xs font-medium text-primary">
+                Street view
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* Premises */}
       <section className="border-t border-border bg-primary py-14 text-primary-foreground lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">

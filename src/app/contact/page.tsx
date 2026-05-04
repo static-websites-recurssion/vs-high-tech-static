@@ -182,17 +182,17 @@ export default function ContactPage() {
             visitor clearance, please coordinate with our office before your
             visit.
           </p>
-          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="mt-10 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2">
             {mapEmbeds.map((m) => (
-              <div key={m.title}>
+              <div key={m.title} className="min-w-0">
                 <p className="mb-3 text-sm font-semibold text-primary">
                   {m.title}
                 </p>
-                <div className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm ring-1 ring-black/5">
+                <div className="min-w-0 overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm ring-1 ring-black/5">
                   <iframe
                     title={m.title}
                     src={m.src}
-                    className="aspect-[4/3] w-full border-0 sm:aspect-video"
+                    className="aspect-[4/3] max-h-[min(70vh,520px)] w-full min-w-0 border-0 sm:aspect-video"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     allowFullScreen

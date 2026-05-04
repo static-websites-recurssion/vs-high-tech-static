@@ -102,7 +102,7 @@ export default function SecurityFeaturesPage() {
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src="/images/tech-security-background.png"
+            src="/images/tech-security-background.webp"
             alt=""
             fill
             className="object-cover"

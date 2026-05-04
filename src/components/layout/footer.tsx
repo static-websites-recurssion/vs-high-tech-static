@@ -28,9 +28,9 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
-          <div>
-            <div className="flex items-center gap-3">
+        <div className="grid min-w-0 gap-10 md:grid-cols-2 lg:grid-cols-5">
+          <div className="min-w-0">
+            <div className="flex min-w-0 items-center gap-3">
               <Image
                 src="/brand-logo.png"
                 alt="V.S. Hitech logo"
@@ -38,11 +38,11 @@ export function Footer() {
                 height={44}
                 className="h-11 w-11"
               />
-              <p className="text-lg font-semibold text-white">
+              <p className="min-w-0 break-words text-lg font-semibold text-white">
                 V.S. Hitech Security Forms Pvt. Ltd.
               </p>
             </div>
-            <p className="mt-3 text-sm text-white/85">
+            <p className="mt-3 break-words text-sm text-white/85">
               Confidential security printing and institutional documentation for
               government, universities, and large enterprises — two plants, triple
               ISO certified.
@@ -59,7 +59,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-wider text-accent">
               Quick links
             </p>
@@ -77,7 +77,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-wider text-accent">
               Useful links
             </p>
@@ -105,32 +105,32 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-6">
-            <div className="flex gap-3">
+          <div className="min-w-0 space-y-6 lg:col-span-1">
+            <div className="flex min-w-0 gap-3">
               <MapPin
                 className="mt-0.5 h-5 w-5 shrink-0 text-accent"
                 aria-hidden
               />
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-wider text-accent">
                   Hyderabad
                 </p>
-                <p className="mt-1 text-sm text-white/90">
+                <p className="mt-1 break-words text-sm text-white/90">
                   Plot no: 74, Road No:7, ALEAP Industrial Estate, opp:JNTU
                   Kukatpally, Hyderabad-500090
                 </p>
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex min-w-0 gap-3">
               <MapPin
                 className="mt-0.5 h-5 w-5 shrink-0 text-accent"
                 aria-hidden
               />
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-wider text-accent">
                   Vijayawada
                 </p>
-                <p className="mt-1 text-sm text-white/90">
+                <p className="mt-1 break-words text-sm text-white/90">
                   Plot No. 11, Aleap Industrial Estate, Surampally Village,
                   Nunna, Vijayawada - 521 212
                 </p>
@@ -138,7 +138,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="min-w-0 space-y-4">
             <a
               href="tel:+919849068920"
               className="flex items-center gap-3 text-sm text-white/90 transition-colors hover:text-white"
@@ -164,8 +164,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/15 pt-6 text-center text-xs text-white/70">
-          © 2025 V.S. Hitech Security Forms Pvt. Ltd. | All Rights Reserved | Designed with pride in Hyderabad
+        <div className="mt-10 border-t border-white/15 pt-6 text-center text-xs leading-relaxed text-white/70">
+          <span className="inline-block max-w-full break-words">
+            © 2026 V.S. Hitech Security Forms Pvt. Ltd. | All Rights Reserved |
+            Designed with pride in Hyderabad
+          </span>
         </div>
       </div>
     </footer>

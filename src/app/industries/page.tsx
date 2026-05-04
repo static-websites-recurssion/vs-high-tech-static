@@ -39,18 +39,18 @@ const sectors = [
     label: "Banking & Financial Institutions",
     image: siteImages.industryBanking,
   },
-  {
-    headline: "Reliable Partner for Government Confidential Printing",
-    body: "Our triple ISO certification and strict security environment make us the preferred choice for government departments requiring confidential document printing with full audit trails and secure disposal.",
-    products: [
-      "Government forms",
-      "Ballot papers",
-      "Identity documents",
-      "Official stationery",
-    ],
-    label: "Government & Public Sector",
-    image: siteImages.industryGovernment,
-  },
+  // {
+  //   headline: "Reliable Partner for Government Confidential Printing",
+  //   body: "Our triple ISO certification and strict security environment make us the preferred choice for government departments requiring confidential document printing with full audit trails and secure disposal.",
+  //   products: [
+  //     "Government forms",
+  //     "Ballot papers",
+  //     "Identity documents",
+  //     "Official stationery",
+  //   ],
+  //   label: "Government & Public Sector",
+  //   image: siteImages.industryGovernment,
+  // },
   {
     headline: "End-to-End Print Solutions for Businesses",
     body: "From annual reports and book works to sticker printing and variable data printing, we support corporates with fast, high-quality print runs backed by state-of-the-art machinery.",
@@ -81,6 +81,7 @@ export default function IndustriesPage() {
             aria-hidden
           />
         </div>
+        <div className="absolute inset-0 bg-primary/80" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Industries we serve
@@ -105,11 +106,11 @@ export default function IndustriesPage() {
             }
           >
             <div
-              className={`mx-auto flex max-w-6xl flex-col gap-10 px-4 py-14 sm:px-6 lg:gap-14 lg:px-8 lg:py-20 ${
+              className={`mx-auto flex min-w-0 max-w-6xl flex-col gap-10 px-4 py-14 sm:px-6 lg:gap-14 lg:px-8 lg:py-20 ${
                 reverse ? "lg:flex-row-reverse" : "lg:flex-row"
               } lg:items-center`}
             >
-              <div className="w-full shrink-0 lg:w-[46%]">
+              <div className="w-full min-w-0 shrink-0 lg:w-[46%]">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-primary/10">
                   <Image
                     src={sector.image.src}
