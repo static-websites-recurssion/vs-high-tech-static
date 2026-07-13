@@ -171,14 +171,19 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-primary/10 shadow-md">
-              <Image
-                src={siteImages.aboutEstate.src}
-                alt={siteImages.aboutEstate.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="lg:sticky lg:top-24">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-primary/10 shadow-md lg:aspect-[4/5]">
+                <Image
+                  src={siteImages.aboutEstate.src}
+                  alt={siteImages.aboutEstate.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <p className="mt-2.5 text-center text-xs font-medium text-muted-foreground">
+                Hyderabad works — main entrance, ALEAP Industrial Estate
+              </p>
             </div>
           </div>
         </section>
@@ -459,14 +464,16 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 </div>
               </div>
             </div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-primary/10 shadow-md">
-              <Image
-                src={siteImages.industryCorporate.src}
-                alt={siteImages.industryCorporate.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="lg:sticky lg:top-24">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-primary/10 shadow-md lg:aspect-[4/5]">
+                <Image
+                  src={siteImages.industryCorporate.src}
+                  alt={siteImages.industryCorporate.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </section>

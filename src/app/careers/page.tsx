@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Careers | V.S. Hitech Security Forms",
   },
   description:
-    "Careers and institutional roles (placeholder until positions are listed).",
+    "Careers at V.S. Hitech — institutional roles are posted here when available; profiles are welcome year-round.",
 };
 
 export default function CareersPage() {

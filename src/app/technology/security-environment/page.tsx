@@ -101,11 +101,12 @@ export default function SecurityEnvironmentPage() {
       <section className="border-t border-border bg-white py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-            Photos placeholder sections
+            Inside the security environment
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Replace these with on-site plant photos (under NDA) when available.
-            The layout is designed to keep the page professional and fast.
+            How the controls translate to the floor — from access-managed zones
+            to supervised destruction of confidential waste. Detailed site
+            photography is shared with qualified buyers under NDA.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

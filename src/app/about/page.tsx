@@ -375,19 +375,6 @@ export default function AboutPage() {
             <p className="text-sm font-medium text-accent">Managing Director</p>
             <dl className="mt-6 space-y-3 text-sm">
               <div>
-                <dt className="font-semibold text-primary">Father</dt>
-                <dd className="mt-0.5 text-muted-foreground">
-                  Shri R. Prasad
-                </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-primary">Registered address</dt>
-                <dd className="mt-0.5 text-muted-foreground">
-                  Villa No. 190, APR Pranav Antilia, beside Keshava Reddy School,
-                  Indra Nagar, Bachupally, Hyderabad 500090
-                </dd>
-              </div>
-              <div>
                 <dt className="font-semibold text-primary">Education</dt>
                 <dd className="mt-0.5 text-muted-foreground">
                   Diploma in Printing Technology, B.Tech, MBA (postgraduate)
@@ -407,12 +394,6 @@ export default function AboutPage() {
                     className="block break-all text-accent hover:underline"
                   >
                     vsprints@gmail.com
-                  </a>
-                  <a
-                    href="mailto:vshitechs@gmail.com"
-                    className="block break-all text-accent hover:underline"
-                  >
-                    vshitechs@gmail.com
                   </a>
                 </dd>
               </div>
@@ -436,21 +417,11 @@ export default function AboutPage() {
             <p className="text-sm font-medium text-accent">Director</p>
             <dl className="mt-6 space-y-3 text-sm">
               <div>
-                <dt className="font-semibold text-primary">Husband</dt>
+                <dt className="font-semibold text-primary">Expertise</dt>
                 <dd className="mt-0.5 text-muted-foreground">
-                  Shri Ramisetti Phani Krishna
+                  DTP, multilingual design &amp; data entry, and confidential
+                  print execution
                 </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-primary">Registered address</dt>
-                <dd className="mt-0.5 text-muted-foreground">
-                  Villa No. 190, APR Pranav Antilia, beside Keshava Reddy School,
-                  Indra Nagar, Bachupally, Hyderabad 500090
-                </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-primary">Education</dt>
-                <dd className="mt-0.5 text-muted-foreground">Graduate</dd>
               </div>
               <div>
                 <dt className="font-semibold text-primary">Contact</dt>

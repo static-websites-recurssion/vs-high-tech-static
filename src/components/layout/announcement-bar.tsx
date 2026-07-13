@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function AnnouncementBar() {
   return (
     <div className="relative z-[60] border-b border-white/10 bg-primary px-2 py-2 text-center text-[11px] leading-snug text-white sm:px-3 sm:text-xs sm:leading-normal">
@@ -9,18 +7,18 @@ export function AnnouncementBar() {
         <span className="text-white/50" aria-hidden>
           |
         </span>
-        <span>Serving from 25+ Years</span>
+        <span>Serving institutions since 1997</span>
         <span className="text-white/50" aria-hidden>
           |
         </span>
         <span className="inline-flex flex-wrap items-baseline justify-center gap-x-1">
           <span>Call:</span>
-          <Link
+          <a
             href="tel:+919849068920"
             className="font-semibold text-accent underline-offset-2 hover:underline"
           >
             9849068920
-          </Link>
+          </a>
         </span>
       </p>
     </div>

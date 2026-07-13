@@ -25,8 +25,8 @@ const downloads = [
   {
     title: "ISO Certificates Overview",
     description:
-      "High-level summary of certifications and compliance posture (placeholder).",
-    href: "#",
+      "Certificate copies and scope statements for ISO 9001, 27001, and 14001 — shared with qualified buyers under NDA.",
+    href: "/contact",
     icon: ShieldCheck,
     image: siteImages.certificationsTrust,
     available: false,
@@ -34,8 +34,8 @@ const downloads = [
   {
     title: "Product Brochure",
     description:
-      "Product categories and security feature options (placeholder).",
-    href: "#",
+      "Product categories, substrates, and security feature options — request the latest edition from our team.",
+    href: "/contact",
     icon: Download,
     image: siteImages.servicesBanner,
     available: false,
@@ -103,8 +103,10 @@ export default function KnowledgeDownloadsPage() {
                 </p>
                 <div className="mt-6">
                   {disabled ? (
-                    <Button variant="outline" className="w-full" disabled>
-                      Download PDF
+                    <Button variant="outline" className="w-full" asChild>
+                      <Link href="/contact" prefetch={false}>
+                        Request via contact
+                      </Link>
                     </Button>
                   ) : (
                     <Button variant="accent" className="w-full" asChild>

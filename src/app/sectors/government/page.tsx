@@ -87,10 +87,11 @@ export default function GovernmentSectorPage() {
                 Sensitive land-record programs
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Competitors cite successful completion of Pattadar Pass Books for
-                TS Government. We position ourselves as a strong alternative for
-                AP/TS departments seeking multi-location capacity, documented
-                controls, and secure execution for similar programs.
+                Land-record and citizen-document programmes like Pattadar Pass
+                Books demand multi-location capacity, documented controls, and
+                secure end-to-end execution. Our two audited plants and
+                closed-vehicle dispatch discipline are built for exactly these
+                AP &amp; Telangana department programmes.
               </p>
             </div>
           </div>

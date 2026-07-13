@@ -166,12 +166,12 @@ export function Navbar() {
         >
           <span className="flex min-w-0 items-center gap-2 sm:gap-3">
             <Image
-              src="/brand-logo.png"
+              src="/images/home/logo-mark.png"
               alt="V.S. Hitech logo"
               width={34}
               height={34}
               priority
-              className="h-8 w-8 shrink-0 sm:h-9 sm:w-9"
+              className="h-8 w-8 shrink-0 object-contain sm:h-9 sm:w-9"
             />
             <span className="break-words hyphens-auto">
               VS HITECH SECURITY FORMS PVT LTD

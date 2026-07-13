@@ -84,7 +84,7 @@ export default function ContactPage() {
               <div>
                 <p className="font-semibold text-primary">Address</p>
                 <p className="mt-1 leading-relaxed">
-                  Plot no: 74, Road No:7, ALEAP Industrial Estate, opp:JNTU
+                  Plot No. 74, Road No. 7, ALEAP Industrial Estate, opp. JNTU
                   Kukatpally, Pragati Nagar, Nizampet (P.O.), Hyderabad-500090
                 </p>
               </div>

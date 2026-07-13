@@ -76,24 +76,38 @@ export default function BlogDetailPage({
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <article className="prose prose-slate max-w-none">
-          <p>
-            Full article copy is prepared for your team to drop in from tenders,
-            internal SOPs, or customer FAQs. The summary above reflects how we
-            talk about this topic with buyers in Andhra Pradesh, Telangana, and
-            neighbouring states.
+        <article className="space-y-5">
+          <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+            This is how we approach the topic with exam cells, treasury teams,
+            and procurement officers across Andhra Pradesh, Telangana, and
+            neighbouring states — grounded in the controls we run every day on
+            our own floors, not generic marketing claims.
           </p>
-          <p>
-            For specifications on question papers, OMR, cheque books, certificates,
-            or variable-data programmes, contact our Hyderabad or Vijayawada
-            offices — we can share sample packs and audit-friendly process maps
-            under NDA.
+          <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+            For specifications on question papers, OMR, cheque books,
+            certificates, or variable-data programmes, contact our Hyderabad or
+            Vijayawada offices — we can share sample packs and audit-friendly
+            process maps under NDA.
           </p>
-          <h2>Key takeaways</h2>
-          <ul>
-            <li>Match security features and paper to your RFP — not a generic catalogue.</li>
-            <li>Serial control, gate logs, and destruction certificates beat marketing claims.</li>
-            <li>Build slack for proof, QC, and DCM dispatch into the exam or issuance calendar.</li>
+          <h2 className="pt-4 text-2xl font-bold text-primary sm:text-3xl">
+            Key takeaways
+          </h2>
+          <ul className="space-y-3">
+            {[
+              "Match security features and paper to your RFP — not a generic catalogue.",
+              "Serial control, gate logs, and destruction certificates beat marketing claims.",
+              "Build slack for proof, QC, and DCM dispatch into the exam or issuance calendar.",
+            ].map((takeaway) => (
+              <li key={takeaway} className="flex gap-3">
+                <span
+                  className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                  aria-hidden
+                />
+                <span className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  {takeaway}
+                </span>
+              </li>
+            ))}
           </ul>
         </article>
       </section>

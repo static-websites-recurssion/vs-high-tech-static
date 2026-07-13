@@ -157,7 +157,7 @@ export default function InfrastructurePage() {
                 <div>
                   <h3 className="text-lg font-bold text-white">Hyderabad</h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/90">
-                    Plot no: 74, Road No:7, ALEAP Industrial Estate, opp:JNTU
+                    Plot No. 74, Road No. 7, ALEAP Industrial Estate, opp. JNTU
                     Kukatpally.
                   </p>
                   <ul className="mt-4 space-y-2 text-sm text-white/85">

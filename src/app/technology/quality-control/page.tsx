@@ -161,7 +161,7 @@ export default function QualityControlPage() {
               <div className="mt-6 overflow-hidden rounded-xl border border-primary/10 bg-white">
                 <Image
                   src={siteImages.infraFinishing.src}
-                  alt="QC and finishing placeholder"
+                  alt="Quality control and finishing area with bound output"
                   width={900}
                   height={540}
                   className="h-44 w-full object-cover"

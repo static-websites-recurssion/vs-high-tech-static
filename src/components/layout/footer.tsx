@@ -31,13 +31,15 @@ export function Footer() {
         <div className="grid min-w-0 gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="min-w-0">
             <div className="flex min-w-0 items-center gap-3">
-              <Image
-                src="/brand-logo.png"
-                alt="V.S. Hitech logo"
-                width={44}
-                height={44}
-                className="h-11 w-11"
-              />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1.5 shadow-sm">
+                <Image
+                  src="/images/home/logo-mark.png"
+                  alt="V.S. Hitech logo"
+                  width={36}
+                  height={36}
+                  className="h-full w-full object-contain"
+                />
+              </span>
               <p className="min-w-0 break-words text-lg font-semibold text-white">
                 V.S. Hitech Security Forms Pvt. Ltd.
               </p>
@@ -118,7 +120,7 @@ export function Footer() {
                   Hyderabad
                 </p>
                 <p className="mt-1 break-words text-sm text-white/90">
-                  Plot no: 74, Road No:7, ALEAP Industrial Estate, opp:JNTU
+                  Plot No. 74, Road No. 7, ALEAP Industrial Estate, opp. JNTU
                   Kukatpally, Hyderabad-500090
                 </p>
               </div>

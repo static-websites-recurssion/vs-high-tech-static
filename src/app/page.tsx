@@ -215,23 +215,23 @@ export default function HomePage() {
               28+ Years
             </p>
             <p className="mt-1 text-sm text-sky-200/85">
-              Of Security Printing Experience
+              Security printing experience
             </p>
           </div>
-            <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-accent sm:text-3xl">
-                2 Units
-              </p>
-              <p className="mt-1 text-sm text-sky-200/85">
-                Hyderabad &amp; Vijayawada plants
-              </p>
-            </div>
+          <div className="text-center sm:text-left">
+            <p className="text-2xl font-bold text-accent sm:text-3xl">
+              2 Units
+            </p>
+            <p className="mt-1 text-sm text-sky-200/85">
+              Hyderabad &amp; Vijayawada plants
+            </p>
+          </div>
           <div className="text-center sm:text-left">
             <p className="text-2xl font-bold text-accent sm:text-3xl">
               365 Days
             </p>
             <p className="mt-1 text-sm text-sky-200/85">
-              Round-the-Clock Operations
+              Round-the-clock operations
             </p>
           </div>
           <div className="text-center sm:text-left">
@@ -239,7 +239,7 @@ export default function HomePage() {
               162 Staff
             </p>
             <p className="mt-1 text-sm text-sky-200/85">
-              Technical & Management Team
+              Technical &amp; management team
             </p>
           </div>
         </div>
