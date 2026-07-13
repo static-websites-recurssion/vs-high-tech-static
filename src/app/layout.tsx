@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { RouteProgress } from "@/components/layout/route-progress";
 
 import "./globals.css";
 
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen min-w-0 flex-col font-sans antialiased`}
       >
+        <RouteProgress />
         <AnnouncementBar />
         <Navbar />
         <main className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-clip">

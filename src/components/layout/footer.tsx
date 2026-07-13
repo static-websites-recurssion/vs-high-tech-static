@@ -68,6 +68,7 @@ export function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
+                    prefetch={false}
                     className="text-white/90 transition-colors hover:text-white"
                   >
                     {label}
@@ -95,6 +96,7 @@ export function Footer() {
                   ) : (
                     <Link
                       href={href}
+                      prefetch={false}
                       className="text-white/90 transition-colors hover:text-white"
                     >
                       {label}

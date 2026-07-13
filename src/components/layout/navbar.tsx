@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -122,9 +122,11 @@ function isPathActive(pathname: string, href: string) {
 
 export function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const prefetchedMenus = useRef<Set<string>>(new Set());
 
   function openDropdown(key: string) {
     if (closeTimerRef.current) {
@@ -132,6 +134,13 @@ export function Navbar() {
       closeTimerRef.current = null;
     }
     setActiveMenu(key);
+    // Warm the menu's routes on open so the eventual click navigates instantly,
+    // without prefetching all ~35 dropdown routes on page load.
+    if (!prefetchedMenus.current.has(key)) {
+      prefetchedMenus.current.add(key);
+      const menu = dropdownMenus.find((m) => m.key === key);
+      menu?.items.forEach((it) => router.prefetch(it.href));
+    }
   }
 
   function scheduleClose(key: string) {
@@ -240,6 +249,7 @@ export function Navbar() {
                         <Link
                           key={item.href}
                           href={item.href}
+                          prefetch={false}
                           target={item.targetBlank ? "_blank" : undefined}
                           rel={
                             item.targetBlank ? "noopener noreferrer" : undefined
@@ -326,6 +336,7 @@ export function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      prefetch={false}
                       target={item.targetBlank ? "_blank" : undefined}
                       rel={
                         item.targetBlank ? "noopener noreferrer" : undefined
