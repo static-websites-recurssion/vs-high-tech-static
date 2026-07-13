@@ -21,11 +21,13 @@ import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/lib/blog-posts";
 import { knowledgeCardImage } from "@/lib/knowledge-preview-media";
-import { machineryPlantPhotos } from "@/lib/machinery-plant-photos";
 import { siteImages } from "@/lib/site-images";
 
-/** Hero-side production shot — multi-level web offset (plant imagery). */
-const heroMachineryPhoto = machineryPlantPhotos[2];
+/** Hero-side production shot — NAPH GRAPHICS Koncept web line (cleaned plant photography). */
+const heroMachineryPhoto = {
+  ...siteImages.heroPress,
+  caption: "NAPH GRAPHICS Koncept — 8-colour web line, Hyderabad works",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -96,44 +98,43 @@ export default function HomePage() {
 
   return (
     <div className="bg-background">
-      {/* SECTION 1 — Hero: logo field + copy; plant photography on larger screens */}
-      <section className="relative isolate w-full min-h-[min(100svh,880px)] overflow-hidden bg-[#dce8f4] text-sky-50">
-        <div className="absolute inset-0 overflow-hidden bg-[#dce8f4]">
+      {/* SECTION 1 — Hero: guilloche security pattern + copy; plant photography on larger screens */}
+      <section className="relative isolate w-full min-h-[min(100svh,880px)] overflow-hidden bg-[#0a1430] text-sky-50">
+        <div className="absolute inset-0 overflow-hidden">
           <Image
-            src={siteImages.heroReceptionBackdrop.src}
+            src={siteImages.heroPattern.src}
             alt=""
             fill
-            className="object-contain object-center opacity-[0.38] blur-[6px] contrast-[0.92] sm:opacity-[0.42] sm:blur-[5px] md:blur-[4px]"
+            className="object-cover object-center"
             priority
             sizes="100vw"
             aria-hidden
           />
         </div>
-        {/* Blue-tinted scrims — ties hero to brand navy / sky */}
         <div
-          className="absolute inset-0 bg-primary/22"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-[#0a1430]/78 via-[#1a2563]/48 to-[#0a1430]/78"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-[#0a1430]/50 via-transparent to-sky-900/20"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-sky-400/12 via-transparent to-sky-600/10"
+          className="absolute inset-0 bg-gradient-to-t from-[#0a1430]/60 via-transparent to-transparent"
           aria-hidden
         />
         <div className="relative z-10 mx-auto flex min-h-[min(100svh,880px)] w-full max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="grid w-full min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(260px,400px)] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(280px,420px)] xl:gap-12">
             <div className="flex min-w-0 justify-center lg:justify-end">
               <div className="w-full max-w-3xl sm:max-w-4xl lg:max-w-[42rem]">
-                <div className="rounded-3xl border border-sky-400/20 bg-gradient-to-br from-slate-950/55 via-[#121c3d]/35 to-primary/20 p-6 shadow-[0_8px_40px_-8px_rgba(8,20,60,0.45)] ring-1 ring-sky-400/10 sm:p-9 lg:p-10 xl:p-11">
-                  <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-sky-300 sm:text-sm">
-                    Triple ISO · Hyderabad &amp; Vijayawada
-                  </p>
+                <div className="rounded-3xl border border-sky-400/20 bg-gradient-to-br from-slate-950/55 via-[#121c3d]/35 to-primary/20 p-6 shadow-[0_8px_40px_-8px_rgba(8,20,60,0.45)] ring-1 ring-sky-400/10 backdrop-blur-[2px] sm:p-9 lg:p-10 xl:p-11">
+                  <div className="flex items-center justify-center gap-3">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/95 p-1.5 shadow-md ring-1 ring-sky-300/40 sm:h-12 sm:w-12">
+                      <Image
+                        src={siteImages.logoMark.src}
+                        alt={siteImages.logoMark.alt}
+                        width={40}
+                        height={40}
+                        className="h-full w-full object-contain"
+                        priority
+                      />
+                    </span>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300 sm:text-sm">
+                      Triple ISO · Hyderabad &amp; Vijayawada
+                    </p>
+                  </div>
                   <h1 className="mt-4 text-balance bg-gradient-to-br from-white via-sky-100 to-sky-300 bg-clip-text text-center text-3xl font-medium leading-[1.18] tracking-[-0.02em] text-transparent sm:text-4xl md:text-5xl lg:text-[2.85rem] lg:leading-[1.1]">
                     India&apos;s trusted security printing partner — since 1997
                   </h1>

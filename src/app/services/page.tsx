@@ -187,13 +187,12 @@ export default function ServicesPage() {
                         {item.useCase}
                       </p>
                     </div>
-                    <Button
-                      variant="accent"
-                      className="mt-6 w-full sm:w-auto"
-                      asChild
+                    <Link
+                      href="/contact"
+                      className="mt-auto pt-6 text-sm font-semibold text-accent hover:underline"
                     >
-                      <Link href="/contact">Contact us</Link>
-                    </Button>
+                      Get a quote →
+                    </Link>
                   </article>
                 ))}
               </div>

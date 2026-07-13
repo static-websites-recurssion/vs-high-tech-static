@@ -3,10 +3,20 @@
  * Facility exteriors are site photography; other assets may be illustrative or from the company profile.
  */
 export const siteImages = {
-  /** Home hero — corporate logo on neutral field (softened in CSS for readability). */
-  heroReceptionBackdrop: {
-    src: "/images/home/hero-logo-backdrop.png",
-    alt: "V.S. Hitech corporate logo — blue mark on light background",
+  /** Home hero — dark navy guilloche security-print pattern (generated backdrop). */
+  heroPattern: {
+    src: "/images/home/hero-pattern.webp",
+    alt: "",
+  },
+  /** Corporate logo mark with transparent background — for hero and brand accents. */
+  logoMark: {
+    src: "/images/home/logo-mark.png",
+    alt: "V.S. Hitech Security Forms logo mark",
+  },
+  /** Home hero — NAPH GRAPHICS Koncept web line, cleaned plant photography (portrait crop). */
+  heroPress: {
+    src: "/images/home/hero-press.webp",
+    alt: "NAPH GRAPHICS Koncept 8-colour web offset line on the V.S. Hitech production floor",
   },
   /** Street view of the Hyderabad works — used for page heroes and banners. */
   heroFacility: {
@@ -49,11 +59,11 @@ export const siteImages = {
   },
   industryGovernment: {
     src: "/images/industry-government.webp",
-    alt: "Institutional government building representing public-sector document programmes",
+    alt: "Indian government secretariat building with national flag — public-sector document programmes",
   },
   industryCorporate: {
     src: "/images/industry-corporate.webp",
-    alt: "Corporate reports and business printing on a professional workspace",
+    alt: "Boardroom table with bound annual reports and corporate print collateral",
   },
   aboutEstate: {
     src: "/images/facilities/hyderabad-works-main-gate.webp",

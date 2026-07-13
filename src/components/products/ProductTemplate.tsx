@@ -63,11 +63,36 @@ function SectorPill({ sector }: { sector: SectorTag }) {
   );
 }
 
+const processSteps = [
+  {
+    step: "Design",
+    detail:
+      "Approved artwork and specifications are locked in with your security checklist before anything moves to production.",
+  },
+  {
+    step: "Pre-press",
+    detail:
+      "Plates, serial ranges, and variable data are prepared in access-controlled pre-press rooms with dual verification.",
+  },
+  {
+    step: "Printing",
+    detail:
+      "Runs execute on a CCTV-monitored floor with single entry/exit, biometric access, and no mobile phones in the print area.",
+  },
+  {
+    step: "Quality Check → Dispatch",
+    detail:
+      "Counted, verified sets are sealed in tamper-evident packets and dispatched in DCM closed vehicles with audit-ready records.",
+  },
+] as const;
+
 function ProcessStep({
   step,
+  detail,
   index,
 }: {
   step: string;
+  detail: string;
   index: number;
 }) {
   return (
@@ -78,7 +103,7 @@ function ProcessStep({
       <div className="min-w-0">
         <p className="text-base font-semibold text-primary">{step}</p>
         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-          Secure workflow aligned to institutional compliance requirements.
+          {detail}
         </p>
       </div>
     </div>
@@ -175,10 +200,9 @@ export function ProductTemplate({ product }: { product: ProductData }) {
                 Our Process
               </h2>
               <div className="mt-6 space-y-5">
-                <ProcessStep step="Design" index={0} />
-                <ProcessStep step="Pre-press" index={1} />
-                <ProcessStep step="Printing" index={2} />
-                <ProcessStep step="Quality Check → Dispatch" index={3} />
+                {processSteps.map((p, i) => (
+                  <ProcessStep key={p.step} step={p.step} detail={p.detail} index={i} />
+                ))}
               </div>
             </div>
 
@@ -220,18 +244,7 @@ export function ProductTemplate({ product }: { product: ProductData }) {
           </article>
 
           <aside className="lg:sticky lg:top-24">
-            <div className="space-y-4">
-              <div className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm">
-                <h3 className="text-lg font-bold text-primary">
-                  Request Quote for This Product
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Enquiry sent via email with your details pre-filled for the
-                  production team.
-                </p>
-              </div>
-              <ProductQuoteForm productName={product.name} />
-            </div>
+            <ProductQuoteForm productName={product.name} />
           </aside>
         </div>
       </section>

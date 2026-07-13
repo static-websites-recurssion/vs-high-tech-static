@@ -39,18 +39,18 @@ const sectors = [
     label: "Banking & Financial Institutions",
     image: siteImages.industryBanking,
   },
-  // {
-  //   headline: "Reliable Partner for Government Confidential Printing",
-  //   body: "Our triple ISO certification and strict security environment make us the preferred choice for government departments requiring confidential document printing with full audit trails and secure disposal.",
-  //   products: [
-  //     "Government forms",
-  //     "Ballot papers",
-  //     "Identity documents",
-  //     "Official stationery",
-  //   ],
-  //   label: "Government & Public Sector",
-  //   image: siteImages.industryGovernment,
-  // },
+  {
+    headline: "Reliable Partner for Government Confidential Printing",
+    body: "Our triple ISO certification and strict security environment make us the preferred choice for government departments requiring confidential document printing with full audit trails and secure disposal.",
+    products: [
+      "Government forms",
+      "Ballot papers",
+      "Identity documents",
+      "Official stationery",
+    ],
+    label: "Government & Public Sector",
+    image: siteImages.industryGovernment,
+  },
   {
     headline: "End-to-End Print Solutions for Businesses",
     body: "From annual reports and book works to sticker printing and variable data printing, we support corporates with fast, high-quality print runs backed by state-of-the-art machinery.",

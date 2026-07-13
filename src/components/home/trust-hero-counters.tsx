@@ -75,7 +75,7 @@ export function TrustHeroCounters({
       ref={ref}
       className={cn(
         variant === "hero" && centered
-          ? "mt-8 flex flex-col items-center gap-8 sm:mt-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-10 sm:gap-y-6"
+          ? "mt-8 flex flex-row flex-wrap items-start justify-center gap-x-6 gap-y-5 sm:mt-10 sm:gap-x-10 sm:gap-y-6"
           : variant === "hero"
             ? "mt-8 flex flex-col gap-8 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-y-4"
             : "mt-10 grid grid-cols-1 gap-6 border-y border-white/15 py-8 sm:grid-cols-3 sm:gap-4 sm:py-10",

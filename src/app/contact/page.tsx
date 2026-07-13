@@ -49,37 +49,33 @@ const whyPoints = [
 export default function ContactPage() {
   return (
     <div className="bg-background">
-      <section className="relative w-full overflow-hidden border-b border-border">
-        <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-14 lg:px-8">
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-40 overflow-hidden rounded-b-2xl sm:h-48">
-            <Image
-              src={siteImages.heroFacility.src}
-              alt=""
-              fill
-              className="object-cover object-center opacity-40"
-              sizes="100vw"
-              aria-hidden
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/85 to-background"
-              aria-hidden
-            />
-          </div>
-          <div className="relative z-10">
-            <h1 className="text-center text-3xl font-bold text-primary sm:text-4xl">
-              Contact Us
-            </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-              Reach our Hyderabad or Vijayawada office by phone or email for site
-              visits and support.
-            </p>
-          </div>
+      <section className="relative w-full overflow-hidden bg-primary text-white">
+        <div className="absolute inset-0 opacity-25">
+          <Image
+            src={siteImages.heroFacility.src}
+            alt=""
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority
+            aria-hidden
+          />
+        </div>
+        <div className="absolute inset-0 bg-primary/80" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <h1 className="text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Contact Us
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-white/90">
+            Reach our Hyderabad or Vijayawada office by phone or email for site
+            visits and support.
+          </p>
         </div>
       </section>
 
       {/* SECTION 1 — Office cards */}
-      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
-        <div className="mt-2 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-lg font-bold text-primary sm:text-xl">
               Hyderabad Office &amp; Works
@@ -188,7 +184,7 @@ export default function ContactPage() {
                 <p className="mb-3 text-sm font-semibold text-primary">
                   {m.title}
                 </p>
-                <div className="min-w-0 overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm ring-1 ring-black/5">
+                <div className="min-w-0 overflow-hidden rounded-xl border border-primary/10 bg-muted shadow-sm ring-1 ring-black/5">
                   <iframe
                     title={m.title}
                     src={m.src}

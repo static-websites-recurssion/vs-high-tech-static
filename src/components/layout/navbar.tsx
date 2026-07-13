@@ -171,13 +171,13 @@ export function Navbar() {
         </Link>
 
         <nav
-          className="hidden items-center gap-1 md:flex lg:gap-2"
+          className="hidden items-center gap-0.5 lg:flex lg:gap-1 xl:gap-2"
           aria-label="Main"
         >
           <Link
             href="/"
             className={cn(
-              "rounded-md border-b-2 border-transparent px-3 py-2 text-sm font-medium transition-colors",
+              "whitespace-nowrap rounded-md border-b-2 border-transparent px-2 py-2 text-[13px] font-medium transition-colors xl:px-3 xl:text-sm",
               pathname === "/"
                 ? "border-accent text-primary"
                 : "border-transparent text-foreground/80 hover:bg-muted hover:text-primary"
@@ -201,7 +201,7 @@ export function Navbar() {
                 <Link
                   href={menu.href}
                   className={cn(
-                    "rounded-md border-b-2 border-transparent px-3 py-2 text-sm font-medium transition-colors",
+                    "whitespace-nowrap rounded-md border-b-2 border-transparent px-2 py-2 text-[13px] font-medium transition-colors xl:px-3 xl:text-sm",
                     parentActive
                       ? "border-accent text-primary"
                       : "border-transparent text-foreground/80 hover:bg-muted hover:text-primary"
@@ -281,7 +281,7 @@ export function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-primary"
@@ -298,7 +298,7 @@ export function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="max-h-[min(75vh,560px)] overflow-y-auto overscroll-y-contain border-t border-border bg-white px-4 py-3 md:hidden"
+          className="max-h-[min(75vh,560px)] overflow-y-auto overscroll-y-contain border-t border-border bg-white px-4 py-3 lg:hidden"
         >
           <div className="flex flex-col gap-2">
             <Link
