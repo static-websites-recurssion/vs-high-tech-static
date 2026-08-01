@@ -14,8 +14,23 @@ import {
 } from "lucide-react";
 
 import { ProductQuoteForm } from "@/components/products/ProductQuoteForm";
-import { productBySlug, type ProductData, type SectorTag } from "@/lib/products-data";
+import {
+  productBySlug,
+  type ProductData,
+  type ProductSlug,
+  type SectorTag,
+} from "@/lib/products-data";
 import { siteImages } from "@/lib/site-images";
+
+/** Products that go through binding, stitching, padding, or similar finishing. */
+const productsWithFinishingAndBinding = new Set<ProductSlug>([
+  "answer-booklets",
+  "cheque-books",
+  "pass-books",
+  "book-works",
+  "question-papers",
+  "carbonless-forms",
+]);
 
 function splitIntoParagraphs(text: string) {
   const sentences = text
@@ -63,28 +78,48 @@ function SectorPill({ sector }: { sector: SectorTag }) {
   );
 }
 
-const processSteps = [
-  {
-    step: "Design",
-    detail:
-      "Approved artwork and specifications are locked in with your security checklist before anything moves to production.",
-  },
-  {
-    step: "Pre-press",
-    detail:
-      "Plates, serial ranges, and variable data are prepared in access-controlled pre-press rooms with dual verification.",
-  },
-  {
-    step: "Printing",
-    detail:
-      "Runs execute on a CCTV-monitored floor with single entry/exit, biometric access, and no mobile phones in the print area.",
-  },
-  {
+type ProcessStepItem = { step: string; detail: string };
+
+function getProcessSteps(slug: ProductSlug): ProcessStepItem[] {
+  const steps: ProcessStepItem[] = [
+    {
+      step: "Design",
+      detail:
+        "We finalise your approved artwork and specifications, along with the security checklist, before production begins.",
+    },
+    {
+      step: "Pre-press",
+      detail:
+        "Plates, serial numbers, and variable data are prepared in access-controlled pre-press rooms, with every detail checked twice.",
+    },
+    {
+      step: "Printing",
+      detail:
+        "Printing happens on a CCTV-monitored floor with a single entry and exit, biometric access, and no mobile phones allowed.",
+    },
+    {
+      step: "Variable Data Printing",
+      detail:
+        "Barcodes, QR codes, serial numbers, names, and other unique data are printed on each sheet using our high-speed variable data machines.",
+    },
+  ];
+
+  if (productsWithFinishingAndBinding.has(slug)) {
+    steps.push({
+      step: "Finishing & Binding",
+      detail:
+        "Sheets are collated, trimmed, and finished — including perfect binding, saddle stitching, padding, or booklet making as required for the job.",
+    });
+  }
+
+  steps.push({
     step: "Quality Check → Dispatch",
     detail:
-      "Counted, verified sets are sealed in tamper-evident packets and dispatched in DCM closed vehicles with audit-ready records.",
-  },
-] as const;
+      "Sets are counted, checked, sealed in tamper-proof packets, and sent in closed DCM vehicles with complete records.",
+  });
+
+  return steps;
+}
 
 function ProcessStep({
   step,
@@ -112,6 +147,7 @@ function ProcessStep({
 
 export function ProductTemplate({ product }: { product: ProductData }) {
   const descriptionParagraphs = splitIntoParagraphs(product.description);
+  const processSteps = getProcessSteps(product.slug);
 
   return (
     <div className="bg-background">

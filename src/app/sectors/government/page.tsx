@@ -9,12 +9,11 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Government & PSUs | Sectors" },
   description:
-    "Confidential printing for government departments and PSUs: forms, ballot papers, official stationery and land records with audit-ready controls and secure disposal.",
+    "Confidential printing for government departments and PSUs — forms, official stationery, and land records, with complete records and secure disposal of waste.",
 };
 
 const products = [
   { title: "Government forms", href: "/services" },
-  { title: "Ballot papers", href: "/services" },
   { title: "Official stationery", href: "/services" },
   { title: "Patta / Pattadar Pass Books", href: "/services" },
   { title: "Confidential Question Papers", href: "/products/question-papers" },
@@ -22,10 +21,10 @@ const products = [
 ] as const;
 
 const securityPoints = [
-  "Full audit trail and job documentation where required",
-  "Dual verification for incoming/outgoing material",
+  "Complete records and job documentation wherever required",
+  "Double checking of all incoming and outgoing material",
   "Confidential waste shredded and burnt under supervision",
-  "Secure dispatch planning for sensitive deliverables",
+  "Careful dispatch planning for sensitive deliveries",
 ] as const;
 
 export default function GovernmentSectorPage() {
@@ -52,8 +51,8 @@ export default function GovernmentSectorPage() {
             Confidential Printing for Government Departments &amp; PSUs
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Confidential document programs delivered with security controls,
-            traceability, and high-volume capacity.
+            Confidential document printing with strong security controls, full
+            traceability, and capacity for very large volumes.
           </p>
         </div>
       </section>
@@ -87,17 +86,17 @@ export default function GovernmentSectorPage() {
                 Sensitive land-record programs
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Land-record and citizen-document programmes like Pattadar Pass
-                Books demand multi-location capacity, documented controls, and
-                secure end-to-end execution. Our two audited plants and
-                closed-vehicle dispatch discipline are built for exactly these
-                AP &amp; Telangana department programmes.
+                Land-record and citizen-document work like Pattadar Pass Books
+                needs large capacity, documented controls, and security from
+                start to finish. Our two audited plants and closed-vehicle
+                dispatch are built for exactly this kind of AP &amp; Telangana
+                department work.
               </p>
             </div>
           </div>
 
           <aside className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm lg:sticky lg:top-24">
-            <h3 className="text-lg font-bold text-primary">Security posture</h3>
+            <h3 className="text-lg font-bold text-primary">Our security controls</h3>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
               {securityPoints.map((s) => (
                 <li key={s} className="flex gap-3">
@@ -111,8 +110,8 @@ export default function GovernmentSectorPage() {
                 Dual verification + disposal
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Dual checking for incoming/outgoing material and controlled
-                confidential waste destruction.
+                Every item is checked twice — on the way in and on the way out
+                — and confidential waste is destroyed under supervision.
               </p>
               <div className="mt-4 flex gap-3 text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-sky-50 px-3 py-1.5">
@@ -135,8 +134,8 @@ export default function GovernmentSectorPage() {
             Need a secure government print partner?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-white/85 sm:text-base">
-            Share your department requirements and compliance checks. We’ll map
-            the workflow and dispatch plan.
+            Share your department&apos;s requirements and compliance checks. We
+            will plan the complete workflow and dispatch for you.
           </p>
           <Button variant="accent" size="lg" className="mt-8" asChild>
             <Link href="/contact">Contact us</Link>

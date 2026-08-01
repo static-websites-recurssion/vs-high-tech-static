@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "Infrastructure & Facilities | Two Plants, High-Volume Security Printing",
   },
   description:
-    "Two manufacturing units (Hyderabad & Vijayawada), 24+ machine categories, web offset to 30,000/hr, security environment, testing labs, and combined ~60,000 sft footprint.",
+    "Two manufacturing units (Hyderabad & Vijayawada), 24+ machine categories, web offset to 30,000/hr, security environment, testing labs, and combined 110,000+ sft footprint.",
 };
 
 const securityChecklist = [
@@ -46,7 +46,7 @@ export default function InfrastructurePage() {
     <div className="bg-background">
       <MachineryOverviewSections
         heroTitle="Infrastructure & facilities"
-        heroSubtitle="Multi-location manufacturing for confidential and high-volume institutional print — 365-day, 24×7 operations with segregated security zones and audited disposal."
+        heroSubtitle="Two plants for confidential, high-volume printing — running 365 days, 24×7, with separate security zones and secure waste disposal."
       />
 
       {/* Security Environment */}
@@ -107,8 +107,8 @@ export default function InfrastructurePage() {
             Hyderabad works — building exteriors
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-            Site photography of our Telangana manufacturing facility (ALEAP
-            Industrial Estate, Nizampet).
+            Real photos of our Hyderabad plant at ALEAP Industrial Estate,
+            Nizampet.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
             <figure className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm">
@@ -163,13 +163,7 @@ export default function InfrastructurePage() {
                   <ul className="mt-4 space-y-2 text-sm text-white/85">
                     <li>
                       <span className="font-semibold text-white">Area:</span>{" "}
-                      40,000 Sft
-                    </li>
-                    <li>
-                      <span className="font-semibold text-white">
-                        Built-up:
-                      </span>{" "}
-                      35,000 Sft
+                      70,000+ Sft
                     </li>
                     <li>
                       <span className="font-semibold text-white">GST:</span>{" "}
@@ -194,7 +188,7 @@ export default function InfrastructurePage() {
                   <ul className="mt-4 space-y-2 text-sm text-white/85">
                     <li>
                       <span className="font-semibold text-white">Area:</span>{" "}
-                      25,000 Sft
+                      40,000+ Sft
                     </li>
                     <li>
                       <span className="font-semibold text-white">GST:</span>{" "}

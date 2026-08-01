@@ -78,25 +78,24 @@ export default function BlogDetailPage({
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <article className="space-y-5">
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            This is how we approach the topic with exam cells, treasury teams,
-            and procurement officers across Andhra Pradesh, Telangana, and
-            neighbouring states — grounded in the controls we run every day on
-            our own floors, not generic marketing claims.
+            This is how we discuss the topic with exam cells and procurement
+            officers across Andhra Pradesh, Telangana, and nearby states —
+            based on the controls we actually run every day on our own floors,
+            not marketing claims.
           </p>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            For specifications on question papers, OMR, cheque books,
-            certificates, or variable-data programmes, contact our Hyderabad or
-            Vijayawada offices — we can share sample packs and audit-friendly
-            process maps under NDA.
+            For details on question papers, OMR sheets, certificates, or
+            variable data printing, contact our Hyderabad or Vijayawada office
+            — we can share samples and process documents under NDA.
           </p>
           <h2 className="pt-4 text-2xl font-bold text-primary sm:text-3xl">
             Key takeaways
           </h2>
           <ul className="space-y-3">
             {[
-              "Match security features and paper to your RFP — not a generic catalogue.",
-              "Serial control, gate logs, and destruction certificates beat marketing claims.",
-              "Build slack for proof, QC, and DCM dispatch into the exam or issuance calendar.",
+              "Choose security features and paper based on your tender needs — not a generic catalogue.",
+              "Serial numbering, gate registers, and destruction certificates matter more than marketing claims.",
+              "Keep buffer time for proofs, quality checks, and dispatch in your exam calendar.",
             ].map((takeaway) => (
               <li key={takeaway} className="flex gap-3">
                 <span

@@ -55,7 +55,7 @@ export const siteImages = {
   },
   industryBanking: {
     src: "/images/industry-banking.webp",
-    alt: "Secure financial document printing and banking stationery context",
+    alt: "Secure institutional document printing context",
   },
   industryGovernment: {
     src: "/images/industry-government.webp",

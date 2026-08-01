@@ -6,7 +6,7 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Our Security Environment" },
   description:
-    "A secure, confidential, dual-verified production environment for secure printing — entry/exit controls, guarded access, and responsible confidential waste handling.",
+    "How we keep confidential printing secure — controlled entry and exit, guarded access, double checking of material, and safe destruction of confidential waste.",
 };
 
 const securityChecklist = [
@@ -24,17 +24,17 @@ const securityChecklist = [
 const placeholderSections = [
   {
     title: "Controlled access zones",
-    body: "Visitors and staff are managed through defined access points with strict verification.",
+    body: "Staff and visitors enter only through fixed access points, with strict identity checks.",
     src: "/images/tech-placeholder-storage.webp",
   },
   {
     title: "Guarded secure handling",
-    body: "Sensitive production steps are monitored, with checks for inbound/outbound materials.",
+    body: "Sensitive production steps are monitored, and all incoming and outgoing material is checked.",
     src: "/images/tech-placeholder-lab.webp",
   },
   {
-    title: "Secure waste destruction flow",
-    body: "Confidential by-products are destroyed through shred-and-burn processes under supervision.",
+    title: "Secure waste destruction",
+    body: "All confidential waste is shredded and burnt under supervision — nothing leaves the plant.",
     src: siteImages.infraMaterials.src,
   },
 ] as const;
@@ -60,8 +60,8 @@ export default function SecurityEnvironmentPage() {
             Our Security Environment
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Institutional-grade confidentiality with documented, access-controlled
-            workflows from entry to dispatch.
+            Complete confidentiality with documented, access-controlled
+            processes — from the entry gate to final dispatch.
           </p>
         </div>
       </section>
@@ -72,8 +72,8 @@ export default function SecurityEnvironmentPage() {
             9-point security checklist
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            These controls support confidential printing, inventory discipline, and
-            secure disposal for sensitive job categories.
+            These controls protect confidential jobs, keep stock fully
+            accounted for, and ensure secure disposal of sensitive material.
           </p>
         </div>
 
@@ -104,9 +104,9 @@ export default function SecurityEnvironmentPage() {
             Inside the security environment
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            How the controls translate to the floor — from access-managed zones
+            How these controls work on the floor — from access-controlled zones
             to supervised destruction of confidential waste. Detailed site
-            photography is shared with qualified buyers under NDA.
+            photos are shared with genuine buyers under NDA.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -142,8 +142,9 @@ export default function SecurityEnvironmentPage() {
               How we handle confidential waste
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Confidential by-products are shred-and-burned under supervision.
-              Destruction is recorded and verified to ensure no residual leakage.
+              All confidential waste is shredded and burnt under supervision.
+              Every destruction is recorded and verified, so nothing can leak
+              out.
             </p>
 
             <ul className="mt-6 space-y-3 text-sm text-foreground/90">
@@ -152,8 +153,8 @@ export default function SecurityEnvironmentPage() {
                   •
                 </span>
                 <span>
-                  Dual verification: batch log at collection + destruction log
-                  after processing.
+                  Two records for every batch — one when waste is collected,
+                  one after it is destroyed.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -161,8 +162,8 @@ export default function SecurityEnvironmentPage() {
                   •
                 </span>
                 <span>
-                  All waste is handled as sensitive material with controlled
-                  movement inside the facility.
+                  All waste is treated as sensitive material and moves inside
+                  the plant only under supervision.
                 </span>
               </li>
             </ul>
@@ -170,11 +171,11 @@ export default function SecurityEnvironmentPage() {
 
           <aside className="rounded-2xl border border-primary/10 bg-primary/5 p-6 shadow-sm">
             <h3 className="text-lg font-bold text-primary">
-              Dual verification, documented
+              Checked twice, recorded always
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              This supports sensitive-job confidentiality for government and
-              institutional printing programmes.
+              This is how we protect confidentiality on sensitive government
+              and institutional printing work.
             </p>
           </aside>
         </div>

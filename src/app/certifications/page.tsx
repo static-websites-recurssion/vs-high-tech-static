@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Certifications | ISO 9001, ISO 27001 & ISO 14001 — V.S. Hitech",
   },
   description:
-    "Triple ISO-certified security printer: quality management (9001), information security (27001), and environmental management (14001). Trusted for confidential government and university work.",
+    "A four ISO certified security printer — quality management (9001), information security (27001), and environmental management (14001). Trusted for confidential government and university work.",
 };
 
 const certifications = [
@@ -46,9 +46,9 @@ const certifications = [
 ] as const;
 
 const trustBullets = [
-  "Preferred vendor profile for institutional tenders and empanelment",
-  "Security environment suitable for confidential examination and financial print",
-  "Dual-location redundancy for volume and business continuity planning",
+  "A strong vendor profile for tenders and empanelment",
+  "A security environment suited for confidential exam and financial printing",
+  "Two plants, so your work continues without interruption",
 ] as const;
 
 export default function CertificationsPage() {
@@ -67,12 +67,11 @@ export default function CertificationsPage() {
             <span className="font-medium text-white">Certifications</span>
           </nav>
           <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Certifications &amp; compliance posture
+            Certifications &amp; compliance
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Internationally recognised standards that underpin how we handle
-            quality, confidentiality, and environmental responsibility — every
-            day, at every shift.
+            International standards that guide how we manage quality,
+            confidentiality, and the environment — every day, every shift.
           </p>
         </div>
       </section>
@@ -132,7 +131,7 @@ export default function CertificationsPage() {
               <Shield className="h-6 w-6" strokeWidth={1.75} aria-hidden />
             </div>
             <h2 className="mt-4 text-lg font-bold text-primary">
-              Why it matters for your RFP
+              Why this matters for your tender
             </h2>
             <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
               {trustBullets.map((b) => (
@@ -145,8 +144,8 @@ export default function CertificationsPage() {
               ))}
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-              Certificate copies and scope details are shared with qualified
-              buyers under NDA as part of tender or vendor onboarding.
+              Certificate copies and scope details are shared with genuine
+              buyers under NDA during tender or vendor registration.
             </p>
             <Button variant="accent" className="mt-6 w-full" asChild>
               <Link href="/contact">Request documentation</Link>

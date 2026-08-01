@@ -13,11 +13,6 @@ export function knowledgeCardImage(category: BlogCategory): {
         src: machineryPlantPhotos[4].src,
         alt: machineryPlantPhotos[4].alt,
       };
-    case "Banking":
-      return {
-        src: machineryPlantPhotos[3].src,
-        alt: machineryPlantPhotos[3].alt,
-      };
     case "Technology":
       return {
         src: machineryPlantPhotos[5].src,

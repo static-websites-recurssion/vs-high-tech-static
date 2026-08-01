@@ -103,8 +103,8 @@ export function ContactDetailsForm({
             Send us your details
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Fill the form and click send. Your email app will open with a
-            pre-filled message.
+            Fill in the form and click send. Your email app will open with the
+            message ready — just press send.
           </p>
         </div>
       </div>
@@ -225,7 +225,7 @@ export function ContactDetailsForm({
             value={details.message}
             onChange={(e) => onChange("message", e.target.value)}
             className="mt-1 min-h-[120px] w-full resize-y rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none ring-0 focus:border-primary/40 focus:ring-2 focus:ring-primary/15"
-            placeholder="Tell us what you need (qty, size, delivery timeline, security features, etc.)"
+            placeholder="Tell us what you need — quantity, size, delivery timeline, security features, and so on."
           />
           {attemptedSubmit && errors.message ? (
             <p className="mt-1 text-xs text-red-600">{errors.message}</p>
@@ -235,7 +235,7 @@ export function ContactDetailsForm({
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-muted-foreground">
-          By clicking send, you’ll be redirected to your email application.
+          Clicking send will open your email app with the details filled in.
         </p>
         <button
           type="submit"

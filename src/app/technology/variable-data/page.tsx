@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: { absolute: "Variable Data Printing" },
   description:
-    "Variable Data Printing (VDP) at high speed using Konica Minolta 7120 & 6120 machines — unique barcodes, QR codes, serial numbers, and personalized documents for exams, ID cards, lottery and institutional programmes.",
+    "Variable Data Printing (VDP) at high speed using Konica Minolta 7120 & 6120 machines — unique barcodes, QR codes, serial numbers, and personalized documents for exams, ID cards, and institutional programmes.",
 };
 
 const capabilities = [
@@ -28,7 +28,7 @@ const capabilities = [
 const useCases = [
   "Hall tickets and examination documents",
   "ID cards and credential packs",
-  "Lottery tickets and promotional applications",
+  "Promotional applications and serialized labels",
   "Personalized certificates and verification cards",
 ];
 
@@ -53,8 +53,8 @@ export default function VariableDataPage() {
             Variable Data Printing
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Unique identification per document, printed at speed for
-            institutional accuracy and audit-ready execution.
+            Every document printed with its own unique number, barcode, or name
+            — at high speed and with full accuracy.
           </p>
         </div>
       </section>
@@ -67,14 +67,14 @@ export default function VariableDataPage() {
                 What is VDP?
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Variable Data Printing (VDP) is the production of printed items
-                where each unit contains unique information — for example
-                serial numbers, barcodes/QR codes, names, and personalized
-                fields — while keeping the overall layout consistent.
+                In Variable Data Printing (VDP), every printed piece carries
+                its own unique information — serial numbers, barcodes, QR
+                codes, or names — while the overall layout stays the same.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                We use VDP for programs that require traceability, validation,
-                and predictable delivery schedules for high-volume campaigns.
+                VDP is ideal for jobs where every piece must be traceable and
+                verifiable — like hall tickets and ID cards — even at very
+                large volumes.
               </p>
             </div>
 
@@ -99,15 +99,14 @@ export default function VariableDataPage() {
                     <p className="font-semibold text-primary">Konica Minolta 6120</p>
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Reliable variable fields and consistent print quality for
-                    institutional packs.
+                    Reliable variable printing with consistent quality, run
+                    after run.
                   </p>
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Where required, we combine variable data with security finishing
-                elements such as UV-visible features, serial control, and
-                tamper-evident components.
+                Where needed, we combine variable data with security features
+                like UV marks, serial numbering, and tamper-proof finishing.
               </p>
             </div>
 
@@ -153,15 +152,15 @@ export default function VariableDataPage() {
           <aside className="lg:sticky lg:top-24">
             <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-primary">
-                Ready for VDP at scale?
+                Have a variable data job?
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Share your data fields and security requirements. We’ll align
-                machine routes, serial control, and dispatch timelines for
-                your program.
+                Share your data fields and security requirements. We will plan
+                the machines, serial numbering, and delivery schedule for your
+                job.
               </p>
               <Button variant="accent" size="lg" className="mt-6 w-full" asChild>
-                <Link href="/contact">Contact for VDP capability</Link>
+                <Link href="/contact">Contact us about VDP</Link>
               </Button>
             </div>
           </aside>

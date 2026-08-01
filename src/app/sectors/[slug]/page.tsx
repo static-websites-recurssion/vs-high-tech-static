@@ -3,7 +3,6 @@ import Head from "next/head";
 export function generateStaticParams() {
   return [
     { slug: "education" },
-    { slug: "banking" },
     { slug: "government" },
     { slug: "corporate" },
   ];

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | V.S. Hitech Security Forms",
   },
   description:
-    "Triple ISO-certified security printing in Hyderabad & Vijayawada — question papers, OMR, cheque books, certificates, and confidential print for AP & Telangana.",
+    "Four ISO-certified security printing in Hyderabad & Vijayawada — question papers, OMR, certificates, and confidential print for AP & Telangana.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=3", type: "image/x-icon" },

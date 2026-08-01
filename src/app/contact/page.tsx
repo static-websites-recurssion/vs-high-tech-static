@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Contact Us | Hyderabad & Vijayawada Security Printing",
   },
   description:
-    "Hyderabad & Vijayawada offices, phone and email, Google Maps directions — triple ISO certified security printing for AP & Telangana.",
+    "Hyderabad & Vijayawada offices, phone and email, Google Maps directions — four ISO certified security printing for AP & Telangana.",
 };
 
 const mapEmbeds = [
@@ -30,18 +30,18 @@ const mapEmbeds = [
 
 const whyPoints = [
   {
-    title: "Fast turnaround response",
-    body: "We respond promptly so you get timelines and next steps without delay.",
+    title: "Quick response",
+    body: "We reply promptly with clear timelines and next steps.",
     icon: Clock,
   },
   {
-    title: "Confidential handling of all specs",
-    body: "Your job details are treated as sensitive and shared only on a need-to-know basis.",
+    title: "Your details stay confidential",
+    body: "Your job details are kept confidential and shared only with the team working on them.",
     icon: Shield,
   },
   {
-    title: "Free site visit available for large orders",
-    body: "For substantial requirements, we can arrange a visit to align on security and logistics.",
+    title: "Free site visit for large orders",
+    body: "For large requirements, our team can visit you to discuss security and delivery planning.",
     icon: MapPin,
   },
 ] as const;
@@ -67,8 +67,8 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-white/90">
-            Reach our Hyderabad or Vijayawada office by phone or email for site
-            visits and support.
+            Call or email our Hyderabad or Vijayawada office. We are happy to
+            help with quotes, samples, and site visits.
           </p>
         </div>
       </section>
@@ -174,9 +174,8 @@ export default function ContactPage() {
             Find us on the map
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground">
-            Approximate map pins for each plant. For exact gate access and
-            visitor clearance, please coordinate with our office before your
-            visit.
+            Map pins show the approximate location of each plant. Please call
+            our office before visiting so we can arrange your gate entry.
           </p>
           <div className="mt-10 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2">
             {mapEmbeds.map((m) => (

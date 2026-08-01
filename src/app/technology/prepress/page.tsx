@@ -83,8 +83,8 @@ export default function PrepressPage() {
             Pre-Press &amp; DTP
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Accurate plates start with disciplined DTP, imaging, and secure
-            pre-press workflows.
+            Good printing starts with good plates — careful DTP, imaging, and
+            secure pre-press work.
           </p>
         </div>
       </section>
@@ -96,8 +96,8 @@ export default function PrepressPage() {
               DTP &amp; Imaging
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Configured for institutional-scale jobs where formatting fidelity
-              and scan accuracy matter.
+              Set up for large jobs where correct formatting and scan accuracy
+              matter.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
               {dtpAndImaging.map((item) => (
@@ -158,8 +158,8 @@ export default function PrepressPage() {
               Plate Exposure &amp; Development
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Controlled exposure and chemical development for stable plate
-              characteristics.
+              Controlled exposure and development so every plate comes out
+              consistent.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
               {plateExposureAndDev.map((item) => (
@@ -187,11 +187,11 @@ export default function PrepressPage() {
 
           <div className="rounded-2xl border border-primary/10 bg-primary/5 p-6 shadow-sm">
             <h3 className="text-xl font-bold text-primary">
-              Need a pre-press capability confirmation?
+              Have questions about pre-press?
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              We can align file formats, plate requirements, security elements,
-              and dispatch timelines for your institutional job.
+              We will help you finalise file formats, plate requirements,
+              security features, and delivery timelines for your job.
             </p>
             <Button variant="accent" size="lg" className="mt-5" asChild>
               <Link href="/contact">Contact for pre-press support</Link>

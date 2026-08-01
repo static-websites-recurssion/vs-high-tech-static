@@ -40,19 +40,19 @@ const whyUsPoints = [
     title: "Confidentiality-first operations",
     icon: Lock,
     description:
-      "Single entry/exit discipline, controlled access, CCTV oversight, and strict process adherence for sensitive jobs.",
+      "Controlled entry and exit, restricted access, CCTV monitoring, and strict procedures for handling sensitive work.",
   },
   {
     title: "ISO-led process & quality discipline",
     icon: Award,
     description:
-      "Triple ISO-certified workflows with checkpoints from pre-press to finishing and dispatch verification.",
+      "Four ISO-certified processes with quality checks at every stage, from pre-press to finishing and final dispatch.",
   },
   {
-    title: "Institutional scale, two locations",
+    title: "Institutional scale, Multiple locations",
     icon: ShieldCheck,
     description:
-      "Hyderabad & Vijayawada plants built for high-volume programs with reliable delivery planning.",
+      "Our Hyderabad and Vijayawada plants combine advanced printing technology with efficient production to deliver consistent, high-quality results across India.",
   },
 ] as const;
 
@@ -77,7 +77,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
       : slug === "management"
         ? "Leadership and accountability behind 28+ years of security printing."
         : slug === "certifications"
-          ? "Compliance posture that supports tenders, onboarding, and audit expectations."
+          ? "Strong compliance practices that meet tender requirements, customer onboarding standards, and audit expectations."
           : slug === "infrastructure"
             ? "Plants, machinery readiness, and production capability across two locations."
             : "Inclusive workforce practices and community-oriented commitments.";
@@ -140,9 +140,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 What makes us a trusted security printer
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                We work with universities, banks, and government departments where
-                confidentiality and audit readiness matter as much as on-time delivery.
-                Our operations are built around access control, traceability, and disciplined dispatch.
+              We work with universities, educational boards, and government organizations where security, confidentiality, and accurate record-keeping are essential. Our processes ensure controlled access, complete tracking, and timely, well-managed delivery.
               </p>
               <div className="mt-8 space-y-4">
                 {whyUsPoints.map((p) => {
@@ -210,7 +208,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               <h3 className="mt-4 text-xl font-bold text-primary">Shri R. Phani Krishna</h3>
               <p className="text-sm font-medium text-accent">Managing Director</p>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                28+ years of industry experience with strong focus on security printing discipline,
+                over 30 years of industry experience with strong focus on security printing discipline,
                 institutional delivery timelines, and compliance-driven operations.
               </p>
             </article>
@@ -239,7 +237,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
 
       {slug === "certifications" ? (
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[3fr_2fr] lg:items-start">
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
                 Compliance & certifications
@@ -249,83 +247,26 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 and clear responsibilities. We maintain ISO-led workflows across production and information handling.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                For universities, banks, and government departments, this translates into disciplined job intake,
+                For universities and government departments, this translates into disciplined job intake,
                 controlled approvals, traceable production steps, and verification before dispatch—so your program
                 stays compliant and predictable even at high volumes.
               </p>
-
-              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-primary/10 bg-white p-5 shadow-sm">
-                  <p className="text-xs font-bold uppercase tracking-wide text-accent">
-                    ISO 9001
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-primary">
-                    Quality Management
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Standardised process controls from pre-press to finishing to reduce defects and rework.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-primary/10 bg-white p-5 shadow-sm">
-                  <p className="text-xs font-bold uppercase tracking-wide text-accent">
-                    ISO 27001
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-primary">
-                    Information Security
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Controls for confidential data handling, access discipline, and secure production practices.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-primary/10 bg-white p-5 shadow-sm">
-                  <p className="text-xs font-bold uppercase tracking-wide text-accent">
-                    ISO 14001
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-primary">
-                    Environmental Management
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Responsible operations and waste handling discipline aligned to defined procedures.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 rounded-2xl border border-primary/10 bg-primary/5 p-6">
-                <p className="text-sm font-semibold text-primary">
-                  What we can share for onboarding / tenders (as applicable)
-                </p>
-                <ul className="mt-3 grid grid-cols-1 gap-2 text-sm text-muted-foreground sm:grid-cols-2">
-                  <li>Certificate copies and scope statements</li>
-                  <li>Process flow & quality checkpoints</li>
-                  <li>Security environment overview (under NDA if required)</li>
-                  <li>Dispatch & audit trail approach</li>
-                </ul>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button variant="accent" size="lg" asChild>
-                  <Link href="/certifications">Open Certifications page</Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="/company-profile.pdf" download>
-                    Download company profile
-                  </a>
-                </Button>
-              </div>
             </div>
-            <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
+
+            <aside className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold ring-2 ring-gold/30">
                   <Award className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                 </div>
                 <div>
-                  <p className="text-sm font-bold uppercase tracking-wide text-accent">Triple ISO</p>
+                  <p className="text-sm font-bold uppercase tracking-wide text-accent">Four ISO</p>
                   <p className="text-lg font-semibold text-primary">9001 • 27001 • 14001</p>
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 For scope statements, certificate copies, and procurement packs, please use the Certifications page or contact us.
               </p>
-              <div className="mt-6 grid grid-cols-1 gap-3">
+              <div className="mt-6 space-y-3">
                 <div className="rounded-xl border border-primary/10 bg-background px-4 py-3">
                   <p className="text-sm font-semibold text-primary">
                     Built for audits and repeatable delivery
@@ -343,7 +284,65 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                   </p>
                 </div>
               </div>
-            </div>
+            </aside>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {[
+              {
+                code: "ISO 9001",
+                title: "Quality Management",
+                body: "Standardised process controls from pre-press to finishing to reduce defects and rework.",
+              },
+              {
+                code: "ISO 27001",
+                title: "Information Security",
+                body: "Controls for confidential data handling, access discipline, and secure production practices.",
+              },
+              {
+                code: "ISO 14001",
+                title: "Environmental Management",
+                body: "Responsible operations and waste handling discipline aligned to defined procedures.",
+              },
+            ].map((iso) => (
+              <article
+                key={iso.code}
+                className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm"
+              >
+                <p className="text-xs font-bold uppercase tracking-wide text-accent">
+                  {iso.code}
+                </p>
+                <h3 className="mt-3 text-lg font-semibold text-primary">
+                  {iso.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {iso.body}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-primary/10 bg-primary/5 p-6">
+            <p className="text-sm font-semibold text-primary">
+              What we can share for onboarding / tenders (as applicable)
+            </p>
+            <ul className="mt-3 grid grid-cols-1 gap-2 text-sm text-muted-foreground sm:grid-cols-2 lg:grid-cols-4">
+              <li>Certificate copies and scope statements</li>
+              <li>Process flow & quality checkpoints</li>
+              <li>Security environment overview (under NDA if required)</li>
+              <li>Dispatch & audit trail approach</li>
+            </ul>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button variant="accent" size="lg" asChild>
+              <Link href="/certifications">Open Certifications page</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/company-profile.pdf" download>
+                Download company profile
+              </a>
+            </Button>
           </div>
         </section>
       ) : null}

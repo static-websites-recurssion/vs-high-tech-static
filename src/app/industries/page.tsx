@@ -6,16 +6,16 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Industries We Serve | Education, Banking, Government & Corporate Printing",
+      "Industries We Serve | Education, Government & Corporate Printing",
   },
   description:
-    "Security printing for universities & exam boards, banks & NBFCs, government departments, and corporates across Andhra Pradesh & Telangana.",
+    "Security printing for universities & exam boards, government departments, and corporates across Andhra Pradesh & Telangana.",
 };
 
 const sectors = [
   {
     headline: "Trusted by Universities and Exam Bodies Across South India",
-    body: "We specialize in the high-confidentiality printing of question papers, OMR sheets, answer booklets, and university certificates for universities, PSCs, recruitment boards, and coaching institutions. Our single-entry facility, CCTV monitoring, and DCM closed-vehicle delivery ensure zero leakage from press to exam hall.",
+    body: "We print question papers, OMR sheets, answer booklets, and certificates for universities, PSCs, recruitment boards, and coaching institutions — all under high confidentiality. With a single-entry facility, CCTV monitoring, and closed-vehicle delivery, there is zero leakage from press to exam hall.",
     products: [
       "Question papers",
       "OMR sheets",
@@ -27,24 +27,10 @@ const sectors = [
     image: siteImages.industryEducation,
   },
   {
-    headline: "Secure Financial Documents for Banks and NBFCs",
-    body: "From MICR-encoded cheque books to pass books, dividend warrants, and pay-in slips, we print financial documents that meet the highest security and compliance standards.",
-    products: [
-      "Cheque books",
-      "Pass books",
-      "Dividend warrants",
-      "Pay-in slips",
-      "Deposit forms",
-    ],
-    label: "Banking & Financial Institutions",
-    image: siteImages.industryBanking,
-  },
-  {
     headline: "Reliable Partner for Government Confidential Printing",
-    body: "Our triple ISO certification and strict security environment make us the preferred choice for government departments requiring confidential document printing with full audit trails and secure disposal.",
+    body: "Our four ISO certifications and strict security environment make us a trusted choice for government departments that need confidential printing with full records and secure disposal of waste.",
     products: [
       "Government forms",
-      "Ballot papers",
       "Identity documents",
       "Official stationery",
     ],
@@ -53,7 +39,7 @@ const sectors = [
   },
   {
     headline: "End-to-End Print Solutions for Businesses",
-    body: "From annual reports and book works to sticker printing and variable data printing, we support corporates with fast, high-quality print runs backed by state-of-the-art machinery.",
+    body: "From annual reports and book works to stickers and variable data printing, we support companies with fast, high-quality print runs on modern machinery.",
     products: [
       "Annual reports",
       "Share certificates",
@@ -87,8 +73,8 @@ export default function IndustriesPage() {
             Industries we serve
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Government departments, universities, banks, and enterprises that
-            require confidential handling, scale, and audit-friendly production.
+            We serve government departments, universities, and companies that
+            need confidential, large-volume printing with proper records.
           </p>
         </div>
       </section>

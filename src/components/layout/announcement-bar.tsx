@@ -3,7 +3,7 @@ export function AnnouncementBar() {
     <div className="relative z-[60] border-b border-white/10 bg-primary px-2 py-2 text-center text-[11px] leading-snug text-white sm:px-3 sm:text-xs sm:leading-normal">
       <p className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-1.5 gap-y-1 break-words sm:gap-x-2">
         <span aria-hidden>🔒</span>
-        <span className="font-medium">Triple ISO Certified</span>
+        <span className="font-medium">Four ISO Certified</span>
         <span className="text-white/50" aria-hidden>
           |
         </span>

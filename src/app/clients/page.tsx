@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Building2, GraduationCap, Landmark, Briefcase } from "lucide-react";
+import { Building2, GraduationCap, Briefcase } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteImages } from "@/lib/site-images";
@@ -9,8 +9,12 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Our Clients & Sectors Served" },
   description:
-    "For 28 years we have served universities, banks, government departments, and corporations across Andhra Pradesh and Telangana. Client names are kept confidential to protect security requirements.",
+    "For 28 years we have served universities, government departments, and corporations across India. Client names are kept confidential to protect security requirements.",
 };
+
+type SectorBullet =
+  | string
+  | { label: string; options: readonly string[] };
 
 const sectors = [
   {
@@ -19,17 +23,18 @@ const sectors = [
     image: siteImages.industryEducation,
     href: "/sectors/education",
     description:
-      "Confidential exam-cycle printing with strict controls, accurate OMR layouts, and sealed dispatch planning.",
-    bullets: ["Question papers", "OMR sheets", "Answer booklets", "Certificates"],
-  },
-  {
-    label: "Banks & Financial Institutions",
-    icon: Landmark,
-    image: siteImages.industryBanking,
-    href: "/sectors/banking",
-    description:
-      "MICR-compliant printing and secure stationery production with repeatable quality checks and predictable timelines.",
-    bullets: ["Cheque books", "Pass books", "Dividend warrants", "Stationery"],
+      "End-to-end examination printing under strict security, including question papers, precision OMR sheets, and secure, sealed, on-time dispatch.",
+    bullets: [
+      "Question papers",
+      "OMR sheets with variable data",
+      "Answer booklets",
+      { label: "Certificates", options: ["Tearable", "Non-tearable"] },
+      "MCQ Sheets",
+      "QCA Booklets",
+      "Original Degree Certificates",
+      { label: "Marks Memos", options: ["Tearable", "Non-tearable"] },
+      "Convocation Certificates", "Digital Answer Script Evaluation/Online Evaluation System"
+    ] satisfies readonly SectorBullet[],
   },
   {
     label: "Government Departments & PSUs",
@@ -37,8 +42,13 @@ const sectors = [
     image: siteImages.industryGovernment,
     href: "/sectors/government",
     description:
-      "Audit-friendly confidential printing for departments and PSUs, with process discipline and controlled disposal.",
-    bullets: ["Confidential forms", "Ballot papers", "Official stationery", "Serialized docs"],
+      "Confidential printing for departments and PSUs, with proper records at every step and secure disposal of waste.",
+    bullets: [
+      "Confidential forms",
+      "Official stationery",
+      "Serialized docs",
+      { label: "Rolls", options: ["TIMS", "ATMS", "Thermal"] },
+    ] satisfies readonly SectorBullet[],
   },
   {
     label: "Corporate & Private Sector",
@@ -46,8 +56,13 @@ const sectors = [
     image: siteImages.industryCorporate,
     href: "/sectors/corporate",
     description:
-      "High-volume commercial and secure printing for businesses—reports, certificates, labels, and variable data work.",
-    bullets: ["Annual reports", "Share certificates", "Barcode printing", "Commercial printing"],
+      "High-volume commercial and secure printing solutions for businesses, including annual reports, certificates, labels, variable data printing, and other customized print materials.",
+    bullets: [
+      "Annual reports",
+      "Share certificates",
+      { label: "Variable Data", options: ["QR codes", "Barcodes"] },
+      "Commercial printing",
+    ] satisfies readonly SectorBullet[],
   },
 ] as const;
 
@@ -55,17 +70,17 @@ const testimonials = [
   {
     who: "University Client, Andhra Pradesh",
     quote:
-      "Consistent confidentiality discipline and on-time dispatches across multiple exam cycles.",
-  },
-  {
-    who: "Bank Client, Hyderabad",
-    quote:
-      "Reliable MICR and stationery production with predictable timelines and quality checks.",
+      "They have handled our exam printing with complete confidentiality and on-time delivery, cycle after cycle.",
   },
   {
     who: "Government Department, Telangana",
     quote:
-      "Audit-friendly handling, controlled disposal, and secure packaging for sensitive documents.",
+      "Proper records, secure packaging, and safe disposal of waste — our audits have always gone smoothly.",
+  },
+  {
+    who: "Corporate Client, Hyderabad",
+    quote:
+      "Large volumes delivered on schedule, with consistent quality every single time.",
   },
 ] as const;
 
@@ -90,9 +105,9 @@ export default function ClientsPage() {
             Our Clients &amp; Sectors Served
           </h1>
           <p className="mt-4 max-w-4xl text-lg text-white/90 sm:text-xl">
-            For 28 years, we have served universities, banks, government departments,
-            and corporations across Andhra Pradesh and Telangana. Our clients trust
-            us with their most sensitive print requirements.
+            For 28 years, we have served universities, government departments,
+            and companies across India. They trust us with their most sensitive
+            printing work.
           </p>
         </div>
       </section>
@@ -108,20 +123,20 @@ export default function ClientsPage() {
                 className={reverse ? "rounded-2xl bg-white p-6 shadow-sm sm:p-8" : "rounded-2xl bg-background p-6 sm:p-8"}
               >
                 <div
-                  className={`grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:items-start ${
+                  className={`grid min-w-0 grid-cols-1 gap-8 lg:items-stretch ${
                     reverse
-                      ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)]"
-                      : ""
+                      ? "lg:grid-cols-[3fr_2fr]"
+                      : "lg:grid-cols-[2fr_3fr]"
                   }`}
                 >
                   <div className={`min-w-0 ${reverse ? "lg:order-2" : ""}`}>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 shadow-sm">
+                    <div className="relative aspect-[4/3] h-full min-h-[240px] overflow-hidden rounded-2xl border border-primary/10 shadow-sm lg:aspect-auto">
                       <Image
                         src={s.image.src}
                         alt={s.image.alt}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 420px"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
                       />
                     </div>
                   </div>
@@ -143,14 +158,23 @@ export default function ClientsPage() {
                       {s.description}
                     </p>
                     <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                      {s.bullets.map((b) => (
-                        <li
-                          key={b}
-                          className="rounded-xl border border-primary/10 bg-white px-4 py-3 text-sm font-medium text-primary shadow-sm"
-                        >
-                          {b}
-                        </li>
-                      ))}
+                      {s.bullets.map((b) => {
+                        const label = typeof b === "string" ? b : b.label;
+                        const options = typeof b === "string" ? null : b.options;
+                        return (
+                          <li
+                            key={label}
+                            className="flex min-h-[3.25rem] flex-col justify-center rounded-xl border border-primary/10 bg-white px-4 py-3 text-sm font-medium text-primary shadow-sm"
+                          >
+                            <span>{label}</span>
+                            {options ? (
+                              <p className="mt-1.5 text-xs font-normal leading-relaxed text-muted-foreground">
+                                {options.join(" · ")}
+                              </p>
+                            ) : null}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -182,7 +206,7 @@ export default function ClientsPage() {
           </div>
 
           <p className="mt-10 text-sm text-muted-foreground">
-            Client names are kept confidential to protect their security requirements.
+            As a security printer, we keep our client names confidential.
           </p>
 
           <div className="mt-10">
@@ -195,4 +219,3 @@ export default function ClientsPage() {
     </div>
   );
 }
-

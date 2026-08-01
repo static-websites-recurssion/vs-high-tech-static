@@ -11,10 +11,8 @@ import {
   Clock,
   FileQuestion,
   GraduationCap,
-  Landmark,
   ScanLine,
   Shield,
-  Ticket,
 } from "lucide-react";
 
 import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
@@ -35,7 +33,7 @@ export const metadata: Metadata = {
       "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
   },
   description:
-    "India's trusted security printing partner since 1997. Confidential question papers, OMR, cheque books & certificates for universities, banks & government in Andhra Pradesh & Telangana.",
+    "India's trusted security printing partner since 1997. Confidential question papers, OMR & certificates for universities, government & institutions in Andhra Pradesh & Telangana.",
 };
 
 const products = [
@@ -58,16 +56,14 @@ const products = [
     icon: Award,
     href: "/services",
   },
-  { name: "Cheque Books", subtitle: null, icon: Landmark, href: "/services" },
   {
     name: "Barcode & Variable Data Printing",
     subtitle: null,
     icon: Barcode,
     href: "/services",
   },
-  { name: "Lottery Tickets", subtitle: null, icon: Ticket, href: "/services" },
   {
-    name: "Pass Books & Annual Reports",
+    name: "Annual Reports & Book Works",
     subtitle: null,
     icon: BookMarked,
     href: "/services",
@@ -78,10 +74,6 @@ const sectors = [
   {
     label: "Universities & Exam Boards",
     image: siteImages.industryEducation,
-  },
-  {
-    label: "Banks & Financial Institutions",
-    image: siteImages.industryBanking,
   },
   {
     label: "Government Departments",
@@ -132,16 +124,17 @@ export default function HomePage() {
                       />
                     </span>
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300 sm:text-sm">
-                      Triple ISO · Hyderabad &amp; Vijayawada
+                      Four ISO · Hyderabad &amp; Vijayawada
                     </p>
                   </div>
                   <h1 className="mt-4 text-balance bg-gradient-to-br from-white via-sky-100 to-sky-300 bg-clip-text text-center text-3xl font-medium leading-[1.18] tracking-[-0.02em] text-transparent sm:text-4xl md:text-5xl lg:text-[2.85rem] lg:leading-[1.1]">
                     India&apos;s trusted security printing partner — since 1997
                   </h1>
                   <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[1.65] text-sky-200/90 sm:text-lg">
-                    Confidential question papers, OMR, cheque books, certificates,
-                    and institutional security print — for universities, banks, and
-                    government across Andhra Pradesh &amp; Telangana.
+                    We print confidential question papers, OMR sheets,
+                    certificates, and other secure documents for universities,
+                    government departments, and companies across Andhra Pradesh
+                    &amp; Telangana.
                   </p>
                   <TrustHeroCounters variant="hero" centered />
                   <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
@@ -252,8 +245,8 @@ export default function HomePage() {
             Our Hyderabad works
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-            Actual building exteriors at our Telangana plant — same audited
-            facility that runs confidential examination and banking programmes.
+            Real photos of our Hyderabad plant — the same secure, audited
+            facility where confidential exam work is printed.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 shadow-md">
@@ -292,12 +285,12 @@ export default function HomePage() {
           Service highlights
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
-          Representative capabilities across security, commercial, and specialized
-          printing — see{" "}
+          A quick look at our main security, commercial, and specialised
+          printing work — see{" "}
           <Link href="/services" className="font-medium text-accent hover:underline">
             all services
           </Link>{" "}
-          for full categories.
+          for the full list.
         </p>
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {products.map(({ name, subtitle, icon: Icon, href }) => (
@@ -354,8 +347,8 @@ export default function HomePage() {
                 High Confidentiality
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Single entry/exit, CCTV surveillance, biometric attendance,
-                special security guards
+                Single entry and exit, round-the-clock CCTV, biometric
+                attendance, and dedicated security guards.
               </p>
             </div>
             <div className="text-center md:text-left">
@@ -370,8 +363,8 @@ export default function HomePage() {
                 State-of-the-Art Machinery
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                24 types of printing machines including Orient, NAPH,
-                Muller-Martini — see{" "}
+                24 types of printing machines, including Orient, NAPH, and
+                Muller-Martini lines — see{" "}
                 <Link
                   href="/infrastructure"
                   className="font-medium text-accent hover:underline"
@@ -388,7 +381,8 @@ export default function HomePage() {
                 On-Time Delivery
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                365 days, 24x7 operations, DCM closed vehicle transport
+                We run 365 days, 24×7, and deliver in closed DCM vehicles so
+                your material reaches safely and on time.
               </p>
             </div>
           </div>
@@ -401,12 +395,12 @@ export default function HomePage() {
           Industries we serve
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-          Government, higher education, banking, and enterprise —{" "}
+          We work with government departments, universities, and companies —{" "}
           <Link href="/industries" className="font-medium text-accent hover:underline">
             read more
           </Link>
         </p>
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {sectors.map(({ label, image }) => (
             <Link
               key={label}
@@ -441,20 +435,19 @@ export default function HomePage() {
                 Security printing — notes from our floors
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Short articles we use with{" "}
+                Short, practical articles on{" "}
                 <strong className="font-medium text-foreground">
-                  exam cells, treasury teams, and audit visits
+                  question paper security, OMR printing, and security features
                 </strong>
-                : question-paper controls, OMR tolerances, MICR on cheque
-                books, and what{" "}
+                , and how{" "}
                 <strong className="font-medium text-foreground">
                   ISO 27001
                 </strong>{" "}
-                actually changes in pre-press. Photography is from our{" "}
+                works on the shop floor. All photos are from our own{" "}
                 <strong className="font-medium text-foreground">
                   Hyderabad and Vijayawada
                 </strong>{" "}
-                works — not stock art.
+                plants — not stock images.
               </p>
             </div>
             <Link
@@ -527,21 +520,17 @@ export default function HomePage() {
             Trusted Across Sectors
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
-            Institutional programmes across AP &amp; Telangana rely on our
-            confidentiality, capacity, and dispatch discipline.
+            Universities, government departments, and companies across AP &amp;
+            Telangana trust us for confidentiality, capacity, and on-time
+            delivery.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {[
               {
                 icon: GraduationCap,
                 label: "Universities & Boards",
                 stat: "50+ clients served",
-              },
-              {
-                icon: Landmark,
-                label: "Banks & NBFCs",
-                stat: "25+ clients served",
               },
               {
                 icon: Building2,
@@ -597,7 +586,8 @@ export default function HomePage() {
             Ready to print with confidence?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-sky-200/95 sm:text-lg">
-            Speak with our team in Hyderabad or Vijayawada
+            Talk to our team in Hyderabad or Vijayawada — we will guide you
+            from enquiry to delivery.
           </p>
           <Button
             variant="accent"

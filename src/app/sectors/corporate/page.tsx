@@ -10,7 +10,7 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Corporate & Private | Sectors" },
   description:
-    "End-to-end print solutions for businesses: annual reports, share certificates, barcode/variable data, sticker labels, and commercial book works with reliable timelines.",
+    "Complete printing solutions for businesses — annual reports, share certificates, barcode and variable data printing, sticker labels, and book works, always on time.",
 };
 
 const corporateProducts = [
@@ -70,8 +70,8 @@ export default function CorporateSectorPage() {
             End-to-End Print Solutions for Indian Businesses
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Commercial and security print capabilities with stable timelines and
-            multi-location capacity.
+            Commercial and security printing for businesses — reliable
+            timelines, good quality, and capacity across two plants.
           </p>
         </div>
       </section>
@@ -113,8 +113,9 @@ export default function CorporateSectorPage() {
                   Get a customised quote for your business
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Share quantity, finishes, timelines, and delivery locations.
-                  We’ll recommend the most efficient production route.
+                  Share your quantity, finishing needs, timelines, and delivery
+                  locations. We will suggest the best and most economical way
+                  to produce it.
                 </p>
               </div>
               <Button variant="accent" size="lg" asChild>

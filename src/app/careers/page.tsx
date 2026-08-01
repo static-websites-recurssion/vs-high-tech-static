@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Careers | V.S. Hitech Security Forms",
   },
   description:
-    "Careers at V.S. Hitech — institutional roles are posted here when available; profiles are welcome year-round.",
+    "Careers at V.S. Hitech — job openings are posted here when available, and profiles are welcome round the year.",
 };
 
 export default function CareersPage() {
@@ -31,7 +31,7 @@ export default function CareersPage() {
             Careers
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Institutional roles will be posted here when available.
+            Job openings will be posted here whenever positions are available.
           </p>
         </div>
       </section>
@@ -42,8 +42,8 @@ export default function CareersPage() {
             Send your profile
           </h2>
           <p className="mt-3 text-muted-foreground">
-            For confidential and role-relevant hiring, please reach our team
-            with your profile details.
+            We welcome profiles round the year. Share your details with our
+            team, and we will reach out when a suitable role opens up.
           </p>
           <div className="mt-6 text-sm text-muted-foreground">
             <Link

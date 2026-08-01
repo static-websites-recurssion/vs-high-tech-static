@@ -45,9 +45,9 @@ export function Footer() {
               </p>
             </div>
             <p className="mt-3 break-words text-sm text-white/85">
-              Confidential security printing and institutional documentation for
-              government, universities, and large enterprises — two plants, triple
-              ISO certified.
+              Confidential security printing for government departments,
+              universities, and large companies — two plants, four ISO
+              certified.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {isoStandards.map((label) => (

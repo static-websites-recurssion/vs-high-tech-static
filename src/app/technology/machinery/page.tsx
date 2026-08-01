@@ -17,13 +17,13 @@ export default function TechnologyMachineryPage() {
     <div className="bg-background">
       <MachineryOverviewSections
         heroTitle="Our machinery"
-        heroSubtitle="Web offset, computer-stationery lines, CTCP, binding, cutting, and security finishing — built for confidential examination, banking, and government programmes."
+        heroSubtitle="Web offset, computer-stationery lines, CTCP, binding, cutting, and security finishing — built for confidential exam and government work."
       />
       <section className="border-t border-border bg-muted/30 py-10">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-sm text-muted-foreground">
-            Security environment, in-house testing, and full premises details are
-            on the infrastructure overview.
+            For our security environment, in-house testing, and premises
+            details, see the infrastructure page.
           </p>
           <Button variant="accent" className="mt-6" asChild>
             <Link href="/infrastructure">View full infrastructure</Link>

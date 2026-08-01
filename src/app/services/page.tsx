@@ -11,21 +11,21 @@ export const metadata: Metadata = {
       "Services | Security, Commercial & Specialized Printing — V.S. Hitech",
   },
   description:
-    "Categorized printing services: confidential security work, high-volume commercial books and reports, and specialized barcode, variable data, thermal, and carbonless production from Hyderabad & Vijayawada.",
+    "Our printing services — confidential security work, high-volume books and reports, and specialised barcode, variable data, thermal, and carbonless printing from Hyderabad & Vijayawada.",
 };
 
 const serviceCategories = [
   {
     title: "Security Printing",
     summary:
-      "Confidential document production for examinations, credentials, and regulated instruments — with controlled access, monitored production, and secure logistics.",
+      "Confidential printing for exams, certificates, and other secure documents — with controlled access, monitored production, and safe delivery.",
     items: [
       {
         name: "Question papers & examination booklets",
         description:
           "Multi-version sets, serial control, and waste destruction under supervision.",
         useCase:
-          "Universities, state PSCs, recruitment boards, and coaching institutes running high-stakes assessments.",
+          "Universities, state PSCs, recruitment boards, and coaching institutes conducting important exams.",
       },
       {
         name: "Degrees, diplomas & academic certificates",
@@ -37,30 +37,16 @@ const serviceCategories = [
       {
         name: "Share certificates & corporate instruments",
         description:
-          "Anti-tamper features, MICR numbering, and audit-friendly production records.",
+          "Anti-tamper features, MICR numbering, and complete production records.",
         useCase:
-          "Companies, registrars, and compliance-driven issuers of negotiable or registered documents.",
-      },
-      {
-        name: "Cheque books & MICR financial forms",
-        description:
-          "Security substrate, MICR encoding, and bank-specified formats.",
-        useCase:
-          "Banks, NBFCs, and treasury operations requiring negotiable instrument standards.",
-      },
-      {
-        name: "Ballot papers, lottery & secure tickets",
-        description:
-          "Sequential control, scratch panels, and specialty inks where applicable.",
-        useCase:
-          "Government elections, regulated lotteries, and large-scale secure ticketing.",
+          "Companies and registrars issuing share certificates and similar official documents.",
       },
     ],
   },
   {
     title: "Commercial Printing",
     summary:
-      "High-volume, schedule-driven print for publications, examination consumables, and institutional reports — aligned with institutional procurement and quality benchmarks.",
+      "High-volume printing of books, exam materials, and reports — delivered on schedule and matching tender quality requirements.",
     items: [
       {
         name: "Textbooks, manuals & book works",
@@ -72,58 +58,51 @@ const serviceCategories = [
       {
         name: "Answer sheets & OMR consumables",
         description:
-          "Scan-compatible stock, barcodes or QR integration, and variable data per series.",
+          "Scanner-friendly paper, barcode or QR printing, and variable data for each series.",
         useCase:
           "Board exams, entrance tests, and large-scale optical scanning operations.",
       },
       {
         name: "Annual reports, directories & corporate publications",
         description:
-          "Premium finishing, tabular data sections, and variable inserts where required.",
+          "Premium finishing, clean data tables, and variable inserts where needed.",
         useCase:
           "Listed companies, PSUs, universities, and membership bodies.",
-      },
-      {
-        name: "Pass books, pay-in slips & banking stationery",
-        description:
-          "Register formats, multi-part sets, and durable binding options.",
-        useCase:
-          "Retail banking branches and back-office fulfilment at scale.",
       },
     ],
   },
   {
     title: "Specialized Printing",
     summary:
-      "Data-driven and substrate-specific jobs that need dedicated equipment — from serialized labels to NCR multi-part business forms.",
+      "Jobs that need special machines and materials — from serialised labels and thermal rolls to carbonless (NCR) multi-part forms.",
     items: [
       {
         name: "Barcode, QR & variable data printing",
         description:
-          "High-speed digital production with per-piece uniqueness and verification.",
+          "High-speed digital printing where every piece is unique and machine-verified.",
         useCase:
           "Asset tagging, examination logistics, retail SKU labels, and serialized documentation.",
       },
       {
         name: "Thermal rolls, labels & sticker printing",
         description:
-          "Heat-sensitive media, adhesives, and roll/sheet formats for operational use.",
+          "Thermal paper, labels, and stickers in roll or sheet formats for daily use.",
         useCase:
-          "POS, logistics, warehousing, and field service labelling.",
+          "Billing counters, logistics, warehouses, and field teams.",
       },
       {
         name: "Carbonless (NCR) forms & multi-part stationery",
         description:
           "2–5 part sets with sequential numbering, perforation, and folding.",
         useCase:
-          "Government departments, utilities, and enterprises needing duplicate/triplicate records.",
+          "Government departments, utilities, and companies that need duplicate or triplicate copies.",
       },
       {
         name: "Government forms & official multi-copy sets",
         description:
           "Standard and custom formats with security paper options.",
         useCase:
-          "Departments that issue permits, receipts, or controlled internal forms.",
+          "Departments that issue permits, receipts, or other controlled forms.",
       },
     ],
   },
@@ -150,9 +129,9 @@ export default function ServicesPage() {
             Services
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Security, commercial, and specialized printing under one roof — built
-            for government, universities, banks, and large institutional programmes
-            across Andhra Pradesh and Telangana.
+            Security, commercial, and specialised printing under one roof — for
+            government departments, universities, and large institutions across
+            Andhra Pradesh and Telangana.
           </p>
         </div>
       </section>
@@ -204,11 +183,12 @@ export default function ServicesPage() {
       <section className="border-t border-border bg-white py-14 lg:py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-base font-medium text-primary">
-            Need a capability review or sample kit?
+            Need samples or more details?
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
-            Call or email our team to align machine routes, security protocols,
-            and delivery schedules with your tender or compliance checklist.
+            Call or email our team. We will help you match our machines,
+            security process, and delivery schedule to your tender
+            requirements.
           </p>
           <Button variant="accent" size="lg" className="mt-6" asChild>
             <Link href="/contact">Contact us</Link>

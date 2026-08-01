@@ -11,9 +11,9 @@ export const machineryOpsSnapshot = [
     detail: "Hyderabad (Telangana) & Vijayawada (Andhra Pradesh)",
   },
   {
-    stat: "~60,000",
+    stat: "110,000+",
     label: "Combined site footprint (sft)",
-    detail: "35,000 sft built-up Hyderabad + 25,000 sft Vijayawada",
+    detail: "70,000+ sft Hyderabad + 40,000+ sft Vijayawada",
   },
   {
     stat: "24+",
@@ -34,11 +34,11 @@ export const machineryFacilityPhotos = [
   },
   {
     ...siteImages.infraFinishing,
-    caption: "Finishing, collation, and dispatch discipline",
+    caption: "Finishing, collation, and dispatch",
   },
   {
     ...siteImages.infraMaterials,
-    caption: "Material control and batch traceability",
+    caption: "Material control and batch tracking",
   },
 ] as const;
 
@@ -82,8 +82,8 @@ export function MachineryOverviewSections({
             Operations at a glance
           </h2>
           <p className="mx-auto mt-3 max-w-3xl text-center text-sm text-muted-foreground sm:text-base">
-            Scale and redundancy for government, university, and banking
-            programmes that cannot afford delays or capacity shortfalls.
+            The scale and backup capacity that government and university work
+            needs — no delays, no shortage of machines.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {machineryOpsSnapshot.map((row) => (

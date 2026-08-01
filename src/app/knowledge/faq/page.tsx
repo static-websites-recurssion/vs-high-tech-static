@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What types of confidential printing do you handle?",
-    a: "We handle confidential institutional work such as question papers, OMR and answer booklets, certificates, banking stationery, and other sensitive document categories that require access control and audit-friendly handling.",
+    a: "We handle confidential work such as question papers, OMR sheets, answer booklets, certificates, and other sensitive documents that need controlled access and proper records.",
   },
   {
     q: "How do you ensure question papers don't leak?",
-    a: "We follow controlled access workflows including single entry/exit, monitored production areas, role-based access, sealed packet delivery, and secure disposal of all confidential waste.",
+    a: "Our facility has a single entry and exit, CCTV-monitored production areas, and restricted access. Papers are delivered in sealed packets, and all confidential waste is destroyed securely.",
   },
   {
     q: "Are you an approved security printer?",
-    a: "We work as an institutional security printer for government, universities, and banks. Approval/empanelment requirements vary by department; we support onboarding with documentation and site visits where applicable.",
+    a: "We work as a security printer for government departments and universities. Approval and empanelment rules differ from department to department — we support the process with documentation and site visits wherever needed.",
   },
   {
     q: "What certifications do you hold?",
@@ -29,47 +29,47 @@ const faqs = [
   },
   {
     q: "Do you serve clients outside Andhra Pradesh and Telangana?",
-    a: "Yes. We primarily serve AP & Telangana with multi-location capacity, and we can support projects outside the region based on volume, timelines, and logistics requirements.",
+    a: "Yes. Our main clients are in AP & Telangana, but we take up projects from other states as well, depending on volume, timelines, and delivery logistics.",
   },
   {
     q: "What is your minimum order quantity?",
-    a: "MOQ depends on the product category, security features, and finishing. Share your requirement and we’ll recommend the most economical route.",
+    a: "Minimum order quantity depends on the product, security features, and finishing. Share your requirement and we will suggest the most economical option.",
   },
   {
     q: "How is material transported securely?",
-    a: "Dispatch is packed in sealed sets and transported using secure logistics (including closed-vehicle movement where required), with controlled handover protocols aligned to job sensitivity.",
+    a: "Material is packed in sealed sets and sent through secure transport — closed vehicles where required — with a controlled handover at the receiving end.",
   },
   {
     q: "Can you print variable data (unique codes/numbers per sheet)?",
-    a: "Yes. We support variable data printing including serial numbers, names, barcodes, QR codes, and Data Matrix depending on your workflow.",
+    a: "Yes. We print variable data including serial numbers, names, barcodes, QR codes, and Data Matrix, based on what your job needs.",
   },
   {
     q: "Do you offer hologram stamping?",
-    a: "Yes. Hologram stamping is available for applicable categories, along with numbering and other security elements depending on the product.",
+    a: "Yes. Hologram stamping is available for suitable products, along with numbering and other security features.",
   },
   {
     q: "What is your turnaround time for urgent jobs?",
-    a: "Turnaround depends on quantity, feature set, and schedule. For urgent institutional requirements, we can prioritize production based on capacity and compliance checks.",
+    a: "Turnaround depends on quantity, security features, and schedule. For urgent requirements, we can prioritise your job since we run 365 days, 24×7.",
   },
   {
     q: "How do you handle confidential waste and rejected prints?",
-    a: "Confidential waste is shredded and burnt under supervision with dual verification logs to reduce leakage risk. Rejected prints are controlled as sensitive material until destroyed.",
+    a: "Confidential waste is shredded and burnt under supervision, with records kept at collection and after destruction. Rejected prints are treated as sensitive material until they are destroyed.",
   },
   {
     q: "Do you have backup power at your facilities?",
-    a: "Yes. We have generator support as part of our infrastructure to protect schedule commitments.",
+    a: "Yes. Both plants have generator backup, so power cuts do not affect your delivery schedule.",
   },
   {
     q: "Can I visit your facility before placing an order?",
-    a: "Yes. Site visits can be arranged for qualified and large-volume buyers, typically coordinated in advance and aligned with confidentiality requirements.",
+    a: "Yes. Site visits can be arranged for genuine and large-volume buyers. Please coordinate with our office in advance, as visits follow our confidentiality rules.",
   },
   {
     q: "What file formats do you accept for artwork?",
-    a: "We support standard print-ready formats. Share your existing files and our pre-press team will confirm the best format and any required settings.",
+    a: "We accept all standard print-ready formats. Share your files and our pre-press team will confirm the best format and settings.",
   },
   {
     q: "Do you provide samples before bulk printing?",
-    a: "Where feasible, we can provide samples or proofs depending on the product, security features, and schedule.",
+    a: "Yes, wherever possible. We can share samples or proofs depending on the product, security features, and schedule.",
   },
 ] as const;
 
@@ -94,7 +94,7 @@ export default function KnowledgeFaqPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Quick answers for institutional buyers and tender teams.
+            Quick answers to the questions buyers and tender teams ask us most.
           </p>
         </div>
       </section>

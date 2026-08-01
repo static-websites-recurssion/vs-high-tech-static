@@ -10,24 +10,24 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Education & Universities | Sectors" },
   description:
-    "Trusted security printing for universities and exam boards: confidential question papers, OMR sheets, answer booklets, and certificates with sealed delivery and controlled disposal.",
+    "Trusted security printing for universities and exam boards — confidential question papers, OMR sheets, answer booklets, and certificates, delivered sealed and on time.",
 };
 
 const painPoints = [
   {
     title: "Question paper leakage",
     icon: AlertTriangle,
-    body: "Prevent leakage risk with controlled access, monitored production, and sealed delivery protocols.",
+    body: "We prevent leakage with controlled access, monitored production, and sealed delivery at every step.",
   },
   {
     title: "OMR scanning failures",
     icon: ScanLine,
-    body: "High-precision printing and verification-ready barcodes/QR to improve scanning consistency.",
+    body: "Accurate printing and verified barcodes and QR codes, so every sheet scans correctly the first time.",
   },
   {
     title: "Certificate forgery",
     icon: ShieldCheck,
-    body: "Layered security features like UV inks, guilloche patterns, and controlled numbering to prevent counterfeiting.",
+    body: "Multiple security features — UV inks, guilloche patterns, and controlled numbering — make certificates very hard to copy.",
   },
 ] as const;
 
@@ -41,11 +41,11 @@ const educationProducts: ProductSlug[] = [
 ];
 
 const howWeWork = [
-  "Receive approved files/specs and agree the security checklist",
-  "Plan pre-press, serial control and dispatch schedule",
-  "Execute printing under monitored and access-controlled workflow",
-  "Quality checks, verification, and final packing in sealed sets",
-  "Secure dispatch and delivery handover with audit-ready records",
+  "We receive your approved files and agree on the security checklist",
+  "We plan pre-press, serial numbering, and the dispatch schedule",
+  "Printing happens in monitored, access-controlled areas",
+  "Every job goes through quality checks and is packed in sealed sets",
+  "Secure dispatch and handover, with complete records for audit",
 ] as const;
 
 export default function EducationSectorPage() {
@@ -72,8 +72,9 @@ export default function EducationSectorPage() {
             Trusted by 50+ Universities &amp; Exam Boards
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Confidential printing for exam cycles — question papers, OMR,
-            answer booklets, and certificates with secure delivery discipline.
+            Confidential printing for the full exam cycle — question papers,
+            OMR sheets, answer booklets, and certificates, delivered sealed and
+            on time.
           </p>
         </div>
       </section>
@@ -108,7 +109,8 @@ export default function EducationSectorPage() {
                 Products for Education
               </h2>
               <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Core exam-cycle categories with confidentiality and traceability.
+                Everything an exam cycle needs — printed with confidentiality
+                and full traceability.
               </p>
             </div>
             <Button variant="accent" asChild>
@@ -196,8 +198,8 @@ export default function EducationSectorPage() {
             Planning your next exam cycle? Talk to us
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-white/85 sm:text-base">
-            Share exam dates, quantities, and security expectations. We’ll map
-            the process and dispatch plan to your timeline.
+            Share your exam dates, quantities, and security needs. We will plan
+            the printing and dispatch around your timeline.
           </p>
           <Button variant="accent" size="lg" className="mt-8" asChild>
             <Link href="/contact">Contact us</Link>

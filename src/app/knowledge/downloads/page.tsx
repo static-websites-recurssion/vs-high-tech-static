@@ -9,14 +9,14 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Downloads" },
   description:
-    "Company profile and institutional documentation downloads (PDF).",
+    "Download our company profile and other documents you may need for tenders and vendor registration.",
 };
 
 const downloads = [
   {
     title: "Company Profile PDF",
     description:
-      "Overview of plants, capabilities, and institutional printing profile for procurement and vendor onboarding.",
+      "An overview of our plants, machines, and printing capabilities — useful for tenders and vendor registration.",
     href: "/company-profile.pdf",
     icon: FileText,
     image: siteImages.aboutEstate,
@@ -25,7 +25,7 @@ const downloads = [
   {
     title: "ISO Certificates Overview",
     description:
-      "Certificate copies and scope statements for ISO 9001, 27001, and 14001 — shared with qualified buyers under NDA.",
+      "Certificate copies and scope details for ISO 9001, 27001, and 14001 — shared with genuine buyers under NDA.",
     href: "/contact",
     icon: ShieldCheck,
     image: siteImages.certificationsTrust,
@@ -34,7 +34,7 @@ const downloads = [
   {
     title: "Product Brochure",
     description:
-      "Product categories, substrates, and security feature options — request the latest edition from our team.",
+      "Product categories, paper options, and security features — request the latest edition from our team.",
     href: "/contact",
     icon: Download,
     image: siteImages.servicesBanner,
@@ -63,7 +63,7 @@ export default function KnowledgeDownloadsPage() {
             Downloads
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Procurement-ready resources for institutional buyers.
+            Documents you may need for tenders and vendor registration.
           </p>
         </div>
       </section>
@@ -124,11 +124,11 @@ export default function KnowledgeDownloadsPage() {
 
         <div className="mt-12 rounded-2xl border border-primary/10 bg-primary/5 p-8">
           <h3 className="text-xl font-bold text-primary">
-            Need official documentation for onboarding?
+            Need official documents for your tender?
           </h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            Contact us for certification copies and scope details under NDA for
-            tenders and vendor onboarding.
+            Contact us for certificate copies and scope details, shared under
+            NDA for tenders and vendor registration.
           </p>
           <Button variant="accent" size="lg" className="mt-5" asChild>
             <Link href="/contact">Contact us</Link>

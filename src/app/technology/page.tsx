@@ -30,7 +30,7 @@ const links = [
   {
     href: "/technology/security-features",
     label: "Security features",
-    blurb: "Covert and overt elements for certificates, stationery, and secure forms.",
+    blurb: "Visible and hidden security features for certificates, stationery, and secure forms.",
     icon: Fingerprint,
   },
   {
@@ -42,25 +42,25 @@ const links = [
   {
     href: "/technology/prepress",
     label: "Pre-press & DTP",
-    blurb: "Workflow from artwork through plates and proofing.",
+    blurb: "From artwork and layout to plates and proofing.",
     icon: Layers,
   },
   {
     href: "/technology/security-environment",
     label: "Security environment",
-    blurb: "Physical controls and segregation for confidential production.",
+    blurb: "Physical security and separate zones for confidential work.",
     icon: Shield,
   },
   {
     href: "/technology/testing",
     label: "Testing facilities",
-    blurb: "In-house checks for substrates, inks, barcodes, and UV features.",
+    blurb: "In-house testing of paper, inks, barcodes, and UV features.",
     icon: FlaskConical,
   },
   {
     href: "/technology/quality-control",
     label: "Quality control",
-    blurb: "Process discipline from receipt through dispatch.",
+    blurb: "Careful checks at every stage, from job receipt to dispatch.",
     icon: Building2,
   },
 ] as const;
@@ -74,8 +74,8 @@ export default function TechnologyPage() {
             Technology
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90">
-            How we print, protect, and verify institutional work — from presses
-            and pre-press through security controls and QC.
+            How we print, protect, and check every job — from pre-press and
+            presses to security controls and quality checks.
           </p>
           <Button variant="accent" className="mt-8" asChild>
             <Link href="/technology/machinery">Explore machinery</Link>

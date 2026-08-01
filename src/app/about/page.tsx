@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: "About Us | 28 Years of Security Printing Excellence",
   },
   description:
-    "Company profile: security printing since 2009, triple ISO under NABCB accreditation, Hyderabad & Vijayawada works, leadership, pre-press scale, and confidentiality controls.",
+    "Company profile: security printing since 2009, four ISO under NABCB accreditation, Hyderabad & Vijayawada works, leadership, pre-press scale, and confidentiality controls.",
 };
 
 const isoCards = [
@@ -79,13 +79,13 @@ const profileHighlights = [
     title: "Who we serve",
     icon: Building2,
     body:
-      "Universities, exam boards, banks, government departments, and corporates — with emphasis on high-confidential examination programmes, secure stationery, and institutional documentation.",
+      "Trusted by universities, educational boards, government departments, and corporates for secure printing of confidential examination materials, certificates, question papers, mark memos, security stationery, and other sensitive institutional documents.",
   },
   {
     title: "Two integrated works",
     icon: MapPin,
     body:
-      "Manufacturing in Telangana (Hyderabad, ALEAP Industrial Estate) and Andhra Pradesh (Vijayawada, Aleap Industrial Estate) — 365-day, round-the-clock operations with DCM closed-vehicle logistics from both plants.",
+      "With manufacturing facilities in Hyderabad, Telangana, and Vijayawada, Andhra Pradesh, we operate 365 days a year with round-the-clock production to ensure reliable and timely execution of every project.",
   },
   {
     title: "Pre-press & DTP",
@@ -127,8 +127,10 @@ export default function AboutPage() {
             About V.S. Hitech Security Forms Pvt. Ltd.
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Triple ISO-certified security printing — two plants, institutional
-            programmes, and controls aligned to our May 2025 company profile.
+            A trusted four ISO-certified security printer with multiple secure
+            production facilities, delivering secure, and high-quality
+            printing solutions for educational institutions and boards, and
+            government organizations.
           </p>
           <div className="mt-8">
             <Button variant="outlineLight" size="lg" className="gap-2" asChild>
@@ -152,38 +154,47 @@ export default function AboutPage() {
               <strong className="font-semibold text-foreground">
                 V.S. Hitech Security Forms Private Limited
               </strong>{" "}
-              is a leading security printing company, certified to{" "}
+              is a leading security printing company, certified under
+              NABCB-accredited ISO standards, including{" "}
               <strong className="font-semibold text-foreground">
                 ISO 9001:2015, ISO 27001:2013, and ISO 14001:2015
-              </strong>{" "}
-              under NABCB accreditation. Incorporated in{" "}
+              </strong>
+              . Established in{" "}
               <strong className="font-semibold text-foreground">2009</strong> as
-              a Private Limited Company, we grew from the proprietary firm{" "}
-              <em>V.S. Hitech Security Forms</em>, with{" "}
+              a Private Limited Company, the organization evolved from the
+              proprietary firm{" "}
+              <em>V.S. Hitech Security Forms</em>. Led by Managing Director{" "}
               <strong className="font-semibold text-foreground">
                 Shri Ramisetti Phani Krishna
-              </strong>{" "}
-              as Managing Director bringing more than{" "}
+              </strong>
+              , who brings over{" "}
               <strong className="font-semibold text-foreground">
                 28 years
               </strong>{" "}
-              of printing-industry experience.
+              of experience in the printing industry, the company has built a
+              strong reputation for secure, high-quality printing solutions.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We provide confidential and commercial printing for{" "}
+              We deliver secure and confidential printing solutions for{" "}
               <strong className="font-semibold text-foreground">
-                universities, banks, government, and large institutions
+                universities, educational boards, government organizations, and
+                large institutions
               </strong>
-              , with state-of-the-art machinery and a strong emphasis on{" "}
+              , backed by advanced printing technology and an unwavering
+              commitment to{" "}
               <strong className="font-semibold text-foreground">
-                confidentiality, quality, safety, and integrity
+                quality, security, confidentiality, and integrity
               </strong>
-              . A woman director serves on the board, and we are committed to{" "}
+              . Our Board includes a woman director, reflecting our commitment
+              to{" "}
               <strong className="font-semibold text-foreground">
-                women&apos;s welfare and employment
-              </strong>{" "}
-              across technical and support roles. Our customers rely on us for
-              prompt statutory compliance and disciplined dispatch.
+                diversity, women&apos;s employment, and an inclusive workplace
+              </strong>
+              . We are also committed to{" "}
+              <strong className="font-semibold text-foreground">
+                statutory compliance and disciplined execution
+              </strong>
+              , ensuring reliable and timely delivery for every project.
             </p>
             <p className="mt-4 rounded-xl border border-primary/10 bg-sky-50/80 px-4 py-3 text-sm leading-relaxed text-primary">
               As stated in our company profile for buyers: among India&apos;s
@@ -274,12 +285,10 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="mt-10 text-center text-sm text-muted-foreground">
-            Hyderabad works: about{" "}
+            Hyderabad works: over{" "}
+            <strong className="font-medium text-primary">70,000 sq. ft.</strong>
+            . Vijayawada works: over{" "}
             <strong className="font-medium text-primary">40,000 sq. ft.</strong>{" "}
-            plot and{" "}
-            <strong className="font-medium text-primary">35,000 sq. ft.</strong>{" "}
-            built-up. Vijayawada works: about{" "}
-            <strong className="font-medium text-primary">25,000 sq. ft.</strong>{" "}
             — see{" "}
             <Link href="/contact" className="font-medium text-accent hover:underline">
               Contact

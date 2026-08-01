@@ -13,7 +13,7 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Quality Control" },
   description:
-    "Quality Control workflow for secure printing: paper GSM testing, security inks testing, barcode verification, UV feature verification, dual-check incoming/outgoing items, triple ISO certification process, and 100% inspection before dispatch.",
+    "Our quality control process — paper GSM testing, security ink testing, barcode and UV verification, double checking of all material, and 100% inspection before dispatch.",
 };
 
 const testingFacilities = [
@@ -25,24 +25,24 @@ const testingFacilities = [
 
 const qcWorkflow = [
   {
-    step: "Incoming specification checks",
+    step: "Incoming checks",
     detail:
-      "Dual-check inbound material batches and print specifications against the approved file and order pack.",
+      "Incoming material and print specifications are checked twice against the approved file and order details.",
   },
   {
     step: "On-press monitoring",
     detail:
-      "Line checks during production for consistency of registration, serial control, and security feature application.",
+      "During production, we keep checking registration, serial numbering, and security features for consistency.",
   },
   {
     step: "Outgoing verification",
     detail:
-      "Dual-check outgoing packets for correct count, sequence, and barcode/QR verification where applicable.",
+      "Outgoing packets are checked twice for correct count and sequence, with barcode or QR verification where needed.",
   },
   {
     step: "100% inspection before dispatch",
     detail:
-      "Final verification before dispatch to support institutional timelines and audit-ready delivery records.",
+      "Every packet gets a final check before dispatch, with complete delivery records maintained for audit.",
   },
 ];
 
@@ -67,8 +67,8 @@ export default function QualityControlPage() {
             Quality Control
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Secure printing quality built on testing, dual-check workflows, and
-            documented ISO processes.
+            Quality built on in-house testing, double checking, and documented
+            ISO processes.
           </p>
         </div>
       </section>
@@ -80,8 +80,8 @@ export default function QualityControlPage() {
               Testing facilities
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Dedicated checks for paper, security inks, barcodes, and UV-visible
-              features to protect authenticity.
+              We test paper, security inks, barcodes, and UV features in-house
+              so nothing goes out unchecked.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {testingFacilities.map(({ label, icon: Icon }) => (
@@ -131,13 +131,12 @@ export default function QualityControlPage() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px] lg:items-start">
             <div className="rounded-2xl border border-primary/10 bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Triple ISO process
+                Four ISO process
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Our quality checks are aligned with documented ISO practices for
-                quality management, information security, and environmental
-                responsibility. This includes dual-check discipline for both
-                incoming and outgoing materials.
+                Our quality checks follow documented ISO practices for quality
+                management, information security, and environmental care. Both
+                incoming and outgoing materials are always checked twice.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["ISO 9001:2015", "ISO 27001:2013", "ISO 14001:2015"].map((t) => (
@@ -152,11 +151,11 @@ export default function QualityControlPage() {
             </div>
             <aside className="rounded-2xl border border-primary/10 bg-primary/5 p-6 shadow-sm">
               <h3 className="text-lg font-bold text-primary">
-                Dispatch-ready verification
+                Checked before every dispatch
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                We perform final verification on every dispatch packet to
-                support institutional timelines and reduce operational risk.
+                Every dispatch packet is verified one final time, so your
+                delivery arrives correct and on schedule.
               </p>
               <div className="mt-6 overflow-hidden rounded-xl border border-primary/10 bg-white">
                 <Image

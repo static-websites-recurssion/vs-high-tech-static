@@ -18,15 +18,15 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: { absolute: "Security Features We Offer" },
   description:
-    "Anti-counterfeit and confidentiality features used across secure printing jobs, including MICR, UV inks, holograms, watermarks, guilloche patterns, serial numbering, barcodes/QR codes, and scratch-off elements.",
+    "Security features we offer — MICR, UV inks, holograms, watermarks, guilloche patterns, serial numbering, barcodes and QR codes, and scratch-off panels.",
 };
 
 const securityFeatures = [
   {
     name: "MICR Encoding",
     icon: Hash,
-    line1: "Machine-readable ink for bank documents",
-    line2: "Built for bank-compliant scanning workflows",
+    line1: "Machine-readable ink for secure documents",
+    line2: "Built for high-accuracy scanning workflows",
   },
   {
     name: "UV-Visible Inks",
@@ -44,7 +44,7 @@ const securityFeatures = [
     name: "Watermarks",
     icon: Droplets,
     line1: "Embedded paper watermarks for certificates",
-    line2: "Difficult to replicate without correct substrate",
+    line2: "Very hard to copy without the right paper",
   },
   {
     name: "Guilloche Patterns",
@@ -68,7 +68,7 @@ const securityFeatures = [
     name: "Void Pantograph",
     icon: Camera,
     line1: "\"VOID\" appears when photocopied",
-    line2: "Reduces value of unauthorized reproductions",
+    line2: "Makes photocopies easy to catch",
   },
   {
     name: "Hot Foil Stamping",
@@ -79,7 +79,7 @@ const securityFeatures = [
   {
     name: "Scratch-Off Panel",
     icon: ShieldCheck,
-    line1: "For lottery and promotional applications",
+    line1: "For promotional and verification applications",
     line2: "Tamper-evident and verification-ready",
   },
   {
@@ -91,8 +91,8 @@ const securityFeatures = [
   {
     name: "Microtext",
     icon: Hash,
-    line1: "Tiny text invisible to naked eye",
-    line2: "Stronger authenticity checks for sensitive documents",
+    line1: "Tiny text not visible to the naked eye",
+    line2: "An extra check of genuineness for sensitive documents",
   },
 ] as const;
 
@@ -117,9 +117,8 @@ export default function SecurityFeaturesPage() {
             Security Features We Offer
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            A complete set of anti-counterfeit and confidentiality features
-            designed for government, universities, banks, and high-volume
-            institutional programmes.
+            A complete set of anti-counterfeit and confidentiality features for
+            government departments, universities, and large institutions.
           </p>
         </div>
       </section>
@@ -131,8 +130,9 @@ export default function SecurityFeaturesPage() {
               Built for verification and confidentiality
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Pick the right combination of features for your RFP: from MICR and
-              UV inks to holograms, watermarks, and tamper-evident elements.
+              Choose the right combination of features for your tender — from
+              MICR and UV inks to holograms, watermarks, and tamper-proof
+              elements.
             </p>
           </div>
           <Button variant="accent" asChild>

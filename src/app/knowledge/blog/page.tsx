@@ -5,7 +5,7 @@ import { blogCategories, blogPosts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: { absolute: "Knowledge Centre | Blog" },
   description:
-    "Insights for institutional buyers: security printing best practices, MICR, OMR, variable data, and compliance guidance.",
+    "Practical articles on security printing — MICR, OMR, variable data, security features, and compliance — written for buyers and tender teams.",
 };
 
 export default function BlogListingPage() {
@@ -17,8 +17,8 @@ export default function BlogListingPage() {
             Blog
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Practical guidance on secure printing, compliance, and
-            institutional-scale execution.
+            Practical articles on security printing, compliance, and handling
+            large print jobs well.
           </p>
         </div>
       </section>

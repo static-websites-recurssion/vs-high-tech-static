@@ -1,4 +1,4 @@
-export type SectorTag = "Education" | "Banking" | "Government" | "Corporate";
+export type SectorTag = "Education" | "Government" | "Corporate";
 
 export type ProductSlug =
   | "question-papers"
@@ -9,7 +9,6 @@ export type ProductSlug =
   | "pass-books"
   | "carbonless-forms"
   | "variable-data"
-  | "lottery-tickets"
   | "thermal-sticker"
   | "dividend-warrants"
   | "book-works";
@@ -48,7 +47,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   "omr-sheets": {
     slug: "omr-sheets",
     name: "OMR Sheets",
-    tagline: "Precision-printed for flawless optical mark recognition",
+    tagline: "Printed with high accuracy so every sheet scans perfectly",
     description:
       "Our OMR sheets are printed with the highest accuracy to ensure reliable scanning results. Used for entrance examinations, recruitment tests, surveys, and evaluation forms. Supports linear barcodes, QR codes, and variable data printing for unique identification of each sheet.",
     securityFeatures: [
@@ -93,15 +92,15 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Security paper",
       "Hot foil stamping (gold/silver)",
     ],
-    sectors: ["Education", "Banking", "Corporate", "Government"],
-    relatedProducts: ["dividend-warrants", "cheque-books", "answer-booklets"],
+    sectors: ["Education", "Corporate", "Government"],
+    relatedProducts: ["dividend-warrants", "answer-booklets", "variable-data"],
   },
   "cheque-books": {
     slug: "cheque-books",
     name: "Cheque Books",
-    tagline: "MICR-encoded, bank-compliant cheque printing",
+    tagline: "MICR-encoded, security-grade cheque printing",
     description:
-      "We print cheque books for banks, NBFCs, cooperative banks, and corporate accounts. All cheques are printed on security paper with MICR encoding using our specialized machinery.",
+      "We print cheque books for corporate accounts and institutional use. All cheques are printed on security paper with MICR encoding using our specialized machinery.",
     securityFeatures: [
       "MICR (E-13B) encoding",
       "Security paper with watermark",
@@ -110,24 +109,24 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Void pantograph",
       "Carbonless copy option",
     ],
-    sectors: ["Banking"],
+    sectors: ["Corporate"],
     relatedProducts: ["pass-books", "dividend-warrants", "carbonless-forms"],
   },
   "pass-books": {
     slug: "pass-books",
     name: "Pass Books & Annual Reports",
-    tagline: "Precision-bound financial documents for the banking sector",
+    tagline: "Neatly bound passbooks, registers, and annual reports",
     description:
-      "We produce pass books for savings and current accounts, fixed deposit passbooks, and annual report books. Printed with multi-colour covers, thread-stitched or perfect-bound, and finished to the highest standards.",
+      "We produce bound registers, fixed-deposit style passbooks for institutional use, and annual report books. Printed with multi-colour covers, thread-stitched or perfect-bound, and finished to the highest standards.",
     securityFeatures: [
       "Perfect binding / saddle stitch",
       "Multi-colour offset printing",
       "Barcode on cover",
       "UV coating available",
       "Variable data printing for personalisation",
-      "Durable finishing for repeated banking handling",
+      "Durable finishing for repeated handling",
     ],
-    sectors: ["Banking", "Corporate"],
+    sectors: ["Corporate"],
     relatedProducts: ["cheque-books", "dividend-warrants", "variable-data"],
   },
   "carbonless-forms": {
@@ -135,7 +134,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Carbonless Forms & Computer Stationery",
     tagline: "Multi-part forms for business and government workflows",
     description:
-      "NCR (No Carbon Required) forms, continuous stationery, and multi-part business forms for government departments, banks, logistics companies, and hospitals. We have dedicated computer stationery machines for continuous-feed printing.",
+      "NCR (No Carbon Required) forms, continuous stationery, and multi-part business forms for government departments, logistics companies, and hospitals. We have dedicated computer stationery machines for continuous-feed printing.",
     securityFeatures: [
       "NCR paper (2-part, 3-part, 4-part)",
       "Sequential numbering",
@@ -144,15 +143,15 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Colour-coded copy sets",
       "Continuous-feed compatibility for high-volume printing",
     ],
-    sectors: ["Government", "Banking", "Corporate"],
+    sectors: ["Government", "Corporate"],
     relatedProducts: ["cheque-books", "variable-data", "pass-books"],
   },
   "variable-data": {
     slug: "variable-data",
     name: "Barcode & Variable Data Printing",
-    tagline: "Every document uniquely identified — at speed",
+    tagline: "Unique barcodes and data on every document, at high speed",
     description:
-      "Using our Konica Minolta 7120 & 6120 variable data machines, we print unique barcodes, QR codes, serial numbers, names, and data on each sheet at high speed. Ideal for hall tickets, ID cards, lottery tickets, and personalized documents.",
+      "Using our Konica Minolta 7120 & 6120 variable data machines, we print unique barcodes, QR codes, serial numbers, names, and data on each sheet at high speed. Ideal for hall tickets, ID cards, and personalized documents.",
     securityFeatures: [
       "Linear barcodes (all symbologies)",
       "QR codes",
@@ -161,30 +160,13 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Auto inspection technology",
       "MICR + variable data combination",
     ],
-    sectors: ["Education", "Banking", "Government", "Corporate"],
-    relatedProducts: ["omr-sheets", "lottery-tickets", "certificates"],
-  },
-  "lottery-tickets": {
-    slug: "lottery-tickets",
-    name: "Lottery Tickets",
-    tagline: "Secure, tamper-proof lottery and scratch card printing",
-    description:
-      "We print lottery tickets and scratch cards with scratch-off panels, sequential numbering, UV-visible security inks, and barcodes. Used by state lottery corporations and corporate promotional programs.",
-    securityFeatures: [
-      "Scratch-off panel",
-      "UV-visible inks",
-      "Sequential numbering",
-      "Barcode for verification",
-      "Tamper-evident coating",
-      "Controlled substrate and secure print workflow",
-    ],
-    sectors: ["Government", "Corporate"],
-    relatedProducts: ["variable-data", "thermal-sticker", "dividend-warrants"],
+    sectors: ["Education", "Government", "Corporate"],
+    relatedProducts: ["omr-sheets", "thermal-sticker", "certificates"],
   },
   "thermal-sticker": {
     slug: "thermal-sticker",
     name: "Thermal Paper & Sticker Printing",
-    tagline: "Labels and POS rolls printed to precision",
+    tagline: "Labels, stickers, and POS rolls in any size you need",
     description:
       "We produce thermal paper rolls for POS terminals, stickers, self-adhesive labels, and product tags. Available in custom sizes with barcode, QR code, or variable data printing.",
     securityFeatures: [
@@ -195,13 +177,13 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "High-speed output",
       "Optional variable data for per-unit identification",
     ],
-    sectors: ["Corporate", "Banking"],
-    relatedProducts: ["carbonless-forms", "variable-data", "lottery-tickets"],
+    sectors: ["Corporate"],
+    relatedProducts: ["carbonless-forms", "variable-data", "dividend-warrants"],
   },
   "dividend-warrants": {
     slug: "dividend-warrants",
     name: "Dividend Warrants & Event Tickets",
-    tagline: "Secure payment instruments and verified event access",
+    tagline: "Secure dividend warrants, tickets, and gate passes",
     description:
       "We print dividend warrants for listed companies, along with event tickets, gate passes, and admission cards with multiple security features to prevent counterfeiting.",
     securityFeatures: [
@@ -213,7 +195,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Anti-tamper finishing for forgery resistance",
     ],
     sectors: ["Corporate", "Government"],
-    relatedProducts: ["certificates", "cheque-books", "lottery-tickets"],
+    relatedProducts: ["certificates", "cheque-books", "variable-data"],
   },
   "book-works": {
     slug: "book-works",

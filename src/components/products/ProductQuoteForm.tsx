@@ -57,11 +57,11 @@ export function ProductQuoteForm({
       className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm"
     >
       <h3 className="text-lg font-bold text-primary">
-        Request Quote for This Product
+        Request a quote for this product
       </h3>
       <p className="mt-2 text-sm text-muted-foreground">
-        Submit opens your email app with a pre-filled enquiry message. No
-        server upload.
+        Fill in the details and click send. Your email app will open with the
+        message ready — just press send.
       </p>
 
       <div className="mt-6 grid grid-cols-1 gap-4">
@@ -142,7 +142,7 @@ export function ProductQuoteForm({
             rows={4}
             required
             className="mt-1 min-h-[120px] w-full resize-y rounded-lg border border-input bg-white px-3 py-2.5 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            placeholder="Timelines, security requirements, delivery location, etc."
+            placeholder="Tell us your timeline, security requirements, delivery location, etc."
           />
         </div>
       </div>
