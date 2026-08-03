@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -120,8 +120,10 @@ export function Navbar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [mobileSection, setMobileSection] = useState<string | null>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const prefetchedMenus = useRef<Set<string>>(new Set());
+  const headerBarRef = useRef<HTMLDivElement | null>(null);
 
   function openDropdown(key: string) {
     if (closeTimerRef.current) {
@@ -145,6 +147,57 @@ export function Navbar() {
     }, 140);
   }
 
+  function closeMobile() {
+    setOpen(false);
+    setMobileSection(null);
+  }
+
+  function toggleMobileSection(key: string) {
+    setMobileSection((current) => (current === key ? null : key));
+    if (!prefetchedMenus.current.has(key)) {
+      prefetchedMenus.current.add(key);
+      const menu = dropdownMenus.find((m) => m.key === key);
+      menu?.items.forEach((it) => router.prefetch(it.href));
+    }
+  }
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setOpen(false);
+    setMobileSection(null);
+  }, [pathname]);
+
+  // Lock body scroll while the mobile sheet is open
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
+  // Keep the sheet pinned just under the sticky bar
+  useEffect(() => {
+    const sync = () => {
+      const bar = headerBarRef.current;
+      if (!bar) return;
+      const top = bar.getBoundingClientRect().bottom;
+      document.documentElement.style.setProperty(
+        "--mobile-nav-top",
+        `${Math.max(0, top)}px`
+      );
+    };
+
+    sync();
+    window.addEventListener("resize", sync);
+    window.addEventListener("scroll", sync, { passive: true });
+    return () => {
+      window.removeEventListener("resize", sync);
+      window.removeEventListener("scroll", sync);
+    };
+  }, [open]);
+
   useEffect(() => {
     return () => {
       if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
@@ -153,11 +206,14 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 isolate border-b border-border/80 bg-white shadow-sm">
-      <div className="mx-auto flex min-w-0 max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
+      <div
+        ref={headerBarRef}
+        className="mx-auto flex min-w-0 max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8"
+      >
         <Link
           href="/"
           className="min-w-0 max-w-[min(100%,18rem)] text-xs font-semibold leading-tight text-primary sm:max-w-xs sm:text-sm md:text-base"
-          onClick={() => setOpen(false)}
+          onClick={closeMobile}
         >
           <span className="flex min-w-0 items-center gap-2 sm:gap-3">
             <Image
@@ -292,7 +348,12 @@ export function Navbar() {
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-primary"
             aria-expanded={open}
             aria-controls="mobile-nav"
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => {
+              setOpen((v) => {
+                if (v) setMobileSection(null);
+                return !v;
+              });
+            }}
           >
             <span className="sr-only">Toggle menu</span>
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -301,55 +362,121 @@ export function Navbar() {
       </div>
 
       {open ? (
-        <div
-          id="mobile-nav"
-          className="max-h-[min(75vh,560px)] overflow-y-auto overscroll-y-contain border-t border-border bg-white px-4 py-3 lg:hidden"
-        >
-          <div className="flex flex-col gap-2">
-            <Link
-              href="/"
-              onClick={() => setOpen(false)}
-              className={cn(
-                "rounded-xl border border-border px-3 py-2.5 text-sm font-semibold transition-colors",
-                pathname === "/"
-                  ? "border-accent/40 bg-muted text-primary"
-                  : "text-primary hover:bg-muted/70"
-              )}
-            >
-              Home
-            </Link>
-            {dropdownMenus.map((menu) => (
-              <details
-                key={menu.key}
-                className="group rounded-xl border border-border bg-white"
-              >
-                <summary className="cursor-pointer list-none px-3 py-2.5 text-sm font-semibold text-primary">
-                  {menu.label}
-                </summary>
-                <div className="grid grid-cols-1 gap-1 border-t border-border px-3 py-3">
-                  {menu.items.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      prefetch={false}
-                      target={item.targetBlank ? "_blank" : undefined}
-                      rel={
-                        item.targetBlank ? "noopener noreferrer" : undefined
-                      }
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        "break-words rounded-lg px-2 py-2 text-sm transition-colors",
-                        isPathActive(pathname, item.href)
-                          ? "border border-accent/40 bg-muted text-primary"
-                          : "text-foreground/90 hover:bg-muted"
-                      )}
+        <div className="lg:hidden" id="mobile-nav">
+          <button
+            type="button"
+            aria-label="Close menu"
+            className="fixed inset-x-0 bottom-0 z-40 bg-primary/45"
+            style={{ top: "var(--mobile-nav-top, 3.5rem)" }}
+            onClick={closeMobile}
+          />
+
+          <div
+            className="fixed inset-x-0 bottom-0 z-50 flex flex-col bg-white shadow-2xl"
+            style={{ top: "var(--mobile-nav-top, 3.5rem)" }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
+          >
+            <nav className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain px-3 py-3">
+              <div className="flex flex-col gap-1.5">
+                <Link
+                  href="/"
+                  onClick={closeMobile}
+                  className={cn(
+                    "rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors",
+                    pathname === "/"
+                      ? "bg-muted text-primary"
+                      : "text-primary hover:bg-muted/70"
+                  )}
+                >
+                  Home
+                </Link>
+
+                {dropdownMenus.map((menu) => {
+                  const isExpanded = mobileSection === menu.key;
+                  const parentActive =
+                    isPathActive(pathname, menu.href) ||
+                    menu.items.some((it) => isPathActive(pathname, it.href));
+
+                  return (
+                    <div
+                      key={menu.key}
+                      className="rounded-lg border border-border/80"
                     >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-            ))}
+                      <button
+                        type="button"
+                        aria-expanded={isExpanded}
+                        onClick={() => toggleMobileSection(menu.key)}
+                        className={cn(
+                          "flex w-full items-center justify-between gap-3 px-3 py-2.5 text-left text-sm font-semibold transition-colors",
+                          parentActive || isExpanded
+                            ? "text-primary"
+                            : "text-primary/90"
+                        )}
+                      >
+                        <span>{menu.label}</span>
+                        <ChevronDown
+                          className={cn(
+                            "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200",
+                            isExpanded && "rotate-180"
+                          )}
+                          aria-hidden
+                        />
+                      </button>
+
+                      {isExpanded ? (
+                        <div className="border-t border-border/70 px-2 pb-2 pt-1">
+                          <Link
+                            href={menu.href}
+                            onClick={closeMobile}
+                            className="mb-1 block rounded-md px-2.5 py-1.5 text-xs font-semibold tracking-wide text-accent hover:bg-muted/60"
+                          >
+                            View all {menu.label.toLowerCase()} →
+                          </Link>
+                          <ul className="flex flex-col">
+                            {menu.items.map((item) => (
+                              <li key={item.href}>
+                                <Link
+                                  href={item.href}
+                                  prefetch={false}
+                                  target={
+                                    item.targetBlank ? "_blank" : undefined
+                                  }
+                                  rel={
+                                    item.targetBlank
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
+                                  onClick={closeMobile}
+                                  className={cn(
+                                    "block rounded-md px-2.5 py-2 text-[13px] leading-snug transition-colors",
+                                    isPathActive(pathname, item.href)
+                                      ? "bg-muted font-semibold text-primary"
+                                      : "text-foreground/85 hover:bg-muted/70 hover:text-primary"
+                                  )}
+                                >
+                                  {item.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null}
+                    </div>
+                  );
+                })}
+              </div>
+            </nav>
+
+            <div className="shrink-0 border-t border-border bg-primary px-4 py-3 text-white">
+              <p className="text-[11px] font-semibold tracking-[0.14em] text-sky-200">
+                FOUR ISO · HYDERABAD &amp; VIJAYAWADA
+              </p>
+              <p className="mt-0.5 text-xs text-sky-100/90">
+                India&apos;s trusted security printing partner since 1997
+              </p>
+            </div>
           </div>
         </div>
       ) : null}
