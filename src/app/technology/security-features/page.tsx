@@ -2,55 +2,63 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Aperture,
   Barcode,
-  Camera,
   CheckCircle2,
   Droplets,
+  EyeOff,
   Fingerprint,
   Hash,
+  Highlighter,
+  Layers,
+  QrCode,
+  ScanLine,
   ShieldCheck,
   Sparkles,
-  Trophy,
+  SpellCheck,
+  Thermometer,
+  Type,
+  Waves,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  securityFeaturesCatalog,
+  type SecurityFeature,
+} from "@/lib/security-features-data";
 
 export const metadata: Metadata = {
   title: { absolute: "Security Features We Offer" },
   description:
-    "Security features we offer — MICR with penetrating ink, UV inks, holograms, watermarks, guilloche patterns, sequential numbering, barcodes and QR codes, and scratch-off panels.",
+    "Security features we offer — barcode, QR code, watermark, UV invisible logo, microtext, microline, thermochromic ink, copy void, fluorescent border, guilloche, hologram, and more.",
 };
 
-const securityFeatures = [
+const featureIcons: Record<string, LucideIcon> = {
+  "Bar Code": Barcode,
+  "QR Code": QrCode,
+  "Spelling Mistake": SpellCheck,
+  "Water Mark": Droplets,
+  "UV Invisible Logo": Sparkles,
+  MicroText: Type,
+  "Micro Line": Waves,
+  "Invisible Sign": EyeOff,
+  "Thermochromic Ink": Thermometer,
+  "Copy Void": ScanLine,
+  "Fluorescent Border": Highlighter,
+  "Guilloche Design": Aperture,
+  "Mirror Text": Type,
+  "High Resolution Border": Layers,
+  "Relief Background": Layers,
+  Hologram: ShieldCheck,
+};
+
+const additionalCapabilities = [
   {
     name: "MICR Encoding",
     icon: Hash,
     line1: "Machine-readable MICR with penetrating ink",
-    line2: "Built for high-accuracy scanning workflows",
-  },
-  {
-    name: "UV-Visible Inks",
-    icon: Sparkles,
-    line1: "Invisible under normal light, glows under UV",
-    line2: "Helps detect tampering and forgery attempts",
-  },
-  {
-    name: "Hologram Stamping",
-    icon: Trophy,
-    line1: "Inline hologram and MICR numbering machine",
-    line2: "Adds a premium, verified anti-counterfeit layer",
-  },
-  {
-    name: "Watermarks",
-    icon: Droplets,
-    line1: "Embedded paper watermarks for certificates",
-    line2: "Very hard to copy without the right paper",
-  },
-  {
-    name: "Guilloche Patterns",
-    icon: CheckCircle2,
-    line1: "Complex mathematical background patterns",
-    line2: "Designed to resist copy-based fraud",
+    line2: "Built for cheques, warrants, and high-accuracy scanning",
   },
   {
     name: "Sequential Numbering",
@@ -59,42 +67,52 @@ const securityFeatures = [
     line2: "Shows through the sheet; hard to alter or erase",
   },
   {
-    name: "Barcodes & QR Codes",
-    icon: Barcode,
-    line1: "Linear, 2D, Data Matrix support",
-    line2: "Fast scanning for verification and logistics",
-  },
-  {
-    name: "Void Pantograph",
-    icon: Camera,
-    line1: "\"VOID\" appears when photocopied",
-    line2: "Makes photocopies easy to catch",
-  },
-  {
     name: "Hot Foil Stamping",
-    icon: Trophy,
+    icon: Sparkles,
     line1: "Gold/silver foil via Heidelberg machine",
-    line2: "Premium finish with enhanced anti-counterfeit",
-  },
-  {
-    name: "Scratch-Off Panel",
-    icon: ShieldCheck,
-    line1: "For promotional and verification applications",
-    line2: "Tamper-evident and verification-ready",
+    line2: "Premium finish with an extra anti-counterfeit layer",
   },
   {
     name: "Variable Data Printing",
     icon: Fingerprint,
     line1: "Unique data per document at high speed",
-    line2: "Names, serials, and identifiers with consistency",
-  },
-  {
-    name: "Microtext",
-    icon: Hash,
-    line1: "Tiny text not visible to the naked eye",
-    line2: "An extra check of genuineness for sensitive documents",
+    line2: "Names, serials, barcodes, and identifiers with consistency",
   },
 ] as const;
+
+function FeatureCard({
+  name,
+  line1,
+  line2,
+  Icon,
+}: {
+  name: string;
+  line1: string;
+  line2: string;
+  Icon: LucideIcon;
+}) {
+  return (
+    <article className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm">
+      <div className="flex items-start gap-4">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
+        </div>
+        <div className="min-w-0">
+          <h3 className="text-base font-semibold text-primary">{name}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            {line1}
+            <br />
+            {line2}
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function catalogIcon(feature: SecurityFeature): LucideIcon {
+  return featureIcons[feature.name] ?? CheckCircle2;
+}
 
 export default function SecurityFeaturesPage() {
   return (
@@ -117,22 +135,23 @@ export default function SecurityFeaturesPage() {
             Security Features We Offer
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            A complete set of anti-counterfeit and confidentiality features for
-            government departments, universities, and large institutions.
+            Sixteen layered anti-counterfeit options — from barcodes and
+            watermarks to UV logos, microtext, thermochromic ink, and holograms —
+            combined to match each tender and document risk.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="flex items-end justify-between gap-6">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              Built for verification and confidentiality
+              Document security feature set
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Choose the right combination of features for your tender — from
-              MICR and UV inks to holograms, watermarks, and tamper-proof
-              elements.
+              Specify one feature or a full stack. We design, proof, and print
+              the combination that makes genuine documents easy to verify and
+              forged ones impractical.
             </p>
           </div>
           <Button variant="accent" asChild>
@@ -141,34 +160,40 @@ export default function SecurityFeaturesPage() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {securityFeatures.map((f) => {
-            const Icon = f.icon;
-            return (
-              <article
+          {securityFeaturesCatalog.map((f) => (
+            <FeatureCard
+              key={f.name}
+              name={f.name}
+              line1={f.summary}
+              line2={f.detail}
+              Icon={catalogIcon(f)}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+          <h2 className="text-2xl font-bold text-primary sm:text-3xl">
+            Also available on press
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Alongside the features above, our lines support MICR encoding,
+            penetrating-ink serials, foil stamping, and high-speed variable data.
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {additionalCapabilities.map((f) => (
+              <FeatureCard
                 key={f.name}
-                className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="text-base font-semibold text-primary">
-                      {f.name}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {f.line1}
-                      <br />
-                      {f.line2}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+                name={f.name}
+                line1={f.line1}
+                line2={f.line2}
+                Icon={f.icon}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>
   );
 }
-

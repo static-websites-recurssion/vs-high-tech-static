@@ -33,7 +33,7 @@ const painPoints = [
   {
     title: "Certificate forgery",
     icon: ShieldCheck,
-    body: "Multiple security features — UV inks, guilloche patterns, and controlled numbering — make certificates very hard to copy.",
+    body: "Multiple security features — Guilloche Design, UV Invisible Logo, Hologram, MicroText, Copy Void, and controlled numbering — make certificates very hard to copy.",
   },
 ] as const;
 

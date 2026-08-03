@@ -386,7 +386,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 09"
             title="Security Printing Features"
-            lead="Layered overt and covert protection — from MICR and sequential numbering with penetrating ink to UV features and holograms — specified per document so a genuine certificate is easy to verify and a forged one is not worth attempting."
+            lead="Sixteen layered options — Bar Code, QR Code, Water Mark, UV Invisible Logo, MicroText, Micro Line, Thermochromic Ink, Copy Void, Fluorescent Border, Guilloche Design, Hologram, and more — specified per document so a genuine certificate is easy to verify and a forged one is not worth attempting."
             tone="dark"
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">

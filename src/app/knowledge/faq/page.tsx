@@ -46,7 +46,11 @@ const faqs = [
   },
   {
     q: "Do you offer hologram stamping?",
-    a: "Yes. Hologram stamping is available for suitable products, along with numbering and other security features.",
+    a: "Yes. Hologram stamping is available for suitable products, along with our full security feature set — barcode, QR code, watermark, UV invisible logo, microtext, microline, copy void, fluorescent border, guilloche, thermochromic ink, and more.",
+  },
+  {
+    q: "What security features can you print on certificates?",
+    a: "We offer sixteen document security options including Bar Code, QR Code, Spelling Mistake cues, Water Mark, UV Invisible Logo, MicroText, Micro Line, Invisible Sign, Thermochromic Ink, Copy Void, Fluorescent Border, Guilloche Design, Mirror Text, High Resolution Border, Relief Background, and Hologram. We help you choose the right combination for your tender.",
   },
   {
     q: "What is your turnaround time for urgent jobs?",

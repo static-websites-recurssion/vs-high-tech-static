@@ -517,43 +517,43 @@ export const securityFeatures: ServiceItem[] = [
   {
     title: "Invisible Security Features",
     description:
-      "UV-reactive inks, covert marks and hidden elements readable only under inspection.",
+      "UV Invisible Logo, Invisible Sign, and other covert marks readable only under UV or inspection light.",
     icon: EyeOff,
   },
   {
     title: "Visible Security Features",
     description:
-      "Guilloche, micro-text, rainbow printing and holograms verifiable at a glance.",
+      "Guilloche Design, MicroText, Micro Line, Mirror Text, High Resolution Border, Relief Background, and Hologram — verifiable at a glance.",
     icon: Eye,
   },
   {
     title: "Special Security Paper",
     description:
-      "Watermarked, fibre-embedded and chemically reactive substrates sourced under control.",
+      "Water Mark, fibre-embedded and chemically reactive substrates sourced under control.",
     icon: Layers,
   },
   {
-    title: "Anti-Counterfeit Printing",
+    title: "Anti-Copy & Reactive Inks",
     description:
-      "Layered deterrents that make reproduction impractical and tampering evident.",
+      "Copy Void pantographs, Fluorescent Border, Thermochromic Ink, and deliberate Spelling Mistake cues that expose forgeries.",
     icon: Shield,
+  },
+  {
+    title: "Bar Code & QR Code",
+    description:
+      "Linear barcodes and QR codes for track-and-trace, mobile verification, and logistics on every secure document.",
+    icon: Barcode,
   },
   {
     title: "Secure Certificates",
     description:
-      "Degree and diploma certificates with numbering, authentication and issue records.",
+      "Degree and diploma certificates with numbering, holograms, guilloche work, and layered authentication.",
     icon: Award,
-  },
-  {
-    title: "Secure Marks Memos",
-    description:
-      "Statements of marks protected against alteration, duplication and forgery.",
-    icon: ScrollText,
   },
   {
     title: "Customized Security Documents",
     description:
-      "Feature sets designed around each institution's risk profile and budget.",
+      "Feature sets designed around each institution's risk profile — pick from our full sixteen-feature catalogue.",
     icon: FileLock2,
   },
 ];

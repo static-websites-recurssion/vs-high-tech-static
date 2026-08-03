@@ -69,10 +69,24 @@ function featureIcon(feature: string) {
   if (f.includes("shredd")) return Hash;
   if (f.includes("number") || f.includes("coding") || f.includes("serial")) return Hash;
   if (f.includes("mobile") || f.includes("phone")) return Ban;
-  if (f.includes("barcode") || f.includes("qr") || f.includes("data") || f.includes("micr")) {
+  if (f.includes("barcode") || f.includes("bar code") || f.includes("qr") || f.includes("data") || f.includes("micr")) {
     return Barcode;
   }
-  if (f.includes("uv") || f.includes("hologram") || f.includes("foil") || f.includes("guilloche")) {
+  if (
+    f.includes("uv") ||
+    f.includes("hologram") ||
+    f.includes("foil") ||
+    f.includes("guilloche") ||
+    f.includes("micro") ||
+    f.includes("thermochromic") ||
+    f.includes("fluorescent") ||
+    f.includes("copy void") ||
+    f.includes("water mark") ||
+    f.includes("watermark") ||
+    f.includes("mirror") ||
+    f.includes("relief") ||
+    f.includes("invisible")
+  ) {
     return CheckCircle2;
   }
   return ShieldCheck;

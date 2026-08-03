@@ -30,7 +30,7 @@ const links = [
   {
     href: "/technology/security-features",
     label: "Security features",
-    blurb: "Visible and hidden security features for certificates, stationery, and secure forms.",
+    blurb: "Sixteen layered features — barcode, QR, watermark, UV logo, microtext, hologram, copy void, and more.",
     icon: Fingerprint,
   },
   {
