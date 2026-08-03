@@ -2,26 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+import { isoCodes } from "@/lib/iso-certifications";
+
 const quickLinks = [
   { href: "/products/question-papers", label: "Products" },
   { href: "/sectors/education", label: "Sectors" },
   { href: "/technology/security-features", label: "Technology" },
-  { href: "/knowledge/blog", label: "Knowledge Centre" },
+  { href: "/knowledge/faq", label: "Knowledge Centre" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
-const usefulLinks: Array<{ href: string; label: string; download?: boolean }> = [
-  { href: "/company-profile.pdf", label: "Company Profile (PDF)", download: true },
+const usefulLinks = [
   { href: "/certifications", label: "Certifications" },
   { href: "/knowledge/faq", label: "FAQ" },
-  { href: "/knowledge/blog", label: "Blog" },
-];
-
-const isoStandards = [
-  "ISO 9001:2015",
-  "ISO 27001:2013",
-  "ISO 14001:2015",
+  { href: "/knowledge/downloads", label: "Downloads" },
 ] as const;
 
 export function Footer() {
@@ -50,7 +45,7 @@ export function Footer() {
               certified.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {isoStandards.map((label) => (
+              {isoCodes.map((label) => (
                 <span
                   key={label}
                   className="inline-flex items-center rounded-full border border-gold/60 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-gold"
@@ -85,25 +80,15 @@ export function Footer() {
               Useful links
             </p>
             <ul className="mt-4 space-y-2 text-sm">
-              {usefulLinks.map(({ href, label, download }) => (
+              {usefulLinks.map(({ href, label }) => (
                 <li key={href}>
-                  {download ? (
-                    <a
-                      href={href}
-                      download
-                      className="text-white/90 transition-colors hover:text-white"
-                    >
-                      {label}
-                    </a>
-                  ) : (
-                    <Link
-                      href={href}
-                      prefetch={false}
-                      className="text-white/90 transition-colors hover:text-white"
-                    >
-                      {label}
-                    </Link>
-                  )}
+                  <Link
+                    href={href}
+                    prefetch={false}
+                    className="text-white/90 transition-colors hover:text-white"
+                  >
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>

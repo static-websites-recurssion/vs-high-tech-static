@@ -2,22 +2,35 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Droplets,
+  FlaskConical,
+  Gauge,
+  MoveVertical,
+  Palette,
   Ruler,
   ScanBarcode,
   ShieldCheck,
   Sparkles,
+  Sun,
+  Waves,
 } from "lucide-react";
 
 import { siteImages } from "@/lib/site-images";
+import { isoCodes } from "@/lib/iso-certifications";
 
 export const metadata: Metadata = {
   title: { absolute: "Quality Control" },
   description:
-    "Our quality control process — paper GSM testing, security ink testing, barcode and UV verification, double checking of all material, and 100% inspection before dispatch.",
+    "Our quality control process — GSM, thickness, Cobb, smoothness, brightness, opacity, colour, security ink, barcode and UV testing, double checking of all material, 100% inspection before dispatch, and four ISO process controls (9001, 27001, 14001, 20000-1).",
 };
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
+  { label: "Digital GSM Tester", icon: Gauge },
+  { label: "Digital Thickness Micrometer", icon: MoveVertical },
+  { label: "Cobb Tester", icon: FlaskConical },
+  { label: "Smoothness & Porosity", icon: Waves },
+  { label: "Digital Brightness and Opacity Tester", icon: Sun },
+  { label: "Automatic Color and Brightness Tester", icon: Palette },
   { label: "Security Inks testing", icon: Droplets },
   { label: "Barcode verification", icon: ScanBarcode },
   { label: "UV features testing", icon: Sparkles },
@@ -80,10 +93,10 @@ export default function QualityControlPage() {
               Testing facilities
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              We test paper, security inks, barcodes, and UV features in-house
-              so nothing goes out unchecked.
+              We test paper properties, security inks, barcodes, and UV features
+              in-house so nothing goes out unchecked.
             </p>
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {testingFacilities.map(({ label, icon: Icon }) => (
                 <div
                   key={label}
@@ -135,11 +148,12 @@ export default function QualityControlPage() {
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                 Our quality checks follow documented ISO practices for quality
-                management, information security, and environmental care. Both
-                incoming and outgoing materials are always checked twice.
+                management, information security, environmental care, and IT
+                service management. Both incoming and outgoing materials are
+                always checked twice.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
-                {["ISO 9001:2015", "ISO 27001:2013", "ISO 14001:2015"].map((t) => (
+                {isoCodes.map((t) => (
                   <span
                     key={t}
                     className="rounded-full border border-primary/15 bg-sky-50 px-3 py-1.5 text-sm font-medium text-primary"

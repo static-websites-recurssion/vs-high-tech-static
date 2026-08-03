@@ -4,46 +4,17 @@ import Link from "next/link";
 import { Award, ChevronRight, FileCheck, Shield } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { isoCertifications } from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Certifications | ISO 9001, ISO 27001 & ISO 14001 — V.S. Hitech",
+      "Certifications | ISO 9001, 27001, 14001 & 20000-1 — V.S. Hitech",
   },
   description:
-    "A four ISO certified security printer — quality management (9001), information security (27001), and environmental management (14001). Trusted for confidential government and university work.",
+    "A four ISO certified security printer — quality (9001), information security (27001), environment (14001), and IT service management (20000-1). Trusted for confidential government and university work.",
 };
-
-const certifications = [
-  {
-    code: "ISO 9001:2015",
-    title: "Quality Management System",
-    points: [
-      "Documented processes from enquiry through dispatch",
-      "Consistent quality checks at pre-press, production, and finishing",
-      "Customer feedback and corrective action loops",
-    ],
-  },
-  {
-    code: "ISO 27001:2013",
-    title: "Information Security Management",
-    points: [
-      "Protection of confidential job data and customer specifications",
-      "Access control aligned with sensitive printing workflows",
-      "Risk-based controls for digital and physical information assets",
-    ],
-  },
-  {
-    code: "ISO 14001:2015",
-    title: "Environmental Management System",
-    points: [
-      "Responsible use of materials and waste segregation",
-      "Monitoring of environmental aspects at both plant locations",
-      "Commitment to continual improvement and legal compliance",
-    ],
-  },
-] as const;
 
 const trustBullets = [
   "A strong vendor profile for tenders and empanelment",
@@ -71,7 +42,8 @@ export default function CertificationsPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
             International standards that guide how we manage quality,
-            confidentiality, and the environment — every day, every shift.
+            confidentiality, the environment, and IT services — every day,
+            every shift.
           </p>
         </div>
       </section>
@@ -93,7 +65,7 @@ export default function CertificationsPage() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
           <div className="space-y-8">
-            {certifications.map((c) => (
+            {isoCertifications.map((c) => (
               <article
                 key={c.code}
                 className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8"

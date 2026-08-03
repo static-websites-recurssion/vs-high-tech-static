@@ -17,14 +17,13 @@ import {
 
 import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
 import { Button } from "@/components/ui/button";
-import { blogPosts } from "@/lib/blog-posts";
-import { knowledgeCardImage } from "@/lib/knowledge-preview-media";
+import { isoCertifications, isoCodes } from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
 
-/** Hero-side production shot — NAPH GRAPHICS Koncept web line (cleaned plant photography). */
+/** Hero-side machine — NAPH GRAPHICS Koncept 8-colour web offset. */
 const heroMachineryPhoto = {
   ...siteImages.heroPress,
-  caption: "NAPH GRAPHICS Koncept — 8-colour web line, Hyderabad works",
+  caption: "NAPH GRAPHICS Koncept — 8-colour web offset",
 };
 
 export const metadata: Metadata = {
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
       "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
   },
   description:
-    "India's trusted security printing partner since 1997. Confidential question papers, OMR & certificates for universities, government & institutions in Andhra Pradesh & Telangana.",
+    "India's trusted four ISO-certified security printing partner since 1997 — ISO 9001, 27001, 14001 & 20000-1. Confidential question papers, OMR & certificates for universities, government & institutions in Andhra Pradesh & Telangana.",
 };
 
 const products = [
@@ -86,8 +85,6 @@ const sectors = [
 ] as const;
 
 export default function HomePage() {
-  const previewPosts = blogPosts.slice(0, 3);
-
   return (
     <div className="bg-background">
       {/* SECTION 1 — Hero: guilloche security pattern + copy; plant photography on larger screens */}
@@ -160,13 +157,14 @@ export default function HomePage() {
             </div>
 
             <figure className="mx-auto w-full max-w-md min-w-0 lg:mx-0 lg:max-w-none">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-primary/40 shadow-[0_20px_50px_-12px_rgba(8,30,80,0.55)] ring-1 ring-sky-400/25 sm:aspect-[5/6] lg:aspect-[3/4]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white shadow-[0_20px_50px_-12px_rgba(8,30,80,0.55)] ring-1 ring-sky-400/25 sm:aspect-[5/6] lg:aspect-[3/4]">
                 <Image
                   src={heroMachineryPhoto.src}
                   alt={heroMachineryPhoto.alt}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center p-2 sm:p-3"
                   sizes="(max-width: 1024px) 100vw, 400px"
+                  priority
                 />
               </div>
               <figcaption className="mt-2.5 text-center text-[11px] font-medium leading-snug text-sky-200/80 lg:text-left">
@@ -184,15 +182,16 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t border-sky-400/25 pt-8 text-center text-xs font-medium text-sky-200/85 sm:mt-12 sm:gap-x-4 sm:text-sm lg:mt-14">
-            <span className="font-semibold text-sky-200">ISO 9001:2015</span>
-            <span className="text-sky-500/45" aria-hidden>
-              ·
-            </span>
-            <span className="font-semibold text-sky-200">ISO 27001:2013</span>
-            <span className="text-sky-500/45" aria-hidden>
-              ·
-            </span>
-            <span className="font-semibold text-sky-200">ISO 14001:2015</span>
+            {isoCodes.map((code, index) => (
+              <span key={code} className="contents">
+                {index > 0 ? (
+                  <span className="text-sky-500/45" aria-hidden>
+                    ·
+                  </span>
+                ) : null}
+                <span className="font-semibold text-sky-200">{code}</span>
+              </span>
+            ))}
             <span className="w-full text-sky-300/90 sm:ml-1 sm:w-auto">
               NABCB-accredited management systems
             </span>
@@ -423,96 +422,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6 — Knowledge Centre teaser */}
-      <section className="border-t border-border bg-gradient-to-b from-sky-50/40 to-white py-16 lg:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                Knowledge centre
-              </p>
-              <h2 className="mt-2 text-3xl font-bold text-primary sm:text-4xl">
-                Security printing — notes from our floors
-              </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Short, practical articles on{" "}
-                <strong className="font-medium text-foreground">
-                  question paper security, OMR printing, and security features
-                </strong>
-                , and how{" "}
-                <strong className="font-medium text-foreground">
-                  ISO 27001
-                </strong>{" "}
-                works on the shop floor. All photos are from our own{" "}
-                <strong className="font-medium text-foreground">
-                  Hyderabad and Vijayawada
-                </strong>{" "}
-                plants — not stock images.
-              </p>
-            </div>
-            <Link
-              href="/knowledge/blog"
-              className="shrink-0 text-sm font-semibold text-accent hover:underline"
-            >
-              All articles →
-            </Link>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {previewPosts.map((post) => {
-              const thumb = knowledgeCardImage(post.category);
-              return (
-              <article
-                key={post.slug}
-                className="overflow-hidden rounded-2xl border border-primary/15 bg-white shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
-                    src={thumb.src}
-                    alt={thumb.alt}
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"
-                    aria-hidden
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="rounded-full border border-primary/15 bg-sky-50 px-3 py-1 text-xs font-semibold text-primary">
-                      {post.category}
-                    </span>
-                    <time
-                      className="text-xs tabular-nums text-muted-foreground"
-                      dateTime={post.date}
-                    >
-                      {post.date}
-                    </time>
-                  </div>
-                  <h3 className="mt-4 text-lg font-bold leading-snug text-primary">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {post.excerpt}
-                  </p>
-                  <div className="mt-5">
-                    <Link
-                      href={`/knowledge/blog/${post.slug}`}
-                      className="text-sm font-semibold text-accent hover:underline"
-                    >
-                      Read article →
-                    </Link>
-                  </div>
-                </div>
-              </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* SECTION 7 — Clients trust strip */}
       <section className="border-t border-border bg-background py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -603,48 +512,28 @@ export default function HomePage() {
       {/* SECTION 9 — Certifications bar */}
       <section className="border-t border-sky-900/30 bg-primary py-12 text-sky-50">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:items-center">
-            <div className="md:col-span-3">
+          <div className="grid grid-cols-1 gap-8">
+            <div>
               <h2 className="text-2xl font-bold text-sky-100 sm:text-3xl">
                 Certifications &amp; compliance
               </h2>
               <p className="mt-2 max-w-2xl text-sm text-sky-200/90 sm:text-base">
                 International standards that support quality, confidentiality,
-                and responsible operations.
+                responsible operations, and reliable IT service delivery.
               </p>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {[
-                  {
-                    code: "ISO 9001:2015",
-                    text: "Quality management for consistent output and delivery",
-                  },
-                  {
-                    code: "ISO 27001:2013",
-                    text: "Information security for confidential print jobs",
-                  },
-                  {
-                    code: "ISO 14001:2015",
-                    text: "Environmental management for responsible operations",
-                  },
-                ].map((b) => (
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {isoCertifications.map((b) => (
                   <div
                     key={b.code}
                     className="rounded-xl border border-sky-400/25 bg-sky-950/25 px-5 py-5"
                   >
                     <p className="text-sm font-bold text-sky-200">{b.code}</p>
                     <p className="mt-2 text-xs leading-relaxed text-sky-300/90">
-                      {b.text}
+                      {b.summary}
                     </p>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="md:col-span-1 md:flex md:justify-end">
-              <Button variant="outlineLight" size="lg" asChild>
-                <a href="/company-profile.pdf" download>
-                  Download Company Profile
-                </a>
-              </Button>
             </div>
           </div>
         </div>

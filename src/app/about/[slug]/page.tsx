@@ -5,6 +5,11 @@ import { notFound } from "next/navigation";
 import { Award, ChevronRight, HeartHandshake, Lock, ShieldCheck, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  isoCertifications,
+  isoCompactList,
+  isoCountLabel,
+} from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
 
 const aboutSlugs = ["why-us", "management", "certifications", "infrastructure", "csr"] as const;
@@ -31,7 +36,10 @@ export function generateMetadata({
   if (!title) return { title: "About" };
   return {
     title: { absolute: `${title} | V.S. Hitech` },
-    description: "Learn more about V.S. Hitech’s leadership, compliance, security culture, and infrastructure.",
+    description:
+      slug === "certifications"
+        ? "Four ISO certifications — ISO 9001:2015, ISO 27001:2013, ISO 14001:2015, and ISO/IEC 20000-1:2018 — quality, information security, environment, and IT service management."
+        : "Learn more about V.S. Hitech’s leadership, compliance, security culture, and infrastructure.",
   };
 }
 
@@ -244,7 +252,8 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Certifications matter for procurement because they create repeatable processes, security controls,
-                and clear responsibilities. We maintain ISO-led workflows across production and information handling.
+                and clear responsibilities. We maintain ISO-led workflows across production, information handling,
+                environmental care, and IT service management.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 For universities and government departments, this translates into disciplined job intake,
@@ -259,8 +268,12 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                   <Award className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                 </div>
                 <div>
-                  <p className="text-sm font-bold uppercase tracking-wide text-accent">Four ISO</p>
-                  <p className="text-lg font-semibold text-primary">9001 • 27001 • 14001</p>
+                  <p className="text-sm font-bold uppercase tracking-wide text-accent">
+                    {isoCountLabel}
+                  </p>
+                  <p className="text-lg font-semibold text-primary">
+                    {isoCompactList}
+                  </p>
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -287,36 +300,20 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
             </aside>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {[
-              {
-                code: "ISO 9001",
-                title: "Quality Management",
-                body: "Standardised process controls from pre-press to finishing to reduce defects and rework.",
-              },
-              {
-                code: "ISO 27001",
-                title: "Information Security",
-                body: "Controls for confidential data handling, access discipline, and secure production practices.",
-              },
-              {
-                code: "ISO 14001",
-                title: "Environmental Management",
-                body: "Responsible operations and waste handling discipline aligned to defined procedures.",
-              },
-            ].map((iso) => (
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {isoCertifications.map((iso) => (
               <article
                 key={iso.code}
                 className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm"
               >
                 <p className="text-xs font-bold uppercase tracking-wide text-accent">
-                  {iso.code}
+                  {iso.shortCode}
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-primary">
-                  {iso.title}
+                  {iso.shortTitle}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {iso.body}
+                  {iso.plain}
                 </p>
               </article>
             ))}
@@ -334,14 +331,9 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
             </ul>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8">
             <Button variant="accent" size="lg" asChild>
               <Link href="/certifications">Open Certifications page</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="/company-profile.pdf" download>
-                Download company profile
-              </a>
             </Button>
           </div>
         </section>

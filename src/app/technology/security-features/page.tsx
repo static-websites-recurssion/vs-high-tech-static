@@ -18,14 +18,14 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: { absolute: "Security Features We Offer" },
   description:
-    "Security features we offer — MICR, UV inks, holograms, watermarks, guilloche patterns, serial numbering, barcodes and QR codes, and scratch-off panels.",
+    "Security features we offer — MICR with penetrating ink, UV inks, holograms, watermarks, guilloche patterns, sequential numbering, barcodes and QR codes, and scratch-off panels.",
 };
 
 const securityFeatures = [
   {
     name: "MICR Encoding",
     icon: Hash,
-    line1: "Machine-readable ink for secure documents",
+    line1: "Machine-readable MICR with penetrating ink",
     line2: "Built for high-accuracy scanning workflows",
   },
   {
@@ -55,8 +55,8 @@ const securityFeatures = [
   {
     name: "Sequential Numbering",
     icon: Fingerprint,
-    line1: "Unique serial numbers on every document",
-    line2: "Supports audit trails and traceability",
+    line1: "Unique serials printed with penetrating ink",
+    line2: "Shows through the sheet; hard to alter or erase",
   },
   {
     name: "Barcodes & QR Codes",

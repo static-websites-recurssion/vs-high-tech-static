@@ -7,11 +7,11 @@ export function MachineryPlantGallery() {
     <section className="border-t border-border bg-muted/25 py-14 lg:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-          On the production floor
+          Our installed machinery
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-          Site photography from our Hyderabad works — Orient Super and NAPH
-          GRAPHICS web lines and allied equipment in active use.
+          Full installed set from our company profile — web offset, sheet-fed,
+          stationery, binding, cutting, CTCP, finishing, and plant support.
         </p>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {machineryPlantPhotos.map((photo) => (
@@ -19,12 +19,12 @@ export function MachineryPlantGallery() {
               key={photo.src}
               className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm"
             >
-              <div className="relative aspect-[4/3] w-full bg-muted">
+              <div className="relative aspect-[4/3] w-full bg-white">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className="object-cover"
+                  className={`object-contain p-3${"rotate180" in photo && photo.rotate180 ? " rotate-180" : ""}`}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

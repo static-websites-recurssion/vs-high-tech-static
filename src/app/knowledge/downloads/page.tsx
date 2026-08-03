@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, FileText, ShieldCheck } from "lucide-react";
+import { Download, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteImages } from "@/lib/site-images";
@@ -9,23 +9,14 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Downloads" },
   description:
-    "Download our company profile and other documents you may need for tenders and vendor registration.",
+    "Request documents you may need for tenders and vendor registration — including ISO 9001, 27001, 14001, and 20000-1 certificate packs.",
 };
 
 const downloads = [
   {
-    title: "Company Profile PDF",
-    description:
-      "An overview of our plants, machines, and printing capabilities — useful for tenders and vendor registration.",
-    href: "/company-profile.pdf",
-    icon: FileText,
-    image: siteImages.aboutEstate,
-    available: true,
-  },
-  {
     title: "ISO Certificates Overview",
     description:
-      "Certificate copies and scope details for ISO 9001, 27001, and 14001 — shared with genuine buyers under NDA.",
+      "Certificate copies and scope details for ISO 9001, 27001, 14001, and 20000-1 — shared with genuine buyers under NDA.",
     href: "/contact",
     icon: ShieldCheck,
     image: siteImages.certificationsTrust,
@@ -69,7 +60,7 @@ export default function KnowledgeDownloadsPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {downloads.map((d) => {
             const Icon = d.icon;
             const disabled = !d.available;

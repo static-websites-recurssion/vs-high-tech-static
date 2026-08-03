@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { FaqAccordion } from "@/components/knowledge/FaqAccordion";
+import { isoCodesInline } from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ const faqs = [
   },
   {
     q: "What certifications do you hold?",
-    a: "We hold ISO 9001:2015, ISO 27001:2013, and ISO 14001:2015 certifications. These standards guide our quality, information security, and environmental practices.",
+    a: `We hold ${isoCodesInline} certifications. These standards guide our quality, information security, environmental, and IT service management practices.`,
   },
   {
     q: "Do you serve clients outside Andhra Pradesh and Telangana?",

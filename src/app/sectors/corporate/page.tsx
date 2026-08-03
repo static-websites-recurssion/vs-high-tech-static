@@ -5,12 +5,18 @@ import { Briefcase, Barcode, BookOpenCheck, Sticker, FileText } from "lucide-rea
 
 import { Button } from "@/components/ui/button";
 import { productBySlug } from "@/lib/products-data";
+import {
+  bulletLabel,
+  bulletOptions,
+  sectorBySlug,
+} from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+
+const sector = sectorBySlug("corporate");
 
 export const metadata: Metadata = {
   title: { absolute: "Corporate & Private | Sectors" },
-  description:
-    "Complete printing solutions for businesses — annual reports, share certificates, barcode and variable data printing, sticker labels, and book works, always on time.",
+  description: sector.description,
 };
 
 const corporateProducts = [
@@ -70,34 +76,65 @@ export default function CorporateSectorPage() {
             End-to-End Print Solutions for Indian Businesses
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Commercial and security printing for businesses — reliable
-            timelines, good quality, and capacity across two plants.
+            {sector.description}
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-          Products &amp; services for corporates
+          What we deliver for corporates
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {corporateProducts.map((p) => {
-            const Icon = p.icon;
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          Matched to our company profile product range — annual reports, share
+          certificates, cheques, warrants, thermal &amp; sticker work, and
+          commercial print.
+        </p>
+        <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {sector.bullets.map((b) => {
+            const label = bulletLabel(b);
+            const options = bulletOptions(b);
             return (
-              <Link
-                key={p.href}
-                href={p.href}
-                className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              <li
+                key={label}
+                className="flex min-h-[3.25rem] flex-col justify-center rounded-xl border border-primary/10 bg-white px-4 py-3 text-sm font-medium text-primary shadow-sm"
               >
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-base font-bold text-primary">{p.title}</p>
-                  <Icon className="h-5 w-5 text-accent" aria-hidden />
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">{p.subtitle}</p>
-                <p className="mt-4 text-sm font-semibold text-accent">View →</p>
-              </Link>
+                <span>{label}</span>
+                {options ? (
+                  <p className="mt-1.5 text-xs font-normal leading-relaxed text-muted-foreground">
+                    {options.join(" · ")}
+                  </p>
+                ) : null}
+              </li>
             );
           })}
+        </ul>
+      </section>
+
+      <section className="border-y border-border bg-white py-14 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-primary sm:text-3xl">
+            Related product pages
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {corporateProducts.map((p) => {
+              const Icon = p.icon;
+              return (
+                <Link
+                  key={p.href}
+                  href={p.href}
+                  className="rounded-2xl border border-primary/10 bg-background p-6 shadow-sm transition-shadow hover:shadow-md"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-base font-bold text-primary">{p.title}</p>
+                    <Icon className="h-5 w-5 text-accent" aria-hidden />
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">{p.subtitle}</p>
+                  <p className="mt-4 text-sm font-semibold text-accent">View →</p>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -128,4 +165,3 @@ export default function CorporateSectorPage() {
     </div>
   );
 }
-

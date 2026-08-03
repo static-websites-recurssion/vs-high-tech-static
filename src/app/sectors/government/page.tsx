@@ -4,21 +4,19 @@ import Link from "next/link";
 import { Building2, ShieldCheck, Trash2, ClipboardCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  bulletLabel,
+  bulletOptions,
+  sectorBySlug,
+} from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+
+const sector = sectorBySlug("government");
 
 export const metadata: Metadata = {
   title: { absolute: "Government & PSUs | Sectors" },
-  description:
-    "Confidential printing for government departments and PSUs — forms, official stationery, and land records, with complete records and secure disposal of waste.",
+  description: sector.description,
 };
-
-const products = [
-  { title: "Government forms", href: "/services" },
-  { title: "Official stationery", href: "/services" },
-  { title: "Patta / Pattadar Pass Books", href: "/services" },
-  { title: "Confidential Question Papers", href: "/products/question-papers" },
-  { title: "Barcode & Variable Data Printing", href: "/products/variable-data" },
-] as const;
 
 const securityPoints = [
   "Complete records and job documentation wherever required",
@@ -63,23 +61,36 @@ export default function GovernmentSectorPage() {
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
               Products &amp; programs we support
             </h2>
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-              {products.map((p) => (
-                <Link
-                  key={p.title}
-                  href={p.href}
-                  className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-base font-bold text-primary">{p.title}</p>
-                    <Building2 className="h-5 w-5 text-accent" aria-hidden />
-                  </div>
-                  <p className="mt-4 text-sm font-semibold text-accent">
-                    View →
-                  </p>
-                </Link>
-              ))}
-            </div>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Drawn from our company profile range and government programmes —
+              forms, land records, stationery, variable data, and thermal
+              supply for TIMS / ATMS.
+            </p>
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {sector.bullets.map((b) => {
+                const label = bulletLabel(b);
+                const options = bulletOptions(b);
+                return (
+                  <li
+                    key={label}
+                    className="flex min-h-[3.25rem] flex-col justify-center rounded-xl border border-primary/10 bg-white px-4 py-3 text-sm font-medium text-primary shadow-sm"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <span>{label}</span>
+                      <Building2
+                        className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                        aria-hidden
+                      />
+                    </div>
+                    {options ? (
+                      <p className="mt-1.5 text-xs font-normal leading-relaxed text-muted-foreground">
+                        {options.join(" · ")}
+                      </p>
+                    ) : null}
+                  </li>
+                );
+              })}
+            </ul>
 
             <div className="mt-12 rounded-2xl border border-primary/10 bg-primary/5 p-8 shadow-sm">
               <h3 className="text-xl font-bold text-primary">
@@ -145,4 +156,3 @@ export default function GovernmentSectorPage() {
     </div>
   );
 }
-

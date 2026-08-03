@@ -13,10 +13,10 @@ export const siteImages = {
     src: "/images/home/logo-mark.png",
     alt: "V.S. Hitech Security Forms logo mark",
   },
-  /** Home hero — NAPH GRAPHICS Koncept web line, cleaned plant photography (portrait crop). */
+  /** Home hero — NAPH GRAPHICS Koncept 8-colour web offset (catalog product photography). */
   heroPress: {
     src: "/images/home/hero-press.webp",
-    alt: "NAPH GRAPHICS Koncept 8-colour web offset line on the V.S. Hitech production floor",
+    alt: "NAPH GRAPHICS Koncept 8-colour web offset press — product view",
   },
   /** Street view of the Hyderabad works — used for page heroes and banners. */
   heroFacility: {
@@ -44,10 +44,10 @@ export const siteImages = {
     src: "/images/infra-materials.webp",
     alt: "Warehoused paper stock and cartons ready for controlled production use",
   },
-  /** Home — Why Choose Us banner: on-site web press photography. */
+  /** Home — Why Choose Us banner: NAPH GRAPHICS Koncept product photography. */
   whyChooseUsPress: {
     src: "/images/home/why-choose-us-press.webp",
-    alt: "Multi-level blue web offset press with paper reels on the production floor at V.S. Hitech",
+    alt: "NAPH GRAPHICS Koncept 8-colour web offset press — product photography",
   },
   industryEducation: {
     src: "/images/industry-education.webp",
@@ -75,6 +75,6 @@ export const siteImages = {
   },
   certificationsTrust: {
     src: "/images/certifications-trust.webp",
-    alt: "Premium certification and compliance documentation aesthetic",
+    alt: "Four ISO certification and compliance documentation — 9001, 27001, 14001, and 20000-1",
   },
 } as const;

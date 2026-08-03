@@ -7,7 +7,6 @@ import {
   ChevronRight,
   Cpu,
   FileCheck,
-  FileDown,
   HeartHandshake,
   Lock,
   MapPin,
@@ -15,7 +14,10 @@ import {
   Users,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import {
+  isoCertifications,
+  isoCodesInline,
+} from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
@@ -23,29 +25,8 @@ export const metadata: Metadata = {
     absolute: "About Us | 28 Years of Security Printing Excellence",
   },
   description:
-    "Company profile: security printing since 2009, four ISO under NABCB accreditation, Hyderabad & Vijayawada works, leadership, pre-press scale, and confidentiality controls.",
+    "Company profile: security printing since 2009, four ISO under NABCB accreditation (9001, 27001, 14001, 20000-1), Hyderabad & Vijayawada works, leadership, pre-press scale, and confidentiality controls.",
 };
-
-const isoCards = [
-  {
-    code: "ISO 9001:2015",
-    title: "Quality Management System",
-    plain:
-      "Structured processes to deliver consistent quality in every print job and customer interaction.",
-  },
-  {
-    code: "ISO 27001:2013",
-    title: "Information Security Management",
-    plain:
-      "Controls that protect confidential data, documents, and customer information throughout production.",
-  },
-  {
-    code: "ISO 14001:2015",
-    title: "Environmental Management System",
-    plain:
-      "Commitment to reducing environmental impact and operating responsibly at both plant locations.",
-  },
-] as const;
 
 const values = [
   {
@@ -79,7 +60,7 @@ const profileHighlights = [
     title: "Who we serve",
     icon: Building2,
     body:
-      "Trusted by universities, educational boards, government departments, and corporates for secure printing of confidential examination materials, certificates, question papers, mark memos, security stationery, and other sensitive institutional documents.",
+      "Trusted by universities, educational boards, government departments, PSUs, and corporates for secure printing of confidential examination materials, question papers, OMR sheets, marks memos, degree and convocation certificates, Pattadar pass books, official stationery, thermal rolls (TIMS / ATMS), share certificates, and other sensitive institutional documents.",
   },
   {
     title: "Two integrated works",
@@ -93,6 +74,14 @@ const profileHighlights = [
     body:
       "30 high-configured DTP systems, 10 scanners, and 20 laser printers (A4 and A3) to support artwork, data, and plate-ready output at volume.",
   },
+] as const;
+
+const aboutParagraphs = [
+  "V.S. Hitech is committed to delivering exceptional customer satisfaction and customer delight. Every solution we provide is focused on understanding customer requirements and exceeding expectations through quality, reliability, and continuous improvement.",
+  "Over the years, the company has grown steadily by embracing the latest technologies and adapting to the evolving needs of our customers. Keeping pace with technological advancement allows us to deliver innovative, efficient, and future-ready solutions.",
+  "We believe that adopting modern technology is essential to meeting the ever-increasing expectations of our customers. Continuous innovation and technical excellence remain among our highest priorities.",
+  "Our greatest strength is our team of highly motivated, well-trained, and experienced professionals working across every department. We encourage collaboration, ownership, and continuous learning to achieve excellence.",
+  "We maintain a culture of total participation, where every employee is encouraged to contribute innovative ideas and valuable suggestions. This collaborative environment helps us deliver high-quality, error-free solutions on time, while ensuring complete customer satisfaction.",
 ] as const;
 
 const securityPractices = [
@@ -132,32 +121,35 @@ export default function AboutPage() {
             printing solutions for educational institutions and boards, and
             government organizations.
           </p>
-          <div className="mt-8">
-            <Button variant="outlineLight" size="lg" className="gap-2" asChild>
-              <a href="/company-profile.pdf" download>
-                <FileDown className="h-5 w-5 shrink-0" aria-hidden />
-                Download Company Profile
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* SECTION 2 — Company Story */}
+      {/* SECTION 2 — About Us */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14 lg:items-start">
+        <h2 className="text-2xl font-bold text-primary sm:text-3xl">About Us</h2>
+
+        {/* ISO certification banner */}
+        <div className="mt-6 flex flex-col gap-3 rounded-xl border border-gold/30 bg-gold/10 px-5 py-4 sm:flex-row sm:items-center sm:gap-4">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold ring-2 ring-gold/30">
+            <ShieldCheck className="h-6 w-6" strokeWidth={1.75} aria-hidden />
+          </span>
+          <p className="text-sm font-semibold leading-relaxed text-primary sm:text-base">
+            All our operations are certified under four ISO standards —
+            quality, information security, environment, and IT service
+            management.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14 lg:items-start">
           <div>
-            <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              Company Story
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
               <strong className="font-semibold text-foreground">
                 V.S. Hitech Security Forms Private Limited
               </strong>{" "}
               is a leading security printing company, certified under
               NABCB-accredited ISO standards, including{" "}
               <strong className="font-semibold text-foreground">
-                ISO 9001:2015, ISO 27001:2013, and ISO 14001:2015
+                {isoCodesInline}
               </strong>
               . Established in{" "}
               <strong className="font-semibold text-foreground">2009</strong> as
@@ -254,6 +246,23 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        {/* Our approach — company statement */}
+        <div className="mt-12 rounded-2xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8 lg:mt-16 lg:p-10">
+          <h3 className="text-lg font-semibold text-primary sm:text-xl">
+            Our commitment
+          </h3>
+          <div className="mt-6 space-y-6">
+            {aboutParagraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-base leading-relaxed text-muted-foreground sm:text-[1.0625rem] sm:leading-8"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Profile highlights (company profile) */}
@@ -322,8 +331,8 @@ export default function AboutPage() {
             </Link>{" "}
             page.
           </p>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {isoCards.map(({ code, title, plain }) => (
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {isoCertifications.map(({ code, title, plain }) => (
               <div
                 key={code}
                 className="flex flex-col rounded-xl border border-primary/10 bg-background p-6 shadow-sm"

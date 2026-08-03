@@ -32,6 +32,14 @@ const productsWithFinishingAndBinding = new Set<ProductSlug>([
   "carbonless-forms",
 ]);
 
+/** Non-security products — show "Key Features" instead of "Key Security Features". */
+const productsWithKeyFeaturesOnly = new Set<ProductSlug>([
+  "carbonless-forms",
+  "variable-data",
+  "thermal-sticker",
+  "book-works",
+]);
+
 function splitIntoParagraphs(text: string) {
   const sentences = text
     .split(/(?<=[.!?])\s+/)
@@ -113,7 +121,7 @@ function getProcessSteps(slug: ProductSlug): ProcessStepItem[] {
   }
 
   steps.push({
-    step: "Quality Check → Dispatch",
+    step: "Quality Check → Pre-Dispatch Inspection → Dispatch",
     detail:
       "Sets are counted, checked, sealed in tamper-proof packets, and sent in closed DCM vehicles with complete records.",
   });
@@ -196,7 +204,9 @@ export function ProductTemplate({ product }: { product: ProductData }) {
 
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Key Security Features
+                {productsWithKeyFeaturesOnly.has(product.slug)
+                  ? "Key Features"
+                  : "Key Security Features"}
               </h2>
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {product.securityFeatures.map((f) => {

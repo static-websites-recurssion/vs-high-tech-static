@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Contact Us | Hyderabad & Vijayawada Security Printing",
   },
   description:
-    "Hyderabad & Vijayawada offices, phone and email, Google Maps directions — four ISO certified security printing for AP & Telangana.",
+    "Hyderabad & Vijayawada offices, phone and email, Google Maps directions — four ISO certified (9001, 27001, 14001, 20000-1) security printing for AP & Telangana.",
 };
 
 const mapEmbeds = [

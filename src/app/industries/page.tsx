@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+import {
+  bulletLabel,
+  bulletOptions,
+  sectorOfferings,
+} from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
@@ -12,45 +19,11 @@ export const metadata: Metadata = {
     "Security printing for universities & exam boards, government departments, and corporates across Andhra Pradesh & Telangana.",
 };
 
-const sectors = [
-  {
-    headline: "Trusted by Universities and Exam Bodies Across South India",
-    body: "We print question papers, OMR sheets, answer booklets, and certificates for universities, PSCs, recruitment boards, and coaching institutions — all under high confidentiality. With a single-entry facility, CCTV monitoring, and closed-vehicle delivery, there is zero leakage from press to exam hall.",
-    products: [
-      "Question papers",
-      "OMR sheets",
-      "Answer booklets",
-      "Mark sheets",
-      "Certificates",
-    ],
-    label: "Education & Examination Boards",
-    image: siteImages.industryEducation,
-  },
-  {
-    headline: "Reliable Partner for Government Confidential Printing",
-    body: "Our four ISO certifications and strict security environment make us a trusted choice for government departments that need confidential printing with full records and secure disposal of waste.",
-    products: [
-      "Government forms",
-      "Identity documents",
-      "Official stationery",
-    ],
-    label: "Government & Public Sector",
-    image: siteImages.industryGovernment,
-  },
-  {
-    headline: "End-to-End Print Solutions for Businesses",
-    body: "From annual reports and book works to stickers and variable data printing, we support companies with fast, high-quality print runs on modern machinery.",
-    products: [
-      "Annual reports",
-      "Share certificates",
-      "Tickets",
-      "Barcode printing",
-      "Commercial printing",
-    ],
-    label: "Corporate & Private Sector",
-    image: siteImages.industryCorporate,
-  },
-] as const;
+const sectorImages = {
+  education: siteImages.industryEducation,
+  government: siteImages.industryGovernment,
+  corporate: siteImages.industryCorporate,
+} as const;
 
 export default function IndustriesPage() {
   return (
@@ -79,12 +52,13 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {sectors.map((sector, index) => {
+      {sectorOfferings.map((sector, index) => {
         const reverse = index % 2 === 1;
+        const image = sectorImages[sector.slug];
 
         return (
           <section
-            key={sector.label}
+            key={sector.slug}
             className={
               index % 2 === 0
                 ? "w-full border-b border-border bg-white"
@@ -99,8 +73,8 @@ export default function IndustriesPage() {
               <div className="w-full min-w-0 shrink-0 lg:w-[46%]">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-primary/10">
                   <Image
-                    src={sector.image.src}
-                    alt={sector.image.alt}
+                    src={image.src}
+                    alt={image.alt}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 46vw"
@@ -123,15 +97,27 @@ export default function IndustriesPage() {
                     Key products
                   </p>
                   <ul className="mt-3 flex flex-wrap gap-2">
-                    {sector.products.map((product) => (
-                      <li
-                        key={product}
-                        className="rounded-full border border-primary/15 bg-sky-100 px-3 py-1.5 text-sm font-medium text-primary"
-                      >
-                        {product}
-                      </li>
-                    ))}
+                    {sector.bullets.map((product) => {
+                      const label = bulletLabel(product);
+                      const options = bulletOptions(product);
+                      const text = options
+                        ? `${label} (${options.join(" · ")})`
+                        : label;
+                      return (
+                        <li
+                          key={label}
+                          className="rounded-full border border-primary/15 bg-sky-100 px-3 py-1.5 text-sm font-medium text-primary"
+                        >
+                          {text}
+                        </li>
+                      );
+                    })}
                   </ul>
+                </div>
+                <div className="mt-8">
+                  <Button variant="outline" asChild>
+                    <Link href={sector.href}>View {sector.navLabel}</Link>
+                  </Button>
                 </div>
               </div>
             </div>

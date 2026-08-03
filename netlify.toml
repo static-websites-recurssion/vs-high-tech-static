@@ -3,6 +3,16 @@
   command = "npm run build"
   publish = "out"
 
+[[redirects]]
+  from = "/knowledge/blog"
+  to = "/knowledge/faq"
+  status = 301
+
+[[redirects]]
+  from = "/knowledge/blog/*"
+  to = "/knowledge/faq"
+  status = 301
+
 [[headers]]
   for = "/images/*"
   [headers.values]

@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Droplets,
+  FlaskConical,
+  Gauge,
+  MoveVertical,
+  Palette,
   Ruler,
   ScanBarcode,
   Sparkles,
+  Sun,
+  Waves,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -14,11 +20,17 @@ export const metadata: Metadata = {
     absolute: "Testing Facilities | In-House QC for Security Print",
   },
   description:
-    "Paper GSM, security inks, barcode verification, and UV feature checks supporting confidential and variable-data production.",
+    "In-house paper and print testing — GSM, thickness, Cobb, smoothness & porosity, brightness, opacity, colour, security inks, barcode, and UV checks.",
 };
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
+  { label: "Digital GSM Tester", icon: Gauge },
+  { label: "Digital Thickness Micrometer", icon: MoveVertical },
+  { label: "Cobb Tester", icon: FlaskConical },
+  { label: "Smoothness & Porosity", icon: Waves },
+  { label: "Digital Brightness and Opacity Tester", icon: Sun },
+  { label: "Automatic Color and Brightness Tester", icon: Palette },
   { label: "Security Inks testing", icon: Droplets },
   { label: "Barcode verification", icon: ScanBarcode },
   { label: "UV features testing", icon: Sparkles },
@@ -43,7 +55,7 @@ export default function TechnologyTestingPage() {
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
           Capabilities
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {testingFacilities.map(({ label, icon: Icon }) => (
             <div
               key={label}

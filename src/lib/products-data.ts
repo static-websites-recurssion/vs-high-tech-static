@@ -72,7 +72,6 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Watermark paper option",
       "Hologram stamping available",
       "Barcode for tracking",
-      "Perfect binding",
       "Anti-counterfeit patterns",
     ],
     sectors: ["Education"],
@@ -80,7 +79,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   },
   certificates: {
     slug: "certificates",
-    name: "University & Share Certificates",
+    name: "University Degree  Certificates",
     tagline: "High-security certificates that can't be faked",
     description:
       "We print academic certificates, degree certificates, and share certificates for universities, corporations, and government bodies. These feature multiple layers of security to prevent forgery.",
@@ -88,7 +87,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "Guilloche security background",
       "UV-visible inks",
       "Hologram stamping",
-      "MICR/sequential numbering",
+      "MICR/sequential numbering with penetrating ink",
       "Security paper",
       "Hot foil stamping (gold/silver)",
     ],
@@ -104,7 +103,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     securityFeatures: [
       "MICR (E-13B) encoding",
       "Security paper with watermark",
-      "Sequential numbering",
+      "Sequential numbering with penetrating ink",
       "UV-fluorescent features",
       "Void pantograph",
       "Carbonless copy option",
@@ -119,7 +118,6 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     description:
       "We produce bound registers, fixed-deposit style passbooks for institutional use, and annual report books. Printed with multi-colour covers, thread-stitched or perfect-bound, and finished to the highest standards.",
     securityFeatures: [
-      "Perfect binding / saddle stitch",
       "Multi-colour offset printing",
       "Barcode on cover",
       "UV coating available",
@@ -204,7 +202,6 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     description:
       "We handle large-volume book printing for publishers, educational institutions, and corporates — including textbooks, training manuals, annual reports, and product catalogs. Our perfect binding and gathering machines handle runs of any size.",
     securityFeatures: [
-      "Perfect binding",
       "Saddle stitching",
       "Multi-colour offset",
       "UV coating",

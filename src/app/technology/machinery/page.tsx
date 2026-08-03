@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Our Machinery | Web Offset, Finishing & Security Print Lines",
   },
   description:
-    "Installed web offset (Orient Super, NAPH GRAPHICS Koncept), stationery, CTCP, binding, and finishing — plant photography, equipment list, and machine categories.",
+    "Installed web offset (Orient Super, NAPH GRAPHICS Koncept), stationery, CTCP, binding, and finishing — equipment photography, list, and machine categories.",
 };
 
 export default function TechnologyMachineryPage() {
@@ -17,7 +17,7 @@ export default function TechnologyMachineryPage() {
     <div className="bg-background">
       <MachineryOverviewSections
         heroTitle="Our machinery"
-        heroSubtitle="Web offset, computer-stationery lines, CTCP, binding, cutting, and security finishing — built for confidential exam and government work."
+        heroSubtitle="Advanced multi-color  sheetfed & web offset presses, computer stationery production lines, hot foil stamping machines, CTCP systems, high-speed binding machines , programmatic cutting machines—engineered for high-volume, commercial, confidential examination and books printing."
       />
       <section className="border-t border-border bg-muted/30 py-10">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">

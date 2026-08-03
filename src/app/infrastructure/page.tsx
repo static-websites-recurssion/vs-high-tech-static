@@ -2,11 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Droplets,
+  FlaskConical,
+  Gauge,
   MapPin,
+  MoveVertical,
+  Palette,
   Ruler,
   ScanBarcode,
   Shield,
   Sparkles,
+  Sun,
+  Waves,
 } from "lucide-react";
 
 import { MachineryOverviewSections } from "@/components/infrastructure/machinery-overview-sections";
@@ -36,6 +42,12 @@ const securityChecklist = [
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
+  { label: "Digital GSM Tester", icon: Gauge },
+  { label: "Digital Thickness Micrometer", icon: MoveVertical },
+  { label: "Cobb Tester", icon: FlaskConical },
+  { label: "Smoothness & Porosity", icon: Waves },
+  { label: "Digital Brightness and Opacity Tester", icon: Sun },
+  { label: "Automatic Color and Brightness Tester", icon: Palette },
   { label: "Security Inks testing", icon: Droplets },
   { label: "Barcode verification", icon: ScanBarcode },
   { label: "UV features testing", icon: Sparkles },
@@ -83,7 +95,7 @@ export default function InfrastructurePage() {
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
           Testing Facilities
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {testingFacilities.map(({ label, icon: Icon }) => (
             <div
               key={label}

@@ -88,9 +88,8 @@ const dropdownMenus: DropdownMenu[] = [
   {
     key: "knowledge",
     label: "KNOWLEDGE CENTRE",
-    href: "/knowledge/blog",
+    href: "/knowledge/faq",
     items: [
-      { label: "Blog", href: "/knowledge/blog" },
       {
         label: "Downloads",
         href: "/knowledge/downloads",

@@ -4,6 +4,11 @@ import Link from "next/link";
 import { Building2, GraduationCap, Briefcase } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  bulletLabel,
+  bulletOptions,
+  sectorOfferings,
+} from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
@@ -12,59 +17,20 @@ export const metadata: Metadata = {
     "For 28 years we have served universities, government departments, and corporations across India. Client names are kept confidential to protect security requirements.",
 };
 
-type SectorBullet =
-  | string
-  | { label: string; options: readonly string[] };
-
-const sectors = [
-  {
-    label: "Universities & Exam Boards",
+const sectorMeta = {
+  education: {
     icon: GraduationCap,
     image: siteImages.industryEducation,
-    href: "/sectors/education",
-    description:
-      "End-to-end examination printing under strict security, including question papers, precision OMR sheets, and secure, sealed, on-time dispatch.",
-    bullets: [
-      "Question papers",
-      "OMR sheets with variable data",
-      "Answer booklets",
-      { label: "Certificates", options: ["Tearable", "Non-tearable"] },
-      "MCQ Sheets",
-      "QCA Booklets",
-      "Original Degree Certificates",
-      { label: "Marks Memos", options: ["Tearable", "Non-tearable"] },
-      "Convocation Certificates", "Digital Answer Script Evaluation/Online Evaluation System"
-    ] satisfies readonly SectorBullet[],
   },
-  {
-    label: "Government Departments & PSUs",
+  government: {
     icon: Building2,
     image: siteImages.industryGovernment,
-    href: "/sectors/government",
-    description:
-      "Confidential printing for departments and PSUs, with proper records at every step and secure disposal of waste.",
-    bullets: [
-      "Confidential forms",
-      "Official stationery",
-      "Serialized docs",
-      { label: "Rolls", options: ["TIMS", "ATMS", "Thermal"] },
-    ] satisfies readonly SectorBullet[],
   },
-  {
-    label: "Corporate & Private Sector",
+  corporate: {
     icon: Briefcase,
     image: siteImages.industryCorporate,
-    href: "/sectors/corporate",
-    description:
-      "High-volume commercial and secure printing solutions for businesses, including annual reports, certificates, labels, variable data printing, and other customized print materials.",
-    bullets: [
-      "Annual reports",
-      "Share certificates",
-      { label: "Variable Data", options: ["QR codes", "Barcodes"] },
-      "Commercial printing",
-    ] satisfies readonly SectorBullet[],
   },
-] as const;
+} as const;
 
 const testimonials = [
   {
@@ -114,13 +80,18 @@ export default function ClientsPage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="space-y-10">
-          {sectors.map((s, idx) => {
-            const Icon = s.icon;
+          {sectorOfferings.map((s, idx) => {
+            const meta = sectorMeta[s.slug];
+            const Icon = meta.icon;
             const reverse = idx % 2 === 1;
             return (
               <section
-                key={s.label}
-                className={reverse ? "rounded-2xl bg-white p-6 shadow-sm sm:p-8" : "rounded-2xl bg-background p-6 sm:p-8"}
+                key={s.slug}
+                className={
+                  reverse
+                    ? "rounded-2xl bg-white p-6 shadow-sm sm:p-8"
+                    : "rounded-2xl bg-background p-6 sm:p-8"
+                }
               >
                 <div
                   className={`grid min-w-0 grid-cols-1 gap-8 lg:items-stretch ${
@@ -132,8 +103,8 @@ export default function ClientsPage() {
                   <div className={`min-w-0 ${reverse ? "lg:order-2" : ""}`}>
                     <div className="relative aspect-[4/3] h-full min-h-[240px] overflow-hidden rounded-2xl border border-primary/10 shadow-sm lg:aspect-auto">
                       <Image
-                        src={s.image.src}
-                        alt={s.image.alt}
+                        src={meta.image.src}
+                        alt={meta.image.alt}
                         fill
                         className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 40vw"
@@ -159,8 +130,8 @@ export default function ClientsPage() {
                     </p>
                     <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {s.bullets.map((b) => {
-                        const label = typeof b === "string" ? b : b.label;
-                        const options = typeof b === "string" ? null : b.options;
+                        const label = bulletLabel(b);
+                        const options = bulletOptions(b);
                         return (
                           <li
                             key={label}
