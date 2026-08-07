@@ -76,12 +76,30 @@ const profileHighlights = [
   },
 ] as const;
 
-const aboutParagraphs = [
-  "V.S. Hitech is committed to delivering exceptional customer satisfaction and customer delight. Every solution we provide is focused on understanding customer requirements and exceeding expectations through quality, reliability, and continuous improvement.",
-  "Over the years, the company has grown steadily by embracing the latest technologies and adapting to the evolving needs of our customers. Keeping pace with technological advancement allows us to deliver innovative, efficient, and future-ready solutions.",
-  "We believe that adopting modern technology is essential to meeting the ever-increasing expectations of our customers. Continuous innovation and technical excellence remain among our highest priorities.",
-  "Our greatest strength is our team of highly motivated, well-trained, and experienced professionals working across every department. We encourage collaboration, ownership, and continuous learning to achieve excellence.",
-  "We maintain a culture of total participation, where every employee is encouraged to contribute innovative ideas and valuable suggestions. This collaborative environment helps us deliver high-quality, error-free solutions on time, while ensuring complete customer satisfaction.",
+const aboutPillars = [
+  {
+    title: "Customer Focus",
+    icon: HeartHandshake,
+    paragraphs: [
+      "VS Hitech focuses on customer delight. Our work is aimed at ensuring total customer satisfaction and customer delight.",
+    ],
+  },
+  {
+    title: "Growth & Technology",
+    icon: Cpu,
+    paragraphs: [
+      "The company has grown at a scaling pace and has continuously updated itself with the latest technology.",
+      "Keeping up with the latest technology to suit the ever-increasing and innovative requirements of our customers is a priority.",
+    ],
+  },
+  {
+    title: "Experienced & Motivated Team",
+    icon: Users,
+    paragraphs: [
+      "We have a highly motivated team of professionals who are trained to work across all departments.",
+      "We believe in creating an environment of total participation, where all employees contribute towards innovative ideas and suggestions, ensuring error-free and timely deliveries to our customers.",
+    ],
+  },
 ] as const;
 
 const securityPractices = [
@@ -134,9 +152,7 @@ export default function AboutPage() {
             <ShieldCheck className="h-6 w-6" strokeWidth={1.75} aria-hidden />
           </span>
           <p className="text-sm font-semibold leading-relaxed text-primary sm:text-base">
-            All our operations are certified under four ISO standards —
-            quality, information security, environment, and IT service
-            management.
+            All our operations are certified with ISO 9001/27001.
           </p>
         </div>
 
@@ -247,21 +263,38 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Our approach — company statement */}
-        <div className="mt-12 rounded-2xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8 lg:mt-16 lg:p-10">
-          <h3 className="text-lg font-semibold text-primary sm:text-xl">
-            Our commitment
-          </h3>
-          <div className="mt-6 space-y-6">
-            {aboutParagraphs.map((paragraph) => (
-              <p
-                key={paragraph}
-                className="text-base leading-relaxed text-muted-foreground sm:text-[1.0625rem] sm:leading-8"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </div>
+        {/* About pillars — customer, technology, team */}
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3 lg:mt-16">
+          {aboutPillars.map(({ title, icon: Icon, paragraphs }, index) => (
+            <article
+              key={title}
+              className="flex flex-col rounded-2xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8"
+            >
+              <div className="flex items-start gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-1 text-lg font-semibold text-primary sm:text-xl">
+                    {title}
+                  </h3>
+                </div>
+              </div>
+              <div className="mt-5 space-y-4">
+                {paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-sm leading-relaxed text-muted-foreground sm:text-base sm:leading-7"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
