@@ -10,23 +10,8 @@ export const metadata: Metadata = {
     absolute: "Contact Us | Hyderabad & Vijayawada Security Printing",
   },
   description:
-    "Hyderabad & Vijayawada offices, phone and email, Google Maps directions — four ISO certified (9001, 27001, 14001, 20000-1) security printing for AP & Telangana.",
+    "Hyderabad & Vijayawada offices, phone and email — four ISO certified (9001, 27001, 14001, 20000-1) security printing for AP & Telangana.",
 };
-
-const mapEmbeds = [
-  {
-    title: "Hyderabad — ALEAP Industrial Estate (approx.)",
-    src: "https://maps.google.com/maps?q=17.4991,78.3910&z=16&output=embed&hl=en",
-    openUrl:
-      "https://www.google.com/maps/search/?api=1&query=17.4991,78.3910",
-  },
-  {
-    title: "Vijayawada — Aleap Industrial Estate, Nunna (approx.)",
-    src: "https://maps.google.com/maps?q=16.5155,80.6262&z=16&output=embed&hl=en",
-    openUrl:
-      "https://www.google.com/maps/search/?api=1&query=16.5155,80.6262",
-  },
-] as const;
 
 const whyPoints = [
   {
@@ -167,49 +152,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* SECTION 3 — Maps */}
-      <section className="border-t border-border bg-muted/30 py-12 lg:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-xl font-bold text-primary sm:text-2xl">
-            Find us on the map
-          </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground">
-            Map pins show the approximate location of each plant. Please call
-            our office before visiting so we can arrange your gate entry.
-          </p>
-          <div className="mt-10 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2">
-            {mapEmbeds.map((m) => (
-              <div key={m.title} className="min-w-0">
-                <p className="mb-3 text-sm font-semibold text-primary">
-                  {m.title}
-                </p>
-                <div className="min-w-0 overflow-hidden rounded-xl border border-primary/10 bg-muted shadow-sm ring-1 ring-black/5">
-                  <iframe
-                    title={m.title}
-                    src={m.src}
-                    className="aspect-[4/3] max-h-[min(70vh,520px)] w-full min-w-0 border-0 sm:aspect-video"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    allowFullScreen
-                  />
-                </div>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  <a
-                    href={m.openUrl}
-                    className="font-medium text-accent hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open in Google Maps
-                  </a>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4 — Why work with us */}
+      {/* SECTION 3 — Why work with us */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
           Why work with us

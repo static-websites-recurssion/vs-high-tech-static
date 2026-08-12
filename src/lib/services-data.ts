@@ -660,15 +660,70 @@ export const heroHighlights = [
 /* ── Section anchors — drives the sticky in-page nav ─────────────────── */
 
 export const serviceSections = [
-  { id: "commercial", label: "Commercial Printing" },
-  { id: "secure", label: "Secure Printing" },
-  { id: "prepress", label: "Prepress" },
-  { id: "technologies", label: "Technologies" },
-  { id: "post-print", label: "Post Print" },
-  { id: "quality", label: "Quality Control" },
-  { id: "logistics", label: "Secure Logistics" },
-  { id: "examination", label: "Examination Services" },
-  { id: "security", label: "Security Printing" },
-  { id: "industries", label: "Industries" },
-  { id: "variable-data", label: "Variable Data" },
+  {
+    id: "commercial",
+    number: "01",
+    label: "Commercial Printing",
+    blurb: "Multi-colour offset runs, publications and specialised finishing at volume.",
+  },
+  {
+    id: "secure",
+    number: "02",
+    label: "Secure Printing",
+    blurb: "Restricted-zone production, counted and released only against authentication.",
+  },
+  {
+    id: "prepress",
+    number: "03",
+    label: "Prepress",
+    blurb: "Proofing, correction and approval before a single plate is made.",
+  },
+  {
+    id: "technologies",
+    number: "04",
+    label: "Printing Technologies",
+    blurb: "Four production routes under one roof, matched to volume and security level.",
+  },
+  {
+    id: "post-print",
+    number: "05",
+    label: "Post Print",
+    blurb: "Finishing, sorting and sealing without breaking the chain of custody.",
+  },
+  {
+    id: "quality",
+    number: "06",
+    label: "Quality Control",
+    blurb: "Stage-wise checkpoints recorded and signed off against every job number.",
+  },
+  {
+    id: "logistics",
+    number: "07",
+    label: "Secure Logistics",
+    blurb: "Sealed, tracked consignments handed over only to an authorised signatory.",
+  },
+  {
+    id: "examination",
+    number: "08",
+    label: "Examination Services",
+    blurb: "Question papers to published results, handled end to end by one partner.",
+  },
+  {
+    id: "security",
+    number: "09",
+    label: "Security Features",
+    blurb: "Sixteen layered options — holograms, UV, microtext, QR and more.",
+  },
+  {
+    id: "industries",
+    number: "10",
+    label: "Industries We Serve",
+    blurb: "Government, education, banking and enterprise, each with its own profile.",
+  },
+  {
+    id: "variable-data",
+    number: "11",
+    label: "Variable Data",
+    blurb: "Database-driven runs where every record is verified and reconciled.",
+  },
 ] as const;

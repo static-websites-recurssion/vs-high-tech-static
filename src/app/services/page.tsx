@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Lock, Phone } from "lucide-react";
+import { ArrowDownRight, ArrowRight, CheckCircle2, Lock, Phone } from "lucide-react";
 
+import { BackToTop } from "@/components/services/back-to-top";
 import { ProcessTimeline } from "@/components/services/process-timeline";
 import { ScrollReveal } from "@/components/services/scroll-reveal";
 import { SectionHeading } from "@/components/services/section-heading";
@@ -41,6 +42,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-background">
       <ScrollReveal />
+      <BackToTop />
 
       {/* ── SECTION 1 — Hero ──────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-[#0a1430] text-sky-50">
@@ -117,23 +119,56 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── In-page navigation ────────────────────────────────────────── */}
+      {/* ── What we cover on this page ────────────────────────────────── */}
       <nav
         aria-label="Sections on this page"
-        className="border-b border-border bg-white"
+        className="border-b border-border bg-white py-14 lg:py-16"
       >
-        <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2">
-            {serviceSections.map((section) => (
-              <Link
-                key={section.id}
-                href={`#${section.id}`}
-                className="rounded-full border border-primary/10 bg-background px-3.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors duration-200 hover:border-accent/40 hover:bg-accent/5 hover:text-accent sm:text-[0.8125rem]"
-              >
-                {section.label}
-              </Link>
-            ))}
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                <span className="h-px w-8 bg-accent/40" aria-hidden />
+                On this page
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-primary sm:text-3xl">
+                What we cover
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-muted-foreground sm:text-right">
+              Eleven capabilities, start to finish. Select any card to jump
+              straight to that section.
+            </p>
           </div>
+
+          <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {serviceSections.map((section) => (
+              <li key={section.id}>
+                <Link
+                  href={`#${section.id}`}
+                  className="group relative flex h-full flex-col rounded-2xl border border-primary/10 bg-background p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/35 hover:bg-white hover:shadow-[0_20px_40px_-24px_rgba(26,37,99,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs font-semibold tracking-[0.18em] text-accent/70 transition-colors duration-300 group-hover:text-accent">
+                      {section.number}
+                    </span>
+                    <span
+                      aria-hidden
+                      className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/[0.06] text-primary transition-all duration-300 group-hover:bg-accent group-hover:text-white"
+                    >
+                      <ArrowDownRight className="h-4 w-4" strokeWidth={1.8} />
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold leading-snug text-primary transition-colors duration-300 group-hover:text-accent">
+                    {section.label}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {section.blurb}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
 
