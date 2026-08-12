@@ -19,8 +19,8 @@ export const machineryPlantPhotos = [
   },
   {
     src: "/images/machinery/plant-04.webp",
-    alt: "Komori Lithrone 26 four-colour sheet-fed offset press",
-    caption: "Komori Lithrone 26 — sheet-fed offset",
+    alt: "Komori Lithrone 28 four-colour sheet-fed offset press",
+    caption: "Komori Lithrone 28 — sheet-fed offset",
   },
   {
     src: "/images/machinery/plant-05.webp",

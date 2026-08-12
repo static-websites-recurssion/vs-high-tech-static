@@ -130,8 +130,7 @@ export default function HomePage() {
                   <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[1.65] text-sky-200/90 sm:text-lg">
                     We print confidential question papers, OMR sheets,
                     certificates, and other secure documents for universities,
-                    government departments, and companies across Andhra Pradesh
-                    &amp; Telangana.
+                    government departments, and companies across India.
                   </p>
                   <TrustHeroCounters variant="hero" centered />
                   <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
