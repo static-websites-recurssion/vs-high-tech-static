@@ -7,10 +7,10 @@ import { siteImages } from "@/lib/site-images";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact Us | Hyderabad & Vijayawada Security Printing",
+    absolute: "Contact Us | Hyderabad, Vijayawada & Bangalore Security Printing",
   },
   description:
-    "Hyderabad & Vijayawada offices, phone and email — four ISO certified (9001, 27001, 14001, 20000-1) security printing for AP & Telangana.",
+    "Hyderabad, Vijayawada & Bangalore offices, phone and email — four ISO certified (9001, 27001, 14001, 20000-1) security printing for AP, Telangana & Karnataka.",
 };
 
 const whyPoints = [
@@ -52,8 +52,8 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-white/90">
-            Call or email our Hyderabad or Vijayawada office. We are happy to
-            help with quotes, samples, and site visits.
+            Call or email our Hyderabad, Vijayawada, or Bangalore office. We are
+            happy to help with quotes, samples, and site visits.
           </p>
         </div>
       </section>

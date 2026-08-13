@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
   },
   description:
-    "India's trusted four ISO-certified security printing partner since 1997 — ISO 9001, 27001, 14001 & 20000-1. Confidential question papers, OMR & certificates for universities, government & institutions in Andhra Pradesh & Telangana.",
+    "India's trusted four ISO-certified security printing partner since 1997 — ISO 9001, 27001, 14001 & 20000-1. Confidential question papers, OMR & certificates for universities, government & institutions in Andhra Pradesh, Telangana & Karnataka.",
 };
 
 const products = [
@@ -428,9 +428,9 @@ export default function HomePage() {
             Trusted Across Sectors
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
-            Universities, government departments, and companies across AP &amp;
-            Telangana trust us for confidentiality, capacity, and on-time
-            delivery.
+            Universities, government departments, and companies across AP,
+            Telangana &amp; Karnataka trust us for confidentiality, capacity, and
+            on-time delivery.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -494,8 +494,8 @@ export default function HomePage() {
             Ready to print with confidence?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-sky-200/95 sm:text-lg">
-            Talk to our team in Hyderabad or Vijayawada — we will guide you
-            from enquiry to delivery.
+            Talk to our team in Hyderabad, Vijayawada, or Bangalore — we will
+            guide you from enquiry to delivery.
           </p>
           <Button
             variant="accent"

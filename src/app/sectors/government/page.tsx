@@ -100,8 +100,8 @@ export default function GovernmentSectorPage() {
                 Land-record and citizen-document work like Pattadar Pass Books
                 needs large capacity, documented controls, and security from
                 start to finish. Our two audited plants and closed-vehicle
-                dispatch are built for exactly this kind of AP &amp; Telangana
-                department work.
+                dispatch are built for exactly this kind of AP, Telangana &amp;
+                Karnataka department work.
               </p>
             </div>
           </div>

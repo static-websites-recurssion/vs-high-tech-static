@@ -29,8 +29,8 @@ const faqs = [
     a: `We hold ${isoCodesInline} certifications. These standards guide our quality, information security, environmental, and IT service management practices.`,
   },
   {
-    q: "Do we serve clients outside Andhra Pradesh and Telangana?",
-    a: "Yes. Our main clients are in AP & Telangana, but we take up projects from other states as well, depending on volume, timelines, and delivery logistics.",
+    q: "Do we serve clients outside Andhra Pradesh, Telangana, and Karnataka?",
+    a: "Yes. Our main clients are in AP, Telangana & Karnataka, but we take up projects from other states as well, depending on volume, timelines, and delivery logistics.",
   },
   {
     q: "What is our minimum order quantity?",
