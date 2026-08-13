@@ -19,7 +19,9 @@ export function MachineryPlantGallery() {
               key={photo.src}
               className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm"
             >
-              <div className="relative aspect-[4/3] w-full bg-white">
+              <div
+                className={`relative aspect-[4/3] w-full ${"darkBg" in photo && photo.darkBg ? "bg-neutral-900" : "bg-white"}`}
+              >
                 <Image
                   src={photo.src}
                   alt={photo.alt}

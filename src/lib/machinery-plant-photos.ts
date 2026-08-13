@@ -180,4 +180,96 @@ export const machineryPlantPhotos = [
     alt: "Konica Minolta AccurioPress extended finishing configuration",
     caption: "Konica Minolta AccurioPress — full line",
   },
+  {
+    src: "/images/machinery/plant-36.webp",
+    alt: "Power punching machine with interchangeable multi-hole punching dies",
+    caption: "Power punching machine",
+  },
+  {
+    src: "/images/machinery/plant-37.webp",
+    alt: "Automatic paper punching machine with programmable control panel and hole pattern tooling",
+    caption: "Automatic paper punching machine",
+  },
+  {
+    src: "/images/machinery/plant-38.webp",
+    alt: "HPM programmable paper cutter system with touchscreen control and high automation",
+    caption: "HPM programmable paper cutter",
+  },
+  {
+    src: "/images/machinery/plant-39.webp",
+    alt: "Book edge gilding machine for gold-edged book and diary finishing",
+    caption: "Book edge gilding machine",
+  },
+  {
+    src: "/images/machinery/plant-40.webp",
+    alt: "Strip gumming and water-based laminating machine with reel stands",
+    caption: "Strip gumming & water-based laminator",
+  },
+  {
+    src: "/images/machinery/plant-41.webp",
+    alt: "Large format film separation plotter producing 24 inch and 40 inch separations",
+    caption: "Large format film separation — 24\" & 40\"",
+  },
+  {
+    src: "/images/machinery/plant-42.webp",
+    alt: "Automatic Wire-O binding machine with wire spool and touchscreen control",
+    caption: "Automatic Wire-O binding machine",
+  },
+  {
+    src: "/images/machinery/plant-43.webp",
+    alt: "Automatic reel to sheet separator with delivery table",
+    caption: "Automatic reel-to-sheet separator",
+  },
+  {
+    src: "/images/machinery/plant-44.webp",
+    alt: "FZ1800 pile turner for 1200 by 780 mm maximum sheet format",
+    caption: "Pile turner — FZ1800",
+  },
+  {
+    src: "/images/machinery/plant-45.webp",
+    alt: "Cardboard shredding machine producing cushioning mesh from waste board",
+    caption: "Cardboard shredding machine",
+  },
+  {
+    src: "/images/machinery/plant-46.webp",
+    alt: "Twin corner cutting machine for rounding book, diary and brochure corners",
+    caption: "Twin corner cutting machine",
+  },
+  {
+    src: "/images/machinery/plant-47.webp",
+    alt: "Hot foil stamping machine with foil reels and heated platen",
+    caption: "Foil stamping machine",
+  },
+  {
+    src: "/images/machinery/plant-48.webp",
+    alt: "Flat-bed screen printing machine with vacuum table",
+    caption: "Screen printing machine",
+  },
+  {
+    src: "/images/machinery/plant-49.webp",
+    alt: "Passport and book centre sewing machine with thread stands and delivery conveyor",
+    caption: "Passport & book centre sewing machine",
+  },
+  {
+    src: "/images/machinery/plant-50.webp",
+    alt: "Single-head wire stitching machine with motor drive and foot pedal",
+    caption: "Single-head wire stitching machine",
+    darkBg: true,
+  },
+  {
+    src: "/images/machinery/plant-51.webp",
+    alt: "Harbhajan saddle stitcher with feeder heads, stitching stations and touchscreen control",
+    caption: "Harbhajan stitcher — saddle stitching unit",
+    darkBg: true,
+  },
+  {
+    src: "/images/machinery/plant-52.webp",
+    alt: "Harbhajan in-line saddle stitching and trimming line with gathering conveyor",
+    caption: "Harbhajan stitcher — in-line stitching line",
+  },
+  {
+    src: "/images/machinery/plant-53.webp",
+    alt: "Thermal and water-based laminating machine with in-line sheeter",
+    caption: "Thermal & water-base laminator with sheeter",
+  },
 ] as const;
