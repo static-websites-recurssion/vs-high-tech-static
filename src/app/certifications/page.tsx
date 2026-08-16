@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const trustBullets = [
   "A strong vendor profile for tenders and empanelment",
   "A security environment suited for confidential exam and financial printing",
-  "Two plants, so your work continues without interruption",
+  "Three plants, so your work continues without interruption",
 ] as const;
 
 export default function CertificationsPage() {

@@ -6,7 +6,7 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: { absolute: "Our Security Environment" },
   description:
-    "How we keep confidential printing secure — controlled entry and exit, guarded access, double checking of material, and safe destruction of confidential waste.",
+    "How we keep confidential printing secure — controlled entry and exit, guarded access, double checking of material, and safe shredding and burning of confidential waste.",
 };
 
 const securityChecklist = [
@@ -105,7 +105,7 @@ export default function SecurityEnvironmentPage() {
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             How these controls work on the floor — from access-controlled zones
-            to supervised destruction of confidential waste. Detailed site
+            to supervised shredding and burning of confidential waste. Detailed site
             photos are shared with genuine buyers under NDA.
           </p>
 
@@ -143,7 +143,7 @@ export default function SecurityEnvironmentPage() {
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               All confidential waste is shredded and burnt under supervision.
-              Every destruction is recorded and verified, so nothing can leak
+              Every shredding and burning is recorded and verified, so nothing can leak
               out.
             </p>
 

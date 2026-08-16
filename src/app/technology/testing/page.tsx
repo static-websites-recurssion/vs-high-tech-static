@@ -45,7 +45,7 @@ export default function TechnologyTestingPage() {
             Testing facilities
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90">
-            In-house testing at both plants keeps our output consistent on
+            In-house testing at all three plants keeps our output consistent on
             security and variable-data jobs.
           </p>
         </div>

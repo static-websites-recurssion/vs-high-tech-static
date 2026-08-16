@@ -60,7 +60,7 @@ const whyUsPoints = [
     title: "Institutional scale, Multiple locations",
     icon: ShieldCheck,
     description:
-      "Our Hyderabad and Vijayawada plants combine advanced printing technology with efficient production to deliver consistent, high-quality results across India.",
+      "Our Hyderabad, Vijayawada, and Bangalore plants combine advanced printing technology with efficient production to deliver consistent, high-quality results across India.",
   },
 ] as const;
 
@@ -87,7 +87,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
         : slug === "certifications"
           ? "Strong compliance practices that meet tender requirements, customer onboarding standards, and audit expectations."
           : slug === "infrastructure"
-            ? "Plants, machinery readiness, and production capability across two locations."
+            ? "Plants, machinery readiness, and production capability across three locations."
             : "Inclusive workforce practices and community-oriented commitments.";
 
   const heroImage =
@@ -216,7 +216,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               <h3 className="mt-4 text-xl font-bold text-primary">Shri R. Phani Krishna</h3>
               <p className="text-sm font-medium text-accent">Managing Director</p>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                over 30 years of industry experience with strong focus on security printing discipline,
+                over 28 years of industry experience with strong focus on security printing discipline,
                 institutional delivery timelines, and compliance-driven operations.
               </p>
             </article>
@@ -378,7 +378,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 We believe strong institutions are built by strong teams. We support inclusive hiring, skill development,
-                and a respectful workplace culture across both locations.
+                and a respectful workplace culture across all three locations.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Our CSR focus is practical and workplace-led—creating opportunities, improving training, and supporting
@@ -418,7 +418,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                     <p className="text-base font-bold text-primary">Safe workplace culture</p>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    Structured safety practices and respectful workplace standards across both locations to support long-term careers.
+                    Structured safety practices and respectful workplace standards across all three locations to support long-term careers.
                   </p>
                 </div>
 

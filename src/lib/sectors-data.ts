@@ -31,7 +31,7 @@ export const sectorOfferings: readonly SectorOffering[] = [
     href: "/sectors/education",
     description:
       "End-to-end examination printing under strict security, including question papers, precision OMR sheets, and secure, sealed, on-time dispatch.",
-    headline: "Trusted by Universities and Exam Bodies Across South India",
+    headline: "Trusted by Universities and Exam Bodies Across India",
     body: "We print question papers, OMR sheets, answer booklets, marks memos, and certificates for universities, PSCs, recruitment boards, and institutions — all under high confidentiality and four ISO-certified processes. With a single-entry facility, CCTV monitoring, and closed-vehicle delivery, there is zero leakage from press to exam hall.",
     bullets: [
       "Question papers",
@@ -76,7 +76,7 @@ export const sectorOfferings: readonly SectorOffering[] = [
     description:
       "High-volume commercial and secure printing for businesses — annual reports, certificates, labels, variable data, and other customised print materials.",
     headline: "End-to-End Print Solutions for Businesses",
-    body: "From annual reports and book works to stickers, cheques, and variable data printing, we support companies with fast, high-quality print runs on modern machinery across two plants.",
+    body: "From annual reports and book works to stickers, cheques, and variable data printing, we support companies with fast, high-quality print runs on modern machinery across three plants.",
     bullets: [
       "Annual report books",
       "Share certificates",

@@ -24,7 +24,7 @@ const links = [
   {
     href: "/technology/machinery",
     label: "Our machinery",
-    blurb: "Web offset, finishing lines, and equipment categories across both plants.",
+    blurb: "Web offset, finishing lines, and equipment categories across all three plants.",
     icon: Printer,
   },
   {

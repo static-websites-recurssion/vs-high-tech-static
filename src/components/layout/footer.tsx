@@ -41,7 +41,7 @@ export function Footer() {
             </div>
             <p className="mt-3 break-words text-sm text-white/85">
               Confidential security printing for government departments,
-              universities, and large companies — two plants, four ISO
+              universities, and large companies — three plants, four ISO
               certified.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
@@ -136,11 +136,11 @@ export function Footer() {
               9849068920
             </a>
             <a
-              href="mailto:vsprints@gmail.com"
+              href="mailto:vshitechs@gmail.com"
               className="flex items-center gap-3 text-sm text-white/90 transition-colors hover:text-white"
             >
               <Mail className="h-5 w-5 shrink-0 text-accent" aria-hidden />
-              vsprints@gmail.com
+              vshitechs@gmail.com
             </a>
             <p className="pt-2 text-sm">
               <Link

@@ -52,6 +52,14 @@ const machineGroups = [
       "Box Strapping: 10 machines (ITW Signode)",
       "Hologram Stamping Machine: 1 no (inline, MICR numbering)",
       "Variable Data Printing: Konica Minolta 7120 & 6120",
+      "Automatic Film Wrapping Machine: 1 no",
+    ],
+  },
+  {
+    title: "Sheet Fed Offset",
+    items: [
+      "Lithrone Model A37P: 4 colour, up to 640x940mm",
+      "Lithrone Model A37P with coater: 4 colour, up to 640x940mm",
     ],
   },
   {
@@ -59,7 +67,6 @@ const machineGroups = [
     items: [
       "Generator: 160 KVA Genset (2 nos)",
       "Plate Exposure: 4 nos (Oshio Graphics, India)",
-      "Sheet Fed Offset: Lithrone Model A37P (4 colour, up to 640x940mm)",
     ],
   },
 ] as const;

@@ -25,6 +25,7 @@ import {
   Layers3,
   type LucideIcon,
   MapPin,
+  Newspaper,
   Package,
   PackageCheck,
   PenTool,
@@ -140,6 +141,18 @@ export const commercialPrinting: ServiceItem[] = [
     description:
       "Pre-printed thermal rolls for POS, banking, tolling and ticketing counters.",
     icon: Receipt,
+  },
+  {
+    title: "Commercial Printing",
+    description:
+      "Brochures, catalogues, annual reports, diaries and book works printed and finished in house.",
+    icon: Newspaper,
+  },
+  {
+    title: "Flexo Printing",
+    description:
+      "Reel-to-reel flexographic printing for labels, tags and continuous roll stationery.",
+    icon: Tags,
   },
 ];
 

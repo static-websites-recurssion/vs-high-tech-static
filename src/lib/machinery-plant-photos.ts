@@ -3,11 +3,6 @@
  */
 export const machineryPlantPhotos = [
   {
-    src: "/images/machinery/plant-01.webp",
-    alt: "Orient Super eight-colour web offset press with paper reel and multi-level walkways",
-    caption: "Orient Super — 8-colour web offset",
-  },
-  {
     src: "/images/machinery/plant-02.webp",
     alt: "Orient Super web offset press towers with operator stairs and control console",
     caption: "Orient Super — press towers and console",
@@ -76,19 +71,9 @@ export const machineryPlantPhotos = [
     caption: "RO-62 Polygraph — 5-colour web offset",
   },
   {
-    src: "/images/machinery/plant-15.webp",
-    alt: "Mark-62 Manugraph web offset control panel and paper path",
-    caption: "Mark-62 Manugraph — control section",
-  },
-  {
     src: "/images/machinery/plant-16.webp",
     alt: "Mark-62 Manugraph web offset with vertical paper web feed",
     caption: "Mark-62 Manugraph — web feed section",
-  },
-  {
-    src: "/images/machinery/plant-17.webp",
-    alt: "Maltolith Germany two-colour sheet-fed offset press",
-    caption: "Maltolith — 2-colour sheet-fed offset",
   },
   {
     src: "/images/machinery/plant-18.webp",
@@ -111,16 +96,6 @@ export const machineryPlantPhotos = [
     caption: "Single-clamp perfect binder",
   },
   {
-    src: "/images/machinery/plant-22.webp",
-    alt: "Appu 1500 five-clamp perfect binding machine with conveyor",
-    caption: "Appu 1500 — five-clamp binder",
-  },
-  {
-    src: "/images/machinery/plant-23.webp",
-    alt: "Automatic industrial paper cutting guillotine with digital control",
-    caption: "Automatic paper cutter",
-  },
-  {
     src: "/images/machinery/plant-24.webp",
     alt: "Automatic polar-style paper cutting machine",
     caption: "Polar-style cutting machine",
@@ -139,16 +114,6 @@ export const machineryPlantPhotos = [
     src: "/images/machinery/plant-27.webp",
     alt: "ITW Signode semi-automatic box strapping machine",
     caption: "ITW Signode — box strapping",
-  },
-  {
-    src: "/images/machinery/plant-28.webp",
-    alt: "Oshio Graphics plate exposure machine with black curtains",
-    caption: "Plate exposure — black curtain unit",
-  },
-  {
-    src: "/images/machinery/plant-29.webp",
-    alt: "Oshio Graphics plate exposure machine with green curtains",
-    caption: "Plate exposure — green curtain unit",
   },
   {
     src: "/images/machinery/plant-30.webp",

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | V.S. Hitech Security Forms",
   },
   description:
-    "Four ISO-certified security printing in Hyderabad & Vijayawada — ISO 9001, 27001, 14001 & 20000-1 — question papers, OMR, certificates, and confidential print for AP, Telangana & Karnataka.",
+    "Four ISO-certified security printing in Hyderabad, Vijayawada & Bangalore — ISO 9001, 27001, 14001 & 20000-1 — question papers, OMR, certificates, and confidential print for institutions across India.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=3", type: "image/x-icon" },

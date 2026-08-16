@@ -41,7 +41,7 @@ export function ProductQuoteForm({
       message || "—",
     ];
 
-    const mailto = `mailto:vsprints@gmail.com?cc=${encodeURIComponent(
+    const mailto = `mailto:vshitechs@gmail.com?cc=${encodeURIComponent(
       "vshitechs@gmail.com"
     )}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
       bodyLines.join("\n")

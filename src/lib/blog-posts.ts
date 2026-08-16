@@ -64,12 +64,12 @@ export const blogPosts: BlogPost[] = [
       "Hologram stamping, UV inks on certificates, and cost per thousand — a simple comparison to help you choose.",
   },
   {
-    title: "Why AP and Telangana Universities Trust VS Hitech",
+    title: "Why Universities Across India Trust VS Hitech",
     category: "Company",
     date: "2026-01-15",
-    slug: slugify("Why AP and Telangana Universities Trust VS Hitech"),
+    slug: slugify("Why Universities Across India Trust VS Hitech"),
     excerpt:
-      "Two plants, closed-vehicle dispatch, ISO 27001, and exam-season capacity — the reasons buyers mention in their vendor audits.",
+      "Three plants, closed-vehicle dispatch, ISO 27001, and exam-season capacity — the reasons buyers mention in their vendor audits.",
   },
   {
     title: "ISO 27001: What It Means for Your Confidential Print Jobs",

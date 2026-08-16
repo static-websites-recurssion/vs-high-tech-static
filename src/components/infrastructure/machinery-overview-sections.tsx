@@ -6,14 +6,14 @@ import { siteImages } from "@/lib/site-images";
 
 export const machineryOpsSnapshot = [
   {
-    stat: "2",
+    stat: "3",
     label: "Manufacturing units",
-    detail: "Hyderabad (Telangana) & Vijayawada (Andhra Pradesh)",
+    detail: "Hyderabad (Telangana), Vijayawada (Andhra Pradesh) & Bangalore (Karnataka)",
   },
   {
-    stat: "110,000+",
+    stat: "145,000+",
     label: "Combined site footprint (sft)",
-    detail: "70,000+ sft Hyderabad + 40,000+ sft Vijayawada",
+    detail: "105,000+ sft Hyderabad + 40,000+ sft Vijayawada",
   },
   {
     stat: "24+",

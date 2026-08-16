@@ -99,9 +99,9 @@ export default function GovernmentSectorPage() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Land-record and citizen-document work like Pattadar Pass Books
                 needs large capacity, documented controls, and security from
-                start to finish. Our two audited plants and closed-vehicle
-                dispatch are built for exactly this kind of AP, Telangana &amp;
-                Karnataka department work.
+                start to finish. Our three audited plants and closed-vehicle
+                dispatch are built for exactly this kind of government
+                department work anywhere in India.
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function GovernmentSectorPage() {
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Every item is checked twice — on the way in and on the way out
-                — and confidential waste is destroyed under supervision.
+                — and confidential waste is shredded and burnt under supervision.
               </p>
               <div className="mt-4 flex gap-3 text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-sky-50 px-3 py-1.5">

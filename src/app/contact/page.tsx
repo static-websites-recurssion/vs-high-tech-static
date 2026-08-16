@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Contact Us | Hyderabad, Vijayawada & Bangalore Security Printing",
   },
   description:
-    "Hyderabad, Vijayawada & Bangalore offices, phone and email — four ISO certified (9001, 27001, 14001, 20000-1) security printing for AP, Telangana & Karnataka.",
+    "Hyderabad, Vijayawada & Bangalore offices, phone and email — four ISO certified (9001, 27001, 14001, 20000-1) security printing for clients across India.",
 };
 
 const whyPoints = [
@@ -86,10 +86,10 @@ export default function ContactPage() {
                 <p className="font-semibold text-primary">Email</p>
                 <p className="mt-1 space-y-1">
                   <a
-                    href="mailto:vsprints@gmail.com"
+                    href="mailto:vshitechs@gmail.com"
                     className="block text-accent hover:underline"
                   >
-                    vsprints@gmail.com
+                    vshitechs@gmail.com
                   </a>
                   <a
                     href="mailto:vshitechs@gmail.com"
@@ -146,7 +146,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <ContactDetailsForm
-              toEmails={["vsprints@gmail.com", "vshitechs@gmail.com"]}
+              toEmails={["vshitechs@gmail.com", "vshitechs@gmail.com"]}
             />
           </div>
         </div>

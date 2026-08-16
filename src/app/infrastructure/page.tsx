@@ -21,10 +21,10 @@ import { siteImages } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Infrastructure & Facilities | Two Plants, High-Volume Security Printing",
+      "Infrastructure & Facilities | Three Plants, High-Volume Security Printing",
   },
   description:
-    "Two manufacturing units (Hyderabad & Vijayawada), 24+ machine categories, web offset to 30,000/hr, security environment, testing labs, and combined 110,000+ sft footprint.",
+    "Three manufacturing units (Hyderabad, Vijayawada & Bangalore), 24+ machine categories, web offset to 30,000/hr, security environment, testing labs, and combined 145,000+ sft footprint.",
 };
 
 const securityChecklist = [
@@ -58,7 +58,7 @@ export default function InfrastructurePage() {
     <div className="bg-background">
       <MachineryOverviewSections
         heroTitle="Infrastructure & facilities"
-        heroSubtitle="Two plants for confidential, high-volume printing — running 365 days, 24×7, with separate security zones and secure waste disposal."
+        heroSubtitle="Three plants for confidential, high-volume printing — running 365 days, 24×7, with separate security zones and secure waste disposal."
       />
 
       {/* Security Environment */}
@@ -175,7 +175,7 @@ export default function InfrastructurePage() {
                   <ul className="mt-4 space-y-2 text-sm text-white/85">
                     <li>
                       <span className="font-semibold text-white">Area:</span>{" "}
-                      70,000+ Sft
+                      105,000+ Sft
                     </li>
                     <li>
                       <span className="font-semibold text-white">GST:</span>{" "}

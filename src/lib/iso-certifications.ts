@@ -38,11 +38,11 @@ export const isoCertifications = [
     title: "Environmental Management System",
     shortTitle: "Environmental Management",
     plain:
-      "Commitment to reducing environmental impact and operating responsibly at both plant locations.",
+      "Commitment to reducing environmental impact and operating responsibly at all three plant locations.",
     summary: "Environmental management for responsible operations",
     points: [
       "Responsible use of materials and waste segregation",
-      "Monitoring of environmental aspects at both plant locations",
+      "Monitoring of environmental aspects at all three plant locations",
       "Commitment to continual improvement and legal compliance",
     ],
   },

@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "Do we have backup power at our facilities?",
-    a: "Yes. Both plants have generator backup, so power cuts do not affect your delivery schedule.",
+    a: "Yes. All three plants have generator backup, so power cuts do not affect your delivery schedule.",
   },
   {
     q: "Can clients visit our facility before placing an order?",

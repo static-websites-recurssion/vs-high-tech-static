@@ -8,6 +8,7 @@ import {
   Cpu,
   FileCheck,
   HeartHandshake,
+  Landmark,
   Lock,
   MapPin,
   ShieldCheck,
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     absolute: "About Us | 28 Years of Security Printing Excellence",
   },
   description:
-    "Company profile: security printing since 2009, four ISO under NABCB accreditation (9001, 27001, 14001, 20000-1), Hyderabad & Vijayawada works, leadership, pre-press scale, and confidentiality controls.",
+    "Company profile: security printing since 2009, four ISO under NABCB accreditation (9001, 27001, 14001, 20000-1), Hyderabad, Vijayawada & Bangalore works, leadership, pre-press scale, and confidentiality controls.",
 };
 
 const values = [
@@ -63,16 +64,22 @@ const profileHighlights = [
       "Trusted by universities, educational boards, government departments, PSUs, and corporates for secure printing of confidential examination materials, question papers, OMR sheets, marks memos, degree and convocation certificates, Pattadar pass books, official stationery, thermal rolls (TIMS / ATMS), share certificates, and other sensitive institutional documents.",
   },
   {
-    title: "Two integrated works",
+    title: "Three integrated works",
     icon: MapPin,
     body:
-      "With manufacturing facilities in Hyderabad, Telangana, and Vijayawada, Andhra Pradesh, we operate 365 days a year with round-the-clock production to ensure reliable and timely execution of every project.",
+      "With manufacturing facilities in Hyderabad, Telangana, Vijayawada, Andhra Pradesh, and Bangalore, Karnataka, we operate 365 days a year with round-the-clock production to ensure reliable and timely execution of every project.",
+  },
+  {
+    title: "Public Service Commissions",
+    icon: Landmark,
+    body:
+      "Recruitment and competitive examinations for public service commissions are handled end to end — question booklets, OMR answer sheets, hall tickets, and result stationery — under the same confidential-job controls as our board examination work.",
   },
   {
     title: "Pre-press & DTP",
     icon: Cpu,
     body:
-      "30 high-configured DTP systems, 10 scanners, and 20 laser printers (A4 and A3) to support artwork, data, and plate-ready output at volume.",
+      "53 high-configured DTP systems, 20 scanners, and 20 laser printers (A4 and A3) to support artwork, data, and plate-ready output at volume.",
   },
 ] as const;
 
@@ -81,23 +88,23 @@ const aboutPillars = [
     title: "Customer Focus",
     icon: HeartHandshake,
     paragraphs: [
-      "VS Hitech focuses on customer delight. Our work is aimed at ensuring total customer satisfaction and customer delight.",
+      "Every order is planned around the customer's deadline and confidentiality requirements, and tracked from proof approval through to sealed dispatch.",
     ],
   },
   {
     title: "Growth & Technology",
     icon: Cpu,
     paragraphs: [
-      "The company has grown at a scaling pace and has continuously updated itself with the latest technology.",
-      "Keeping up with the latest technology to suit the ever-increasing and innovative requirements of our customers is a priority.",
+      "The company has grown steadily since incorporation, reinvesting in plant and equipment as volumes have scaled across all three works.",
+      "Pre-press, printing, and finishing lines are kept current so we can take on the more complex and more secure jobs our customers bring us.",
     ],
   },
   {
     title: "Experienced & Motivated Team",
     icon: Users,
     paragraphs: [
-      "We have a highly motivated team of professionals who are trained to work across all departments.",
-      "We believe in creating an environment of total participation, where all employees contribute towards innovative ideas and suggestions, ensuring error-free and timely deliveries to our customers.",
+      "162 people across technical, non-technical, and managerial roles, cross-trained so every department can run at full strength through peak season.",
+      "Employees are encouraged to raise ideas and flag problems early — that habit is what keeps deliveries error-free and on schedule.",
     ],
   },
 ] as const;
@@ -111,7 +118,7 @@ const securityPractices = [
   "Dual checking on all incoming and outgoing materials",
   "Printing, finishing, and allied operations under one roof",
   "Additional security guards deployed for highly sensitive jobs",
-  "Confidential waste shredded and disposed of securely",
+  "Confidential waste shredded and burnt",
 ] as const;
 
 export default function AboutPage() {
@@ -245,10 +252,10 @@ export default function AboutPage() {
             </div>
             <div className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm">
               <p className="text-lg font-bold leading-snug text-primary">
-                Hyderabad + Vijayawada
+                Hyderabad + Vijayawada + Bangalore
               </p>
               <p className="mt-2 text-sm font-medium text-muted-foreground">
-                Two fully equipped plants
+                Three fully equipped plants
               </p>
             </div>
             <div className="rounded-xl border border-primary/10 bg-white p-6 shadow-sm">
@@ -308,7 +315,7 @@ export default function AboutPage() {
             Summary points from our published company profile — full statutory
             tables and equipment schedules are in the downloadable PDF.
           </p>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
             {profileHighlights.map(({ title, icon: Icon, body }) => (
               <div
                 key={title}
@@ -328,7 +335,7 @@ export default function AboutPage() {
           </div>
           <p className="mt-10 text-center text-sm text-muted-foreground">
             Hyderabad works: over{" "}
-            <strong className="font-medium text-primary">70,000 sq. ft.</strong>
+            <strong className="font-medium text-primary">105,000 sq. ft.</strong>
             . Vijayawada works: over{" "}
             <strong className="font-medium text-primary">40,000 sq. ft.</strong>{" "}
             — see{" "}
@@ -428,7 +435,7 @@ export default function AboutPage() {
               <div>
                 <dt className="font-semibold text-primary">Education</dt>
                 <dd className="mt-0.5 text-muted-foreground">
-                  Diploma in Printing Technology, B.Tech, MBA (postgraduate)
+                  Diploma in Printing Technology, B.Tech
                 </dd>
               </div>
               <div>
@@ -441,10 +448,10 @@ export default function AboutPage() {
                     9849068920
                   </a>
                   <a
-                    href="mailto:vsprints@gmail.com"
+                    href="mailto:vshitechs@gmail.com"
                     className="block break-all text-accent hover:underline"
                   >
-                    vsprints@gmail.com
+                    vshitechs@gmail.com
                   </a>
                 </dd>
               </div>

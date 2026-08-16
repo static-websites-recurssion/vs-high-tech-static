@@ -41,7 +41,7 @@ function toMailto({
 }
 
 export function ContactDetailsForm({
-  toEmails = ["vsprints@gmail.com", "vshitechs@gmail.com"],
+  toEmails = ["vshitechs@gmail.com", "vshitechs@gmail.com"],
 }: {
   toEmails?: string[];
 }) {

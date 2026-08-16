@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
   },
   description:
-    "India's trusted four ISO-certified security printing partner since 1997 — ISO 9001, 27001, 14001 & 20000-1. Confidential question papers, OMR & certificates for universities, government & institutions in Andhra Pradesh, Telangana & Karnataka.",
+    "India's trusted four ISO-certified security printing partner since 1997 — ISO 9001, 27001, 14001 & 20000-1. Confidential question papers, OMR & certificates for universities, government & institutions across India.",
 };
 
 const products = [
@@ -121,7 +121,7 @@ export default function HomePage() {
                       />
                     </span>
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300 sm:text-sm">
-                      Four ISO · Hyderabad &amp; Vijayawada
+                      Four ISO · Hyderabad · Vijayawada · Bangalore
                     </p>
                   </div>
                   <h1 className="mt-4 text-balance bg-gradient-to-br from-white via-sky-100 to-sky-300 bg-clip-text text-center text-3xl font-medium leading-[1.18] tracking-[-0.02em] text-transparent sm:text-4xl md:text-5xl lg:text-[2.85rem] lg:leading-[1.1]">
@@ -211,10 +211,10 @@ export default function HomePage() {
           </div>
           <div className="text-center sm:text-left">
             <p className="text-2xl font-bold text-accent sm:text-3xl">
-              2 Units
+              3 Units
             </p>
             <p className="mt-1 text-sm text-sky-200/85">
-              Hyderabad &amp; Vijayawada plants
+              Hyderabad, Vijayawada &amp; Bangalore plants
             </p>
           </div>
           <div className="text-center sm:text-left">
@@ -428,9 +428,8 @@ export default function HomePage() {
             Trusted Across Sectors
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
-            Universities, government departments, and companies across AP,
-            Telangana &amp; Karnataka trust us for confidentiality, capacity, and
-            on-time delivery.
+            Universities, government departments, and companies across India
+            trust us for confidentiality, capacity, and on-time delivery.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">

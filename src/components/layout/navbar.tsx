@@ -471,7 +471,7 @@ export function Navbar() {
 
             <div className="shrink-0 border-t border-border bg-primary px-4 py-3 text-white">
               <p className="text-[11px] font-semibold tracking-[0.14em] text-sky-200">
-                FOUR ISO · HYDERABAD &amp; VIJAYAWADA
+                FOUR ISO · HYDERABAD · VIJAYAWADA · BANGALORE
               </p>
               <p className="mt-0.5 text-xs text-sky-100/90">
                 India&apos;s trusted security printing partner since 1997

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Industries We Serve | Education, Government & Corporate Printing",
   },
   description:
-    "Security printing for universities & exam boards, government departments, and corporates across Andhra Pradesh, Telangana & Karnataka.",
+    "Security printing for universities & exam boards, government departments, and corporates across India.",
 };
 
 const sectorImages = {
