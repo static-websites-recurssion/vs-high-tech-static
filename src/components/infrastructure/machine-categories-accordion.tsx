@@ -17,6 +17,13 @@ const machineGroups = [
     ],
   },
   {
+    title: "Sheet Fed Offset",
+    items: [
+      "Lithrone Model A37P: 4 colour, up to 640x940mm",
+      "Lithrone Model A37P with coater: 4 colour, up to 640x940mm",
+    ],
+  },
+  {
     title: "Computer Stationery Machines",
     items: [
       "FlexiBobine 12 web: 1 no, 5 colour, 45,000 sheets/hr",
@@ -24,6 +31,17 @@ const machineGroups = [
       "Rollon Engineering (4 colour): 1 no, 36,000/hr",
       "Rollon Engineering (3 colour): 1 no, 36,000/hr",
       "Geekay Machinery (Multi colour): 3 nos, 8,000/hr",
+    ],
+  },
+  {
+    title: "Cutting & Security Finishing",
+    items: [
+      "Cutting Machines: 10 nos total (Japan, UK, Germany, India)",
+      "Pinning Machines: 16 nos (Stander Print Equipments)",
+      "Box Strapping: 10 machines (ITW Signode)",
+      "Hologram Stamping Machine: 1 no (inline, MICR numbering)",
+      "Variable Data Printing: Konica Minolta 7120 & 6120",
+      "Automatic Film Wrapping Machine: 1 no",
     ],
   },
   {
@@ -42,24 +60,6 @@ const machineGroups = [
       "Perfect Binding machines: 6 machines (single clamp, six clamp, five clamp, four clamp — from Print tools, Well Bond, Muller Martini, Appu 1500)",
       "Stitching Machines: 20 nos",
       "Gathering Machine: 1 no (Hans Muller, Switzerland) — inline gathering, pinning, cutting",
-    ],
-  },
-  {
-    title: "Cutting & Security Finishing",
-    items: [
-      "Cutting Machines: 10 nos total (Japan, UK, Germany, India)",
-      "Pinning Machines: 16 nos (Stander Print Equipments)",
-      "Box Strapping: 10 machines (ITW Signode)",
-      "Hologram Stamping Machine: 1 no (inline, MICR numbering)",
-      "Variable Data Printing: Konica Minolta 7120 & 6120",
-      "Automatic Film Wrapping Machine: 1 no",
-    ],
-  },
-  {
-    title: "Sheet Fed Offset",
-    items: [
-      "Lithrone Model A37P: 4 colour, up to 640x940mm",
-      "Lithrone Model A37P with coater: 4 colour, up to 640x940mm",
     ],
   },
   {

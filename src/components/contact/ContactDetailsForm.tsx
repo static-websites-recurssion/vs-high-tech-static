@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 
+import { ORGANIZATION } from "@/lib/seo";
+
 type ContactDetails = {
   name: string;
   email: string;
@@ -41,7 +43,7 @@ function toMailto({
 }
 
 export function ContactDetailsForm({
-  toEmails = ["vshitechs@gmail.com", "vshitechs@gmail.com"],
+  toEmails = [...ORGANIZATION.emails],
 }: {
   toEmails?: string[];
 }) {

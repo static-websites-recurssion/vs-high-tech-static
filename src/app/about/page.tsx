@@ -21,7 +21,7 @@ import {
 } from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
 import { keywordsFor } from "@/lib/keywords";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, ORGANIZATION } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   breadcrumbSchema,
@@ -455,7 +455,7 @@ export default function AboutPage() {
               <div>
                 <dt className="font-semibold text-primary">Education</dt>
                 <dd className="mt-0.5 text-muted-foreground">
-                  Diploma in Printing Technology, B.Tech
+                  Diploma in Printing Technology, B.Tech in Printing Technology
                 </dd>
               </div>
               <div>
@@ -467,12 +467,15 @@ export default function AboutPage() {
                   >
                     9849068920
                   </a>
-                  <a
-                    href="mailto:vshitechs@gmail.com"
-                    className="block break-all text-accent hover:underline"
-                  >
-                    vshitechs@gmail.com
-                  </a>
+                  {ORGANIZATION.emails.map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="block break-all text-accent hover:underline"
+                    >
+                      {email}
+                    </a>
+                  ))}
                 </dd>
               </div>
             </dl>

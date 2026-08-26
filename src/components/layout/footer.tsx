@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { isoCodes } from "@/lib/iso-certifications";
+import { ORGANIZATION } from "@/lib/seo";
 
 const quickLinks = [
   { href: "/products/question-papers", label: "Products" },
@@ -41,7 +42,7 @@ export function Footer() {
             </div>
             <p className="mt-3 break-words text-sm text-white/85">
               Confidential security printing for government departments,
-              universities, and large companies — three plants, four ISO
+              universities, Boards and large companies — three plants, four ISO
               certified.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
@@ -135,13 +136,20 @@ export function Footer() {
               <Phone className="h-5 w-5 shrink-0 text-accent" aria-hidden />
               9849068920
             </a>
-            <a
-              href="mailto:vshitechs@gmail.com"
-              className="flex items-center gap-3 text-sm text-white/90 transition-colors hover:text-white"
-            >
-              <Mail className="h-5 w-5 shrink-0 text-accent" aria-hidden />
-              vshitechs@gmail.com
-            </a>
+            <div className="flex min-w-0 gap-3">
+              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden />
+              <div className="min-w-0 space-y-1">
+                {ORGANIZATION.emails.map((email) => (
+                  <a
+                    key={email}
+                    href={`mailto:${email}`}
+                    className="block break-all text-sm text-white/90 transition-colors hover:text-white"
+                  >
+                    {email}
+                  </a>
+                ))}
+              </div>
+            </div>
             <p className="pt-2 text-sm">
               <Link
                 href="/contact"

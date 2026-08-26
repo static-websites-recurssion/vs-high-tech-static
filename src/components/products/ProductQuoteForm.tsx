@@ -4,6 +4,7 @@ import type { FormEvent } from "react";
 import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { ORGANIZATION } from "@/lib/seo";
 
 export function ProductQuoteForm({
   productName,
@@ -41,8 +42,9 @@ export function ProductQuoteForm({
       message || "—",
     ];
 
-    const mailto = `mailto:vshitechs@gmail.com?cc=${encodeURIComponent(
-      "vshitechs@gmail.com"
+    const [to, ...cc] = ORGANIZATION.emails;
+    const mailto = `mailto:${to}?cc=${encodeURIComponent(
+      cc.join(",")
     )}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
       bodyLines.join("\n")
     )}`;

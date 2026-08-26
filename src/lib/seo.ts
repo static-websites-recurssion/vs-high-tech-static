@@ -38,6 +38,12 @@ export const ORGANIZATION = {
   foundingDate: "1997",
   incorporationDate: "2009",
   founder: "Ramisetti Phani Krishna",
+  emails: [
+    "vshitechs@gmail.com",
+    "info@vshitechsecurityforms.com",
+    "vsprints@gmail.com",
+    "pkrconfidentialt1@gmail.com",
+  ],
   email: "vshitechs@gmail.com",
   logo: "/images/home/logo-mark.png",
   isoStandards: [

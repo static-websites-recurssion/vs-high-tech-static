@@ -5,7 +5,7 @@ import { Clock, MapPin, Shield } from "lucide-react";
 import { ContactDetailsForm } from "@/components/contact/ContactDetailsForm";
 import { siteImages } from "@/lib/site-images";
 import { keywordsFor } from "@/lib/keywords";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, ORGANIZATION } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   breadcrumbSchema,
@@ -107,18 +107,15 @@ export default function ContactPage() {
               <div>
                 <p className="font-semibold text-primary">Email</p>
                 <p className="mt-1 space-y-1">
-                  <a
-                    href="mailto:vshitechs@gmail.com"
-                    className="block text-accent hover:underline"
-                  >
-                    vshitechs@gmail.com
-                  </a>
-                  <a
-                    href="mailto:vshitechs@gmail.com"
-                    className="block text-accent hover:underline"
-                  >
-                    vshitechs@gmail.com
-                  </a>
+                  {ORGANIZATION.emails.map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="block break-all text-accent hover:underline"
+                    >
+                      {email}
+                    </a>
+                  ))}
                 </p>
               </div>
               <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-border pt-4 text-xs sm:text-sm">
@@ -168,7 +165,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <ContactDetailsForm
-              toEmails={["vshitechs@gmail.com", "vshitechs@gmail.com"]}
+              toEmails={[...ORGANIZATION.emails]}
             />
           </div>
         </div>
