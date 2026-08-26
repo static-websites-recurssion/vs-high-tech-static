@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { FaqAccordion } from "@/components/knowledge/FaqAccordion";
+import { JsonLd } from "@/components/seo/json-ld";
 import { isoCodesInline } from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Frequently Asked Questions" },
+export const metadata: Metadata = buildMetadata({
+  title: "Security Printing FAQ | Confidentiality, MOQ & Turnaround",
   description:
-    "Common questions about confidential printing, security controls, certifications, logistics, turnaround time, and facility operations.",
-};
+    "Answers on confidential printing, security controls, ISO certifications, minimum order quantity, turnaround time, secure logistics and facility visits.",
+  path: "/knowledge/faq",
+  keywords: keywordsFor("/knowledge/faq"),
+});
 
 const faqs = [
   {
@@ -81,6 +92,21 @@ const faqs = [
 export default function KnowledgeFaqPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Security Printing FAQ",
+            description:
+              "Answers on confidential printing, security controls, ISO certifications, minimum order quantity, turnaround time and secure logistics.",
+            path: "/knowledge/faq",
+          }),
+          breadcrumbSchema([
+            { name: "Knowledge Centre", path: "/knowledge/faq" },
+            { name: "FAQ", path: "/knowledge/faq" },
+          ]),
+          faqSchema(faqs, "/knowledge/faq"),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-20">
           <Image

@@ -42,7 +42,9 @@ const dropdownMenus: DropdownMenu[] = [
   {
     key: "products",
     label: "PRODUCTS",
-    href: "/products",
+    // /products is a noindex 301 stub — point the nav at the live page so the
+    // site does not link every visitor and crawler through a redirect.
+    href: "/services",
     items: [
       {
         label: "Confidential Question Papers",
@@ -51,6 +53,8 @@ const dropdownMenus: DropdownMenu[] = [
       { label: "OMR Sheets", href: "/products/omr-sheets" },
       { label: "Answer Booklets", href: "/products/answer-booklets" },
       { label: "University Certificates", href: "/products/certificates" },
+      { label: "Cheque Books", href: "/products/cheque-books" },
+      { label: "Pass Books & Annual Reports", href: "/products/pass-books" },
       { label: "Carbonless Forms", href: "/products/carbonless-forms" },
       { label: "Barcode & Variable Data", href: "/products/variable-data" },
       { label: "Thermal & Sticker Printing", href: "/products/thermal-sticker" },
@@ -61,7 +65,8 @@ const dropdownMenus: DropdownMenu[] = [
   {
     key: "sectors",
     label: "SECTORS",
-    href: "/sectors",
+    // /sectors is a noindex 301 stub — link the live overview instead.
+    href: "/industries",
     items: [
       { label: "Education & Universities", href: "/sectors/education" },
       { label: "Government & PSUs", href: "/sectors/government" },
@@ -103,7 +108,8 @@ const dropdownMenus: DropdownMenu[] = [
     href: "/contact",
     items: [
       { label: "Get a Quote", href: "/contact" },
-      { label: "Our Locations", href: "/contact/locations" },
+      // /contact/locations is a noindex 301 stub; the office cards live here.
+      { label: "Our Locations", href: "/contact" },
       { label: "Careers", href: "/careers" },
     ],
   },

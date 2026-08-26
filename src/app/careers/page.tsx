@@ -3,18 +3,38 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Careers | V.S. Hitech Security Forms",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Careers & Printing Press Jobs in Hyderabad | V.S. Hitech",
   description:
-    "Careers at V.S. Hitech — job openings are posted here when available, and profiles are welcome round the year.",
-};
+    "Careers at V.S. Hitech Security Forms — printing press roles in Hyderabad and Vijayawada. Openings are posted here; profiles are welcome round the year.",
+  path: "/careers",
+  keywords: keywordsFor("/careers"),
+});
 
 export default function CareersPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Careers at V.S. Hitech Security Forms",
+            description:
+              "Printing press and security printing roles in Hyderabad and Vijayawada.",
+            path: "/careers",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Careers", path: "/careers" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-20">
           <Image

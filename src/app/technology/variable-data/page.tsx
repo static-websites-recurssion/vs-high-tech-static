@@ -9,12 +9,22 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Variable Data Printing" },
+export const metadata: Metadata = buildMetadata({
+  title: "Variable Data Printing (VDP) Services India | V.S. Hitech",
   description:
-    "Variable Data Printing (VDP) at high speed using Konica Minolta 7120 & 6120 machines — unique barcodes, QR codes, serial numbers, and personalized documents for exams, ID cards, and institutional programmes.",
-};
+    "High-speed variable data printing on Konica Minolta 7120 & 6120 — unique barcodes, QR codes and serial numbers for hall tickets, ID cards and exams.",
+  path: "/technology/variable-data",
+  keywords: keywordsFor("/technology/variable-data"),
+});
 
 const capabilities = [
   "Linear barcodes (all common symbologies)",
@@ -35,6 +45,18 @@ const useCases = [
 export default function VariableDataPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Variable Data Printing (VDP)",
+            description:
+              "High-speed unique barcodes, QR codes, serial numbers and personalised data on every sheet.",
+            path: "/technology/variable-data",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Variable Data Printing", path: "/technology/variable-data" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

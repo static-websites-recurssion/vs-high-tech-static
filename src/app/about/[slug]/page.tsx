@@ -4,7 +4,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Award, ChevronRight, HeartHandshake, Lock, ShieldCheck, Users } from "lucide-react";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 import {
   isoCertifications,
   isoCompactList,
@@ -18,29 +26,93 @@ export function generateStaticParams() {
   return aboutSlugs.map((slug) => ({ slug }));
 }
 
+/**
+ * One title/description/keyword set per sub-page. Previously four of the five
+ * shared a single generic description, which is a duplicate-content signal and
+ * gives Google nothing to match a query against.
+ */
+const SEO_BY_SLUG: Record<
+  string,
+  { title: string; description: string; keywords: string[] }
+> = {
+  "why-us": {
+    title: "Why Choose V.S. Hitech | Confidentiality-First Security Printing",
+    description:
+      "Why buyers pick us: confidentiality-first operations, four ISO-certified processes, three plants running 24×7, and on-time sealed dispatch across India.",
+    keywords: [
+      "why choose a security printer",
+      "best security printing company India",
+      "reliable confidential printing partner",
+      "security printing company comparison",
+    ],
+  },
+  management: {
+    title: "Management Team & Leadership | V.S. Hitech Security Forms",
+    description:
+      "Led by Managing Director Shri Ramisetti Phani Krishna with 28+ years in printing, with a board that includes a woman director and 24 managers.",
+    keywords: [
+      "V.S. Hitech management team",
+      "security printing company directors",
+      "Ramisetti Phani Krishna",
+      "printing company leadership Hyderabad",
+    ],
+  },
+  certifications: {
+    title: "Certifications & Accreditations | Four ISO Standards",
+    description:
+      "Four ISO certifications — 9001 quality, 27001 information security, 14001 environment and 20000-1 IT service management, under NABCB accreditation.",
+    keywords: [
+      "ISO certifications security printer",
+      "NABCB accredited printing company",
+      "ISO 27001 printing press India",
+      "printing company certifications for tenders",
+    ],
+  },
+  infrastructure: {
+    title: "Our Infrastructure | Plants, Machinery & Capacity",
+    description:
+      "Three plants across Hyderabad, Vijayawada and Bangalore with 145,000+ sft, 24+ machine categories, web offset to 30,000 impressions/hour and generator backup.",
+    keywords: [
+      "security printing plant infrastructure",
+      "printing press capacity India",
+      "printing facility Hyderabad Vijayawada",
+      "high volume printing plant",
+    ],
+  },
+  csr: {
+    title: "CSR & Women Empowerment | V.S. Hitech Security Forms",
+    description:
+      "Our commitment to inclusive employment — a woman director on the board, women's employment on the shop floor, and statutory compliance throughout.",
+    keywords: [
+      "CSR printing company India",
+      "women employment printing industry",
+      "inclusive workplace manufacturing India",
+    ],
+  },
+};
+
 export function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }): Metadata {
-  const slug = params.slug;
-  const titleBySlug: Record<string, string> = {
-    "why-us": "Why VS Hitech",
-    management: "Management Team",
-    certifications: "Certifications & Accreditations",
-    infrastructure: "Infrastructure",
-    csr: "CSR & Women Empowerment",
-  };
+  const seo = SEO_BY_SLUG[params.slug];
+  if (!seo) {
+    return buildMetadata({
+      title: "About V.S. Hitech Security Forms",
+      description:
+        "Company profile, leadership, certifications and infrastructure of V.S. Hitech Security Forms.",
+      path: "/about",
+      noindex: true,
+    });
+  }
 
-  const title = titleBySlug[slug];
-  if (!title) return { title: "About" };
-  return {
-    title: { absolute: `${title} | V.S. Hitech` },
-    description:
-      slug === "certifications"
-        ? "Four ISO certifications — ISO 9001:2015, ISO 27001:2013, ISO 14001:2015, and ISO/IEC 20000-1:2018 — quality, information security, environment, and IT service management."
-        : "Learn more about V.S. Hitech’s leadership, compliance, security culture, and infrastructure.",
-  };
+  return buildMetadata({
+    title: seo.title,
+    description: seo.description,
+    path: `/about/${params.slug}`,
+    keywords: [...seo.keywords, ...keywordsFor("/about")],
+  });
 }
 
 const whyUsPoints = [
@@ -101,8 +173,26 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
             ? siteImages.infraFinishing
             : siteImages.aboutEstate;
 
+  const seo = SEO_BY_SLUG[params.slug];
+
   return (
     <div className="bg-background">
+      {seo ? (
+        <JsonLd
+          data={graph(
+            webPageSchema({
+              name: seo.title,
+              description: seo.description,
+              path: `/about/${params.slug}`,
+              type: "AboutPage",
+            }),
+            breadcrumbSchema([
+              { name: "About", path: "/about" },
+              { name: seo.title.split(" | ")[0], path: `/about/${params.slug}` },
+            ]),
+          )}
+        />
+      ) : null}
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

@@ -28,19 +28,49 @@ import {
   variableDataApplications,
 } from "@/lib/services-data";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import { allProductSlugs, productBySlug } from "@/lib/products-data";
+import {
+  breadcrumbSchema,
+  graph,
+  itemListSchema,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Products & Services | Secure Printing & Document Management — V.S. Hitech",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Security Printing Services & Products | V.S. Hitech",
   description:
-    "End-to-end secure printing and document processing — commercial and security printing, prepress, examination services, OMR/ICR processing, quality control and secure logistics for governments, universities and enterprises.",
-};
+    "End-to-end secure printing and document processing — security printing, prepress, examination services, OMR/ICR processing, QC and secure logistics.",
+  path: "/services",
+  keywords: keywordsFor("/services"),
+});
 
 export default function ServicesPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Security Printing Services & Products",
+            description:
+              "End-to-end secure printing and document processing for governments, universities and enterprises.",
+            path: "/services",
+            type: "CollectionPage",
+          }),
+          breadcrumbSchema([{ name: "Products & Services", path: "/services" }]),
+          itemListSchema({
+            name: "Security printing products",
+            path: "/services",
+            items: allProductSlugs.map((slug) => ({
+              name: productBySlug[slug].name,
+              path: `/products/${slug}`,
+              description: productBySlug[slug].tagline,
+            })),
+          }),
+        )}
+      />
       <ScrollReveal />
       <BackToTop />
 
@@ -507,7 +537,7 @@ export default function ServicesPage() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/contact/locations">
+                <Link href="/contact">
                   <Phone className="h-4 w-4" aria-hidden />
                   Talk to our team
                 </Link>

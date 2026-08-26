@@ -14,14 +14,22 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Testing Facilities | In-House QC for Security Print",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "In-House Paper & Print Testing Lab | GSM, Cobb, UV, Barcode",
   description:
-    "In-house paper and print testing — GSM, thickness, Cobb, smoothness & porosity, brightness, opacity, colour, security inks, barcode, and UV checks.",
-};
+    "In-house paper and print testing — GSM, thickness, Cobb, smoothness, brightness, opacity, colour, security inks, barcode and UV feature checks.",
+  path: "/technology/testing",
+  keywords: keywordsFor("/technology/testing"),
+});
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
@@ -39,6 +47,18 @@ const testingFacilities = [
 export default function TechnologyTestingPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "In-House Testing Facilities",
+            description:
+              "Paper and print testing — GSM, thickness, Cobb, brightness, opacity, security inks, barcode and UV.",
+            path: "/technology/testing",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Testing Facilities", path: "/technology/testing" }]),
+        )}
+      />
       <section className="w-full border-b border-border bg-primary py-12 text-white sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">

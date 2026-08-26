@@ -9,15 +9,22 @@ import {
   sectorOfferings,
 } from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Industries We Serve | Education, Government & Corporate Printing",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Industries We Serve | Education, Government & Corporate Printing",
   description:
-    "Security printing for universities & exam boards, government departments, and corporates across India.",
-};
+    "Security printing for universities and exam boards, government departments and PSUs, and corporates across India — papers, OMR, certificates and forms.",
+  path: "/industries",
+  keywords: keywordsFor("/industries"),
+});
 
 const sectorImages = {
   education: siteImages.industryEducation,
@@ -28,6 +35,18 @@ const sectorImages = {
 export default function IndustriesPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Industries We Serve",
+            description:
+              "Security printing for universities and exam boards, government departments and PSUs, and corporates across India.",
+            path: "/industries",
+            type: "CollectionPage",
+          }),
+          breadcrumbSchema([{ name: "Industries", path: "/industries" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

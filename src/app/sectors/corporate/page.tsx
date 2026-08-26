@@ -11,13 +11,25 @@ import {
   sectorBySlug,
 } from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/structured-data";
 
 const sector = sectorBySlug("corporate");
 
-export const metadata: Metadata = {
-  title: { absolute: "Corporate & Private | Sectors" },
-  description: sector.description,
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Corporate Printing | Annual Reports, Cheques & Certificates",
+  description:
+    "Commercial and secure printing for businesses — annual reports, share certificates, cheque books, passbooks, dividend warrants and variable data.",
+  path: "/sectors/corporate",
+  keywords: keywordsFor("/sectors/corporate"),
+});
 
 const corporateProducts = [
   {
@@ -55,6 +67,25 @@ const corporateProducts = [
 export default function CorporateSectorPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Corporate Printing — Annual Reports, Cheques & Certificates",
+            description: "High-volume commercial and secure printing for businesses — annual reports, share certificates, cheque books, passbooks, dividend warrants and labels.",
+            path: "/sectors/corporate",
+          }),
+          breadcrumbSchema([
+            { name: "Industries", path: "/industries" },
+            { name: "Corporate & Private", path: "/sectors/corporate" },
+          ]),
+          serviceSchema({
+            name: "Corporate Printing — Annual Reports, Cheques & Certificates",
+            description: sector.description,
+            path: "/sectors/corporate",
+            serviceType: "Security printing",
+          }),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

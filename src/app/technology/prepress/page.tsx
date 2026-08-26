@@ -11,12 +11,22 @@ import {
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Pre-Press & DTP" },
+export const metadata: Metadata = buildMetadata({
+  title: "Pre-Press & DTP Services | CTCP Plate Making \u2014 V.S. Hitech",
   description:
-    "DTP systems, scanners, laser printers, CTCP plate making machines, plate exposure and development — our pre-press foundation for accurate, secure printing.",
-};
+    "DTP systems, scanners, CTCP plate making machines, plate exposure and development — the access-controlled pre-press foundation for secure printing.",
+  path: "/technology/prepress",
+  keywords: keywordsFor("/technology/prepress"),
+});
 
 const dtpAndImaging = [
   {
@@ -65,6 +75,18 @@ const plateExposureAndDev = [
 export default function PrepressPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Pre-Press & DTP Services",
+            description:
+              "DTP, scanning, CTCP plate making, plate exposure and development in access-controlled rooms.",
+            path: "/technology/prepress",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Pre-Press & DTP", path: "/technology/prepress" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

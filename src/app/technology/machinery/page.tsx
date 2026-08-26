@@ -3,18 +3,38 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { MachineryOverviewSections } from "@/components/infrastructure/machinery-overview-sections";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Our Machinery | Web Offset, Finishing & Security Print Lines",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Printing Machinery | Web Offset, CTCP, Binding & Finishing",
   description:
-    "Installed web offset (Orient Super, NAPH GRAPHICS Koncept), stationery, CTCP, binding, and finishing — equipment photography, list, and machine categories.",
-};
+    "Installed web offset (Orient Super, NAPH Graphics Koncept), computer stationery lines, CTCP plate making, hot foil stamping, binding and finishing.",
+  path: "/technology/machinery",
+  keywords: keywordsFor("/technology/machinery"),
+});
 
 export default function TechnologyMachineryPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Printing Machinery & Production Lines",
+            description:
+              "Web offset, computer stationery, CTCP, hot foil stamping, binding and finishing equipment.",
+            path: "/technology/machinery",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Machinery", path: "/technology/machinery" }]),
+        )}
+      />
       <MachineryOverviewSections
         heroTitle="Our machinery"
         heroSubtitle="Advanced multi-color  sheetfed & web offset presses, computer stationery production lines, hot foil stamping machines, CTCP systems, high-speed binding machines , programmatic cutting machines—engineered for high-volume, commercial, confidential examination and books printing."

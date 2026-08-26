@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 
 import { ProductTemplate } from "@/components/products/ProductTemplate";
+import { productMetadata } from "@/lib/product-seo";
 import { productBySlug } from "@/lib/products-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: `${productBySlug["dividend-warrants"].name} | Products — V.S. Hitech`,
-  },
-  description: productBySlug["dividend-warrants"].description,
-};
+export const metadata: Metadata = productMetadata("dividend-warrants");
 
 export default function ProductDividendWarrantsPage() {
   return (

@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { MachineryInfoButton } from "@/components/infrastructure/machinery-info-button";
 import { machineryPlantPhotos } from "@/lib/machinery-plant-photos";
 
 export function MachineryPlantGallery() {
@@ -20,13 +21,19 @@ export function MachineryPlantGallery() {
               className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm"
             >
               <div
-                className={`relative aspect-[4/3] w-full ${"darkBg" in photo && photo.darkBg ? "bg-neutral-900" : "bg-white"}`}
+                className={`relative aspect-[4/3] w-full ${photo.darkBg ? "bg-neutral-900" : "bg-white"}`}
               >
+                {photo.info ? (
+                  <MachineryInfoButton
+                    title={photo.info.title}
+                    items={photo.info.items}
+                  />
+                ) : null}
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className={`object-contain p-3${"rotate180" in photo && photo.rotate180 ? " rotate-180" : ""}`}
+                  className={`object-contain p-3${photo.rotate180 ? " rotate-180" : ""}`}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

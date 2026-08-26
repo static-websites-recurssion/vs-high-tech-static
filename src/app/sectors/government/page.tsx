@@ -10,13 +10,25 @@ import {
   sectorBySlug,
 } from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/structured-data";
 
 const sector = sectorBySlug("government");
 
-export const metadata: Metadata = {
-  title: { absolute: "Government & PSUs | Sectors" },
-  description: sector.description,
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Government & PSU Confidential Printing | V.S. Hitech",
+  description:
+    "Confidential printing for government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
+  path: "/sectors/government",
+  keywords: keywordsFor("/sectors/government"),
+});
 
 const securityPoints = [
   "Complete records and job documentation wherever required",
@@ -28,6 +40,25 @@ const securityPoints = [
 export default function GovernmentSectorPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Government Confidential Printing & PSU Print Services",
+            description: "Confidential printing for government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
+            path: "/sectors/government",
+          }),
+          breadcrumbSchema([
+            { name: "Industries", path: "/industries" },
+            { name: "Government & PSUs", path: "/sectors/government" },
+          ]),
+          serviceSchema({
+            name: "Government Confidential Printing & PSU Print Services",
+            description: sector.description,
+            path: "/sectors/government",
+            serviceType: "Security printing",
+          }),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

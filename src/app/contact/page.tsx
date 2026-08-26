@@ -4,14 +4,23 @@ import { Clock, MapPin, Shield } from "lucide-react";
 
 import { ContactDetailsForm } from "@/components/contact/ContactDetailsForm";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  localBusinessSchemas,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Contact Us | Hyderabad, Vijayawada & Bangalore Security Printing",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Contact Us | Security Printing in Hyderabad & Vijayawada",
   description:
-    "Hyderabad, Vijayawada & Bangalore offices, phone and email — four ISO certified (9001, 27001, 14001, 20000-1) security printing for clients across India.",
-};
+    "Call or email our Hyderabad and Vijayawada offices for quotes, samples and site visits. Four ISO certified security printing. Phone +91 98490 68920.",
+  path: "/contact",
+  keywords: keywordsFor("/contact"),
+});
 
 const whyPoints = [
   {
@@ -34,6 +43,19 @@ const whyPoints = [
 export default function ContactPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Contact V.S. Hitech Security Forms",
+            description:
+              "Hyderabad and Vijayawada offices, phone, email and GST details for quotes, samples and site visits.",
+            path: "/contact",
+            type: "ContactPage",
+          }),
+          breadcrumbSchema([{ name: "Contact", path: "/contact" }]),
+          localBusinessSchemas(),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

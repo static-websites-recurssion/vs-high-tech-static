@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 
 import { ProductQuoteForm } from "@/components/products/ProductQuoteForm";
+import { JsonLd } from "@/components/seo/json-ld";
+import { productSeoDescription } from "@/lib/product-seo";
 import {
   productBySlug,
   type ProductData,
@@ -21,6 +23,12 @@ import {
   type SectorTag,
 } from "@/lib/products-data";
 import { siteImages } from "@/lib/site-images";
+import {
+  breadcrumbSchema,
+  graph,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/structured-data";
 
 /** Products that go through binding, stitching, padding, or similar finishing. */
 const productsWithFinishingAndBinding = new Set<ProductSlug>([
@@ -170,9 +178,58 @@ function ProcessStep({
 export function ProductTemplate({ product }: { product: ProductData }) {
   const descriptionParagraphs = splitIntoParagraphs(product.description);
   const processSteps = getProcessSteps(product.slug);
+  const path = `/products/${product.slug}`;
 
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: product.name,
+            description: productSeoDescription(product.slug),
+            path,
+          }),
+          breadcrumbSchema([
+            { name: "Products & Services", path: "/services" },
+            { name: product.name, path },
+          ]),
+          serviceSchema({
+            name: product.name,
+            description: product.description,
+            path,
+            serviceType: `${product.name} printing`,
+            features: product.securityFeatures,
+          }),
+        )}
+      />
+
+      {/* Visible breadcrumb trail — matches the BreadcrumbList above. */}
+      <nav
+        aria-label="Breadcrumb"
+        className="mx-auto max-w-6xl px-4 pt-4 sm:px-6 lg:px-8"
+      >
+        <ol className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+          <li>
+            <Link href="/" className="hover:text-primary hover:underline">
+              Home
+            </Link>
+          </li>
+          <li aria-hidden>/</li>
+          <li>
+            <Link
+              href="/services"
+              className="hover:text-primary hover:underline"
+            >
+              Products &amp; Services
+            </Link>
+          </li>
+          <li aria-hidden>/</li>
+          <li className="font-medium text-primary" aria-current="page">
+            {product.name}
+          </li>
+        </ol>
+      </nav>
+
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-30">
           <Image

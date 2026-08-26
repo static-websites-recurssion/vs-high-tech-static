@@ -20,14 +20,22 @@ import {
   isoCodesInline,
 } from "@/lib/iso-certifications";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "About Us | 28 Years of Security Printing Excellence",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "About Us | Security Printing Company Since 1997 \u2014 V.S. Hitech",
   description:
-    "Company profile: security printing since 2009, four ISO under NABCB accreditation (9001, 27001, 14001, 20000-1), Hyderabad, Vijayawada & Bangalore works, leadership, pre-press scale, and confidentiality controls.",
-};
+    "Security printing since 1997, incorporated 2009 — four ISO certifications under NABCB accreditation, three plants, and leadership focused on confidentiality.",
+  path: "/about",
+  keywords: keywordsFor("/about"),
+});
 
 const values = [
   {
@@ -124,6 +132,18 @@ const securityPractices = [
 export default function AboutPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "About V.S. Hitech Security Forms",
+            description:
+              "Security printing since 1997, incorporated 2009, four ISO certifications under NABCB accreditation, three plants and a leadership team focused on confidentiality.",
+            path: "/about",
+            type: "AboutPage",
+          }),
+          breadcrumbSchema([{ name: "About", path: "/about" }]),
+        )}
+      />
       {/* SECTION 1 — Page Hero */}
       <section className="w-full bg-primary text-white">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">

@@ -17,15 +17,22 @@ import {
 
 import { MachineryOverviewSections } from "@/components/infrastructure/machinery-overview-sections";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Infrastructure & Facilities | Three Plants, High-Volume Security Printing",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Infrastructure & Printing Facilities | 3 Plants, 145,000+ sft",
   description:
-    "Three manufacturing units (Hyderabad, Vijayawada & Bangalore), 24+ machine categories, web offset to 30,000/hr, security environment, testing labs, and combined 145,000+ sft footprint.",
-};
+    "Three plants across Hyderabad, Vijayawada and Bangalore — 145,000+ sft, 24+ machine categories, web offset to 30,000/hr and in-house testing labs.",
+  path: "/infrastructure",
+  keywords: keywordsFor("/infrastructure"),
+});
 
 const securityChecklist = [
   "Single Entry/Exit guarded at all times",
@@ -56,6 +63,19 @@ const testingFacilities = [
 export default function InfrastructurePage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Infrastructure & Printing Facilities",
+            description:
+              "Three plants across Hyderabad, Vijayawada and Bangalore — 145,000+ sft, 24+ machine categories, secure environment and in-house testing labs.",
+            path: "/infrastructure",
+          }),
+          breadcrumbSchema([
+            { name: "Infrastructure", path: "/infrastructure" },
+          ]),
+        )}
+      />
       <MachineryOverviewSections
         heroTitle="Infrastructure & facilities"
         heroSubtitle="Three plants for confidential, high-volume printing — running 365 days, 24×7, with separate security zones and secure waste disposal."

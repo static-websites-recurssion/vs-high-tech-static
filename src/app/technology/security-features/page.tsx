@@ -27,12 +27,22 @@ import {
   securityFeaturesCatalog,
   type SecurityFeature,
 } from "@/lib/security-features-data";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Security Features We Offer" },
+export const metadata: Metadata = buildMetadata({
+  title: "16 Document Security Features | Hologram, UV & Microtext",
   description:
-    "Security features we offer — barcode, QR code, watermark, UV invisible logo, microtext, microline, thermochromic ink, copy void, fluorescent border, guilloche, hologram, and more.",
-};
+    "Security features we print — barcode, QR code, watermark, UV invisible logo, microtext, thermochromic ink, copy void, guilloche, hologram and more.",
+  path: "/technology/security-features",
+  keywords: keywordsFor("/technology/security-features"),
+});
 
 const featureIcons: Record<string, LucideIcon> = {
   "Bar Code": Barcode,
@@ -117,6 +127,18 @@ function catalogIcon(feature: SecurityFeature): LucideIcon {
 export default function SecurityFeaturesPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Document Security Features",
+            description:
+              "Sixteen printable security features from hologram and UV invisible logo to microtext and guilloche.",
+            path: "/technology/security-features",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Security Features", path: "/technology/security-features" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

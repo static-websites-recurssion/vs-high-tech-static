@@ -1,7 +1,20 @@
 /**
  * Machinery photography from the V.S. Hitech company profile (end-to-end set).
  */
-export const machineryPlantPhotos = [
+export type MachineryPlantPhoto = {
+  src: string;
+  alt: string;
+  caption: string;
+  rotate180?: boolean;
+  darkBg?: boolean;
+  /** Extra details shown via the gallery info (“i”) button */
+  info?: {
+    title: string;
+    items: readonly string[];
+  };
+};
+
+export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   {
     src: "/images/machinery/plant-02.webp",
     alt: "Orient Super web offset press towers with operator stairs and control console",
@@ -31,6 +44,10 @@ export const machineryPlantPhotos = [
     src: "/images/machinery/plant-07.webp",
     alt: "Muller-Martini Progress 520 computer stationery press with UV dryer",
     caption: "Muller-Martini Progress 520 — UV stationery",
+    info: {
+      title: "Delivery configurations",
+      items: ["Reel to sheet", "Reel to reel", "Reel to fanfold"],
+    },
   },
   {
     src: "/images/machinery/plant-08.webp",
@@ -103,7 +120,7 @@ export const machineryPlantPhotos = [
   {
     src: "/images/machinery/plant-25.webp",
     alt: "Stander Print Equipments industrial pinning / wire-stitching machine",
-    caption: "Pinning machine — Stander Print",
+    caption: "Pinning machine — Standard Print",
   },
   {
     src: "/images/machinery/plant-26.webp",
@@ -237,4 +254,4 @@ export const machineryPlantPhotos = [
     alt: "Thermal and water-based laminating machine with in-line sheeter",
     caption: "Thermal & water-base laminator with sheeter",
   },
-] as const;
+];

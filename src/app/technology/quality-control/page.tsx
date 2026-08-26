@@ -16,12 +16,22 @@ import {
 
 import { siteImages } from "@/lib/site-images";
 import { isoCodes } from "@/lib/iso-certifications";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Quality Control" },
+export const metadata: Metadata = buildMetadata({
+  title: "Print Quality Control | 100% Inspection Before Dispatch",
   description:
-    "Our quality control process — GSM, thickness, Cobb, smoothness, brightness, opacity, colour, security ink, barcode and UV testing, double checking of all material, 100% inspection before dispatch, and four ISO process controls (9001, 27001, 14001, 20000-1).",
-};
+    "GSM, Cobb, brightness, opacity, colour, security ink, barcode and UV testing, dual material checks and 100% inspection before dispatch under ISO 9001.",
+  path: "/technology/quality-control",
+  keywords: keywordsFor("/technology/quality-control"),
+});
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
@@ -62,6 +72,18 @@ const qcWorkflow = [
 export default function QualityControlPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Quality Control Process",
+            description:
+              "Material testing, dual checking and 100% inspection before dispatch under ISO 9001.",
+            path: "/technology/quality-control",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Quality Control", path: "/technology/quality-control" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

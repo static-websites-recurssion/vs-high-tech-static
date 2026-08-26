@@ -11,13 +11,25 @@ import {
   sectorBySlug,
 } from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/structured-data";
 
 const sector = sectorBySlug("education");
 
-export const metadata: Metadata = {
-  title: { absolute: "Education & Universities | Sectors" },
-  description: sector.description,
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Examination Printing for Universities & Exam Boards | V.S. Hitech",
+  description:
+    "Examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos and certificates, sealed and on time.",
+  path: "/sectors/education",
+  keywords: keywordsFor("/sectors/education"),
+});
 
 const painPoints = [
   {
@@ -57,6 +69,25 @@ const howWeWork = [
 export default function EducationSectorPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Examination Printing for Universities & Exam Boards",
+            description: "End-to-end examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos and certificates.",
+            path: "/sectors/education",
+          }),
+          breadcrumbSchema([
+            { name: "Industries", path: "/industries" },
+            { name: "Education & Universities", path: "/sectors/education" },
+          ]),
+          serviceSchema({
+            name: "Examination Printing for Universities & Exam Boards",
+            description: sector.description,
+            path: "/sectors/education",
+            serviceType: "Security printing",
+          }),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

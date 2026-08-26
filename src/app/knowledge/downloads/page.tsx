@@ -5,12 +5,22 @@ import { Download, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Downloads" },
+export const metadata: Metadata = buildMetadata({
+  title: "Downloads | ISO Certificates & Vendor Documents \u2014 V.S. Hitech",
   description:
-    "Request documents you may need for tenders and vendor registration — including ISO 9001, 27001, 14001, and 20000-1 certificate packs.",
-};
+    "Request documents for tenders and vendor registration — ISO 9001, 27001, 14001 and 20000-1 certificate packs, company profile and compliance papers.",
+  path: "/knowledge/downloads",
+  keywords: keywordsFor("/knowledge/downloads"),
+});
 
 const downloads = [
   {
@@ -36,6 +46,18 @@ const downloads = [
 export default function KnowledgeDownloadsPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Downloads — ISO Certificates & Vendor Documents",
+            description:
+              "ISO certificate packs, company profile and compliance documents for tenders and vendor registration.",
+            path: "/knowledge/downloads",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Knowledge Centre", path: "/knowledge/faq" }, { name: "Downloads", path: "/knowledge/downloads" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-20">
           <Image

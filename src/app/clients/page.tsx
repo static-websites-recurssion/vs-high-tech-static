@@ -10,12 +10,22 @@ import {
   sectorOfferings,
 } from "@/lib/sectors-data";
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Our Clients & Sectors Served" },
+export const metadata: Metadata = buildMetadata({
+  title: "Our Clients | Universities, Government & Corporate \u2014 V.S. Hitech",
   description:
-    "For 28 years we have served universities, government departments, and corporations across India. Client names are kept confidential to protect security requirements.",
-};
+    "Since 1997 we have served universities, government departments and corporations across India. Client names stay confidential to protect their security.",
+  path: "/clients",
+  keywords: keywordsFor("/clients"),
+});
 
 const sectorMeta = {
   education: {
@@ -53,6 +63,18 @@ const testimonials = [
 export default function ClientsPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Our Clients & Sectors Served",
+            description:
+              "Universities, government departments and corporations served across India since 1997.",
+            path: "/clients",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Clients", path: "/clients" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

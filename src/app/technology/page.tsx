@@ -11,14 +11,22 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Technology | Security Printing, Machinery & QC",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Security Printing Technology, Machinery & Quality Control",
   description:
-    "Machinery, security features, variable data, pre-press, controlled environment, testing, and quality control at V.S. Hitech.",
-};
+    "Machinery, document security features, variable data printing, pre-press, controlled security environment, in-house testing and quality control.",
+  path: "/technology",
+  keywords: keywordsFor("/technology"),
+});
 
 const links = [
   {
@@ -68,6 +76,18 @@ const links = [
 export default function TechnologyPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Security Printing Technology",
+            description:
+              "Machinery, security features, variable data, pre-press, security environment, testing and quality control.",
+            path: "/technology",
+            type: "CollectionPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }]),
+        )}
+      />
       <section className="w-full border-b border-border bg-primary py-12 text-white sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

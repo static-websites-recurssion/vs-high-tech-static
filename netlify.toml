@@ -22,3 +22,27 @@
   for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# --- SEO: 301 the legacy URLs so link equity consolidates on the live pages ---
+# These paths still ship a noindex meta-refresh stub as a belt-and-braces
+# fallback for hosts that ignore this file.
+
+[[redirects]]
+  from = "/products"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/sectors"
+  to = "/industries"
+  status = 301
+
+[[redirects]]
+  from = "/sectors/banking"
+  to = "/industries"
+  status = 301
+
+[[redirects]]
+  from = "/contact/locations"
+  to = "/contact"
+  status = 301

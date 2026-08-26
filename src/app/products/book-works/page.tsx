@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 
 import { ProductTemplate } from "@/components/products/ProductTemplate";
+import { productMetadata } from "@/lib/product-seo";
 import { productBySlug } from "@/lib/products-data";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: `${productBySlug["book-works"].name} | Products — V.S. Hitech`,
-  },
-  description: productBySlug["book-works"].description,
-};
+export const metadata: Metadata = productMetadata("book-works");
 
 export default function ProductBookWorksPage() {
   return <ProductTemplate product={productBySlug["book-works"]} />;

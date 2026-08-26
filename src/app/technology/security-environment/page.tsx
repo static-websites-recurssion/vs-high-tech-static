@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { siteImages } from "@/lib/site-images";
+import { keywordsFor } from "@/lib/keywords";
+import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  breadcrumbSchema,
+  graph,
+  webPageSchema,
+} from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: { absolute: "Our Security Environment" },
+export const metadata: Metadata = buildMetadata({
+  title: "Secure Printing Environment | CCTV, Biometrics & Waste Control",
   description:
-    "How we keep confidential printing secure — controlled entry and exit, guarded access, double checking of material, and safe shredding and burning of confidential waste.",
-};
+    "Single guarded entry and exit, CCTV-monitored floor, biometric access, dual material checks, and confidential waste shredded and burnt under supervision.",
+  path: "/technology/security-environment",
+  keywords: keywordsFor("/technology/security-environment"),
+});
 
 const securityChecklist = [
   "Single Entry/Exit guarded at all times",
@@ -42,6 +52,18 @@ const placeholderSections = [
 export default function SecurityEnvironmentPage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Our Security Environment",
+            description:
+              "Guarded single entry and exit, CCTV, biometric access and supervised destruction of confidential waste.",
+            path: "/technology/security-environment",
+            type: "WebPage",
+          }),
+          breadcrumbSchema([{ name: "Technology", path: "/technology" }, { name: "Security Environment", path: "/technology/security-environment" }]),
+        )}
+      />
       <section className="relative w-full overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-25">
           <Image

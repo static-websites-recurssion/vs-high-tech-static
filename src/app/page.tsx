@@ -16,9 +16,14 @@ import {
 } from "lucide-react";
 
 import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { isoCertifications, isoCodes } from "@/lib/iso-certifications";
+import { keywordsFor } from "@/lib/keywords";
+import { allProductSlugs, productBySlug } from "@/lib/products-data";
+import { buildMetadata } from "@/lib/seo";
 import { siteImages } from "@/lib/site-images";
+import { graph, itemListSchema, webPageSchema } from "@/lib/structured-data";
 
 /** Hero-side machine — NAPH GRAPHICS Koncept 8-colour web offset. */
 const heroMachineryPhoto = {
@@ -26,14 +31,14 @@ const heroMachineryPhoto = {
   caption: "NAPH GRAPHICS Koncept — 8-colour web offset",
 };
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
-  },
+export const metadata: Metadata = buildMetadata({
+  title:
+    "Security Printing Company in Hyderabad | V.S. Hitech",
   description:
-    "India's trusted four ISO-certified security printing partner since 1997 — ISO 9001, 27001, 14001 & 20000-1. Confidential question papers, OMR & certificates for universities, government & institutions across India.",
-};
+    "India's trusted four ISO-certified security printer since 1997 — confidential question papers, OMR sheets and certificates for institutions across India.",
+  path: "/",
+  keywords: keywordsFor("/"),
+});
 
 const products = [
   {
@@ -87,6 +92,25 @@ const sectors = [
 export default function HomePage() {
   return (
     <div className="bg-background">
+      <JsonLd
+        data={graph(
+          webPageSchema({
+            name: "Security Printing Company in Hyderabad | V.S. Hitech Security Forms",
+            description:
+              "Four ISO-certified security printing partner since 1997 — confidential question papers, OMR sheets, answer booklets and certificates for universities, government departments and corporates across India.",
+            path: "/",
+          }),
+          itemListSchema({
+            name: "Security printing products",
+            path: "/",
+            items: allProductSlugs.map((slug) => ({
+              name: productBySlug[slug].name,
+              path: `/products/${slug}`,
+              description: productBySlug[slug].tagline,
+            })),
+          }),
+        )}
+      />
       {/* SECTION 1 — Hero: guilloche security pattern + copy; plant photography on larger screens */}
       <section className="relative isolate w-full min-h-[min(100svh,880px)] overflow-hidden bg-[#0a1430] text-sky-50">
         <div className="absolute inset-0 overflow-hidden">
