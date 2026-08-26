@@ -13,7 +13,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = {
   ...buildMetadata({
     title: "Industries Served",
-    description: "Industries we serve — education, government and corporate.",
+    description: "Industries we serve — Education, Government and Corporate.",
     path: "/industries",
     noindex: true,
   }),

@@ -32,7 +32,7 @@ export function organizationSchema(): Json {
     },
     image: absoluteUrl("/images/og/og-default.jpg"),
     description:
-      "Four ISO-certified security printing company in Hyderabad, Vijayawada and Bangalore — confidential question papers, OMR sheets, answer booklets, certificates, cheque books and variable data printing for universities, government departments and corporates across India.",
+      "Four ISO-certified security printing company in Hyderabad, Vijayawada and Bangalore — confidential question papers, OMR sheets, answer booklets, certificates, cheque books and variable data printing for Universities, Government departments and Corporates across India.",
     foundingDate: ORGANIZATION.foundingDate,
     founder: { "@type": "Person", name: ORGANIZATION.founder },
     email: [...ORGANIZATION.emails],

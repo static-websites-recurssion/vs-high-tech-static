@@ -30,7 +30,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Confidential Question Papers",
     tagline: "Zero-leak security from our press to the exam hall",
     description:
-      "We specialize in printing examination question papers for universities, public service commissions, recruitment boards, and competitive exam bodies. Every job is handled under maximum security — single entry/exit facility, CCTV-monitored floor, biometric attendance, and all waste shredded and burnt. Papers are dispatched in sealed packets via DCM closed vehicles.",
+      "We specialize in printing Examination question papers for Universities, public service commissions, recruitment Boards, and competitive exam bodies. Every job is handled under maximum security — single entry/exit facility, CCTV-monitored floor, biometric attendance, and all waste shredded and burnt. Papers are dispatched in sealed packets via DCM closed vehicles.",
     securityFeatures: [
       "CCTV-monitored printing floor",
       "Biometric access to press area",
@@ -50,7 +50,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "OMR Sheets",
     tagline: "Printed with high accuracy so every sheet scans perfectly",
     description:
-      "Our OMR sheets are printed with the highest accuracy to ensure reliable scanning results. Used for entrance examinations, recruitment tests, surveys, and evaluation forms. Supports linear barcodes, QR codes, and variable data printing for unique identification of each sheet.",
+      "Our OMR sheets are printed with the highest accuracy to ensure reliable scanning results. Used for entrance Examinations, recruitment tests, surveys, and evaluation forms. Supports linear barcodes, QR codes, and variable data printing for unique identification of each sheet.",
     securityFeatures: [
       "High-precision printing for scan accuracy",
       "Bar Code / QR Code integration",
@@ -65,9 +65,9 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   "answer-booklets": {
     slug: "answer-booklets",
     name: "Answer Booklets",
-    tagline: "Secure, numbered booklets for board and university exams",
+    tagline: "Secure, numbered booklets for Board and University exams",
     description:
-      "Printed for boards, universities, and competitive exams. Available with serial numbering, watermarks, hologram options, and barcodes. Our gathering machines ensure correct collation and our perfect binding lines handle large runs with speed.",
+      "Printed for Boards, Universities, and competitive exams. Available with serial numbering, watermarks, hologram options, and barcodes. Our gathering machines ensure correct collation and our perfect binding lines handle large runs with speed.",
     securityFeatures: [
       "Serial numbering",
       "Water Mark paper option",
@@ -81,10 +81,10 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   },
   certificates: {
     slug: "certificates",
-    name: "University Degree  Certificates",
+    name: "University Degree Certificates",
     tagline: "High-security certificates that can't be faked",
     description:
-      "We print academic certificates, degree certificates, and share certificates for universities, corporations, and government bodies. These feature multiple layers of security to prevent forgery — from guilloche and holograms to UV logos, microtext, copy-void backgrounds, and thermochromic ink.",
+      "We print academic certificates, degree certificates, and share certificates for Universities, corporations, and Government bodies. These feature multiple layers of security to prevent forgery — from guilloche and holograms to UV logos, microtext, copy-void backgrounds, and thermochromic ink.",
     securityFeatures: [
       "Guilloche Design background",
       "Hologram stamping",
@@ -109,7 +109,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Cheque Books",
     tagline: "MICR-encoded, security-grade cheque printing",
     description:
-      "We print cheque books for corporate accounts and institutional use. All cheques are printed on security paper with MICR encoding using our specialized machinery.",
+      "We print cheque books for Corporate accounts and institutional use. All cheques are printed on security paper with MICR encoding using our specialized machinery.",
     securityFeatures: [
       "MICR (E-13B) encoding",
       "Water Mark security paper",
@@ -142,9 +142,9 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   "carbonless-forms": {
     slug: "carbonless-forms",
     name: "Carbonless Forms & Computer Stationery",
-    tagline: "Multi-part forms for business and government workflows",
+    tagline: "Multi-part forms for business and Government workflows",
     description:
-      "NCR (No Carbon Required) forms, continuous stationery, and multi-part business forms for government departments, logistics companies, and hospitals. We have dedicated computer stationery machines for continuous-feed printing.",
+      "NCR (No Carbon Required) forms, continuous stationery, and multi-part business forms for Government departments, logistics companies, and hospitals. We have dedicated computer stationery machines for continuous-feed printing.",
     securityFeatures: [
       "NCR paper (2-part, 3-part, 4-part)",
       "Sequential numbering",
@@ -214,7 +214,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Book Works & Commercial Printing",
     tagline: "High-volume books, manuals, and catalogs — on time",
     description:
-      "We handle large-volume book printing for publishers, educational institutions, and corporates — including textbooks, training manuals, annual reports, and product catalogs. Our perfect binding and gathering machines handle runs of any size.",
+      "We handle large-volume book printing for publishers, Educational institutions, and Corporates — including textbooks, training manuals, annual reports, and product catalogs. Our perfect binding and gathering machines handle runs of any size.",
     securityFeatures: [
       "Saddle stitching",
       "Multi-colour offset",

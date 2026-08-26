@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "ISO 9001, 27001, 14001 & 20000-1 Certified Printer | V.S. Hitech",
   description:
-    "Four ISO certified under NABCB accreditation — 9001 quality, 27001 information security, 14001 environment, 20000-1 IT service management. Packs for tenders.",
+    "Four ISO certifications under NABCB accreditation — 9001 quality, 27001 information security, 14001 environment, 20000-1 IT service management. Packs for tenders.",
   path: "/certifications",
   keywords: keywordsFor("/certifications"),
 });

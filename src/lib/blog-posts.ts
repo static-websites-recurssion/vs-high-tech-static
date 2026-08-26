@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-05",
     slug: slugify("OMR Sheets: How to Get the Best Scan Accuracy"),
     excerpt:
-      "Paper GSM, timing marks, and cutting accuracy — lessons from the large OMR jobs we print for boards and universities.",
+      "Paper GSM, timing marks, and cutting accuracy — lessons from the large OMR jobs we print for Boards and Universities.",
   },
   {
     title: "Question Paper Leakage: How Security Printers Prevent It",

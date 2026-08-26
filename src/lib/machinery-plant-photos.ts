@@ -252,6 +252,6 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   {
     src: "/images/machinery/plant-53.webp",
     alt: "Thermal and water-based laminating machine with in-line sheeter",
-    caption: "Thermal & water-base laminator with sheeter",
+    caption: "Thermal & water-based laminator with sheeter",
   },
 ];

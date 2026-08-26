@@ -38,11 +38,11 @@ const SEO_TITLE: Record<ProductSlug, string> = {
  */
 const SEO_DESCRIPTION: Record<ProductSlug, string> = {
   "question-papers":
-    "Confidential question paper printing for universities, PSCs and recruitment boards — CCTV-monitored floor, biometric access, sealed dispatch.",
+    "Confidential question paper printing for Universities, PSCs and recruitment Boards — CCTV-monitored floor, biometric access, sealed dispatch.",
   "omr-sheets":
     "High-accuracy OMR sheet printing for entrance exams, recruitment tests and surveys — barcodes, QR codes, sequential numbering and variable data per sheet.",
   "answer-booklets":
-    "Serial-numbered answer booklets and answer scripts for boards and universities — watermark paper, hologram, barcode and microtext options.",
+    "Serial-numbered answer booklets and answer scripts for Boards and Universities — watermark paper, hologram, barcode and microtext options.",
   certificates:
     "Degree, convocation and share certificate printing with guilloche, hologram, UV invisible logo, microtext and copy-void anti-forgery security.",
   "cheque-books":
@@ -50,7 +50,7 @@ const SEO_DESCRIPTION: Record<ProductSlug, string> = {
   "pass-books":
     "Passbook, pattadar passbook, register and annual report printing — multi-colour covers, thread-stitched or perfect-bound, with barcode personalisation.",
   "carbonless-forms":
-    "NCR carbonless forms, continuous computer stationery and multi-part business forms for government, logistics and hospitals — 2, 3 and 4-part sets.",
+    "NCR carbonless forms, continuous computer stationery and multi-part business forms for Government, logistics and hospitals — 2, 3 and 4-part sets.",
   "variable-data":
     "Variable data printing at up to 140 pages/min — unique barcodes, QR codes, Data Matrix and serial numbers on every sheet, with auto inspection.",
   "thermal-sticker":
@@ -58,7 +58,7 @@ const SEO_DESCRIPTION: Record<ProductSlug, string> = {
   "dividend-warrants":
     "Dividend warrant, event ticket, gate pass and admission card printing with watermark paper, hologram, UV features and sequential numbering.",
   "book-works":
-    "High-volume book printing for publishers, institutions and corporates — textbooks, training manuals, annual reports and catalogs, perfect bound.",
+    "High-volume book printing for publishers, institutions and Corporates — textbooks, training manuals, annual reports and catalogs, perfect bound.",
 };
 
 export function productMetadata(slug: ProductSlug): Metadata {

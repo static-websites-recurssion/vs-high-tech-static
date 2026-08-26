@@ -73,7 +73,7 @@ export default function EducationSectorPage() {
         data={graph(
           webPageSchema({
             name: "Examination Printing for Universities & Exam Boards",
-            description: "End-to-end examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos and certificates.",
+            description: "End-to-end Examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos and certificates.",
             path: "/sectors/education",
           }),
           breadcrumbSchema([
@@ -116,10 +116,10 @@ export default function EducationSectorPage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-          What we deliver for education
+          What we deliver for Education
         </h2>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Aligned to our company profile and examination programmes — from
+          Aligned to our company profile and Examination programmes — from
           confidential question papers through marks memos, certificates, and
           online evaluation support.
         </p>

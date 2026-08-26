@@ -25,7 +25,7 @@ const sector = sectorBySlug("government");
 export const metadata: Metadata = buildMetadata({
   title: "Government & PSU Confidential Printing | V.S. Hitech",
   description:
-    "Confidential printing for government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
+    "Confidential printing for Government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
   path: "/sectors/government",
   keywords: keywordsFor("/sectors/government"),
 });
@@ -44,7 +44,7 @@ export default function GovernmentSectorPage() {
         data={graph(
           webPageSchema({
             name: "Government Confidential Printing & PSU Print Services",
-            description: "Confidential printing for government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
+            description: "Confidential printing for Government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
             path: "/sectors/government",
           }),
           breadcrumbSchema([
@@ -93,7 +93,7 @@ export default function GovernmentSectorPage() {
               Products &amp; programs we support
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Drawn from our company profile range and government programmes —
+              Drawn from our company profile range and Government programmes —
               forms, land records, stationery, variable data, and thermal
               supply for TIMS / ATMS.
             </p>
@@ -131,7 +131,7 @@ export default function GovernmentSectorPage() {
                 Land-record and citizen-document work like Pattadar Pass Books
                 needs large capacity, documented controls, and security from
                 start to finish. Our three audited plants and closed-vehicle
-                dispatch are built for exactly this kind of government
+                dispatch are built for exactly this kind of Government
                 department work anywhere in India.
               </p>
             </div>
@@ -173,7 +173,7 @@ export default function GovernmentSectorPage() {
       <section className="border-t border-border bg-primary py-14 text-white lg:py-16">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
-            Need a secure government print partner?
+            Need a secure Government print partner?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-white/85 sm:text-base">
             Share your department&apos;s requirements and compliance checks. We

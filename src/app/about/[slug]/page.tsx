@@ -49,7 +49,7 @@ const SEO_BY_SLUG: Record<
   management: {
     title: "Management Team & Leadership | V.S. Hitech Security Forms",
     description:
-      "Led by Managing Director Shri Ramisetti Phani Krishna with 28+ years in printing, with a board that includes a woman director and 24 managers.",
+      "Led by Managing Director Shri Ramisetti Phani Krishna with 28+ years in printing, with a Board that includes a woman director and 24 managers.",
     keywords: [
       "V.S. Hitech management team",
       "security printing company directors",
@@ -82,7 +82,7 @@ const SEO_BY_SLUG: Record<
   csr: {
     title: "CSR & Women Empowerment | V.S. Hitech Security Forms",
     description:
-      "Our commitment to inclusive employment — a woman director on the board, women's employment on the shop floor, and statutory compliance throughout.",
+      "Our commitment to inclusive employment — a woman director on the Board, women's employment on the shop floor, and statutory compliance throughout.",
     keywords: [
       "CSR printing company India",
       "women employment printing industry",
@@ -129,7 +129,7 @@ const whyUsPoints = [
       "Four ISO-certified processes with quality checks at every stage, from pre-press to finishing and final dispatch.",
   },
   {
-    title: "Institutional scale, Multiple locations",
+    title: "Institutional scale, multiple locations",
     icon: ShieldCheck,
     description:
       "Our Hyderabad, Vijayawada, and Bangalore plants combine advanced printing technology with efficient production to deliver consistent, high-quality results across India.",
@@ -238,7 +238,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 What makes us a trusted security printer
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We work with universities, educational boards, and government organizations where security, confidentiality, and accurate record-keeping are essential. Our processes ensure controlled access, complete tracking, and timely, well-managed delivery.
+              We work with Universities, Educational Boards, and Government organizations where security, confidentiality, and accurate record-keeping are essential. Our processes ensure controlled access, complete tracking, and timely, well-managed delivery.
               </p>
               <div className="mt-8 space-y-4">
                 {whyUsPoints.map((p) => {
@@ -306,7 +306,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               <h3 className="mt-4 text-xl font-bold text-primary">Shri R. Phani Krishna</h3>
               <p className="text-sm font-medium text-accent">Managing Director</p>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                over 28 years of industry experience with strong focus on security printing discipline,
+                Over 28 years of industry experience with a strong focus on security printing discipline,
                 institutional delivery timelines, and compliance-driven operations.
               </p>
             </article>
@@ -346,7 +346,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 environmental care, and IT service management.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                For universities and government departments, this translates into disciplined job intake,
+                For Universities and Government departments, this translates into disciplined job intake,
                 controlled approvals, traceable production steps, and verification before dispatch—so your program
                 stays compliant and predictable even at high volumes.
               </p>
@@ -472,7 +472,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Our CSR focus is practical and workplace-led—creating opportunities, improving training, and supporting
-                community initiatives aligned with education and safety.
+                community initiatives aligned with Education and safety.
               </p>
 
               <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">

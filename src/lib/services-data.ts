@@ -139,7 +139,7 @@ export const commercialPrinting: ServiceItem[] = [
   {
     title: "Multi Color Thermal Rolls",
     description:
-      "Pre-printed thermal rolls for POS, banking, tolling and ticketing counters.",
+      "Pre-printed thermal rolls for POS, Banking, tolling and ticketing counters.",
     icon: Receipt,
   },
   {
@@ -204,7 +204,7 @@ export const securePrinting: ServiceItem[] = [
   {
     title: "Government Printing",
     description:
-      "Secure, tender-compliant production for government departments, boards, PSUs, and statutory bodies.",
+      "Secure, tender-compliant production for Government departments, Boards, PSUs, and statutory bodies.",
     icon: Landmark,
   },
   {
@@ -513,7 +513,7 @@ export const examinationCapabilities: ServiceItem[] = [
   {
     title: "Customized Answer Booklets",
     description:
-      "Booklets built to the board's format — barcodes, serials, page counts and layout.",
+      "Booklets built to the Board's format — barcodes, serials, page counts and layout.",
     icon: FileSignature,
   },
 ];
@@ -576,7 +576,7 @@ export const securityFeatures: ServiceItem[] = [
 export const industryApplications: ServiceItem[] = [
   {
     title: "Education",
-    description: "Universities, boards and institutions running large examinations.",
+    description: "Universities, Boards and institutions running large Examinations.",
     icon: GraduationCap,
   },
   {
@@ -731,7 +731,7 @@ export const serviceSections = [
     id: "industries",
     number: "10",
     label: "Industries We Serve",
-    blurb: "Government, education, banking and enterprise, each with its own profile.",
+    blurb: "Government, Education, Banking and enterprise, each with its own profile.",
   },
   {
     id: "variable-data",

@@ -97,7 +97,7 @@ export default function HomePage() {
           webPageSchema({
             name: "Security Printing Company in Hyderabad | V.S. Hitech Security Forms",
             description:
-              "Four ISO-certified security printing partner since 1997 — confidential question papers, OMR sheets, answer booklets and certificates for universities, government departments and corporates across India.",
+              "Four ISO-certified security printing partner since 1997 — confidential question papers, OMR sheets, answer booklets and certificates for Universities, Government departments and Corporates across India.",
             path: "/",
           }),
           itemListSchema({
@@ -153,8 +153,8 @@ export default function HomePage() {
                   </h1>
                   <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[1.65] text-sky-200/90 sm:text-lg">
                     We print confidential question papers, OMR sheets,
-                    certificates, and other secure documents for universities,
-                    government departments, and companies across India.
+                    certificates, and other secure documents for Universities,
+                    Government departments, and companies across India.
                   </p>
                   <TrustHeroCounters variant="hero" centered />
                   <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
@@ -393,6 +393,7 @@ export default function HomePage() {
                 >
                   infrastructure
                 </Link>
+                .
               </p>
             </div>
             <div className="text-center md:text-left">
@@ -417,7 +418,7 @@ export default function HomePage() {
           Industries we serve
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-          We work with government departments, universities, and companies —{" "}
+          We work with Government departments, Universities, and companies —{" "}
           <Link href="/industries" className="font-medium text-accent hover:underline">
             read more
           </Link>
@@ -452,7 +453,7 @@ export default function HomePage() {
             Trusted Across Sectors
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
-            Universities, government departments, and companies across India
+            Universities, Government departments, and companies across India
             trust us for confidentiality, capacity, and on-time delivery.
           </p>
 

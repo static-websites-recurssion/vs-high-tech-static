@@ -42,7 +42,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Security Printing Services & Products | V.S. Hitech",
   description:
-    "End-to-end secure printing and document processing — security printing, prepress, examination services, OMR/ICR processing, QC and secure logistics.",
+    "End-to-end secure printing and document processing — security printing, prepress, Examination services, OMR/ICR processing, QC and secure logistics.",
   path: "/services",
   keywords: keywordsFor("/services"),
 });
@@ -55,7 +55,7 @@ export default function ServicesPage() {
           webPageSchema({
             name: "Security Printing Services & Products",
             description:
-              "End-to-end secure printing and document processing for governments, universities and enterprises.",
+              "End-to-end secure printing and document processing for governments, Universities and enterprises.",
             path: "/services",
             type: "CollectionPage",
           }),
@@ -208,7 +208,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 01"
             title="Commercial Printing"
-            lead="Full-scale commercial production — from multi-colour offset runs to specialised finishing — engineered for volume, consistency and deadline certainity."
+            lead="Full-scale commercial production — from multi-colour offset runs to specialised finishing — engineered for volume, consistency and deadline certanity."
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {commercialPrinting.map((item) => (
@@ -411,14 +411,14 @@ export default function ServicesPage() {
               <SectionHeading
                 eyebrow="Section 08"
                 title="Examination Services"
-                lead="A single accountable partner across the full examination cycle — from the first draft of a question paper to the published result."
+                lead="A single accountable partner across the full Examination cycle — from the first draft of a question paper to the published result."
               />
               <div
                 data-reveal
                 className="mt-8 rounded-2xl border border-primary/10 bg-white p-5"
               >
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Boards and universities work with one team, one chain of
+                  Boards and Universities work with one team, one chain of
                   custody and one audit trail — instead of coordinating separate
                   printing, scanning and evaluation vendors.
                 </p>

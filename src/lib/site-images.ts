@@ -51,7 +51,7 @@ export const siteImages = {
   },
   industryEducation: {
     src: "/images/industry-education.webp",
-    alt: "Examination and higher-education printing context with official booklets",
+    alt: "Examination and higher-Education printing context with official booklets",
   },
   industryBanking: {
     src: "/images/industry-banking.webp",
@@ -59,11 +59,11 @@ export const siteImages = {
   },
   industryGovernment: {
     src: "/images/industry-government.webp",
-    alt: "Indian government secretariat building with national flag — public-sector document programmes",
+    alt: "Indian Government secretariat building with national flag — public-sector document programmes",
   },
   industryCorporate: {
     src: "/images/industry-corporate.webp",
-    alt: "Boardroom table with bound annual reports and corporate print collateral",
+    alt: "Boardroom table with bound annual reports and Corporate print collateral",
   },
   aboutEstate: {
     src: "/images/facilities/hyderabad-works-main-gate.webp",

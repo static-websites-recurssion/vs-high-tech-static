@@ -23,7 +23,7 @@ export const machineryOpsSnapshot = [
   {
     stat: "30,000+",
     label: "Impressions / hour (web)",
-    detail: "High-speed colour web lines for volume examination & commercial work",
+    detail: "High-speed colour web lines for volume Examination & commercial work",
   },
 ] as const;
 
@@ -82,7 +82,7 @@ export function MachineryOverviewSections({
             Operations at a glance
           </h2>
           <p className="mx-auto mt-3 max-w-3xl text-center text-sm text-muted-foreground sm:text-base">
-            The scale and backup capacity that government and university work
+            The scale and backup capacity that Government and University work
             needs — no delays, no shortage of machines.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

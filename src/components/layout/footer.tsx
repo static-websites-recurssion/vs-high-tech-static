@@ -41,8 +41,8 @@ export function Footer() {
               </p>
             </div>
             <p className="mt-3 break-words text-sm text-white/85">
-              Confidential security printing for government departments,
-              universities, Boards and large companies — three plants, four ISO
+              Confidential security printing for Government departments,
+              Universities, Boards and large companies — three plants, four ISO
               certified.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">

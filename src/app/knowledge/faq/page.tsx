@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "Are we an approved security printer?",
-    a: "We work as a security printer for government departments and universities. Approval and empanelment rules differ from department to department — we support the process with documentation and site visits wherever needed.",
+    a: "We work as a security printer for Government departments and Universities. Approval and empanelment rules differ from department to department — we support the process with documentation and site visits wherever needed.",
   },
   {
     q: "What certifications do we hold?",

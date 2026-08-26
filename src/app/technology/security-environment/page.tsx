@@ -196,7 +196,7 @@ export default function SecurityEnvironmentPage() {
               Checked twice, recorded always
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              This is how we protect confidentiality on sensitive government
+              This is how we protect confidentiality on sensitive Government
               and institutional printing work.
             </p>
           </aside>

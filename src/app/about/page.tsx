@@ -69,19 +69,19 @@ const profileHighlights = [
     title: "Who we serve",
     icon: Building2,
     body:
-      "Trusted by universities, educational boards, government departments, PSUs, and corporates for secure printing of confidential examination materials, question papers, OMR sheets, marks memos, degree and convocation certificates, Pattadar pass books, official stationery, thermal rolls (TIMS / ATMS), share certificates, and other sensitive institutional documents.",
+      "Trusted by Universities, Educational Boards, Government departments, PSUs, and Corporates for secure printing of confidential Examination materials, question papers, OMR sheets, marks memos, degree and convocation certificates, Pattadar pass books, official stationery, thermal rolls (TIMS / ATMS), share certificates, and other sensitive institutional documents.",
   },
   {
     title: "Three integrated works",
     icon: MapPin,
     body:
-      "With manufacturing facilities in Hyderabad, Telangana, Vijayawada, Andhra Pradesh, and Bangalore, Karnataka, we operate 365 days a year with round-the-clock production to ensure reliable and timely execution of every project.",
+      "With manufacturing facilities in Hyderabad, Telangana; Vijayawada, Andhra Pradesh; and Bangalore, Karnataka, we operate 365 days a year with round-the-clock production to ensure reliable and timely execution of every project.",
   },
   {
     title: "Public Service Commissions",
     icon: Landmark,
     body:
-      "Recruitment and competitive examinations for public service commissions are handled end to end — question booklets, OMR answer sheets, hall tickets, and result stationery — under the same confidential-job controls as our board examination work.",
+      "Recruitment and competitive Examinations for public service commissions are handled end to end — question booklets, OMR answer sheets, hall tickets, and result stationery — under the same confidential-job controls as our Board Examination work.",
   },
   {
     title: "Pre-press & DTP",
@@ -162,9 +162,9 @@ export default function AboutPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
             A trusted four ISO-certified security printer with multiple secure
-            production facilities, delivering secure, and high-quality
-            printing solutions for educational institutions and boards, and
-            government organizations.
+            production facilities, delivering secure and high-quality
+            printing solutions for Educational institutions and Boards, and
+            Government organizations.
           </p>
         </div>
       </section>
@@ -212,7 +212,7 @@ export default function AboutPage() {
             <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
               We deliver secure and confidential printing solutions for{" "}
               <strong className="font-semibold text-foreground">
-                universities, educational boards, government organizations, and
+                Universities, Educational Boards, Government organizations, and
                 large institutions
               </strong>
               , backed by advanced printing technology and an unwavering

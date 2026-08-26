@@ -36,7 +36,7 @@ const capabilities = [
 ];
 
 const useCases = [
-  "Hall tickets and examination documents",
+  "Hall tickets and Examination documents",
   "ID cards and credential packs",
   "Promotional applications and serialized labels",
   "Personalized certificates and verification cards",

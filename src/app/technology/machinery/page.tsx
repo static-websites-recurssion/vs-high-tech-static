@@ -37,7 +37,7 @@ export default function TechnologyMachineryPage() {
       />
       <MachineryOverviewSections
         heroTitle="Our machinery"
-        heroSubtitle="Advanced multi-color  sheetfed & web offset presses, computer stationery production lines, hot foil stamping machines, CTCP systems, high-speed binding machines , programmatic cutting machines—engineered for high-volume, commercial, confidential examination and books printing."
+        heroSubtitle="Advanced multi-color sheetfed & web offset presses, computer stationery production lines, hot foil stamping machines, CTCP systems, high-speed binding machines, programmatic cutting machines—engineered for high-volume, commercial, confidential Examination and books printing."
       />
       <section className="border-t border-border bg-muted/30 py-10">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">

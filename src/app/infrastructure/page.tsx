@@ -41,7 +41,7 @@ const securityChecklist = [
   "Visitors not allowed without special permission",
   "Employees/Vehicles searched when leaving",
   "Recorded gate pass system",
-  "Adequate fire fighting equipment",
+  "Adequate fire-fighting equipment",
   "Dual checking system for incoming/outgoing material",
   "Special security guards for sensitive jobs",
   "Confidential waste shredded and burnt",

@@ -166,7 +166,7 @@ export default function QualityControlPage() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px] lg:items-start">
             <div className="rounded-2xl border border-primary/10 bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Four ISO process
+                Four ISO processes
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                 Our quality checks follow documented ISO practices for quality

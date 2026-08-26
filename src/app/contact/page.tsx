@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us | Security Printing in Hyderabad & Vijayawada",
   description:
-    "Call or email our Hyderabad and Vijayawada offices for quotes, samples and site visits. Four ISO certified security printing. Phone +91 98490 68920.",
+    "Call or email our Hyderabad and Vijayawada offices for quotes, samples and site visits. Four ISO-certified security printing. Phone +91 98490 68920.",
   path: "/contact",
   keywords: keywordsFor("/contact"),
 });
