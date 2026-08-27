@@ -42,7 +42,7 @@ export const ORGANIZATION = {
     "vshitechs@gmail.com",
     "info@vshitechsecurityforms.com",
     "vsprints@gmail.com",
-    "pkrconfidentialt1@gmail.com",
+    "pkrconfidential@gmail.com",
   ],
   email: "vshitechs@gmail.com",
   logo: "/images/home/logo-mark.png",
