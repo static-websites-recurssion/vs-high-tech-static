@@ -30,7 +30,7 @@ function useCountUp(target: number, durationMs: number, active: boolean) {
 const items = [
   { end: 28, suffix: "+", label: "Years of excellence" },
   { end: 162, suffix: "", label: "Staff on the team" },
-  { end: 365, suffix: "", label: "Days operations / year" },
+  { end: 365, suffix: "", label: "Operating days a year" },
 ] as const;
 
 type TrustHeroCountersProps = {

@@ -10,9 +10,9 @@ export type SecurityFeature = {
 
 export const securityFeaturesCatalog: SecurityFeature[] = [
   {
-    name: "Bar Code",
+    name: "Barcode",
     summary: "Linear barcodes for fast scanning and track-and-trace",
-    detail: "Supports common linear symbologies for logistics, verification, and inventory workflows.",
+    detail: "Supports the common linear symbologies used in logistics, verification, and inventory workflows.",
   },
   {
     name: "QR Code",
@@ -25,7 +25,7 @@ export const securityFeaturesCatalog: SecurityFeature[] = [
     detail: "Hidden authenticity cues that a forger would not know to reproduce correctly.",
   },
   {
-    name: "Water Mark",
+    name: "Watermark",
     summary: "Embedded paper watermarks visible in transmitted light",
     detail: "Security-grade stock that is very hard to fake without the correct paper mill supply.",
   },
@@ -35,7 +35,7 @@ export const securityFeaturesCatalog: SecurityFeature[] = [
     detail: "Covert brand or institutional marks for quick forensic checks without altering the face design.",
   },
   {
-    name: "Micro Text",
+    name: "Microtext",
     summary: "Tiny text that blurs or vanishes when copied",
     detail: "Readable under magnification; photocopies and low-res scans typically lose the detail.",
   },

@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-05",
     slug: slugify("OMR Sheets: How to Get the Best Scan Accuracy"),
     excerpt:
-      "Paper GSM, timing marks, and cutting accuracy — lessons from the large OMR jobs we print for Boards and Universities.",
+      "Paper GSM, timing marks, and cutting accuracy — lessons from the large OMR jobs we print for boards and universities.",
   },
   {
     title: "Question Paper Leakage: How Security Printers Prevent It",
@@ -64,10 +64,10 @@ export const blogPosts: BlogPost[] = [
       "Hologram stamping, UV inks on certificates, and cost per thousand — a simple comparison to help you choose.",
   },
   {
-    title: "Why Universities Across India Trust VS Hitech",
+    title: "Why Universities Across India Trust V.S. Hitech",
     category: "Company",
     date: "2026-01-15",
-    slug: slugify("Why Universities Across India Trust VS Hitech"),
+    slug: slugify("Why Universities Across India Trust V.S. Hitech"),
     excerpt:
       "Three plants, closed-vehicle dispatch, ISO 27001, and exam-season capacity — the reasons buyers mention in their vendor audits.",
   },

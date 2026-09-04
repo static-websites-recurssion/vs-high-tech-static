@@ -105,8 +105,8 @@ export function ContactDetailsForm({
             Send us your details
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Fill in the form and click send. Your email app will open with the
-            message ready — just press send.
+            Fill in the form and click Send. Your email app will open with the
+            message ready — then just press Send.
           </p>
         </div>
       </div>
@@ -177,7 +177,7 @@ export function ContactDetailsForm({
             value={details.company}
             onChange={(e) => onChange("company", e.target.value)}
             className="mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none ring-0 focus:border-primary/40 focus:ring-2 focus:ring-primary/15"
-            placeholder="Organization name"
+            placeholder="Organisation name"
             autoComplete="organization"
           />
         </div>
@@ -237,7 +237,7 @@ export function ContactDetailsForm({
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-muted-foreground">
-          Clicking send will open your email app with the details filled in.
+          Clicking Send will open your email app with the details filled in.
         </p>
         <button
           type="submit"

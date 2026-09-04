@@ -26,7 +26,7 @@ const sector = sectorBySlug("education");
 export const metadata: Metadata = buildMetadata({
   title: "Examination Printing for Universities & Exam Boards | V.S. Hitech",
   description:
-    "Examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos and certificates, sealed and on time.",
+    "Examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos, and certificates, sealed and on time.",
   path: "/sectors/education",
   keywords: keywordsFor("/sectors/education"),
 });
@@ -45,7 +45,7 @@ const painPoints = [
   {
     title: "Certificate forgery",
     icon: ShieldCheck,
-    body: "Multiple security features — Guilloche Design, UV Invisible Logo, Hologram, MicroText, Copy Void, and controlled numbering — make certificates very hard to copy.",
+    body: "Multiple security features — Guilloche Design, UV Invisible Logo, Hologram, Microtext, Copy Void, and controlled numbering — make certificates very hard to copy.",
   },
 ] as const;
 
@@ -73,7 +73,7 @@ export default function EducationSectorPage() {
         data={graph(
           webPageSchema({
             name: "Examination Printing for Universities & Exam Boards",
-            description: "End-to-end Examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos and certificates.",
+            description: "End-to-end examination printing under strict security — question papers, precision OMR sheets, answer booklets, marks memos, and certificates.",
             path: "/sectors/education",
           }),
           breadcrumbSchema([
@@ -116,10 +116,10 @@ export default function EducationSectorPage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-          What we deliver for Education
+          What we deliver for education
         </h2>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Aligned to our company profile and Examination programmes — from
+          Aligned to our company profile and examination programmes — from
           confidential question papers through marks memos, certificates, and
           online evaluation support.
         </p>
@@ -261,7 +261,7 @@ export default function EducationSectorPage() {
       <section className="border-t border-border bg-primary py-14 text-white lg:py-16">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
-            Planning your next exam cycle? Talk to us
+            Planning your next exam cycle? Talk to us.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-white/85 sm:text-base">
             Share your exam dates, quantities, and security needs. We will plan

@@ -62,8 +62,8 @@ export function ProductQuoteForm({
         Request a quote for this product
       </h3>
       <p className="mt-2 text-sm text-muted-foreground">
-        Fill in the details and click send. Your email app will open with the
-        message ready — just press send.
+        Fill in the details and click Send. Your email app will open with the
+        message ready — then just press Send.
       </p>
 
       <div className="mt-6 grid grid-cols-1 gap-4">
@@ -151,7 +151,7 @@ export function ProductQuoteForm({
 
       <div className="mt-6">
         <Button type="submit" variant="accent" size="lg" className="w-full">
-          {sent ? "Opening your email…" : "Send Enquiry"}
+          {sent ? "Opening your email…" : "Send enquiry"}
         </Button>
       </div>
     </form>

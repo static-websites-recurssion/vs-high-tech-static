@@ -11,7 +11,7 @@ export function MachineryPlantGallery() {
           Our installed machinery
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-          Full installed set from our company profile — web offset, sheet-fed,
+          The full installed set from our company profile — web offset, sheet-fed,
           stationery, binding, cutting, CTCP, finishing, and plant support.
         </p>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

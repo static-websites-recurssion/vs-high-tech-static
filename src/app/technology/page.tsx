@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Security Printing Technology, Machinery & Quality Control",
   description:
-    "Machinery, document security features, variable data printing, pre-press, controlled security environment, in-house testing and quality control.",
+    "Machinery, document security features, variable data printing, pre-press, a controlled security environment, in-house testing, and quality control.",
   path: "/technology",
   keywords: keywordsFor("/technology"),
 });
@@ -81,7 +81,7 @@ export default function TechnologyPage() {
           webPageSchema({
             name: "Security Printing Technology",
             description:
-              "Machinery, security features, variable data, pre-press, security environment, testing and quality control.",
+              "Machinery, security features, variable data, pre-press, security environment, testing, and quality control.",
             path: "/technology",
             type: "CollectionPage",
           }),
@@ -129,9 +129,9 @@ export default function TechnologyPage() {
         </div>
 
         <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-muted-foreground">
-          For premises, security checklist, and combined footprint, see{" "}
+          For premises, the security checklist, and our combined footprint, see{" "}
           <Link href="/infrastructure" className="font-medium text-accent hover:underline">
-            Infrastructure &amp; facilities
+            Infrastructure &amp; Facilities
           </Link>
           .
         </p>

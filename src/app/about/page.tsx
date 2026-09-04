@@ -51,7 +51,7 @@ const values = [
       "Checks and standards applied from pre-press through finishing and dispatch.",
   },
   {
-    title: "Women Empowerment in Workforce",
+    title: "Women's Empowerment in the Workforce",
     icon: HeartHandshake,
     description:
       "Inclusive hiring and growth opportunities across technical and support roles.",
@@ -69,7 +69,7 @@ const profileHighlights = [
     title: "Who we serve",
     icon: Building2,
     body:
-      "Trusted by Universities, Educational Boards, Government departments, PSUs, and Corporates for secure printing of confidential Examination materials, question papers, OMR sheets, marks memos, degree and convocation certificates, Pattadar pass books, official stationery, thermal rolls (TIMS / ATMS), share certificates, and other sensitive institutional documents.",
+      "Trusted by universities, educational boards, government departments, PSUs, and corporates for the secure printing of confidential examination materials, question papers, OMR sheets, marks memos, degree and convocation certificates, Pattadar passbooks, official stationery, thermal rolls (TIMS / ATMS), share certificates, and other sensitive institutional documents.",
   },
   {
     title: "Three integrated works",
@@ -81,13 +81,13 @@ const profileHighlights = [
     title: "Public Service Commissions",
     icon: Landmark,
     body:
-      "Recruitment and competitive Examinations for public service commissions are handled end to end — question booklets, OMR answer sheets, hall tickets, and result stationery — under the same confidential-job controls as our Board Examination work.",
+      "Recruitment and competitive examinations for public service commissions are handled end to end — question booklets, OMR answer sheets, hall tickets, and result stationery — under the same confidential-job controls as our board examination work.",
   },
   {
     title: "Pre-press & DTP",
     icon: Cpu,
     body:
-      "53 high-configured DTP systems, 20 scanners, and 20 laser printers (A4 and A3) to support artwork, data, and plate-ready output at volume.",
+      "53 high-specification DTP systems, 20 scanners, and 20 laser printers (A4 and A3) to support artwork, data, and plate-ready output at volume.",
   },
 ] as const;
 
@@ -163,15 +163,15 @@ export default function AboutPage() {
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
             A trusted four ISO-certified security printer with multiple secure
             production facilities, delivering secure and high-quality
-            printing solutions for Educational institutions and Boards, and
-            Government organizations.
+            printing solutions for educational institutions, boards, and
+            government organisations.
           </p>
         </div>
       </section>
 
       {/* SECTION 2 — About Us */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <h2 className="text-2xl font-bold text-primary sm:text-3xl">About Us</h2>
+        <h2 className="text-2xl font-bold text-primary sm:text-3xl">About us</h2>
 
         {/* ISO certification banner */}
         <div className="mt-6 flex flex-col gap-3 rounded-xl border border-gold/30 bg-gold/10 px-5 py-4 sm:flex-row sm:items-center sm:gap-4">
@@ -179,7 +179,7 @@ export default function AboutPage() {
             <ShieldCheck className="h-6 w-6" strokeWidth={1.75} aria-hidden />
           </span>
           <p className="text-sm font-semibold leading-relaxed text-primary sm:text-base">
-            All our operations are certified with ISO 9001/27001.
+            All our operations are certified to ISO 9001 and ISO 27001.
           </p>
         </div>
 
@@ -196,7 +196,7 @@ export default function AboutPage() {
               </strong>
               . Established in{" "}
               <strong className="font-semibold text-foreground">2009</strong> as
-              a Private Limited Company, the organization evolved from the
+              a private limited company, the organisation evolved from the
               proprietary firm{" "}
               <em>V.S. Hitech Security Forms</em>. Led by Managing Director{" "}
               <strong className="font-semibold text-foreground">
@@ -212,7 +212,7 @@ export default function AboutPage() {
             <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
               We deliver secure and confidential printing solutions for{" "}
               <strong className="font-semibold text-foreground">
-                Universities, Educational Boards, Government organizations, and
+                universities, educational boards, government organisations, and
                 large institutions
               </strong>
               , backed by advanced printing technology and an unwavering
@@ -220,7 +220,7 @@ export default function AboutPage() {
               <strong className="font-semibold text-foreground">
                 quality, security, confidentiality, and integrity
               </strong>
-              . Our Board includes a woman director, reflecting our commitment
+              . Our board includes a woman director, reflecting our commitment
               to{" "}
               <strong className="font-semibold text-foreground">
                 diversity, women&apos;s employment, and an inclusive workplace
@@ -232,7 +232,7 @@ export default function AboutPage() {
               , ensuring reliable and timely delivery for every project.
             </p>
             <p className="mt-4 rounded-xl border border-primary/10 bg-sky-50/80 px-4 py-3 text-sm leading-relaxed text-primary">
-              As stated in our company profile for buyers: among India&apos;s
+              As stated in our company profile for buyers, we are among India&apos;s
               leading security printers —{" "}
               <strong className="font-semibold">first in Andhra Pradesh &amp; Telangana</strong>{" "}
               and <strong className="font-semibold">third nationally</strong>.
@@ -355,10 +355,10 @@ export default function AboutPage() {
           </div>
           <p className="mt-10 text-center text-sm text-muted-foreground">
             Hyderabad works: over{" "}
-            <strong className="font-medium text-primary">105,000 sq. ft.</strong>
-            . Vijayawada works: over{" "}
-            <strong className="font-medium text-primary">40,000 sq. ft.</strong>{" "}
-            — see{" "}
+            <strong className="font-medium text-primary">105,000 sq ft</strong>.
+            Vijayawada works: over{" "}
+            <strong className="font-medium text-primary">40,000 sq ft</strong>.
+            See{" "}
             <Link href="/contact" className="font-medium text-accent hover:underline">
               Contact
             </Link>{" "}
@@ -378,7 +378,7 @@ export default function AboutPage() {
       <section className="border-y border-border bg-white py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-            ISO Certifications
+            ISO certifications
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
             Internationally recognised standards that guide how we work every
@@ -440,7 +440,7 @@ export default function AboutPage() {
       {/* SECTION 4 — Management Team */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-          Management Team
+          Management team
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
@@ -482,8 +482,8 @@ export default function AboutPage() {
             <p className="mt-6 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
               With vast experience in the printing industry, he is credited in
               our company profile with positioning V.S. Hitech among the top
-              security printers nationally and as the leading player in Andhra
-              Pradesh and Telangana — through sustained execution and technical
+              security printers nationally, and as the leading player in Andhra
+              Pradesh and Telangana, through sustained execution and technical
               depth.
             </p>
           </article>
@@ -517,7 +517,7 @@ export default function AboutPage() {
               </div>
             </dl>
             <p className="mt-6 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
-              Experienced in DTP, designing, and data entry in Indian and foreign
+              Experienced in DTP, design, and data entry in Indian and foreign
               languages, and in the execution of commercial and confidential
               printing. The company profile recognises her contribution alongside
               the Managing Director in building V.S. Hitech into a trusted
@@ -531,7 +531,7 @@ export default function AboutPage() {
       <section className="border-t border-border bg-primary py-14 text-primary-foreground lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
-            Company Values
+            Company values
           </h2>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {values.map(({ title, icon: Icon, description }) => (

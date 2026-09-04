@@ -28,22 +28,22 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Print Quality Control | 100% Inspection Before Dispatch",
   description:
-    "GSM, Cobb, brightness, opacity, colour, security ink, barcode and UV testing, dual material checks and 100% inspection before dispatch under ISO 9001.",
+    "GSM, Cobb, brightness, opacity, colour, security ink, barcode, and UV testing; dual material checks; and 100% inspection before dispatch under ISO 9001.",
   path: "/technology/quality-control",
   keywords: keywordsFor("/technology/quality-control"),
 });
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
-  { label: "Digital GSM Tester", icon: Gauge },
-  { label: "Digital Thickness Micrometer", icon: MoveVertical },
-  { label: "Cobb Tester", icon: FlaskConical },
-  { label: "Smoothness & Porosity", icon: Waves },
-  { label: "Digital Brightness and Opacity Tester", icon: Sun },
-  { label: "Automatic Color and Brightness Tester", icon: Palette },
-  { label: "Security Inks testing", icon: Droplets },
+  { label: "Digital GSM tester", icon: Gauge },
+  { label: "Digital thickness micrometer", icon: MoveVertical },
+  { label: "Cobb tester", icon: FlaskConical },
+  { label: "Smoothness & porosity testing", icon: Waves },
+  { label: "Digital brightness and opacity tester", icon: Sun },
+  { label: "Automatic colour and brightness tester", icon: Palette },
+  { label: "Security ink testing", icon: Droplets },
   { label: "Barcode verification", icon: ScanBarcode },
-  { label: "UV features testing", icon: Sparkles },
+  { label: "UV feature testing", icon: Sparkles },
 ];
 
 const qcWorkflow = [
@@ -77,7 +77,7 @@ export default function QualityControlPage() {
           webPageSchema({
             name: "Quality Control Process",
             description:
-              "Material testing, dual checking and 100% inspection before dispatch under ISO 9001.",
+              "Material testing, dual checking, and 100% inspection before dispatch under ISO 9001.",
             path: "/technology/quality-control",
             type: "WebPage",
           }),
@@ -102,7 +102,7 @@ export default function QualityControlPage() {
             Quality Control
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            Quality built on in-house testing, double checking, and documented
+            Quality built on in-house testing, double-checking, and documented
             ISO processes.
           </p>
         </div>

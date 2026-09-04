@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Careers & Printing Press Jobs in Hyderabad | V.S. Hitech",
   description:
-    "Careers at V.S. Hitech Security Forms — printing press roles in Hyderabad and Vijayawada. Openings are posted here; profiles are welcome round the year.",
+    "Careers at V.S. Hitech Security Forms — printing press roles in Hyderabad and Vijayawada. Openings are posted here, and profiles are welcome all year round.",
   path: "/careers",
   keywords: keywordsFor("/careers"),
 });
@@ -62,7 +62,7 @@ export default function CareersPage() {
             Send your profile
           </h2>
           <p className="mt-3 text-muted-foreground">
-            We welcome profiles round the year. Share your details with our
+            We welcome profiles all year round. Share your details with our
             team, and we will reach out when a suitable role opens up.
           </p>
           <div className="mt-6 text-sm text-muted-foreground">
@@ -70,7 +70,7 @@ export default function CareersPage() {
               href="/contact"
               className="font-medium text-accent hover:underline"
             >
-              Go to Contact / Locations
+              Go to the Contact page
             </Link>
           </div>
         </div>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: "Industries Served",
     description:
-      "Industries we serve — Education, Government and Corporate.",
+      "Industries we serve — education, government, and corporate.",
     path: "/industries",
     noindex: true,
   }),

@@ -20,13 +20,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const securityChecklist = [
-  "Single Entry/Exit guarded at all times",
-  "Identity cards for all employees, entry pass for visitors",
+  "Single entry and exit, guarded at all times",
+  "Identity cards for all employees; entry passes for visitors",
   "Visitors not allowed without special permission",
-  "Employees/Vehicles searched when leaving",
-  "Recorded gate pass system",
-  "Adequate fire fighting equipment",
-  "Dual checking system for incoming/outgoing material",
+  "Employees and vehicles searched when leaving",
+  "Recorded gate-pass system",
+  "Adequate fire-fighting equipment",
+  "Dual checking system for incoming and outgoing material",
   "Special security guards for sensitive jobs",
   "Confidential waste shredded and burnt",
 ] as const;
@@ -57,7 +57,7 @@ export default function SecurityEnvironmentPage() {
           webPageSchema({
             name: "Our Security Environment",
             description:
-              "Guarded single entry and exit, CCTV, biometric access and supervised destruction of confidential waste.",
+              "Guarded single entry and exit, CCTV, biometric access, and supervised destruction of confidential waste.",
             path: "/technology/security-environment",
             type: "WebPage",
           }),
@@ -165,8 +165,8 @@ export default function SecurityEnvironmentPage() {
             </h2>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               All confidential waste is shredded and burnt under supervision.
-              Every shredding and burning is recorded and verified, so nothing can leak
-              out.
+              Every shredding and burning operation is recorded and verified, so
+              nothing can leak out.
             </p>
 
             <ul className="mt-6 space-y-3 text-sm text-foreground/90">
@@ -196,7 +196,7 @@ export default function SecurityEnvironmentPage() {
               Checked twice, recorded always
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              This is how we protect confidentiality on sensitive Government
+              This is how we protect confidentiality on sensitive government
               and institutional printing work.
             </p>
           </aside>

@@ -35,7 +35,7 @@ export const metadata: Metadata = buildMetadata({
   title:
     "Security Printing Company in Hyderabad | V.S. Hitech",
   description:
-    "India's trusted four ISO-certified security printer since 1997 — confidential question papers, OMR sheets and certificates for institutions across India.",
+    "India's trusted four ISO-certified security printer since 1997 — confidential question papers, OMR sheets, and certificates for institutions across India.",
   path: "/",
   keywords: keywordsFor("/"),
 });
@@ -97,7 +97,7 @@ export default function HomePage() {
           webPageSchema({
             name: "Security Printing Company in Hyderabad | V.S. Hitech Security Forms",
             description:
-              "Four ISO-certified security printing partner since 1997 — confidential question papers, OMR sheets, answer booklets and certificates for Universities, Government departments and Corporates across India.",
+              "Four ISO-certified security printing partner since 1997 — confidential question papers, OMR sheets, answer booklets, and certificates for universities, government departments, and corporates across India.",
             path: "/",
           }),
           itemListSchema({
@@ -153,8 +153,8 @@ export default function HomePage() {
                   </h1>
                   <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[1.65] text-sky-200/90 sm:text-lg">
                     We print confidential question papers, OMR sheets,
-                    certificates, and other secure documents for Universities,
-                    Government departments, and companies across India.
+                    certificates, and other secure documents for universities,
+                    government departments, and companies across India.
                   </p>
                   <TrustHeroCounters variant="hero" centered />
                   <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
@@ -335,7 +335,7 @@ export default function HomePage() {
                 href={href}
                 className="mt-auto pt-6 text-sm font-semibold text-accent hover:underline"
               >
-                Learn More →
+                Learn more →
               </Link>
             </div>
           ))}
@@ -346,7 +346,7 @@ export default function HomePage() {
       <section className="border-y border-border bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-primary sm:text-4xl">
-            Why Choose Us
+            Why choose us
           </h2>
           <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-primary/10 shadow-md">
             <div className="relative aspect-[21/9] w-full sm:aspect-[3/1]">
@@ -418,10 +418,11 @@ export default function HomePage() {
           Industries we serve
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">
-          We work with Government departments, Universities, and companies —{" "}
+          We work with government departments, universities, and companies —{" "}
           <Link href="/industries" className="font-medium text-accent hover:underline">
             read more
           </Link>
+          .
         </p>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {sectors.map(({ label, image }) => (
@@ -450,10 +451,10 @@ export default function HomePage() {
       <section className="border-t border-border bg-background py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-primary sm:text-4xl">
-            Trusted Across Sectors
+            Trusted across sectors
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
-            Universities, Government departments, and companies across India
+            Universities, government departments, and companies across India
             trust us for confidentiality, capacity, and on-time delivery.
           </p>
 
@@ -466,7 +467,7 @@ export default function HomePage() {
               },
               {
                 icon: Building2,
-                label: "Government Depts",
+                label: "Government Departments",
                 stat: "20+ clients served",
               },
               {
@@ -527,7 +528,7 @@ export default function HomePage() {
             className="mt-8"
             asChild
           >
-            <Link href="/contact">Contact Us Today</Link>
+            <Link href="/contact">Contact us today</Link>
           </Button>
         </div>
       </section>

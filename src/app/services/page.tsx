@@ -42,7 +42,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Security Printing Services & Products | V.S. Hitech",
   description:
-    "End-to-end secure printing and document processing — security printing, prepress, Examination services, OMR/ICR processing, QC and secure logistics.",
+    "End-to-end secure printing and document processing — security printing, prepress, examination services, OMR / ICR processing, QC, and secure logistics.",
   path: "/services",
   keywords: keywordsFor("/services"),
 });
@@ -55,7 +55,7 @@ export default function ServicesPage() {
           webPageSchema({
             name: "Security Printing Services & Products",
             description:
-              "End-to-end secure printing and document processing for governments, Universities and enterprises.",
+              "End-to-end secure printing and document processing for governments, universities, and enterprises.",
             path: "/services",
             type: "CollectionPage",
           }),
@@ -111,9 +111,9 @@ export default function ServicesPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-[1.7] text-sky-100/85 sm:text-xl">
-              Delivering secure, innovative and end-to-end printing and document
+              Delivering secure, innovative, and end-to-end printing and document
               management solutions backed by advanced technology, stringent
-              quality standards and secure logistics.
+              quality standards, and secure logistics.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -208,7 +208,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 01"
             title="Commercial Printing"
-            lead="Full-scale commercial production — from multi-colour offset runs to specialised finishing — engineered for volume, consistency and deadline certanity."
+            lead="Full-scale commercial production — from multi-colour offset runs to specialised finishing — engineered for volume, consistency, and deadline certainty."
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {commercialPrinting.map((item) => (
@@ -286,7 +286,7 @@ export default function ServicesPage() {
                 className="mt-8 rounded-2xl border border-primary/10 bg-background p-5"
               >
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  In-house DTP, composition and data teams work inside the same
+                  In-house DTP, composition, and data teams work inside the same
                   controlled environment as production — so confidential content
                   never leaves the perimeter.
                 </p>
@@ -304,7 +304,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 04"
             title="Printing Technologies"
-            lead="Four production routes under one roof — so each job runs on the process that suits its volume, security level and turnaround."
+            lead="Four production routes under one roof — so each job runs on the process that suits its volume, security level, and turnaround."
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
             {printingTechnologies.map((tech) => (
@@ -369,7 +369,7 @@ export default function ServicesPage() {
               <span className="font-semibold text-primary">
                 Error-free dispatch is the standard, not the target.
               </span>{" "}
-              A consignment leaves our works only when counts, labels, seals and
+              A consignment leaves our works only when counts, labels, seals, and
               documentation reconcile exactly against the client&apos;s
               distribution plan.
             </p>
@@ -392,7 +392,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 07"
             title="Secure Logistics"
-            lead="Security does not end at the loading bay. Consignments stay sealed, tracked and accounted for until an authorised signatory takes charge."
+            lead="Security does not end at the loading bay. Consignments stay sealed, tracked, and accounted for until an authorised signatory takes charge."
             tone="dark"
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
@@ -411,16 +411,16 @@ export default function ServicesPage() {
               <SectionHeading
                 eyebrow="Section 08"
                 title="Examination Services"
-                lead="A single accountable partner across the full Examination cycle — from the first draft of a question paper to the published result."
+                lead="A single accountable partner across the full examination cycle — from the first draft of a question paper to the published result."
               />
               <div
                 data-reveal
                 className="mt-8 rounded-2xl border border-primary/10 bg-white p-5"
               >
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Boards and Universities work with one team, one chain of
-                  custody and one audit trail — instead of coordinating separate
-                  printing, scanning and evaluation vendors.
+                  Boards and universities work with one team, one chain of
+                  custody, and one audit trail — instead of coordinating separate
+                  printing, scanning, and evaluation vendors.
                 </p>
               </div>
             </div>
@@ -451,7 +451,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 09"
             title="Security Printing Features"
-            lead="Sixteen layered options — Bar Code, QR Code, Water Mark, UV Invisible Logo, MicroText, Micro Line, Thermochromic Ink, Copy Void, Fluorescent Border, Guilloche Design, Hologram, and more — specified per document so a genuine certificate is easy to verify and a forged one is not worth attempting."
+            lead="Sixteen layered options — Barcode, QR Code, Watermark, UV Invisible Logo, Microtext, Micro Line, Thermochromic Ink, Copy Void, Fluorescent Border, Guilloche Design, Hologram, and more — specified per document so a genuine certificate is easy to verify and a forged one is not worth attempting."
             tone="dark"
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
@@ -468,7 +468,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 10"
             title="Industry Applications"
-            lead="The same controlled production model serves very different sectors — each with its own compliance, volume and turnaround profile."
+            lead="The same controlled production model serves very different sectors — each with its own compliance, volume, and turnaround profile."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 xl:grid-cols-5">
             {industryApplications.map((industry) => (
@@ -497,7 +497,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Section 11"
             title="Variable Data Printing"
-            lead="Database-driven production where no two documents are the same — every record verified, sequenced and reconciled before it is packed."
+            lead="Database-driven production where no two documents are the same — every record verified, sequenced, and reconciled before it is packed."
             tone="dark"
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
@@ -521,11 +521,11 @@ export default function ServicesPage() {
             </p>
             <h2 className="mt-4 text-balance text-2xl font-semibold leading-tight tracking-[-0.02em] text-primary sm:text-3xl lg:text-4xl">
               Tell us what the tender asks for. We will show you how it gets
-              printed, secured and delivered.
+              printed, secured, and delivered.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Share your specification, volumes and timelines — our team will
-              map them to the right process, security features and delivery
+              Share your specification, volumes, and timelines — our team will
+              map them to the right process, security features, and delivery
               schedule, and send samples where required.
             </p>
 

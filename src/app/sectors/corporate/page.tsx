@@ -26,7 +26,7 @@ const sector = sectorBySlug("corporate");
 export const metadata: Metadata = buildMetadata({
   title: "Corporate Printing | Annual Reports, Cheques & Certificates",
   description:
-    "Commercial and secure printing for businesses — annual reports, share certificates, cheque books, passbooks, dividend warrants and variable data.",
+    "Commercial and secure printing for businesses — annual reports, share certificates, cheque books, passbooks, dividend warrants, and variable data.",
   path: "/sectors/corporate",
   keywords: keywordsFor("/sectors/corporate"),
 });
@@ -53,7 +53,7 @@ const corporateProducts = [
   {
     title: "Sticker labels",
     href: "/products/thermal-sticker",
-    subtitle: "Labels, tags, and POS rolls with barcode/QR integration",
+    subtitle: "Labels, tags, and POS rolls with barcode and QR integration",
     icon: Sticker,
   },
   {
@@ -71,7 +71,7 @@ export default function CorporateSectorPage() {
         data={graph(
           webPageSchema({
             name: "Corporate Printing — Annual Reports, Cheques & Certificates",
-            description: "High-volume commercial and secure printing for businesses — annual reports, share certificates, cheque books, passbooks, dividend warrants and labels.",
+            description: "High-volume commercial and secure printing for businesses — annual reports, share certificates, cheque books, passbooks, dividend warrants, and labels.",
             path: "/sectors/corporate",
           }),
           breadcrumbSchema([
@@ -114,7 +114,7 @@ export default function CorporateSectorPage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-          What we deliver for Corporates
+          What we deliver for corporates
         </h2>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           Matched to our company profile product range — annual reports, share

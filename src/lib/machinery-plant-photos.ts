@@ -46,7 +46,7 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
     caption: "Muller-Martini Progress 520 — UV stationery",
     info: {
       title: "Delivery configurations",
-      items: ["Reel to sheet", "Reel to reel", "Reel to fanfold"],
+      items: ["Reel-to-sheet", "Reel-to-reel", "Reel-to-fanfold"],
     },
   },
   {
@@ -56,8 +56,8 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   },
   {
     src: "/images/machinery/plant-09.webp",
-    alt: "Muller Martini Amigo perfect binding machine",
-    caption: "Muller Martini Amigo — perfect binder",
+    alt: "Muller-Martini Amigo perfect binding machine",
+    caption: "Muller-Martini Amigo — perfect binder",
     rotate180: true,
   },
   {
@@ -99,7 +99,7 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   },
   {
     src: "/images/machinery/plant-19.webp",
-    alt: "Hans Muller in-line gathering, pinning and cutting machine",
+    alt: "Hans Muller in-line gathering, pinning, and cutting machine",
     caption: "Hans Muller — gathering / stitching line",
   },
   {
@@ -120,7 +120,7 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   {
     src: "/images/machinery/plant-25.webp",
     alt: "Stander Print Equipments industrial pinning / wire-stitching machine",
-    caption: "Pinning machine — Standard Print",
+    caption: "Pinning machine — Stander Print",
   },
   {
     src: "/images/machinery/plant-26.webp",
@@ -149,8 +149,8 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   },
   {
     src: "/images/machinery/plant-33.webp",
-    alt: "Kirloskar Green 160 KVA industrial generator set",
-    caption: "Kirloskar Green — 160 KVA genset",
+    alt: "Kirloskar Green 160 kVA industrial generator set",
+    caption: "Kirloskar Green — 160 kVA generator set",
   },
   {
     src: "/images/machinery/plant-34.webp",
@@ -189,8 +189,8 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   },
   {
     src: "/images/machinery/plant-41.webp",
-    alt: "Large format film separation plotter producing 24 inch and 40 inch separations",
-    caption: "Large format film separation — 24\" & 40\"",
+    alt: "Large-format film separation plotter producing 24-inch and 40-inch separations",
+    caption: "Large-format film separation — 24\" & 40\"",
   },
   {
     src: "/images/machinery/plant-42.webp",
@@ -199,12 +199,12 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   },
   {
     src: "/images/machinery/plant-43.webp",
-    alt: "Automatic reel to sheet separator with delivery table",
+    alt: "Automatic reel-to-sheet separator with delivery table",
     caption: "Automatic reel-to-sheet separator",
   },
   {
     src: "/images/machinery/plant-44.webp",
-    alt: "FZ1800 pile turner for 1200 by 780 mm maximum sheet format",
+    alt: "FZ1800 pile turner for a 1,200 × 780 mm maximum sheet format",
     caption: "Pile turner — FZ1800",
   },
   {
@@ -214,7 +214,7 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
   },
   {
     src: "/images/machinery/plant-46.webp",
-    alt: "Twin corner cutting machine for rounding book, diary and brochure corners",
+    alt: "Twin corner cutting machine for rounding book, diary, and brochure corners",
     caption: "Twin corner cutting machine",
   },
   {

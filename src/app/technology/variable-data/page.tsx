@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Variable Data Printing (VDP) Services India | V.S. Hitech",
   description:
-    "High-speed variable data printing on Konica Minolta 7120 & 6120 — unique barcodes, QR codes and serial numbers for hall tickets, ID cards and exams.",
+    "High-speed variable data printing on Konica Minolta 7120 & 6120 — unique barcodes, QR codes, and serial numbers for hall tickets, ID cards, and exams.",
   path: "/technology/variable-data",
   keywords: keywordsFor("/technology/variable-data"),
 });
@@ -30,16 +30,16 @@ const capabilities = [
   "Linear barcodes (all common symbologies)",
   "QR codes and Data Matrix",
   "Unique serial numbers & serial blocks",
-  "Names and personalized fields",
-  "Up to 140 pages/min (VDP throughput)",
+  "Names and personalised fields",
+  "Up to 140 pages a minute (VDP throughput)",
   "Auto inspection technology for consistency",
 ];
 
 const useCases = [
-  "Hall tickets and Examination documents",
+  "Hall tickets and examination documents",
   "ID cards and credential packs",
-  "Promotional applications and serialized labels",
-  "Personalized certificates and verification cards",
+  "Promotional applications and serialised labels",
+  "Personalised certificates and verification cards",
 ];
 
 export default function VariableDataPage() {
@@ -50,7 +50,7 @@ export default function VariableDataPage() {
           webPageSchema({
             name: "Variable Data Printing (VDP)",
             description:
-              "High-speed unique barcodes, QR codes, serial numbers and personalised data on every sheet.",
+              "High-speed unique barcodes, QR codes, serial numbers, and personalised data on every sheet.",
             path: "/technology/variable-data",
             type: "WebPage",
           }),
@@ -112,7 +112,7 @@ export default function VariableDataPage() {
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">
                     High-speed digital VDP for unique barcodes, QR codes, and
-                    serialized data sets.
+                    serialised data sets.
                   </p>
                 </div>
                 <div className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm">

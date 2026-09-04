@@ -17,74 +17,74 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Security Printing FAQ | Confidentiality, MOQ & Turnaround",
   description:
-    "Answers on confidential printing, security controls, ISO certifications, minimum order quantity, turnaround time, secure logistics and facility visits.",
+    "Answers on confidential printing, security controls, ISO certifications, minimum order quantity, turnaround time, secure logistics, and facility visits.",
   path: "/knowledge/faq",
   keywords: keywordsFor("/knowledge/faq"),
 });
 
 const faqs = [
   {
-    q: "What types of confidential printing do we handle?",
+    q: "What types of confidential printing do you handle?",
     a: "We handle confidential work such as question papers, OMR sheets, answer booklets, certificates, and other sensitive documents that need controlled access and proper records.",
   },
   {
-    q: "How do we ensure question papers don't leak?",
+    q: "How do you ensure question papers do not leak?",
     a: "Our facility has a single entry and exit, CCTV-monitored production areas, and restricted access. Papers are delivered in sealed packets, and all confidential waste is destroyed securely.",
   },
   {
-    q: "Are we an approved security printer?",
-    a: "We work as a security printer for Government departments and Universities. Approval and empanelment rules differ from department to department — we support the process with documentation and site visits wherever needed.",
+    q: "Are you an approved security printer?",
+    a: "We work as a security printer for government departments and universities. Approval and empanelment rules differ from department to department — we support the process with documentation and site visits wherever needed.",
   },
   {
-    q: "What certifications do we hold?",
+    q: "What certifications do you hold?",
     a: `We hold ${isoCodesInline} certifications. These standards guide our quality, information security, environmental, and IT service management practices.`,
   },
   {
-    q: "Do we serve clients outside Andhra Pradesh, Telangana, and Karnataka?",
-    a: "Yes. Our main clients are in AP, Telangana & Karnataka, but we take up projects from other states as well, depending on volume, timelines, and delivery logistics.",
+    q: "Do you serve clients outside Andhra Pradesh, Telangana, and Karnataka?",
+    a: "Yes. Our main clients are in Andhra Pradesh, Telangana, and Karnataka, but we take up projects from other states as well, depending on volume, timelines, and delivery logistics.",
   },
   {
-    q: "What is our minimum order quantity?",
-    a: "Minimum order quantity depends on the product, security features, and finishing. Share your requirement and we will suggest the most economical option.",
+    q: "What is your minimum order quantity?",
+    a: "Minimum order quantity depends on the product, security features, and finishing. Share your requirement, and we will suggest the most economical option.",
   },
   {
-    q: "How do we transport material securely?",
+    q: "How do you transport material securely?",
     a: "Material is packed in sealed sets and sent through secure transport — closed vehicles where required — with a controlled handover at the receiving end.",
   },
   {
-    q: "Can we print variable data (unique codes/numbers per sheet)?",
+    q: "Can you print variable data (unique codes or numbers per sheet)?",
     a: "Yes. We print variable data including serial numbers, names, barcodes, QR codes, and Data Matrix, based on what your job needs.",
   },
   {
-    q: "Do we offer hologram stamping?",
+    q: "Do you offer hologram stamping?",
     a: "Yes. Hologram stamping is available for suitable products, along with our full security feature set — barcode, QR code, watermark, UV invisible logo, microtext, microline, copy void, fluorescent border, guilloche, thermochromic ink, and more.",
   },
   {
-    q: "What security features can we print on certificates?",
-    a: "We offer sixteen document security options including Bar Code, QR Code, Spelling Mistake cues, Water Mark, UV Invisible Logo, MicroText, Micro Line, Invisible Sign, Thermochromic Ink, Copy Void, Fluorescent Border, Guilloche Design, Mirror Text, High Resolution Border, Relief Background, and Hologram. We help you choose the right combination for your tender.",
+    q: "What security features can you print on certificates?",
+    a: "We offer sixteen document security options, including Barcode, QR Code, Spelling Mistake cues, Watermark, UV Invisible Logo, Microtext, Micro Line, Invisible Sign, Thermochromic Ink, Copy Void, Fluorescent Border, Guilloche Design, Mirror Text, High Resolution Border, Relief Background, and Hologram. We help you choose the right combination for your tender.",
   },
   {
-    q: "What is our turnaround time for urgent jobs?",
-    a: "Turnaround depends on quantity, security features, and schedule. For urgent requirements, we can prioritise your job since we run 365 days, 24×7.",
+    q: "What is your turnaround time for urgent jobs?",
+    a: "Turnaround depends on quantity, security features, and schedule. For urgent requirements, we can prioritise your job, since we run 365 days a year, 24×7.",
   },
   {
-    q: "How do we handle confidential waste and rejected prints?",
+    q: "How do you handle confidential waste and rejected prints?",
     a: "Confidential waste is shredded and burnt under supervision, with records kept at collection and after destruction. Rejected prints are treated as sensitive material until they are destroyed.",
   },
   {
-    q: "Do we have backup power at our facilities?",
+    q: "Do you have backup power at your facilities?",
     a: "Yes. All three plants have generator backup, so power cuts do not affect your delivery schedule.",
   },
   {
-    q: "Can clients visit our facility before placing an order?",
+    q: "Can clients visit your facility before placing an order?",
     a: "Yes. Site visits can be arranged for genuine and large-volume buyers. Please coordinate with our office in advance, as visits follow our confidentiality rules.",
   },
   {
-    q: "What artwork file formats do we accept?",
-    a: "We accept all standard print-ready formats. Share your files and our pre-press team will confirm the best format and settings.",
+    q: "What artwork file formats do you accept?",
+    a: "We accept all standard print-ready formats. Share your files, and our pre-press team will confirm the best format and settings.",
   },
   {
-    q: "Do we provide samples before bulk printing?",
+    q: "Do you provide samples before bulk printing?",
     a: "Yes, wherever possible. We can share samples or proofs depending on the product, security features, and schedule.",
   },
 ] as const;
@@ -97,7 +97,7 @@ export default function KnowledgeFaqPage() {
           webPageSchema({
             name: "Security Printing FAQ",
             description:
-              "Answers on confidential printing, security controls, ISO certifications, minimum order quantity, turnaround time and secure logistics.",
+              "Answers on confidential printing, security controls, ISO certifications, minimum order quantity, turnaround time, and secure logistics.",
             path: "/knowledge/faq",
           }),
           breadcrumbSchema([

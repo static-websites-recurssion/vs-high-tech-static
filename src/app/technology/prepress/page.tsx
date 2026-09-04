@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Pre-Press & DTP Services | CTCP Plate Making \u2014 V.S. Hitech",
   description:
-    "DTP systems, scanners, CTCP plate making machines, plate exposure and development — the access-controlled pre-press foundation for secure printing.",
+    "DTP systems, scanners, CTCP plate-making machines, plate exposure, and development — the access-controlled pre-press foundation for secure printing.",
   path: "/technology/prepress",
   keywords: keywordsFor("/technology/prepress"),
 });
@@ -32,17 +32,17 @@ const dtpAndImaging = [
   {
     icon: Boxes,
     label: "DTP Systems",
-    detail: "30 nos, high configured",
+    detail: "30 units, high specification",
   },
   {
     icon: ScanBarcode,
     label: "Scanners",
-    detail: "10 nos",
+    detail: "10 units",
   },
   {
     icon: Printer,
     label: "Laser Printers",
-    detail: "20 nos (10 A4 + 10 A3)",
+    detail: "20 units (10 A4 + 10 A3)",
   },
 ];
 
@@ -50,12 +50,12 @@ const plateMaking = [
   {
     icon: Sparkles,
     label: "Basys Print CTCP Machine (Model 860)",
-    detail: "1 no, fully automatic, 80 plates/hr, 3000 DPI",
+    detail: "1 unit, fully automatic, 80 plates an hour, 3,000 dpi",
   },
   {
     icon: Sparkles,
     label: "Basys Print CTCP Machine (Model 850)",
-    detail: "1 no, 40 plates/hr, 1500 DPI",
+    detail: "1 unit, 40 plates an hour, 1,500 dpi",
   },
 ];
 
@@ -63,7 +63,7 @@ const plateExposureAndDev = [
   {
     icon: Ruler,
     label: "Plate Exposure",
-    detail: "4 nos (Oshio Graphics, India)",
+    detail: "4 units (Oshio Graphics, India)",
   },
   {
     icon: FileCheck,
@@ -80,7 +80,7 @@ export default function PrepressPage() {
           webPageSchema({
             name: "Pre-Press & DTP Services",
             description:
-              "DTP, scanning, CTCP plate making, plate exposure and development in access-controlled rooms.",
+              "DTP, scanning, CTCP plate making, plate exposure, and development in access-controlled rooms.",
             path: "/technology/prepress",
             type: "WebPage",
           }),
@@ -115,7 +115,7 @@ export default function PrepressPage() {
         <div className="space-y-12">
           <div>
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              DTP &amp; Imaging
+              DTP &amp; imaging
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Set up for large jobs where correct formatting and scan accuracy
@@ -145,7 +145,7 @@ export default function PrepressPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              CTCP Plate Making
+              CTCP plate making
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Computer-to-plate (CTCP) machines to create consistent plates for
@@ -177,7 +177,7 @@ export default function PrepressPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              Plate Exposure &amp; Development
+              Plate exposure &amp; development
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Controlled exposure and development so every plate comes out

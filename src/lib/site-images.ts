@@ -13,7 +13,7 @@ export const siteImages = {
     src: "/images/home/logo-mark.png",
     alt: "V.S. Hitech Security Forms logo mark",
   },
-  /** Home hero — NAPH GRAPHICS Koncept 8-colour web offset (catalog product photography). */
+  /** Home hero — NAPH GRAPHICS Koncept 8-colour web offset (catalogue product photography). */
   heroPress: {
     src: "/images/home/hero-press.webp",
     alt: "NAPH GRAPHICS Koncept 8-colour web offset press — product view",
@@ -51,7 +51,7 @@ export const siteImages = {
   },
   industryEducation: {
     src: "/images/industry-education.webp",
-    alt: "Examination and higher-Education printing context with official booklets",
+    alt: "Examination and higher-education printing context with official booklets",
   },
   industryBanking: {
     src: "/images/industry-banking.webp",
@@ -59,11 +59,11 @@ export const siteImages = {
   },
   industryGovernment: {
     src: "/images/industry-government.webp",
-    alt: "Indian Government secretariat building with national flag — public-sector document programmes",
+    alt: "Indian government secretariat building with the national flag — public-sector document programmes",
   },
   industryCorporate: {
     src: "/images/industry-corporate.webp",
-    alt: "Boardroom table with bound annual reports and Corporate print collateral",
+    alt: "Boardroom table with bound annual reports and corporate print collateral",
   },
   aboutEstate: {
     src: "/images/facilities/hyderabad-works-main-gate.webp",
@@ -75,6 +75,6 @@ export const siteImages = {
   },
   certificationsTrust: {
     src: "/images/certifications-trust.webp",
-    alt: "Four ISO certification and compliance documentation — 9001, 27001, 14001, and 20000-1",
+    alt: "Four ISO certification and compliance documents — 9001, 27001, 14001, and 20000-1",
   },
 } as const;

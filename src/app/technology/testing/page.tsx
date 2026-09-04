@@ -26,22 +26,22 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "In-House Paper & Print Testing Lab | GSM, Cobb, UV, Barcode",
   description:
-    "In-house paper and print testing — GSM, thickness, Cobb, smoothness, brightness, opacity, colour, security inks, barcode and UV feature checks.",
+    "In-house paper and print testing — GSM, thickness, Cobb, smoothness, brightness, opacity, colour, security inks, barcode, and UV feature checks.",
   path: "/technology/testing",
   keywords: keywordsFor("/technology/testing"),
 });
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
-  { label: "Digital GSM Tester", icon: Gauge },
-  { label: "Digital Thickness Micrometer", icon: MoveVertical },
-  { label: "Cobb Tester", icon: FlaskConical },
-  { label: "Smoothness & Porosity", icon: Waves },
-  { label: "Digital Brightness and Opacity Tester", icon: Sun },
-  { label: "Automatic Color and Brightness Tester", icon: Palette },
-  { label: "Security Inks testing", icon: Droplets },
+  { label: "Digital GSM tester", icon: Gauge },
+  { label: "Digital thickness micrometer", icon: MoveVertical },
+  { label: "Cobb tester", icon: FlaskConical },
+  { label: "Smoothness & porosity testing", icon: Waves },
+  { label: "Digital brightness and opacity tester", icon: Sun },
+  { label: "Automatic colour and brightness tester", icon: Palette },
+  { label: "Security ink testing", icon: Droplets },
   { label: "Barcode verification", icon: ScanBarcode },
-  { label: "UV features testing", icon: Sparkles },
+  { label: "UV feature testing", icon: Sparkles },
 ] as const;
 
 export default function TechnologyTestingPage() {
@@ -52,7 +52,7 @@ export default function TechnologyTestingPage() {
           webPageSchema({
             name: "In-House Testing Facilities",
             description:
-              "Paper and print testing — GSM, thickness, Cobb, brightness, opacity, security inks, barcode and UV.",
+              "Paper and print testing — GSM, thickness, Cobb, brightness, opacity, security inks, barcode, and UV.",
             path: "/technology/testing",
             type: "WebPage",
           }),
@@ -62,7 +62,7 @@ export default function TechnologyTestingPage() {
       <section className="w-full border-b border-border bg-primary py-12 text-white sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Testing facilities
+            Testing Facilities
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90">
             In-house testing at all three plants keeps our output consistent on

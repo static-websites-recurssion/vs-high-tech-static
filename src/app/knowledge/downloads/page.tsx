@@ -17,14 +17,14 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Downloads | ISO Certificates & Vendor Documents \u2014 V.S. Hitech",
   description:
-    "Request documents for tenders and vendor registration — ISO 9001, 27001, 14001 and 20000-1 certificate packs, company profile and compliance papers.",
+    "Request documents for tenders and vendor registration — ISO 9001, 27001, 14001, and 20000-1 certificate packs, company profile, and compliance papers.",
   path: "/knowledge/downloads",
   keywords: keywordsFor("/knowledge/downloads"),
 });
 
 const downloads = [
   {
-    title: "ISO Certificates Overview",
+    title: "ISO certificates overview",
     description:
       "Certificate copies and scope details for ISO 9001, 27001, 14001, and 20000-1 — shared with genuine buyers under NDA.",
     href: "/contact",
@@ -33,7 +33,7 @@ const downloads = [
     available: false,
   },
   {
-    title: "Product Brochure",
+    title: "Product brochure",
     description:
       "Product categories, paper options, and security features — request the latest edition from our team.",
     href: "/contact",
@@ -51,7 +51,7 @@ export default function KnowledgeDownloadsPage() {
           webPageSchema({
             name: "Downloads — ISO Certificates & Vendor Documents",
             description:
-              "ISO certificate packs, company profile and compliance documents for tenders and vendor registration.",
+              "ISO certificate packs, company profile, and compliance documents for tenders and vendor registration.",
             path: "/knowledge/downloads",
             type: "WebPage",
           }),
@@ -118,7 +118,7 @@ export default function KnowledgeDownloadsPage() {
                   {disabled ? (
                     <Button variant="outline" className="w-full" asChild>
                       <Link href="/contact" prefetch={false}>
-                        Request via contact
+                        Request via the Contact page
                       </Link>
                     </Button>
                   ) : (

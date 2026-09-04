@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Our Clients | Universities, Government & Corporate \u2014 V.S. Hitech",
   description:
-    "Since 1997 we have served Universities, Government departments and corporations across India. Client names stay confidential to protect their security.",
+    "Since 1997, we have served universities, government departments, and corporations across India. Client names stay confidential to protect their security.",
   path: "/clients",
   keywords: keywordsFor("/clients"),
 });
@@ -44,17 +44,17 @@ const sectorMeta = {
 
 const testimonials = [
   {
-    who: "University Client, Andhra Pradesh",
+    who: "University client, Andhra Pradesh",
     quote:
       "They have handled our exam printing with complete confidentiality and on-time delivery, cycle after cycle.",
   },
   {
-    who: "Government Department, Telangana",
+    who: "Government department, Telangana",
     quote:
       "Proper records, secure packaging, and safe disposal of waste — our audits have always gone smoothly.",
   },
   {
-    who: "Corporate Client, Hyderabad",
+    who: "Corporate client, Hyderabad",
     quote:
       "Large volumes delivered on schedule, with consistent quality every single time.",
   },
@@ -68,7 +68,7 @@ export default function ClientsPage() {
           webPageSchema({
             name: "Our Clients & Sectors Served",
             description:
-              "Universities, Government departments and corporations served across India since 1997.",
+              "Universities, government departments, and corporations served across India since 1997.",
             path: "/clients",
             type: "WebPage",
           }),
@@ -93,7 +93,7 @@ export default function ClientsPage() {
             Our Clients &amp; Sectors Served
           </h1>
           <p className="mt-4 max-w-4xl text-lg text-white/90 sm:text-xl">
-            For 28 years, we have served Universities, Government departments,
+            For 28 years, we have served universities, government departments,
             and companies across India. They trust us with their most sensitive
             printing work.
           </p>

@@ -6,7 +6,7 @@ export function AnnouncementBar() {
       <p className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-1.5 gap-y-1 break-words sm:gap-x-2">
         <span aria-hidden>🔒</span>
         <span className="font-medium">
-          {isoCountLabel} Certified
+          {isoCountLabel} certified
         </span>
         <span className="hidden text-white/50 sm:inline" aria-hidden>
           |

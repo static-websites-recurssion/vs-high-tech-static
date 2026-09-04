@@ -40,7 +40,7 @@ const productsWithFinishingAndBinding = new Set<ProductSlug>([
   "carbonless-forms",
 ]);
 
-/** Non-security products — show "Key Features" instead of "Key Security Features". */
+/** Non-security products — show "Key features" instead of "Key security features". */
 const productsWithKeyFeaturesOnly = new Set<ProductSlug>([
   "carbonless-forms",
   "variable-data",
@@ -128,7 +128,7 @@ function getProcessSteps(slug: ProductSlug): ProcessStepItem[] {
         "Printing happens on a CCTV-monitored floor with a single entry and exit, biometric access, and no mobile phones allowed.",
     },
     {
-      step: "Variable Data Printing",
+      step: "Variable data printing",
       detail:
         "Barcodes, QR codes, serial numbers, names, and other unique data are printed on each sheet using our high-speed variable data machines.",
     },
@@ -136,14 +136,14 @@ function getProcessSteps(slug: ProductSlug): ProcessStepItem[] {
 
   if (productsWithFinishingAndBinding.has(slug)) {
     steps.push({
-      step: "Finishing & Binding",
+      step: "Finishing & binding",
       detail:
         "Sheets are collated, trimmed, and finished — including perfect binding, saddle stitching, padding, or booklet making as required for the job.",
     });
   }
 
   steps.push({
-    step: "Quality Check → Pre-Dispatch Inspection → Dispatch",
+    step: "Quality check → Pre-dispatch inspection → Dispatch",
     detail:
       "Sets are counted, checked, sealed in tamper-proof packets, and sent in closed DCM vehicles with complete records.",
   });
@@ -276,8 +276,8 @@ export function ProductTemplate({ product }: { product: ProductData }) {
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
                 {productsWithKeyFeaturesOnly.has(product.slug)
-                  ? "Key Features"
-                  : "Key Security Features"}
+                  ? "Key features"
+                  : "Key security features"}
               </h2>
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {product.securityFeatures.map((f) => {
@@ -314,7 +314,7 @@ export function ProductTemplate({ product }: { product: ProductData }) {
 
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Our Process
+                Our process
               </h2>
               <div className="mt-6 space-y-5">
                 {processSteps.map((p, i) => (
@@ -325,7 +325,7 @@ export function ProductTemplate({ product }: { product: ProductData }) {
 
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Related Products
+                Related products
               </h2>
               <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
                 {product.relatedProducts.map((slug) => {

@@ -27,37 +27,37 @@ import {
 } from "@/lib/structured-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Infrastructure & Printing Facilities | 3 Plants, 145,000+ sft",
+  title: "Infrastructure & Printing Facilities | 3 Plants, 145,000+ sq ft",
   description:
-    "Three plants across Hyderabad, Vijayawada and Bangalore — 145,000+ sft, 24+ machine categories, web offset to 30,000/hr and in-house testing labs.",
+    "Three plants across Hyderabad, Vijayawada, and Bangalore — 145,000+ sq ft, 24+ machine categories, web offset up to 30,000 impressions an hour, and in-house testing labs.",
   path: "/infrastructure",
   keywords: keywordsFor("/infrastructure"),
 });
 
 const securityChecklist = [
-  "Single Entry/Exit guarded at all times",
+  "Single entry and exit, guarded at all times",
   "Biometric attendance and role-based access to sensitive production areas",
-  "Identity cards for all employees, entry pass for visitors",
+  "Identity cards for all employees; entry passes for visitors",
   "Visitors not allowed without special permission",
-  "Employees/Vehicles searched when leaving",
-  "Recorded gate pass system",
+  "Employees and vehicles searched when leaving",
+  "Recorded gate-pass system",
   "Adequate fire-fighting equipment",
-  "Dual checking system for incoming/outgoing material",
+  "Dual checking system for incoming and outgoing material",
   "Special security guards for sensitive jobs",
   "Confidential waste shredded and burnt",
 ] as const;
 
 const testingFacilities = [
   { label: "Paper GSM testing", icon: Ruler },
-  { label: "Digital GSM Tester", icon: Gauge },
-  { label: "Digital Thickness Micrometer", icon: MoveVertical },
-  { label: "Cobb Tester", icon: FlaskConical },
-  { label: "Smoothness & Porosity", icon: Waves },
-  { label: "Digital Brightness and Opacity Tester", icon: Sun },
-  { label: "Automatic Color and Brightness Tester", icon: Palette },
-  { label: "Security Inks testing", icon: Droplets },
+  { label: "Digital GSM tester", icon: Gauge },
+  { label: "Digital thickness micrometer", icon: MoveVertical },
+  { label: "Cobb tester", icon: FlaskConical },
+  { label: "Smoothness & porosity testing", icon: Waves },
+  { label: "Digital brightness and opacity tester", icon: Sun },
+  { label: "Automatic colour and brightness tester", icon: Palette },
+  { label: "Security ink testing", icon: Droplets },
   { label: "Barcode verification", icon: ScanBarcode },
-  { label: "UV features testing", icon: Sparkles },
+  { label: "UV feature testing", icon: Sparkles },
 ] as const;
 
 export default function InfrastructurePage() {
@@ -68,7 +68,7 @@ export default function InfrastructurePage() {
           webPageSchema({
             name: "Infrastructure & Printing Facilities",
             description:
-              "Three plants across Hyderabad, Vijayawada and Bangalore — 145,000+ sft, 24+ machine categories, secure environment and in-house testing labs.",
+              "Three plants across Hyderabad, Vijayawada, and Bangalore — 145,000+ sq ft, 24+ machine categories, a secure environment, and in-house testing labs.",
             path: "/infrastructure",
           }),
           breadcrumbSchema([
@@ -77,7 +77,7 @@ export default function InfrastructurePage() {
         )}
       />
       <MachineryOverviewSections
-        heroTitle="Infrastructure & facilities"
+        heroTitle="Infrastructure & Facilities"
         heroSubtitle="Three plants for confidential, high-volume printing — running 365 days, 24×7, with separate security zones and secure waste disposal."
       />
 
@@ -89,7 +89,7 @@ export default function InfrastructurePage() {
               <Shield className="h-6 w-6" strokeWidth={1.75} aria-hidden />
             </div>
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              Our Security Environment
+              Our security environment
             </h2>
           </div>
           <ol className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5">
@@ -113,7 +113,7 @@ export default function InfrastructurePage() {
       {/* Testing Facilities */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
-          Testing Facilities
+          Testing facilities
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {testingFacilities.map(({ label, icon: Icon }) => (
@@ -195,7 +195,7 @@ export default function InfrastructurePage() {
                   <ul className="mt-4 space-y-2 text-sm text-white/85">
                     <li>
                       <span className="font-semibold text-white">Area:</span>{" "}
-                      105,000+ Sft
+                      105,000+ sq ft
                     </li>
                     <li>
                       <span className="font-semibold text-white">GST:</span>{" "}
@@ -214,13 +214,13 @@ export default function InfrastructurePage() {
                 <div>
                   <h3 className="text-lg font-bold text-white">Vijayawada</h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/90">
-                    Plot No. 11, Aleap Industrial Estate, Surampally Village,
+                    Plot No. 11, ALEAP Industrial Estate, Surampally Village,
                     Nunna, Krishna District.
                   </p>
                   <ul className="mt-4 space-y-2 text-sm text-white/85">
                     <li>
                       <span className="font-semibold text-white">Area:</span>{" "}
-                      40,000+ Sft
+                      40,000+ sq ft
                     </li>
                     <li>
                       <span className="font-semibold text-white">GST:</span>{" "}

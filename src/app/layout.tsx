@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s | V.S. Hitech Security Forms",
   },
   description:
-    "Four ISO-certified security printing in Hyderabad, Vijayawada & Bangalore — ISO 9001, 27001, 14001 & 20000-1 — question papers, OMR, certificates, and confidential print for institutions across India.",
+    "Four ISO-certified security printing in Hyderabad, Vijayawada, and Bangalore — ISO 9001, 27001, 14001, and 20000-1 — question papers, OMR sheets, certificates, and confidential print for institutions across India.",
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -57,14 +57,14 @@ export const metadata: Metadata = {
     title:
       "V.S. Hitech Security Forms Pvt. Ltd. | Security Printing Company Hyderabad",
     description:
-      "Four ISO-certified security printing in Hyderabad, Vijayawada & Bangalore — question papers, OMR sheets, certificates and confidential print for institutions across India.",
+      "Four ISO-certified security printing in Hyderabad, Vijayawada, and Bangalore — question papers, OMR sheets, certificates, and confidential print for institutions across India.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "V.S. Hitech Security Forms | Security Printing Company Hyderabad",
     description:
-      "Four ISO-certified security printing — question papers, OMR sheets, certificates and confidential print across India.",
+      "Four ISO-certified security printing — question papers, OMR sheets, certificates, and confidential print across India.",
     images: [OG_IMAGE.url],
   },
   robots: {

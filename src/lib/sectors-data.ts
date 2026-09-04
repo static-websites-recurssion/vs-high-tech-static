@@ -30,9 +30,9 @@ export const sectorOfferings: readonly SectorOffering[] = [
     navLabel: "Education & Universities",
     href: "/sectors/education",
     description:
-      "End-to-end Examination printing under strict security, including question papers, precision OMR sheets, and secure, sealed, on-time dispatch.",
+      "End-to-end examination printing under strict security, including question papers, precision OMR sheets, and secure, sealed, on-time dispatch.",
     headline: "Trusted by Universities and Exam Bodies Across India",
-    body: "We print question papers, OMR sheets, answer booklets, marks memos, and certificates for Universities, PSCs, recruitment Boards, and institutions — all under high confidentiality and four ISO-certified processes. With a single-entry facility, CCTV monitoring, and closed-vehicle delivery, there is zero leakage from press to exam hall.",
+    body: "We print question papers, OMR sheets, answer booklets, marks memos, and certificates for universities, PSCs, recruitment boards, and institutions — all under high confidentiality and four ISO-certified processes. With a single-entry facility, CCTV monitoring, and closed-vehicle delivery, there is zero leakage from press to exam hall.",
     bullets: [
       "Question papers",
       "OMR sheets with variable data",
@@ -54,13 +54,13 @@ export const sectorOfferings: readonly SectorOffering[] = [
     description:
       "Confidential printing for departments and PSUs, with proper records at every step and secure disposal of waste.",
     headline: "Reliable Partner for Government Confidential Printing",
-    body: "Our four ISO-certified processes (9001, 27001, 14001, and 20000-1) and strict security environment make us a trusted choice for Government departments and PSUs that need confidential printing with full records and secure disposal of waste — including land-record programmes, stationery, and high-volume thermal supply.",
+    body: "Our four ISO-certified processes (9001, 27001, 14001, and 20000-1) and strict security environment make us a trusted choice for government departments and PSUs that need confidential printing with full records and secure disposal of waste — including land-record programmes, stationery, and high-volume thermal supply.",
     bullets: [
       "Government & confidential forms",
       "Official stationery",
       "Carbonless & computer stationery",
-      "Serialized / numbered documents",
-      "Patta / Pattadar pass books",
+      "Serialised / numbered documents",
+      "Patta / Pattadar passbooks",
       "Identity documents",
       "Confidential question papers",
       { label: "Barcode & variable data", options: ["QR codes", "Barcodes"] },

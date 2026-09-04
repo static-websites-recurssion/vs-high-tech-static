@@ -77,27 +77,27 @@ export type ProcessStep = {
 
 export const commercialPrinting: ServiceItem[] = [
   {
-    title: "Multi Color Offset Printing",
+    title: "Multi-Colour Offset Printing",
     description:
-      "Sheetfed and web offset up to eight colours, holding registration across very long runs.",
+      "Sheet-fed and web offset up to eight colours, holding registration across very long runs.",
     icon: Printer,
   },
   {
     title: "Packaging Printing",
     description:
-      "Cartons, sleeves and outer packs printed, die-cut and finished to brand specification.",
+      "Cartons, sleeves, and outer packs printed, die-cut, and finished to brand specification.",
     icon: Package,
   },
   {
     title: "Embossing",
     description:
-      "Raised relief detailing that gives covers, certificates and folders tactile depth.",
+      "Raised relief detailing that gives covers, certificates, and folders tactile depth.",
     icon: Layers,
   },
   {
     title: "Hot Foil Stamping",
     description:
-      "Metallic gold, silver and pigment foils applied under controlled heat and pressure.",
+      "Metallic gold, silver, and pigment foils applied under controlled heat and pressure.",
     icon: Sparkles,
   },
   {
@@ -115,43 +115,43 @@ export const commercialPrinting: ServiceItem[] = [
   {
     title: "Gloss & Thermal Lamination",
     description:
-      "Protective film lamination for durability, scuff resistance and longer shelf life.",
+      "Protective film lamination for durability, scuff resistance, and longer shelf life.",
     icon: Layers3,
   },
   {
     title: "Carbonless Stationery",
     description:
-      "Two to five part NCR sets with sequential numbering, perforation and collation.",
+      "Two- to five-part NCR sets with sequential numbering, perforation, and collation.",
     icon: Copy,
   },
   {
     title: "Computer Stationery",
     description:
-      "Continuous forms engineered for high-speed impact, laser and line-printer output.",
+      "Continuous forms engineered for high-speed impact, laser, and line-printer output.",
     icon: Files,
   },
   {
     title: "Variable Data Printing",
     description:
-      "Every impression unique — names, numbers, barcodes and QR codes at production speed.",
+      "Every impression unique — names, numbers, barcodes, and QR codes at production speed.",
     icon: Database,
   },
   {
-    title: "Multi Color Thermal Rolls",
+    title: "Multi-Colour Thermal Rolls",
     description:
-      "Pre-printed thermal rolls for POS, Banking, tolling and ticketing counters.",
+      "Pre-printed thermal rolls for POS, banking, tolling, and ticketing counters.",
     icon: Receipt,
   },
   {
     title: "Commercial Printing",
     description:
-      "Brochures, catalogues, annual reports, diaries and book works printed and finished in house.",
+      "Brochures, catalogues, annual reports, diaries, and book works printed and finished in-house.",
     icon: Newspaper,
   },
   {
     title: "Flexo Printing",
     description:
-      "Reel-to-reel flexographic printing for labels, tags and continuous roll stationery.",
+      "Reel-to-reel flexographic printing for labels, tags, and continuous roll stationery.",
     icon: Tags,
   },
 ];
@@ -168,7 +168,7 @@ export const securePrinting: ServiceItem[] = [
   {
     title: "Certificates",
     description:
-      "Degrees, diplomas and awards carrying guilloche work and authentication features.",
+      "Degrees, diplomas, and awards carrying guilloche work and authentication features.",
     icon: Award,
   },
   {
@@ -184,7 +184,7 @@ export const securePrinting: ServiceItem[] = [
     icon: ShieldCheck,
   },
   {
-    title: "Personalized Printing",
+    title: "Personalised Printing",
     description:
       "Individually addressed documents matched line for line against verified data sets.",
     icon: IdCard,
@@ -192,19 +192,19 @@ export const securePrinting: ServiceItem[] = [
   {
     title: "Financial Stationery",
     description:
-      "Cheques, dividend warrants and passbooks with MICR encoding, sequential numbering and penetrating ink.",
+      "Cheques, dividend warrants, and passbooks with MICR encoding, sequential numbering, and penetrating ink.",
     icon: Banknote,
   },
   {
     title: "Barcode Printing",
     description:
-      "1D, 2D and QR encoding, machine-verified inline so every code scans first time.",
+      "1D, 2D, and QR encoding, machine-verified inline so every code scans first time.",
     icon: Barcode,
   },
   {
     title: "Government Printing",
     description:
-      "Secure, tender-compliant production for Government departments, Boards, PSUs, and statutory bodies.",
+      "Secure, tender-compliant production for government departments, boards, PSUs, and statutory bodies.",
     icon: Landmark,
   },
   {
@@ -219,7 +219,7 @@ export const securePillars: ServiceItem[] = [
   {
     title: "Confidentiality",
     description:
-      "Restricted zones, vetted operators and need-to-know access at every stage.",
+      "Restricted zones, vetted operators, and need-to-know access at every stage.",
     icon: EyeOff,
   },
   {
@@ -237,7 +237,7 @@ export const securePillars: ServiceItem[] = [
   {
     title: "Security",
     description:
-      "CCTV-monitored floors, sealed storage and supervised destruction of waste.",
+      "CCTV-monitored floors, sealed storage, and supervised destruction of waste.",
     icon: Shield,
   },
 ];
@@ -272,7 +272,7 @@ export const prepressSteps: ProcessStep[] = [
   {
     title: "Label Generation",
     description:
-      "Centre, batch and consignment labels generated from the same verified master.",
+      "Centre, batch, and consignment labels generated from the same verified master.",
     icon: Tags,
   },
   {
@@ -289,9 +289,9 @@ export const printingTechnologies: (ServiceItem & { specs: string[] })[] = [
   {
     title: "Offset Printing",
     description:
-      "Multi-colour sheetfed and web offset for high-volume runs at consistent colour.",
+      "Multi-colour sheet-fed and web offset for high-volume runs at consistent colour.",
     icon: Printer,
-    specs: ["Up to 8 colours", "Web & sheetfed", "Long-run economy"],
+    specs: ["Up to 8 colours", "Web & sheet-fed", "Long-run economy"],
   },
   {
     title: "Digital Printing",
@@ -310,7 +310,7 @@ export const printingTechnologies: (ServiceItem & { specs: string[] })[] = [
   {
     title: "Variable Data Printing",
     description:
-      "Database-driven printing where every record, code and number is unique.",
+      "Database-driven printing where every record, code, and number is unique.",
     icon: Database,
     specs: ["Record-level data", "Barcode & QR", "Inline verification"],
   },
@@ -331,7 +331,7 @@ export const postPrintFlow: ProcessStep[] = [
   },
   {
     title: "Gathering",
-    description: "Sections assembled, trimmed and made ready for packing.",
+    description: "Sections assembled, trimmed, and made ready for packing.",
     icon: Boxes,
   },
   {
@@ -346,7 +346,7 @@ export const postPrintFlow: ProcessStep[] = [
   },
   {
     title: "Sorting",
-    description: "Packs sorted centre-wise, route-wise and consignment-wise.",
+    description: "Packs sorted centre-wise, route-wise, and consignment-wise.",
     icon: Split,
   },
   {
@@ -362,13 +362,13 @@ export const qualityStages: ProcessStep[] = [
   {
     title: "Multiple Inspection Stages",
     description:
-      "Checks are built into every stage — prepress, press, finishing and packing — so defects are caught where they occur.",
+      "Checks are built into every stage — prepress, press, finishing, and packing — so defects are caught where they occur.",
     icon: SearchCheck,
   },
   {
     title: "Cover Verification",
     description:
-      "Covers matched against the approved proof for version, centre code, subject and paper series.",
+      "Covers matched against the approved proof for version, centre code, subject, and paper series.",
     icon: FileText,
   },
   {
@@ -380,7 +380,7 @@ export const qualityStages: ProcessStep[] = [
   {
     title: "Packaging Inspection",
     description:
-      "Pack counts, seal integrity and consignment markings verified against the dispatch plan.",
+      "Pack counts, seal integrity, and consignment markings verified against the dispatch plan.",
     icon: PackageCheck,
   },
   {
@@ -438,7 +438,7 @@ export const examinationFlow: ProcessStep[] = [
   {
     title: "Question Paper Design",
     description:
-      "Composition, multi-set generation and version control inside the secure zone.",
+      "Composition, multi-set generation, and version control inside the secure zone.",
     icon: PenTool,
   },
   {
@@ -462,7 +462,7 @@ export const examinationFlow: ProcessStep[] = [
   {
     title: "Answer Booklets",
     description:
-      "Customised booklets with barcodes, serials and scanner-friendly stock.",
+      "Customised booklets with barcodes, serials, and scanner-friendly stock.",
     icon: FileText,
   },
   {
@@ -480,7 +480,7 @@ export const examinationFlow: ProcessStep[] = [
   {
     title: "Result Generation",
     description:
-      "Tabulation, moderation and marks memo generation from verified data.",
+      "Tabulation, moderation, and marks memo generation from verified data.",
     icon: Database,
   },
   {
@@ -493,27 +493,27 @@ export const examinationFlow: ProcessStep[] = [
 
 export const examinationCapabilities: ServiceItem[] = [
   {
-    title: "On-screen Evaluation",
+    title: "On-Screen Evaluation",
     description:
       "Digitised scripts evaluated on screen with masked identities and examiner audit trails.",
     icon: Eye,
   },
   {
-    title: "Off-screen Evaluation",
+    title: "Off-Screen Evaluation",
     description:
-      "Conventional camp evaluation supported with logistics, stationery and tabulation.",
+      "Conventional camp evaluation supported with logistics, stationery, and tabulation.",
     icon: FileText,
   },
   {
     title: "Centre-wise Verification",
     description:
-      "Attendance, packet counts and used-unused reconciliation verified centre by centre.",
+      "Attendance, packet counts, and used/unused reconciliation verified centre by centre.",
     icon: SearchCheck,
   },
   {
-    title: "Customized Answer Booklets",
+    title: "Customised Answer Booklets",
     description:
-      "Booklets built to the Board's format — barcodes, serials, page counts and layout.",
+      "Booklets built to the board's format — barcodes, serials, page counts, and layout.",
     icon: FileSignature,
   },
 ];
@@ -536,13 +536,13 @@ export const securityFeatures: ServiceItem[] = [
   {
     title: "Visible Security Features",
     description:
-      "Guilloche Design, MicroText, Micro Line, Mirror Text, High Resolution Border, Relief Background, and Hologram — verifiable at a glance.",
+      "Guilloche Design, Microtext, Micro Line, Mirror Text, High Resolution Border, Relief Background, and Hologram — verifiable at a glance.",
     icon: Eye,
   },
   {
     title: "Special Security Paper",
     description:
-      "Water Mark, fibre-embedded and chemically reactive substrates sourced under control.",
+      "Watermark, fibre-embedded, and chemically reactive substrates sourced under control.",
     icon: Layers,
   },
   {
@@ -552,7 +552,7 @@ export const securityFeatures: ServiceItem[] = [
     icon: Shield,
   },
   {
-    title: "Bar Code & QR Code",
+    title: "Barcode & QR Code",
     description:
       "Linear barcodes and QR codes for track-and-trace, mobile verification, and logistics on every secure document.",
     icon: Barcode,
@@ -564,7 +564,7 @@ export const securityFeatures: ServiceItem[] = [
     icon: Award,
   },
   {
-    title: "Customized Security Documents",
+    title: "Customised Security Documents",
     description:
       "Feature sets designed around each institution's risk profile — pick from our full sixteen-feature catalogue.",
     icon: FileLock2,
@@ -576,27 +576,27 @@ export const securityFeatures: ServiceItem[] = [
 export const industryApplications: ServiceItem[] = [
   {
     title: "Education",
-    description: "Universities, Boards and institutions running large Examinations.",
+    description: "Universities, boards, and institutions running large examinations.",
     icon: GraduationCap,
   },
   {
     title: "Government",
-    description: "Departments, PSUs and statutory bodies with tender-grade requirements.",
+    description: "Departments, PSUs, and statutory bodies with tender-grade requirements.",
     icon: Landmark,
   },
   {
     title: "Banking",
-    description: "Cheques, warrants, passbooks and branch stationery under MICR control.",
+    description: "Cheques, warrants, passbooks, and branch stationery under MICR control.",
     icon: Banknote,
   },
   {
     title: "Retail",
-    description: "Labels, tags, promotional print and billing consumables at scale.",
+    description: "Labels, tags, promotional print, and billing consumables at scale.",
     icon: ShoppingCart,
   },
   {
     title: "Utilities",
-    description: "Bill production, personalised statements and field documentation.",
+    description: "Bill production, personalised statements, and field documentation.",
     icon: Zap,
   },
   {
@@ -611,7 +611,7 @@ export const industryApplications: ServiceItem[] = [
   },
   {
     title: "Supermarkets",
-    description: "POS rolls, shelf labels and barcode stationery for daily operations.",
+    description: "POS rolls, shelf labels, and barcode stationery for daily operations.",
     icon: Store,
   },
   {
@@ -621,7 +621,7 @@ export const industryApplications: ServiceItem[] = [
   },
   {
     title: "Toll Management Systems",
-    description: "Serialised receipts, tags and thermal rolls for high-throughput plazas.",
+    description: "Serialised receipts, tags, and thermal rolls for high-throughput plazas.",
     icon: Route,
   },
 ];
@@ -640,8 +640,8 @@ export const variableDataApplications: ServiceItem[] = [
     icon: Receipt,
   },
   {
-    title: "Personalized Documents",
-    description: "Letters, notices and cards addressed to the individual recipient.",
+    title: "Personalised Documents",
+    description: "Letters, notices, and cards addressed to the individual recipient.",
     icon: IdCard,
   },
   {
@@ -656,7 +656,7 @@ export const variableDataApplications: ServiceItem[] = [
   },
   {
     title: "Institution Documents",
-    description: "Hall tickets, marks memos and certificates unique to every candidate.",
+    description: "Hall tickets, marks memos, and certificates unique to every candidate.",
     icon: GraduationCap,
   },
 ];
@@ -677,7 +677,7 @@ export const serviceSections = [
     id: "commercial",
     number: "01",
     label: "Commercial Printing",
-    blurb: "Multi-colour offset runs, publications and specialised finishing at volume.",
+    blurb: "Multi-colour offset runs, publications, and specialised finishing at volume.",
   },
   {
     id: "secure",
@@ -689,7 +689,7 @@ export const serviceSections = [
     id: "prepress",
     number: "03",
     label: "Prepress",
-    blurb: "Proofing, correction and approval before a single plate is made.",
+    blurb: "Proofing, correction, and approval before a single plate is made.",
   },
   {
     id: "technologies",
@@ -701,7 +701,7 @@ export const serviceSections = [
     id: "post-print",
     number: "05",
     label: "Post Print",
-    blurb: "Finishing, sorting and sealing without breaking the chain of custody.",
+    blurb: "Finishing, sorting, and sealing without breaking the chain of custody.",
   },
   {
     id: "quality",
@@ -725,13 +725,13 @@ export const serviceSections = [
     id: "security",
     number: "09",
     label: "Security Features",
-    blurb: "Sixteen layered options — holograms, UV, microtext, QR and more.",
+    blurb: "Sixteen layered options — holograms, UV, microtext, QR, and more.",
   },
   {
     id: "industries",
     number: "10",
     label: "Industries We Serve",
-    blurb: "Government, Education, Banking and enterprise, each with its own profile.",
+    blurb: "Government, education, banking, and enterprise, each with its own profile.",
   },
   {
     id: "variable-data",

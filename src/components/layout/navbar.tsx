@@ -27,7 +27,7 @@ const dropdownMenus: DropdownMenu[] = [
     label: "ABOUT",
     href: "/about",
     items: [
-      { label: "Why VS Hitech", href: "/about/why-us" },
+      { label: "Why V.S. Hitech", href: "/about/why-us" },
       { label: "Company Profile", href: "/about" },
       { label: "Our Clients", href: "/clients" },
       { label: "Management Team", href: "/about/management" },
@@ -36,7 +36,7 @@ const dropdownMenus: DropdownMenu[] = [
         href: "/about/certifications",
       },
       { label: "Infrastructure", href: "/about/infrastructure" },
-      { label: "CSR & Women Empowerment", href: "/about/csr" },
+      { label: "CSR & Women's Empowerment", href: "/about/csr" },
     ],
   },
   {
@@ -231,7 +231,7 @@ export function Navbar() {
               className="h-8 w-8 shrink-0 object-contain sm:h-9 sm:w-9"
             />
             <span className="break-words hyphens-auto">
-              VS HITECH SECURITY FORMS PVT LTD
+              V.S. HITECH SECURITY FORMS PVT. LTD.
             </span>
           </span>
         </Link>

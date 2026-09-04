@@ -89,7 +89,7 @@ export function BlogListingClient({
                     href={`/knowledge/blog/${post.slug}`}
                     className="text-sm font-semibold text-accent hover:underline"
                   >
-                    Read More →
+                    Read more →
                   </Link>
                 </div>
               </div>

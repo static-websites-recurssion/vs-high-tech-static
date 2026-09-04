@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Printing Machinery | Web Offset, CTCP, Binding & Finishing",
   description:
-    "Installed web offset (Orient Super, NAPH Graphics Koncept), computer stationery lines, CTCP plate making, hot foil stamping, binding and finishing.",
+    "Installed web offset (Orient Super, NAPH Graphics Koncept), computer stationery lines, CTCP plate making, hot foil stamping, binding, and finishing.",
   path: "/technology/machinery",
   keywords: keywordsFor("/technology/machinery"),
 });
@@ -28,7 +28,7 @@ export default function TechnologyMachineryPage() {
           webPageSchema({
             name: "Printing Machinery & Production Lines",
             description:
-              "Web offset, computer stationery, CTCP, hot foil stamping, binding and finishing equipment.",
+              "Web offset, computer stationery, CTCP, hot foil stamping, binding, and finishing equipment.",
             path: "/technology/machinery",
             type: "WebPage",
           }),
@@ -36,17 +36,17 @@ export default function TechnologyMachineryPage() {
         )}
       />
       <MachineryOverviewSections
-        heroTitle="Our machinery"
-        heroSubtitle="Advanced multi-color sheetfed & web offset presses, computer stationery production lines, hot foil stamping machines, CTCP systems, high-speed binding machines, programmatic cutting machines—engineered for high-volume, commercial, confidential Examination and books printing."
+        heroTitle="Our Machinery"
+        heroSubtitle="Advanced multi-colour sheet-fed and web offset presses, computer stationery production lines, hot foil stamping machines, CTCP systems, high-speed binding machines, and programmable cutting machines — engineered for high-volume commercial, confidential examination, and book printing."
       />
       <section className="border-t border-border bg-muted/30 py-10">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-sm text-muted-foreground">
             For our security environment, in-house testing, and premises
-            details, see the infrastructure page.
+            details, see the Infrastructure page.
           </p>
           <Button variant="accent" className="mt-6" asChild>
-            <Link href="/infrastructure">View full infrastructure</Link>
+            <Link href="/infrastructure">View the full infrastructure</Link>
           </Button>
         </div>
       </section>

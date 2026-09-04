@@ -18,14 +18,14 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "ISO 9001, 27001, 14001 & 20000-1 Certified Printer | V.S. Hitech",
   description:
-    "Four ISO certifications under NABCB accreditation — 9001 quality, 27001 information security, 14001 environment, 20000-1 IT service management. Packs for tenders.",
+    "Four ISO certifications under NABCB accreditation — 9001 quality, 27001 information security, 14001 environment, and 20000-1 IT service management. Packs available for tenders.",
   path: "/certifications",
   keywords: keywordsFor("/certifications"),
 });
 
 const trustBullets = [
   "A strong vendor profile for tenders and empanelment",
-  "A security environment suited for confidential exam and financial printing",
+  "A security environment suited to confidential exam and financial printing",
   "Three plants, so your work continues without interruption",
 ] as const;
 
@@ -56,7 +56,7 @@ export default function CertificationsPage() {
             <span className="font-medium text-white">Certifications</span>
           </nav>
           <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Certifications &amp; compliance
+            Certifications &amp; Compliance
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
             International standards that guide how we manage quality,

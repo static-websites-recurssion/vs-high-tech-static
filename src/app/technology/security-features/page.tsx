@@ -39,18 +39,18 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "16 Document Security Features | Hologram, UV & Microtext",
   description:
-    "Security features we print — barcode, QR code, watermark, UV invisible logo, microtext, thermochromic ink, copy void, guilloche, hologram and more.",
+    "Security features we print — barcode, QR code, watermark, UV invisible logo, microtext, thermochromic ink, copy void, guilloche, hologram, and more.",
   path: "/technology/security-features",
   keywords: keywordsFor("/technology/security-features"),
 });
 
 const featureIcons: Record<string, LucideIcon> = {
-  "Bar Code": Barcode,
+  Barcode: Barcode,
   "QR Code": QrCode,
   "Spelling Mistake": SpellCheck,
-  "Water Mark": Droplets,
+  Watermark: Droplets,
   "UV Invisible Logo": Sparkles,
-  MicroText: Type,
+  Microtext: Type,
   "Micro Line": Waves,
   "Invisible Sign": EyeOff,
   "Thermochromic Ink": Thermometer,
@@ -67,26 +67,26 @@ const additionalCapabilities = [
   {
     name: "MICR Encoding",
     icon: Hash,
-    line1: "Machine-readable MICR with penetrating ink",
-    line2: "Built for cheques, warrants, and high-accuracy scanning",
+    line1: "Machine-readable MICR with penetrating ink.",
+    line2: "Built for cheques, warrants, and high-accuracy scanning.",
   },
   {
     name: "Sequential Numbering",
     icon: Fingerprint,
-    line1: "Unique serials printed with penetrating ink",
-    line2: "Shows through the sheet; hard to alter or erase",
+    line1: "Unique serials printed with penetrating ink.",
+    line2: "Shows through the sheet; hard to alter or erase.",
   },
   {
     name: "Hot Foil Stamping",
     icon: Sparkles,
-    line1: "Gold/silver foil via Heidelberg machine",
-    line2: "Premium finish with an extra anti-counterfeit layer",
+    line1: "Gold or silver foil applied on a Heidelberg machine.",
+    line2: "Premium finish with an extra anti-counterfeit layer.",
   },
   {
     name: "Variable Data Printing",
     icon: Fingerprint,
-    line1: "Unique data per document at high speed",
-    line2: "Names, serials, barcodes, and identifiers with consistency",
+    line1: "Unique data per document at high speed.",
+    line2: "Names, serials, barcodes, and identifiers, printed consistently.",
   },
 ] as const;
 

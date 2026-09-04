@@ -49,7 +49,7 @@ const SEO_BY_SLUG: Record<
   management: {
     title: "Management Team & Leadership | V.S. Hitech Security Forms",
     description:
-      "Led by Managing Director Shri Ramisetti Phani Krishna with 28+ years in printing, with a Board that includes a woman director and 24 managers.",
+      "Led by Managing Director Shri Ramisetti Phani Krishna, with 28+ years in printing, a board that includes a woman director, and 24 managers.",
     keywords: [
       "V.S. Hitech management team",
       "security printing company directors",
@@ -60,7 +60,7 @@ const SEO_BY_SLUG: Record<
   certifications: {
     title: "Certifications & Accreditations | Four ISO Standards",
     description:
-      "Four ISO certifications — 9001 quality, 27001 information security, 14001 environment and 20000-1 IT service management, under NABCB accreditation.",
+      "Four ISO certifications — 9001 quality, 27001 information security, 14001 environment, and 20000-1 IT service management — under NABCB accreditation.",
     keywords: [
       "ISO certifications security printer",
       "NABCB accredited printing company",
@@ -71,7 +71,7 @@ const SEO_BY_SLUG: Record<
   infrastructure: {
     title: "Our Infrastructure | Plants, Machinery & Capacity",
     description:
-      "Three plants across Hyderabad, Vijayawada and Bangalore with 145,000+ sft, 24+ machine categories, web offset to 30,000 impressions/hour and generator backup.",
+      "Three plants across Hyderabad, Vijayawada, and Bangalore with 145,000+ sq ft, 24+ machine categories, web offset up to 30,000 impressions an hour, and generator backup.",
     keywords: [
       "security printing plant infrastructure",
       "printing press capacity India",
@@ -80,9 +80,9 @@ const SEO_BY_SLUG: Record<
     ],
   },
   csr: {
-    title: "CSR & Women Empowerment | V.S. Hitech Security Forms",
+    title: "CSR & Women's Empowerment | V.S. Hitech Security Forms",
     description:
-      "Our commitment to inclusive employment — a woman director on the Board, women's employment on the shop floor, and statutory compliance throughout.",
+      "Our commitment to inclusive employment — a woman director on the board, women's employment on the shop floor, and statutory compliance throughout.",
     keywords: [
       "CSR printing company India",
       "women employment printing industry",
@@ -101,7 +101,7 @@ export function generateMetadata({
     return buildMetadata({
       title: "About V.S. Hitech Security Forms",
       description:
-        "Company profile, leadership, certifications and infrastructure of V.S. Hitech Security Forms.",
+        "Company profile, leadership, certifications, and infrastructure of V.S. Hitech Security Forms.",
       path: "/about",
       noindex: true,
     });
@@ -142,14 +142,14 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
 
   const heading =
     slug === "why-us"
-      ? "Why VS Hitech"
+      ? "Why V.S. Hitech"
       : slug === "management"
         ? "Management Team"
         : slug === "certifications"
           ? "Certifications & Accreditations"
           : slug === "infrastructure"
             ? "Infrastructure"
-            : "CSR & Women Empowerment";
+            : "CSR & Women's Empowerment";
 
   const subheading =
     slug === "why-us"
@@ -238,7 +238,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 What makes us a trusted security printer
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We work with Universities, Educational Boards, and Government organizations where security, confidentiality, and accurate record-keeping are essential. Our processes ensure controlled access, complete tracking, and timely, well-managed delivery.
+              We work with universities, educational boards, and government organisations where security, confidentiality, and accurate record-keeping are essential. Our processes ensure controlled access, complete tracking, and timely, well-managed delivery.
               </p>
               <div className="mt-8 space-y-4">
                 {whyUsPoints.map((p) => {
@@ -291,11 +291,11 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">Leadership</h2>
               <p className="mt-3 max-w-3xl text-muted-foreground">
-                Our leadership team combines printing technology expertise with disciplined execution for institutional programs.
+                Our leadership team combines printing technology expertise with disciplined execution for institutional programmes.
               </p>
             </div>
             <Button variant="outline" asChild className="hidden sm:inline-flex">
-              <Link href="/about">View full About page</Link>
+              <Link href="/about">View the full About page</Link>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -314,8 +314,8 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Users className="h-6 w-6" strokeWidth={1.75} aria-hidden />
               </div>
-              <h3 className="mt-4 text-xl font-bold text-primary">Operations & Quality Leadership</h3>
-              <p className="text-sm font-medium text-accent">Plant & Process Owners</p>
+              <h3 className="mt-4 text-xl font-bold text-primary">Operations &amp; Quality Leadership</h3>
+              <p className="text-sm font-medium text-accent">Plant &amp; Process Owners</p>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 Dedicated owners for pre-press, printing, finishing, and dispatch verification to ensure auditability and consistent output quality.
               </p>
@@ -324,7 +324,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
           <div className="mt-10 rounded-2xl border border-primary/10 bg-primary/5 p-8">
             <h3 className="text-xl font-bold text-primary">Talk to leadership for institutional onboarding</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              For tenders, vendor onboarding, and program planning, reach out and we’ll share the right documentation under NDA where needed.
+              For tenders, vendor onboarding, and programme planning, reach out and we will share the right documentation under NDA where needed.
             </p>
             <Button variant="accent" size="lg" className="mt-5" asChild>
               <Link href="/contact">Contact us</Link>
@@ -338,7 +338,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[3fr_2fr] lg:items-start">
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Compliance & certifications
+                Compliance &amp; certifications
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Certifications matter for procurement because they create repeatable processes, security controls,
@@ -346,8 +346,8 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                 environmental care, and IT service management.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                For Universities and Government departments, this translates into disciplined job intake,
-                controlled approvals, traceable production steps, and verification before dispatch—so your program
+                For universities and government departments, this translates into disciplined job intake,
+                controlled approvals, traceable production steps, and verification before dispatch — so your programme
                 stays compliant and predictable even at high volumes.
               </p>
             </div>
@@ -375,7 +375,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                     Built for audits and repeatable delivery
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Documentation-led processes help reduce risk for confidential programs with strict timelines.
+                    Documentation-led processes help reduce risk for confidential programmes with strict timelines.
                   </p>
                 </div>
                 <div className="rounded-xl border border-primary/10 bg-background px-4 py-3">
@@ -411,19 +411,19 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
 
           <div className="mt-8 rounded-2xl border border-primary/10 bg-primary/5 p-6">
             <p className="text-sm font-semibold text-primary">
-              What we can share for onboarding / tenders (as applicable)
+              What we can share for onboarding and tenders (as applicable)
             </p>
             <ul className="mt-3 grid grid-cols-1 gap-2 text-sm text-muted-foreground sm:grid-cols-2 lg:grid-cols-4">
               <li>Certificate copies and scope statements</li>
-              <li>Process flow & quality checkpoints</li>
+              <li>Process flow &amp; quality checkpoints</li>
               <li>Security environment overview (under NDA if required)</li>
-              <li>Dispatch & audit trail approach</li>
+              <li>Dispatch &amp; audit trail approach</li>
             </ul>
           </div>
 
           <div className="mt-8">
             <Button variant="accent" size="lg" asChild>
-              <Link href="/certifications">Open Certifications page</Link>
+              <Link href="/certifications">Open the Certifications page</Link>
             </Button>
           </div>
         </section>
@@ -434,15 +434,15 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                Plants & production capability
+                Plants &amp; production capability
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Two operational locations help ensure delivery continuity and program scaling.
+                Multiple operational locations help ensure delivery continuity and programme scaling.
                 We maintain security discipline and process checks across pre-press, printing, finishing, and dispatch.
               </p>
               <div className="mt-8">
                 <Button variant="accent" size="lg" asChild>
-                  <Link href="/infrastructure">Open Infrastructure page</Link>
+                  <Link href="/infrastructure">Open the Infrastructure page</Link>
                 </Button>
               </div>
             </div>
@@ -464,15 +464,15 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
             <div>
               <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-                CSR & women empowerment
+                CSR &amp; women&apos;s empowerment
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 We believe strong institutions are built by strong teams. We support inclusive hiring, skill development,
                 and a respectful workplace culture across all three locations.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Our CSR focus is practical and workplace-led—creating opportunities, improving training, and supporting
-                community initiatives aligned with Education and safety.
+                Our CSR focus is practical and workplace-led — creating opportunities, improving training, and supporting
+                community initiatives aligned with education and safety.
               </p>
 
               <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -493,7 +493,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                       <Users className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                     </div>
-                    <p className="text-base font-bold text-primary">Skills & training</p>
+                    <p className="text-base font-bold text-primary">Skills &amp; training</p>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     Continuous training on production discipline, quality checks, and role-based responsibilities for consistent outcomes.
@@ -517,10 +517,10 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                       <Lock className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                     </div>
-                    <p className="text-base font-bold text-primary">Ethics & confidentiality</p>
+                    <p className="text-base font-bold text-primary">Ethics &amp; confidentiality</p>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    Reinforcing confidentiality discipline as a shared responsibility—supporting trust for institutional clients.
+                    Reinforcing confidentiality discipline as a shared responsibility — supporting trust for institutional clients.
                   </p>
                 </div>
               </div>
@@ -528,7 +528,7 @@ export default function AboutSlugPage({ params }: { params: { slug: string } }) 
               <div className="mt-8 rounded-2xl border border-primary/10 bg-primary/5 p-6">
                 <p className="text-sm font-semibold text-primary">Focus areas</p>
                 <ul className="mt-3 grid grid-cols-1 gap-2 text-sm text-muted-foreground sm:grid-cols-2">
-                  <li>Women participation across roles</li>
+                  <li>Women&apos;s participation across roles</li>
                   <li>Training and upskilling</li>
                   <li>Workplace safety and wellbeing</li>
                   <li>Education-aligned community support</li>

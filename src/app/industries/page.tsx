@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Industries We Serve | Education, Government & Corporate Printing",
   description:
-    "Security printing for Universities and exam Boards, Government departments and PSUs, and Corporates across India — papers, OMR, certificates and forms.",
+    "Security printing for universities and exam boards, government departments and PSUs, and corporates across India — papers, OMR, certificates, and forms.",
   path: "/industries",
   keywords: keywordsFor("/industries"),
 });
@@ -40,7 +40,7 @@ export default function IndustriesPage() {
           webPageSchema({
             name: "Industries We Serve",
             description:
-              "Security printing for Universities and exam Boards, Government departments and PSUs, and Corporates across India.",
+              "Security printing for universities and exam boards, government departments and PSUs, and corporates across India.",
             path: "/industries",
             type: "CollectionPage",
           }),
@@ -62,10 +62,10 @@ export default function IndustriesPage() {
         <div className="absolute inset-0 bg-primary/80" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Industries we serve
+            Industries We Serve
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-white/90 sm:text-xl">
-            We serve Government departments, Universities, and companies that
+            We serve government departments, universities, and companies that
             need confidential, large-volume printing with proper records.
           </p>
         </div>

@@ -30,7 +30,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Confidential Question Papers",
     tagline: "Zero-leak security from our press to the exam hall",
     description:
-      "We specialize in printing Examination question papers for Universities, public service commissions, recruitment Boards, and competitive exam bodies. Every job is handled under maximum security — single entry/exit facility, CCTV-monitored floor, biometric attendance, and all waste shredded and burnt. Papers are dispatched in sealed packets via DCM closed vehicles.",
+      "We specialise in printing examination question papers for universities, public service commissions, recruitment boards, and competitive exam bodies. Every job is handled under maximum security — single entry/exit facility, CCTV-monitored floor, biometric attendance, and all waste shredded and burnt. Papers are dispatched in sealed packets via DCM closed vehicles.",
     securityFeatures: [
       "CCTV-monitored printing floor",
       "Biometric access to press area",
@@ -38,7 +38,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
       "DCM closed-vehicle transport",
       "All waste shredded and burnt",
       "Confidential numbering and coding",
-      "Bar Code / QR Code tracking option",
+      "Barcode / QR Code tracking option",
       "Special security guards during printing",
       "No mobile phones in print area",
     ],
@@ -50,10 +50,10 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "OMR Sheets",
     tagline: "Printed with high accuracy so every sheet scans perfectly",
     description:
-      "Our OMR sheets are printed with the highest accuracy to ensure reliable scanning results. Used for entrance Examinations, recruitment tests, surveys, and evaluation forms. Supports linear barcodes, QR codes, and variable data printing for unique identification of each sheet.",
+      "Our OMR sheets are printed with the highest accuracy to ensure reliable scanning results. Used for entrance examinations, recruitment tests, surveys, and evaluation forms. Supports linear barcodes, QR codes, and variable data printing for unique identification of each sheet.",
     securityFeatures: [
       "High-precision printing for scan accuracy",
-      "Bar Code / QR Code integration",
+      "Barcode / QR Code integration",
       "Sequential numbering",
       "UV Invisible Logo / UV-visible marks",
       "Copy Void anti-photocopy background",
@@ -65,15 +65,15 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   "answer-booklets": {
     slug: "answer-booklets",
     name: "Answer Booklets",
-    tagline: "Secure, numbered booklets for Board and University exams",
+    tagline: "Secure, numbered booklets for board and university exams",
     description:
-      "Printed for Boards, Universities, and competitive exams. Available with serial numbering, watermarks, hologram options, and barcodes. Our gathering machines ensure correct collation and our perfect binding lines handle large runs with speed.",
+      "Printed for boards, universities, and competitive exams. Available with serial numbering, watermarks, hologram options, and barcodes. Our gathering machines ensure correct collation and our perfect binding lines handle large runs with speed.",
     securityFeatures: [
       "Serial numbering",
-      "Water Mark paper option",
+      "Watermark paper option",
       "Hologram stamping available",
-      "Bar Code for tracking",
-      "MicroText / Micro Line patterns",
+      "Barcode for tracking",
+      "Microtext / Micro Line patterns",
       "UV Invisible Logo option",
     ],
     sectors: ["Education"],
@@ -84,21 +84,21 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "University Degree Certificates",
     tagline: "High-security certificates that can't be faked",
     description:
-      "We print academic certificates, degree certificates, and share certificates for Universities, corporations, and Government bodies. These feature multiple layers of security to prevent forgery — from guilloche and holograms to UV logos, microtext, copy-void backgrounds, and thermochromic ink.",
+      "We print academic certificates, degree certificates, and share certificates for universities, corporations, and government bodies. These feature multiple layers of security to prevent forgery — from guilloche and holograms to UV logos, microtext, copy-void backgrounds, and thermochromic ink.",
     securityFeatures: [
       "Guilloche Design background",
       "Hologram stamping",
       "UV Invisible Logo",
-      "Water Mark security paper",
-      "MicroText & Micro Line",
+      "Watermark security paper",
+      "Microtext & Micro Line",
       "Copy Void pantograph",
       "Fluorescent Border",
       "Mirror Text / Relief Background",
       "High Resolution Border",
       "Thermochromic Ink option",
       "Invisible Sign / Spelling Mistake cues",
-      "Bar Code & QR Code",
-      "MICR/sequential numbering with penetrating ink",
+      "Barcode & QR Code",
+      "MICR / sequential numbering with penetrating ink",
       "Hot foil stamping (gold/silver)",
     ],
     sectors: ["Education", "Corporate", "Government"],
@@ -109,14 +109,14 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Cheque Books",
     tagline: "MICR-encoded, security-grade cheque printing",
     description:
-      "We print cheque books for Corporate accounts and institutional use. All cheques are printed on security paper with MICR encoding using our specialized machinery.",
+      "We print cheque books for corporate accounts and institutional use. All cheques are printed on security paper with MICR encoding using our specialised machinery.",
     securityFeatures: [
       "MICR (E-13B) encoding",
-      "Water Mark security paper",
+      "Watermark security paper",
       "Sequential numbering with penetrating ink",
       "UV Invisible Logo / fluorescent features",
       "Copy Void pantograph",
-      "MicroText & Micro Line",
+      "Microtext & Micro Line",
       "Fluorescent Border",
       "Carbonless copy option",
     ],
@@ -128,7 +128,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Pass Books & Annual Reports",
     tagline: "Neatly bound passbooks, registers, and annual reports",
     description:
-      "We produce bound registers, fixed-deposit style passbooks for institutional use, and annual report books. Printed with multi-colour covers, thread-stitched or perfect-bound, and finished to the highest standards.",
+      "We produce bound registers, fixed-deposit-style passbooks for institutional use, and annual report books. Printed with multi-colour covers, thread-stitched or perfect-bound, and finished to the highest standards.",
     securityFeatures: [
       "Multi-colour offset printing",
       "Barcode on cover",
@@ -142,14 +142,14 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   "carbonless-forms": {
     slug: "carbonless-forms",
     name: "Carbonless Forms & Computer Stationery",
-    tagline: "Multi-part forms for business and Government workflows",
+    tagline: "Multi-part forms for business and government workflows",
     description:
-      "NCR (No Carbon Required) forms, continuous stationery, and multi-part business forms for Government departments, logistics companies, and hospitals. We have dedicated computer stationery machines for continuous-feed printing.",
+      "NCR (No Carbon Required) forms, continuous stationery, and multi-part business forms for government departments, logistics companies, and hospitals. We have dedicated computer stationery machines for continuous-feed printing.",
     securityFeatures: [
       "NCR paper (2-part, 3-part, 4-part)",
       "Sequential numbering",
       "Perforation and folding",
-      "Variable data/barcode printing",
+      "Variable data / barcode printing",
       "Colour-coded copy sets",
       "Continuous-feed compatibility for high-volume printing",
     ],
@@ -161,12 +161,12 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     name: "Barcode & Variable Data Printing",
     tagline: "Unique barcodes and data on every document, at high speed",
     description:
-      "Using our Konica Minolta 7120 & 6120 variable data machines, we print unique barcodes, QR codes, serial numbers, names, and data on each sheet at high speed. Ideal for hall tickets, ID cards, and personalized documents.",
+      "Using our Konica Minolta 7120 & 6120 variable data machines, we print unique barcodes, QR codes, serial numbers, names, and data on each sheet at high speed. Ideal for hall tickets, ID cards, and personalised documents.",
     securityFeatures: [
-      "Bar Code (linear — all symbologies)",
+      "Barcode (linear — all symbologies)",
       "QR Code",
       "Data Matrix",
-      "Up to 140 pages/min",
+      "Up to 140 pages per minute",
       "Auto inspection technology",
       "MICR + variable data combination",
     ],
@@ -182,7 +182,7 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     securityFeatures: [
       "Heat-sensitive thermal paper",
       "Adhesive label options",
-      "Bar Code / QR Code integration",
+      "Barcode / QR Code integration",
       "Custom size printing",
       "High-speed output",
       "Optional variable data for per-unit identification",
@@ -197,12 +197,12 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
     description:
       "We print dividend warrants for listed companies, along with event tickets, gate passes, and admission cards with multiple security features to prevent counterfeiting.",
     securityFeatures: [
-      "Water Mark security paper",
+      "Watermark security paper",
       "Hologram option",
       "UV Invisible Logo / fluorescent features",
-      "Bar Code & QR Code",
+      "Barcode & QR Code",
       "Copy Void pantograph",
-      "MicroText & Guilloche Design",
+      "Microtext & Guilloche Design",
       "Sequential numbering",
       "Thermochromic Ink option",
     ],
@@ -212,9 +212,9 @@ export const productBySlug: Record<ProductSlug, ProductData> = {
   "book-works": {
     slug: "book-works",
     name: "Book Works & Commercial Printing",
-    tagline: "High-volume books, manuals, and catalogs — on time",
+    tagline: "High-volume books, manuals, and catalogues — on time",
     description:
-      "We handle large-volume book printing for publishers, Educational institutions, and Corporates — including textbooks, training manuals, annual reports, and product catalogs. Our perfect binding and gathering machines handle runs of any size.",
+      "We handle large-volume book printing for publishers, educational institutions, and corporates — including textbooks, training manuals, annual reports, and product catalogues. Our perfect binding and gathering machines handle runs of any size.",
     securityFeatures: [
       "Saddle stitching",
       "Multi-colour offset",

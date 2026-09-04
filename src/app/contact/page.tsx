@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us | Security Printing in Hyderabad & Vijayawada",
   description:
-    "Call or email our Hyderabad and Vijayawada offices for quotes, samples and site visits. Four ISO-certified security printing. Phone +91 98490 68920.",
+    "Call or email our Hyderabad and Vijayawada offices for quotes, samples, and site visits. Four ISO-certified security printing. Phone: +91 98490 68920.",
   path: "/contact",
   keywords: keywordsFor("/contact"),
 });
@@ -48,7 +48,7 @@ export default function ContactPage() {
           webPageSchema({
             name: "Contact V.S. Hitech Security Forms",
             description:
-              "Hyderabad and Vijayawada offices, phone, email and GST details for quotes, samples and site visits.",
+              "Hyderabad and Vijayawada offices — phone, email, and GST details for quotes, samples, and site visits.",
             path: "/contact",
             type: "ContactPage",
           }),
@@ -85,14 +85,14 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-lg font-bold text-primary sm:text-xl">
-              Hyderabad Office &amp; Works
+              Hyderabad office &amp; works
             </h2>
             <div className="mt-4 space-y-4 text-sm text-muted-foreground">
               <div>
                 <p className="font-semibold text-primary">Address</p>
                 <p className="mt-1 leading-relaxed">
                   Plot No. 74, Road No. 7, ALEAP Industrial Estate, opp. JNTU
-                  Kukatpally, Pragati Nagar, Nizampet (P.O.), Hyderabad-500090
+                  Kukatpally, Pragati Nagar, Nizampet (P.O.), Hyderabad – 500 090
                 </p>
               </div>
               <div>
@@ -123,21 +123,20 @@ export default function ContactPage() {
                   <span className="font-semibold text-primary">GST:</span>{" "}
                   36AADCV2323F1ZN
                 </span>
-                
               </div>
             </div>
           </article>
 
           <article className="flex flex-col rounded-xl border border-primary/10 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-lg font-bold text-primary sm:text-xl">
-              Vijayawada Office &amp; Works
+              Vijayawada office &amp; works
             </h2>
             <div className="mt-4 space-y-4 text-sm text-muted-foreground">
               <div>
                 <p className="font-semibold text-primary">Address</p>
                 <p className="mt-1 leading-relaxed">
-                  Plot No. 11, Aleap Industrial Estate, Surampally Village,
-                  Nunna, Krishna District, Vijayawada - 521 212
+                  Plot No. 11, ALEAP Industrial Estate, Surampally Village,
+                  Nunna, Krishna District, Vijayawada – 521 212
                 </p>
               </div>
               <div>

@@ -41,9 +41,9 @@ export function Footer() {
               </p>
             </div>
             <p className="mt-3 break-words text-sm text-white/85">
-              Confidential security printing for Government departments,
-              Universities, Boards and large companies — three plants, four ISO
-              certified.
+              Confidential security printing for government departments,
+              universities, boards, and large companies — three plants and four
+              ISO certifications.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {isoCodes.map((label) => (
@@ -107,7 +107,7 @@ export function Footer() {
                 </p>
                 <p className="mt-1 break-words text-sm text-white/90">
                   Plot No. 74, Road No. 7, ALEAP Industrial Estate, opp. JNTU
-                  Kukatpally, Hyderabad-500090
+                  Kukatpally, Hyderabad – 500 090
                 </p>
               </div>
             </div>
@@ -121,8 +121,8 @@ export function Footer() {
                   Vijayawada
                 </p>
                 <p className="mt-1 break-words text-sm text-white/90">
-                  Plot No. 11, Aleap Industrial Estate, Surampally Village,
-                  Nunna, Vijayawada - 521 212
+                  Plot No. 11, ALEAP Industrial Estate, Surampally Village,
+                  Nunna, Vijayawada – 521 212
                 </p>
               </div>
             </div>
@@ -163,7 +163,7 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/15 pt-6 text-center text-xs leading-relaxed text-white/70">
           <span className="inline-block max-w-full break-words">
-            © 2026 V.S. Hitech Security Forms Pvt. Ltd. | All Rights Reserved |
+            © 2026 V.S. Hitech Security Forms Pvt. Ltd. | All rights reserved |
             Designed with pride in Hyderabad
           </span>
         </div>

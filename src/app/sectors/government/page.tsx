@@ -25,7 +25,7 @@ const sector = sectorBySlug("government");
 export const metadata: Metadata = buildMetadata({
   title: "Government & PSU Confidential Printing | V.S. Hitech",
   description:
-    "Confidential printing for Government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
+    "Confidential printing for government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents, and thermal rolls.",
   path: "/sectors/government",
   keywords: keywordsFor("/sectors/government"),
 });
@@ -44,7 +44,7 @@ export default function GovernmentSectorPage() {
         data={graph(
           webPageSchema({
             name: "Government Confidential Printing & PSU Print Services",
-            description: "Confidential printing for Government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents and thermal rolls.",
+            description: "Confidential printing for government departments and PSUs — forms, official stationery, pattadar passbooks, serialised documents, and thermal rolls.",
             path: "/sectors/government",
           }),
           breadcrumbSchema([
@@ -90,10 +90,10 @@ export default function GovernmentSectorPage() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_360px] lg:items-start">
           <div>
             <h2 className="text-2xl font-bold text-primary sm:text-3xl">
-              Products &amp; programs we support
+              Products &amp; programmes we support
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Drawn from our company profile range and Government programmes —
+              Drawn from our company profile range and government programmes —
               forms, land records, stationery, variable data, and thermal
               supply for TIMS / ATMS.
             </p>
@@ -125,13 +125,13 @@ export default function GovernmentSectorPage() {
 
             <div className="mt-12 rounded-2xl border border-primary/10 bg-primary/5 p-8 shadow-sm">
               <h3 className="text-xl font-bold text-primary">
-                Sensitive land-record programs
+                Sensitive land-record programmes
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Land-record and citizen-document work like Pattadar Pass Books
+                Land-record and citizen-document work, such as Pattadar passbooks,
                 needs large capacity, documented controls, and security from
                 start to finish. Our three audited plants and closed-vehicle
-                dispatch are built for exactly this kind of Government
+                dispatch are built for exactly this kind of government
                 department work anywhere in India.
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function GovernmentSectorPage() {
             </ul>
             <div className="mt-6 border-t border-border pt-6">
               <p className="text-sm font-semibold text-primary">
-                Dual verification + disposal
+                Dual verification and disposal
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Every item is checked twice — on the way in and on the way out
@@ -173,7 +173,7 @@ export default function GovernmentSectorPage() {
       <section className="border-t border-border bg-primary py-14 text-white lg:py-16">
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
-            Need a secure Government print partner?
+            Need a secure government print partner?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-white/85 sm:text-base">
             Share your department&apos;s requirements and compliance checks. We
