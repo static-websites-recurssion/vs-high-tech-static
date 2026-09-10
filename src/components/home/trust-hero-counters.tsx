@@ -77,7 +77,7 @@ export function TrustHeroCounters({
         variant === "hero" && centered
           ? "mt-8 flex flex-row flex-wrap items-start justify-center gap-x-6 gap-y-5 sm:mt-10 sm:gap-x-10 sm:gap-y-6"
           : variant === "hero"
-            ? "mt-8 flex flex-col gap-8 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-y-4"
+            ? "mt-8 grid grid-cols-3 gap-3 sm:mt-10 sm:gap-6"
             : "mt-10 grid grid-cols-1 gap-6 border-y border-white/15 py-8 sm:grid-cols-3 sm:gap-4 sm:py-10",
         className
       )}
@@ -90,7 +90,7 @@ export function TrustHeroCounters({
             variant === "hero" && centered
               ? "min-w-0 text-center sm:min-w-[7.5rem]"
               : variant === "hero"
-                ? "min-w-0 text-left sm:border-l sm:border-white/[0.12] sm:pl-8 sm:first:border-l-0 sm:first:pl-0"
+                ? "min-w-0 border-l border-white/[0.12] pl-3 text-left first:border-l-0 first:pl-0 sm:pl-6"
                 : "text-center sm:border-r sm:border-white/10 sm:last:border-r-0 sm:px-2"
           )}
         >
@@ -98,7 +98,7 @@ export function TrustHeroCounters({
             className={cn(
               "font-mono font-semibold tabular-nums tracking-tight",
               variant === "hero"
-                ? "text-3xl text-sky-100 sm:text-4xl"
+                ? "text-2xl text-sky-100 sm:text-4xl"
                 : "text-accent text-4xl font-bold sm:text-5xl"
             )}
           >

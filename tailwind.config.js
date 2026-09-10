@@ -1,4 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+
+// Every brand colour is a CSS variable holding "r g b" so Tailwind's opacity
+// modifiers (bg-primary/10, text-accent/70 …) keep working. The actual values
+// live in src/app/globals.css — change the palette there, not here.
+const rgb = (name) => `rgb(var(${name}) / <alpha-value>)`;
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -19,34 +25,51 @@ module.exports = {
         ],
       },
       colors: {
-        border: "#e2e8f0",
-        input: "#e2e8f0",
-        ring: "#0ea5e9",
-        background: "#f8f9fc",
-        foreground: "#1a2563",
+        border: rgb("--c-border"),
+        input: rgb("--c-border"),
+        ring: rgb("--c-accent"),
+        background: rgb("--c-bg"),
+        foreground: rgb("--c-fg"),
         primary: {
-          DEFAULT: "#1a2563",
+          DEFAULT: rgb("--c-primary"),
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#0ea5e9",
-          foreground: "#ffffff",
+          DEFAULT: rgb("--c-accent"),
+          foreground: rgb("--c-accent-fg"),
         },
-        gold: "#d4a017",
+        gold: rgb("--c-gold"),
         white: "#ffffff",
         muted: {
-          DEFAULT: "#eef2f7",
-          foreground: "#475569",
+          DEFAULT: rgb("--c-muted"),
+          foreground: rgb("--c-muted-fg"),
         },
         destructive: {
           DEFAULT: "#ef4444",
           foreground: "#ffffff",
+        },
+        // The hand-written sky-* classes across the site follow the theme too.
+        sky: {
+          50: rgb("--c-sky-50"),
+          100: rgb("--c-sky-100"),
+          200: rgb("--c-sky-200"),
+          300: rgb("--c-sky-300"),
+          400: rgb("--c-sky-400"),
+          500: rgb("--c-sky-500"),
+          600: rgb("--c-sky-600"),
+          700: rgb("--c-sky-700"),
+          800: rgb("--c-sky-800"),
+          900: rgb("--c-sky-900"),
+          950: rgb("--c-sky-950"),
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        glow: "0 12px 40px -12px rgb(var(--c-accent) / 0.45)",
       },
     },
   },

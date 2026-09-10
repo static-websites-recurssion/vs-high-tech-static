@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ArrowRight,
   Award,
   Barcode,
   BookMarked,
@@ -13,6 +14,7 @@ import {
   GraduationCap,
   ScanLine,
   Shield,
+  ShieldCheck,
 } from "lucide-react";
 
 import { TrustHeroCounters } from "@/components/home/trust-hero-counters";
@@ -128,83 +130,109 @@ export default function HomePage() {
           className="absolute inset-0 bg-gradient-to-t from-[#0a1430]/60 via-transparent to-transparent"
           aria-hidden
         />
+        {/* Soft accent glow behind the copy. */}
+        <div
+          className="pointer-events-none absolute -left-40 top-1/3 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-sky-500/20 blur-[140px]"
+          aria-hidden
+        />
         <div className="relative z-10 mx-auto flex min-h-[min(100svh,880px)] w-full max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="grid w-full min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(260px,400px)] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(280px,420px)] xl:gap-12">
-            <div className="flex min-w-0 justify-center lg:justify-end">
-              <div className="w-full max-w-3xl sm:max-w-4xl lg:max-w-[42rem]">
-                <div className="rounded-3xl border border-sky-400/20 bg-gradient-to-br from-slate-950/55 via-[#121c3d]/35 to-primary/20 p-6 shadow-[0_8px_40px_-8px_rgba(8,20,60,0.45)] ring-1 ring-sky-400/10 backdrop-blur-[2px] sm:p-9 lg:p-10 xl:p-11">
-                  <div className="flex items-center justify-center gap-3">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/95 p-1.5 shadow-md ring-1 ring-sky-300/40 sm:h-12 sm:w-12">
-                      <Image
-                        src={siteImages.logoMark.src}
-                        alt={siteImages.logoMark.alt}
-                        width={40}
-                        height={40}
-                        className="h-full w-full object-contain"
-                        priority
-                      />
-                    </span>
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300 sm:text-sm">
-                      Four ISO · Hyderabad · Vijayawada · Bangalore
-                    </p>
-                  </div>
-                  <h1 className="mt-4 text-balance bg-gradient-to-br from-white via-sky-100 to-sky-300 bg-clip-text text-center text-3xl font-medium leading-[1.18] tracking-[-0.02em] text-transparent sm:text-4xl md:text-5xl lg:text-[2.85rem] lg:leading-[1.1]">
-                    India&apos;s trusted security printing partner — since 1997
-                  </h1>
-                  <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[1.65] text-sky-200/90 sm:text-lg">
-                    We print confidential question papers, OMR sheets,
-                    certificates, and other secure documents for universities,
-                    government departments, and companies across India.
-                  </p>
-                  <TrustHeroCounters variant="hero" centered />
-                  <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
-                    <Button
-                      variant="accent"
-                      size="lg"
-                      className="shadow-lg shadow-black/20"
-                      asChild
-                    >
-                      <Link href="/contact">Contact us</Link>
-                    </Button>
-                    <Button
-                      variant="outlineLight"
-                      size="lg"
-                      className="border-sky-300/45 bg-sky-400/10 text-sky-50 hover:border-sky-200/60 hover:bg-sky-400/20"
-                      asChild
-                    >
-                      <Link href="/services">View services</Link>
-                    </Button>
-                  </div>
-                </div>
+          <div className="grid w-full min-w-0 items-center gap-12 lg:grid-cols-12 lg:gap-10">
+            <div className="min-w-0 lg:col-span-7">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-300/30 bg-sky-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-200 sm:text-xs">
+                  <ShieldCheck className="h-3.5 w-3.5 text-sky-300" aria-hidden />
+                  Four ISO certified
+                </span>
+                <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-sky-200/80 sm:text-xs">
+                  Hyderabad · Vijayawada · Bangalore
+                </span>
               </div>
+              <h1 className="mt-6 text-balance text-4xl font-medium leading-[1.12] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.6rem] lg:leading-[1.06]">
+                India&apos;s trusted security printing partner
+                <span className="mt-1 block bg-gradient-to-r from-sky-300 via-sky-200 to-gold bg-clip-text text-transparent">
+                  since 1997
+                </span>
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-[1.7] text-sky-100/85 sm:text-lg">
+                We print confidential question papers, OMR sheets,
+                certificates, and other secure documents for universities,
+                government departments, and companies across India.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+                <Button
+                  variant="accent"
+                  size="lg"
+                  className="h-12 px-7 text-base shadow-glow"
+                  asChild
+                >
+                  <Link href="/contact">
+                    Contact us
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </Link>
+                </Button>
+                <Button
+                  variant="outlineLight"
+                  size="lg"
+                  className="h-12 border-sky-300/40 bg-white/5 px-7 text-base text-sky-50 backdrop-blur-sm hover:border-sky-200/60 hover:bg-white/10"
+                  asChild
+                >
+                  <Link href="/services">View services</Link>
+                </Button>
+              </div>
+              <TrustHeroCounters
+                variant="hero"
+                className="border-t border-sky-400/20 pt-8"
+              />
             </div>
 
-            <figure className="mx-auto w-full max-w-md min-w-0 lg:mx-0 lg:max-w-none">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white shadow-[0_20px_50px_-12px_rgba(8,30,80,0.55)] ring-1 ring-sky-400/25 sm:aspect-[5/6] lg:aspect-[3/4]">
+            <figure className="relative mx-auto w-full max-w-md min-w-0 lg:col-span-5 lg:mx-0 lg:max-w-none">
+              <div
+                className="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-sky-400/30 via-transparent to-gold/20 blur-xl"
+                aria-hidden
+              />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-b from-white to-sky-50 shadow-[0_24px_60px_-16px_rgba(0,0,0,0.6)] ring-1 ring-white/20 sm:aspect-[5/6] lg:aspect-[3/4]">
                 <Image
                   src={heroMachineryPhoto.src}
                   alt={heroMachineryPhoto.alt}
                   fill
-                  className="object-contain object-center p-2 sm:p-3"
-                  sizes="(max-width: 1024px) 100vw, 400px"
+                  className="object-contain object-center p-3 sm:p-4"
+                  sizes="(max-width: 1024px) 100vw, 460px"
                   priority
                 />
-              </div>
-              <figcaption className="mt-2.5 text-center text-[11px] font-medium leading-snug text-sky-200/80 lg:text-left">
-                {heroMachineryPhoto.caption}
-                <span className="mt-1 block">
+                <div
+                  className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0a1430]/85 via-[#0a1430]/30 to-transparent"
+                  aria-hidden
+                />
+                <figcaption className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+                  <span className="min-w-0">
+                    <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-300">
+                      On our floor
+                    </span>
+                    <span className="mt-0.5 block text-sm font-semibold leading-snug text-white">
+                      {heroMachineryPhoto.caption}
+                    </span>
+                  </span>
                   <Link
                     href="/technology/machinery"
-                    className="font-semibold text-sky-300 underline-offset-2 hover:text-sky-200 hover:underline"
+                    className="inline-flex shrink-0 items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur transition-colors hover:bg-white/20"
                   >
-                    Our machinery →
+                    Machinery
+                    <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </Link>
-                </span>
-              </figcaption>
+                </figcaption>
+              </div>
+              <div className="absolute -right-5 -top-5 hidden rounded-xl border border-white/15 bg-[#0a1430]/85 px-4 py-3 shadow-lg backdrop-blur lg:block">
+                <p className="font-mono text-2xl font-semibold tabular-nums text-gold">
+                  24
+                </p>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-sky-200/80">
+                  Machine types
+                </p>
+              </div>
             </figure>
           </div>
 
-          <div className="mt-10 flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t border-sky-400/25 pt-8 text-center text-xs font-medium text-sky-200/85 sm:mt-12 sm:gap-x-4 sm:text-sm lg:mt-14">
+          <div className="mt-12 flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t border-sky-400/20 pt-7 text-center text-xs font-medium text-sky-200/85 sm:gap-x-4 sm:text-sm lg:mt-16">
             {isoCodes.map((code, index) => (
               <span key={code} className="contents">
                 {index > 0 ? (

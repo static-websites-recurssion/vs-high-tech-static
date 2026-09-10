@@ -4,8 +4,119 @@
 
 :root {
   --radius: 0.5rem;
-  --background: #f8f9fc;
-  --foreground: #1a2563;
+
+  /* ---------------------------------------------------------------------
+     Brand palette. Values are "r g b" triplets so Tailwind opacity modifiers
+     work (see tailwind.config.js). Three themes ship:
+
+       default  — "Midnight": deep navy + electric cyan + warm gold
+       royal    — brighter royal blue + vivid blue accent + amber
+       azure    — literal primary/accent swap: sky-blue bands, navy links
+
+     Switch by adding data-theme="royal" to <html> in src/app/layout.tsx.
+     --------------------------------------------------------------------- */
+  --c-primary: 15 27 77; /* #0f1b4d */
+  --c-fg: 30 41 59; /* #1e293b body text */
+  --c-bg: 245 247 251; /* #f5f7fb */
+  --c-border: 223 228 238; /* #dfe4ee */
+  --c-muted: 236 240 247; /* #ecf0f7 */
+  --c-muted-fg: 71 85 105; /* #475569 */
+  --c-gold: 226 181 59; /* #e2b53b */
+
+  /* Accent has two readings: darker on light surfaces (WCAG AA for text),
+     brighter on dark surfaces. --c-accent flips automatically below. */
+  --c-accent-on-light: 2 132 199; /* #0284c7 */
+  --c-accent-on-dark: 56 189 248; /* #38bdf8 */
+  --c-accent: var(--c-accent-on-light);
+  /* Text on bg-accent buttons: white on light surfaces, navy on dark ones. */
+  --c-accent-fg-on-light: 255 255 255;
+  --c-accent-fg-on-dark: var(--c-primary);
+  --c-accent-fg: var(--c-accent-fg-on-light);
+
+  /* Glow tints for the dark hero / CTA sections. */
+  --c-glow-a: 14 165 233;
+  --c-glow-b: 99 102 241;
+
+  --c-sky-50: 240 249 255;
+  --c-sky-100: 224 242 254;
+  --c-sky-200: 186 230 253;
+  --c-sky-300: 125 211 252;
+  --c-sky-400: 56 189 248;
+  --c-sky-500: 14 165 233;
+  --c-sky-600: 2 132 199;
+  --c-sky-700: 3 105 161;
+  --c-sky-800: 7 89 133;
+  --c-sky-900: 12 74 110;
+  --c-sky-950: 8 47 73;
+
+  /* Kept for anything still reading the old names. */
+  --background: rgb(var(--c-bg));
+  --foreground: rgb(var(--c-fg));
+}
+
+:root[data-theme="royal"] {
+  --c-primary: 30 58 138; /* #1e3a8a */
+  --c-fg: 30 41 59;
+  --c-bg: 247 249 253;
+  --c-border: 221 228 240;
+  --c-muted: 235 240 250;
+  --c-muted-fg: 71 85 105;
+  --c-gold: 251 191 36; /* #fbbf24 */
+  --c-accent-on-light: 37 99 235; /* #2563eb */
+  --c-accent-on-dark: 125 211 252; /* #7dd3fc */
+  --c-glow-a: 59 130 246;
+  --c-glow-b: 251 191 36;
+}
+
+/* "azure": the literal primary/accent swap — sky-blue bands and headings,
+   navy links, gold CTAs on dark. */
+:root[data-theme="azure"] {
+  --c-primary: 3 105 161; /* #0369a1 */
+  --c-fg: 30 41 59;
+  --c-bg: 246 250 253;
+  --c-border: 214 228 240;
+  --c-muted: 232 242 250;
+  --c-muted-fg: 71 85 105;
+  --c-gold: 251 191 36;
+  --c-accent-on-light: 26 37 99; /* old navy #1a2563 */
+  --c-accent-on-dark: 251 191 36; /* gold */
+  --c-accent-fg-on-dark: 12 74 110;
+  --c-glow-a: 56 189 248;
+  --c-glow-b: 26 37 99;
+}
+
+/* Accent flips to its bright reading inside dark surfaces, and back to the
+   dark reading inside white cards nested in them. */
+.bg-primary,
+.bg-sky-950,
+.bg-slate-950 {
+  --c-accent: var(--c-accent-on-dark);
+  --c-accent-fg: var(--c-accent-fg-on-dark);
+}
+.bg-white,
+.bg-background,
+.bg-muted {
+  --c-accent: var(--c-accent-on-light);
+  --c-accent-fg: var(--c-accent-fg-on-light);
+}
+
+/* Dark hero / CTA bands get a soft two-tone glow instead of flat navy. */
+section.bg-primary,
+footer.bg-primary {
+  background-image: radial-gradient(
+      ellipse 70% 80% at 8% 0%,
+      rgb(var(--c-glow-a) / 0.28),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 70% at 100% 100%,
+      rgb(var(--c-glow-b) / 0.22),
+      transparent 60%
+    );
+}
+
+::selection {
+  background: rgb(var(--c-accent-on-light) / 0.25);
 }
 
 html {
@@ -54,10 +165,10 @@ body {
 .bg-security-grid {
   background-image: linear-gradient(
       to right,
-      rgba(125, 211, 252, 0.07) 1px,
+      rgb(var(--c-sky-300) / 0.07) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(125, 211, 252, 0.07) 1px, transparent 1px);
+    linear-gradient(to bottom, rgb(var(--c-sky-300) / 0.07) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
