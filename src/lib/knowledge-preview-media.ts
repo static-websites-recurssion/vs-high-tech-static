@@ -20,8 +20,8 @@ export function knowledgeCardImage(category: BlogCategory): {
       };
     case "Products":
       return {
-        src: machineryPlantPhotos[8].src,
-        alt: machineryPlantPhotos[8].alt,
+        src: machineryPlantPhotos[9].src,
+        alt: machineryPlantPhotos[9].alt,
       };
     case "Company":
       return {

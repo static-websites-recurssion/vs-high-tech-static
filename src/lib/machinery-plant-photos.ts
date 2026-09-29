@@ -50,6 +50,12 @@ export const machineryPlantPhotos: readonly MachineryPlantPhoto[] = [
     },
   },
   {
+    // Original printer image extracted from slide 5 of the supplied Kaleido deck.
+    src: "/images/machinery/kaleido-heavy-3200.webp",
+    alt: "Kaleido UV roll-to-roll printer with media rollers and operator console",
+    caption: "Kaleido Heavy 3200 — UV roll-to-roll printer",
+  },
+  {
     src: "/images/machinery/plant-08.webp",
     alt: "Geekay multi-colour pack-to-pack computer stationery press",
     caption: "Geekay — pack-to-pack stationery press",
